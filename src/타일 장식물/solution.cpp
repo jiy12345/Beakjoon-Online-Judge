@@ -14,7 +14,7 @@ long long solution(int N) {
     long before = 1;
     long current = 1;
     long after;
-    // ÇÇº¸³ªÄ¡ ¼ö¿­ ±¸ÇÏ±â
+    // Ã‡Ã‡ÂºÂ¸Â³ÂªÃ„Â¡ Â¼Ã¶Â¿Â­ Â±Â¸Ã‡ÃÂ±Ã¢
     for (int i = 0;i < N - 2;i++) {
         after = before + current;
         before = current;
