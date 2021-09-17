@@ -4,118 +4,21 @@
 #include<deque>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-1 <= ¹®ÀÚ¿­ÀÇ ±æÀÌ <= 1,000,000
-1 <= pdÀÇ ±æÀÌ <= 100,000   => µû¶ó¼­ ¸Å¹ø µÚÁı´Â °Í¿¡´Â ¹«¸®°¡ ÀÖ¾îº¸ÀÎ´Ù1
-1 <= n <= 10,000
-
-pÀÇ ±æÀÌÀÇ ÇÕ°ú ndÀÇ ÇÕÀº 700,000À» ³ÑÁö ¾ÊÀ½
-
- - ¹®Á¦ »óÈ²
-AC¿¡¼­ RÀº ¹è¿­ ¼ıÀÚÀÇ ¼ø¼­¸¦ µÚÁı°í, D´Â Ã¹¹øÂ° ¼ıÀÚ¸¦ ¹ö¸°´Ù! ¹è¿­ÀÌ ºñ¾îÀÖ´Âµ¥ D¸¦ »ç¿ëÇÏ¸é ¿À·ù°¡ ¹ß»ıÇÑ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
-¸Å¹ø µÚÁıÀ¸¸ç ¹İº¹À» ÁøÇàÇÏ¸é »ó´çÈ÷ ¿À·¡ °É¸±°ÍÀÌ´Ù!
-
-µû¶ó¼­ is_reversed º¯¼ö¸¦ ¼±¾ğÇÏ¿© µÚÁıÈù »óÅÂÀÎÁö ¶È¹Ù·Î µÈ »óÅÂÀÎÁö ¸¦ Ç¥½ÃÇÏ°í
-
-¼ö¸¦ ÇÏ³ª ¹ö¸±¶§´Â µÚÁıÈù »óÅÂ¶ó¸é ¾Õ¿¡¼­ ÇÏ³ª¸¦ ¹ö¸®°í, µÚÁıÈ÷Áö ¾ÊÀº »óÅÂ¶ó¸é µÚ¿¡¼­ ÇÏ³ª¸¦ ¹ö¸°´Ù!
- => ¾Õ µÚ¿¡¼­ ¸ğµÎ »èÁ¦°¡ ÀÌ·ç¾îÁö¹Ç·Î deque¸¦ »ç¿ëÇÏ´Â °ÍÀÌ È¿À²ÀûÀÏ µí ÇÏ´Ù!
-¸¶Áö¸·¿¡´Â µÚÁıÈù »óÅÂ¶ó¸é µÚÁı¾î¼­ Ãâ·ÂÇÑ´Ù!
-
-1. Å×½ºÆ® ÄÉÀÌ½º º¯¼ö¸¦ ÀÔ·Â¹Ş´Â´Ù.
-2. Å×½ºÆ® ÄÉÀÌ½º º¯¼öÀÇ Å©±â¸¸Å­ ¹İº¹¹®À» µ¹¸®¸ç, AC¿Í ¹è¿­À» ÀÔ·Â¹Ş´Â´Ù.
-3. ¹è¿­À» ÀÔ·Â¹ŞÀ» ¶§´Â  2n+1(´ë°ıÈ£¿Í ½°Ç¥¸¦ Æ÷ÇÔÇÏ¿©) °³ÀÇ ¹®ÀÚ¸¦ ÀĞ¾î Á¤¼ö¸é º¤ÅÍ¿¡ ÀúÀåÇÏµµ·Ï ÇÑ´Ù.
-
-
-´ÙÀ½°ú °°Àº °úÁ¤À» °ÅÄ¡ÀÚ
-
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
-
-// KMP ±¸Çö
-//// ½ÇÆĞÇÔ¼ö ±¸Çö(Á¢µÎ»ç¿Í Á¢¹Ì»ç ÃÖ´ë ÀÏÄ¡ ±æÀÌ ºñ±³)
-//vector<int> makeTable(string pattern) {
-//    int patternSize = pattern.size();
-//
-//    vector<int> table(patternSize, 0);
-//
-//    int j = 0;
-//    for (int i = 1; i < patternSize; i++) {
-//
-//        // j ÀÎµ¦½º°¡ 0ÀÌ»óÀÎµ¥, i¹øÂ°¿Í j¹øÂ° ¹®ÀÚ°¡ ÀÏÄ¡ÇÏÁö ¾Ê´Â´Ù¸é, 
-//        while (j > 0 && pattern[i] != pattern[j]) {
-//            j = table[j - 1]; // ÇÑ Ä­ µÚ·Î ¹é 
-//        }
-//
-//        if (pattern[i] == pattern[j]) {
-//            table[i] = ++j;
-//        }
-//    }
-//
-//    return table;
-//}
-//
-//int KMP(string data, string pattern) {
-//    int index = -1;
-//    vector<int> table = makeTable(pattern);
-//
-//    int parentSize = data.size();
-//    int patternSize = pattern.size();
-//
-//    int j = 0;
-//    for (int i = 0; i < parentSize; i++) {
-//        while (j > 0 && data[i] != pattern[j]) {
-//            j = table[j - 1]; // ÀÏÄ¡ ÇÏÁö ¾Ê¾ÒÀ» ¶§, ÀÌÀü ´Ü°è¿¡ ÀÖ´ø °ªÀ¸·Î ÀÌµ¿ 
-//        }
-//        if (data[i] == pattern[j]) {
-//            if (j == patternSize - 1) {
-//                index = (i - patternSize + 1);
-//
-//                data = data.substr(0, index) + data.substr(index + pattern.size());
-//                i = ((index - patternSize)>0)? (index - patternSize) : -1;
-//                j = ((table[j] - patternSize) > 0) ? (table[j] - patternSize) : 0;
-//                parentSize = data.size();
-//
-//                //cout << "index: " << index << endl;
-//                //cout << "parent size:" << parentSize << endl;
-//                //cout << "i: " << i << endl;
-//                //cout << endl;
-//            }
-//            else {
-//                j++; // ´Ü¼øÈ÷ ¸ÅÄª¸¸ ÀÌ·ç¾îÁ³±â ¶§¹®¿¡ j¸¸ Áõ°¡½ÃÄÑ ¸ÅÄª È®ÀÎ 
-//            }
-//        }
-//        parentSize = data.size();
-//    }
-//
-//    if (data.empty()) {
-//        cout << "FRULA";
-//    }
-//    else {
-//        cout << data;
-//    }
-//
-//    return index;
-//}
-
 void solution(string data, string pattern) {
 	string stack;
-
+	
+	// ì „ì²´ ë¬¸ìì—´ì„ ìŠ¤íƒì— í•˜ë‚˜ì”© ë„£ê¸°
 	for (int i = 0; i < data.size(); i++) {
 		stack += data[i];
 
+		// íŒ¨í„´ ì‚¬ì´ì¦ˆë³´ë‹¤ ì»¤ì¡Œì„ ê²½ìš°
 		if (stack.size() >= pattern.size()) {
+			// íŒ¨í„´ê³¼ ë¹„êµ
 			string temp = stack.substr(stack.size() - pattern.size());
+			// íŒ¨í„´ì´ ë°œê²¬ë˜ì—ˆì„ ê²½ìš°
 			if(temp == pattern) {
 				int cnt = 0;
+				// ìŠ¤íƒì˜ ë§¨ ìœ„ì—ì„œ íŒ¨í„´ì´ ê°€ì§„ ë¬¸ì ê°œìˆ˜ë§Œí¼ pop í•˜ê¸°
 				while (cnt < pattern.size()) {
 					stack.pop_back();
 					cnt++;
@@ -123,19 +26,19 @@ void solution(string data, string pattern) {
 			}
 		}
 	}
-	if (stack.empty()) {
+	if (stack.empty()) { // íŒ¨í„´ë§¤ì¹­ì´ ì™„ì „íˆ ì´ë£¨ì–´ì ¸ ë¹ˆ ë¬¸ìì—´ì¼ ê²½ìš°
 		cout << "FRULA";
 	}
-	else {
+	else { // ì•„ë‹ ê²½ìš°
 		cout << stack;
 	}
 }
 
 int main() {
-	string data, pattern; // ATM¿¡ ÁÙ ¼­ÀÖ´Â »ç¶÷ÀÇ ¼ö
+	string data, pattern; // data: ì „ì²´ ë¬¸ìì—´, pattern: í­íƒ„ ë¬¸ìì—´
 
 	cin >> data;
-    cin >> pattern;
+    	cin >> pattern;
 
 	solution(data, pattern);
 
