@@ -4,54 +4,14 @@
 #include<deque>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
- - º¯¼ö
-T: Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö
-p: °¢ Å×½ºÆ® ÄÉÀÌ½º°¡ ¼öÇàÇÒ ÇÔ¼ö
-n: ¹è¿­¿¡ ÀÖ´Â ¼öÀÇ °³¼ö
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-1 <= T <= 100
-1 <= pdÀÇ ±æÀÌ <= 100,000   => µû¶ó¼­ ¸Å¹ø µÚÁı´Â °Í¿¡´Â ¹«¸®°¡ ÀÖ¾îº¸ÀÎ´Ù1
-1 <= n <= 10,000
-
-pÀÇ ±æÀÌÀÇ ÇÕ°ú ndÀÇ ÇÕÀº 700,000À» ³ÑÁö ¾ÊÀ½
-
- - ¹®Á¦ »óÈ²
-AC¿¡¼­ RÀº ¹è¿­ ¼ıÀÚÀÇ ¼ø¼­¸¦ µÚÁı°í, D´Â Ã¹¹øÂ° ¼ıÀÚ¸¦ ¹ö¸°´Ù! ¹è¿­ÀÌ ºñ¾îÀÖ´Âµ¥ D¸¦ »ç¿ëÇÏ¸é ¿À·ù°¡ ¹ß»ıÇÑ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
-¸Å¹ø µÚÁıÀ¸¸ç ¹İº¹À» ÁøÇàÇÏ¸é »ó´çÈ÷ ¿À·¡ °É¸±°ÍÀÌ´Ù!
-
-µû¶ó¼­ is_reversed º¯¼ö¸¦ ¼±¾ğÇÏ¿© µÚÁıÈù »óÅÂÀÎÁö ¶È¹Ù·Î µÈ »óÅÂÀÎÁö ¸¦ Ç¥½ÃÇÏ°í
-
-¼ö¸¦ ÇÏ³ª ¹ö¸±¶§´Â µÚÁıÈù »óÅÂ¶ó¸é ¾Õ¿¡¼­ ÇÏ³ª¸¦ ¹ö¸®°í, µÚÁıÈ÷Áö ¾ÊÀº »óÅÂ¶ó¸é µÚ¿¡¼­ ÇÏ³ª¸¦ ¹ö¸°´Ù!
- => ¾Õ µÚ¿¡¼­ ¸ğµÎ »èÁ¦°¡ ÀÌ·ç¾îÁö¹Ç·Î deque¸¦ »ç¿ëÇÏ´Â °ÍÀÌ È¿À²ÀûÀÏ µí ÇÏ´Ù!
-¸¶Áö¸·¿¡´Â µÚÁıÈù »óÅÂ¶ó¸é µÚÁı¾î¼­ Ãâ·ÂÇÑ´Ù!
-
-1. Å×½ºÆ® ÄÉÀÌ½º º¯¼ö¸¦ ÀÔ·Â¹Ş´Â´Ù.
-2. Å×½ºÆ® ÄÉÀÌ½º º¯¼öÀÇ Å©±â¸¸Å­ ¹İº¹¹®À» µ¹¸®¸ç, AC¿Í ¹è¿­À» ÀÔ·Â¹Ş´Â´Ù.
-3. ¹è¿­À» ÀÔ·Â¹ŞÀ» ¶§´Â  2n+1(´ë°ıÈ£¿Í ½°Ç¥¸¦ Æ÷ÇÔÇÏ¿©) °³ÀÇ ¹®ÀÚ¸¦ ÀĞ¾î Á¤¼ö¸é º¤ÅÍ¿¡ ÀúÀåÇÏµµ·Ï ÇÑ´Ù.
-
-
-´ÙÀ½°ú °°Àº °úÁ¤À» °ÅÄ¡ÀÚ
-
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
 void solution(int T) {
 
-	// 1. µé¾î¿Â °ª º¤ÅÍ¿¡ ¹Ş±â
+	// 1. ë“¤ì–´ì˜¨ ê°’ ë²¡í„°ì— ë°›ê¸°
 	for (int i = 0; i < T; i++) {
-		bool is_reversed = false; // true¸é µÚÁıÈù °Í!
+		bool is_reversed = false; // trueë©´ ë’¤ì§‘íŒ ê²ƒ!
 		int j;
 
-		// AC ÀÔ·Â¹Ş±â
+		// AC ì…ë ¥ë°›ê¸°
 		string AC;
 		cin >> AC;
 
@@ -63,7 +23,7 @@ void solution(int T) {
 		string num_array_string;
 		cin >> num_array_string;
 
-		num_array_string = num_array_string.substr(1, num_array_string.size() - 2); // ´ë°ıÈ£ Á¦°Å
+		num_array_string = num_array_string.substr(1, num_array_string.size() - 2); // ëŒ€ê´„í˜¸ ì œê±°
 		
 		stringstream sstream(num_array_string);
 		string word;
@@ -82,29 +42,28 @@ void solution(int T) {
 				is_reversed = !is_reversed;
 			}
 			else if(AC[j] == 'D') {
-				if (num_array.empty()) { // D°¡ ³ª¿Ô´Âµ¥ ¹è¿­ÀÌ ºñ¾îÀÖÀ» °æ¿ì error
+				if (num_array.empty()) { // Dê°€ ë‚˜ì™”ëŠ”ë° ë°°ì—´ì´ ë¹„ì–´ìˆì„ ê²½ìš° error
 					cout << "error" << endl;
 					break;
 				}
-				if (is_reversed) { // µÚÁıÈù »óÅÂÀÏ °æ¿ì
+				if (is_reversed) { // ë’¤ì§‘íŒ ìƒíƒœì¼ ê²½ìš°
 					//cout << "pop_front" << endl;
 					num_array.pop_back();
 				}
-				else { // ¶È¹Ù¸¥ »óÅÂÀÏ °æ¿ì
+				else { // ë˜‘ë°”ë¥¸ ìƒíƒœì¼ ê²½ìš°
 					//cout << "pop_back" << endl;
 					num_array.pop_front();
 				}
 			}
 		}
 
-		if (j != AC.size()) { // ¹İº¹¹®À» ³¡±îÁö µ¹Áö ¾Ê¾ÒÀ» °æ¿ì = error°¡ Áß°£¿¡ ¹ß»ıÇßÀ» °æ¿ì => Ãâ·ÂÇÏÁö ¾ÊÀ½
+		if (j != AC.size()) { // ë°˜ë³µë¬¸ì„ ëê¹Œì§€ ëŒì§€ ì•Šì•˜ì„ ê²½ìš° = errorê°€ ì¤‘ê°„ì— ë°œìƒí–ˆì„ ê²½ìš° => ì¶œë ¥í•˜ì§€ ì•ŠìŒ
 			continue;
 		}
 
-
 		int array_size = num_array.size();
 
-		if (is_reversed) {
+		if (is_reversed) { // ë’¤ì§‘í˜€ìˆì„ ê²½ìš° ë’¤ë¶€í„° ì¶œë ¥
 			cout << "[";
 			for (j = 0; j < array_size; j++) {
 				if (j == array_size - 1) {
@@ -117,7 +76,7 @@ void solution(int T) {
 			}
 			cout << "]" << endl;
 		}
-		else {
+		else { // ë’¤ì§‘íˆì§€ ì•Šì•„ìˆì„ ê²½ìš° ì•ë¶€í„° 
 			cout << "[";
 			for (j = 0; j < array_size; j++) {
 				if (j == array_size - 1) {
@@ -134,7 +93,7 @@ void solution(int T) {
 }
 
 int main() {
-	int T; // ATM¿¡ ÁÙ ¼­ÀÖ´Â »ç¶÷ÀÇ ¼ö
+	int T; // í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ìˆ˜
 
 	cin >> T;
 
