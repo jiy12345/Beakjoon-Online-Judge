@@ -3,55 +3,10 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-
- - º¯¼ö
-N: ATM¿¡ ÁÙ ¼­ÀÖ´Â »ç¶÷ÀÇ ¸í¼ö
-Pi: i¹øÂ° »ç¶÷ÀÌ µ·À» ÀÎÃâÇÏ´Âµ¥ °É¸®´Â ½Ã°£.
-
- - ¹®Á¦ »óÈ²
-°¢°¢ÀÇ »ç¶÷¿¡°Ô´Â ¹øÈ£°¡ ¸Å°ÜÁ®ÀÖÀ¸¸ç, 
-°¢ »ç¶÷ÀÌ °¡Áø ¹øÈ£¸¦ i¶ó ÇÒ ¶§ Pi´Â °¢ »ç¶÷ÀÌ ±â´Ù¸®´Â ½Ã°£À» Á¦¿ÜÇÑ ¼ø¼öÇÏ°Ô ÀÎÃâÇÏ´Â µ¥¸¸ °É¸®´Â ½Ã°£ÀÌ´Ù.
-
-µû¶ó¼­ °¢ »ç¶÷ÀÌ ÀÎÃâÇÏ´Âµ¥±îÁö °É¸®´Â ½Ã°£À» Æ÷ÇÔÇÏ¿© °è»êÇÏ¸é 
-ÀÚ½Åº¸´Ù ¾Õ ¼ø¼­¿¡ ÀÖÀÖ´Â »ç¶÷µéÀÇ ÀÎÃâ ½Ã°£°ú ÀÚ½ÅÀÇ ÀÎÃâ½Ã°£À» ´õÇÏ¿© °è»êÇÑ´Ù.
-
-ÀÌ ¶§, ¸ðµç »ç¶÷µéÀÌ ÀÎÃâÇÏ´Â µ¥±îÁö °É¸®´Â ½Ã°£À» ¸ðµÎ ÇÕÇÑ ½Ã°£ÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
-
-2. Ç®ÀÌ °èÈ¹
-½±°Ô »ý°¢ÇØº¸¸é, ÀÎÃâÇÏ´Âµ¥ °É¸®´Â ½Ã°£ÀÌ ¾Õ¿¡ ¿Â´Ù¸é Á» ´õ ¸¹Àº »ç¶÷µéÀÇ ´ë±â ½Ã°£ÀÌ ±æ¾îÁú °ÍÀÌ´Ù.
-µû¶ó¼­, ½Ã°£ÀÌ ¿À·¡ °É¸®´Â »ç¶÷À» ÃÖ´ëÇÑ µÚ·Î º¸³»´Â ¹æ¹ýÀ» ½á¾ß ÇÑ´Ù.
-
-ÀÌ °æ¿ì ÇöÀç ³²Àº »ç¶÷ Áß ÀÎÃâ¿¡ °É¸®´Â ½Ã°£ÀÌ °¡Àå ÀûÀº »ç¶÷À» ¸ÕÀú ¼±ÅÃÇÏ´Â ±×¸®µð ¾Ë°í¸®ÁòÀ» »ý°¢ÇÒ ¼ö ÀÖ´Ù.
-
-ÀÌ¸¦ ±¸ÇöÇÏ±â À§ÇØ¼­´Â °É¸®´Â °ªÀ» ÀÛÀº °ªºÎÅÍ Å« °ª ¼øÀ¸·Î Á¤·ÄÇÏ¿© °ªÀ» °è»êÇÏ¸é ´äÀ» ±¸ÇÒ ¼ö ÀÖÀ» °ÍÀÌ´Ù.
-
-´ÙÀ½°ú °°Àº °úÁ¤À» °ÅÄ¡ÀÚ
-
-1. µé¾î¿Â °ªµéÀ» º¤ÅÍ¿¡ ¹Þ´Â´Ù.
-2. Á¤·ÄÇÔ¼ö¸¦ ÅëÇØ Á¤·ÄÇÑ´Ù.
-3. 0ºÎÅÍ ¹è¿­ÀÇ ±æÀÌ-1 ±îÁö ¹Ýº¹¹®À» µ¹¸®¸ç ÇÕÀ» ÀúÀåÇÒ º¯¼ö¿¡ (ÇöÀç À§Ä¡ÀÇ ¿ø¼Ò) * (¹è¿­ÀÇ ±æÀÌ - ÇöÀç À§Ä¡)¸¦ ´õÇÑ´Ù.
-
-3. °èÈ¹ °ËÁõ
-±×¸®µð ¾Ë°í¸®ÁòÀÇ Á¤´ç¼ºÀ» Áõ¸íÇÏÀÚ¸é,
-
-1) Å½¿åÀû ¼±ÅÃ¼Ó¼º Áõ¸í
-
- 1. °¡Àå ÀÛÀº °ªÀ» ¸ÕÀú ¼±ÅÃÇÏÁö ¾Ê´Â(°¡Àå ÀÛÀº °ªºÎÅÍ Å« °ª ¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÁö ¾ÊÀº) ÃÖÀûÇØ°¡ Á¸ÀçÇÔÀ» °¡Á¤ÇÑ´Ù.
- 2. ¾Õ¿¡ ¿À´Â °ªÀº µÚ »ç¶÷µéÀÇ ÃÑ ¼Ò¿ä½Ã°£¿¡ ¸ðµÎ ¿µÇâÀ» ³¢Ä¡¹Ç·Î, ´õ Å« °ªÀÌ ¾Õ¿¡ ¿Ã °æ¿ì µÚ »ç¶÷µéÀÇ ÃÑ ¼Ò¿ä½Ã°£ÀÌ ÀÛÀº °ªÀÌ ¿ÔÀ» ¶§º¸´Ù Ä¿Áö°Ô µÈ´Ù.
- 3. µû¶ó¼­ °¡Àå ÀÛÀº °ªÀ» ¸ÕÀú ¼±ÅÃÇÏÁö ¾ÊÀ¸¸é ¹Ýµå½Ã ÀüÃ¼ ¼Ò¿ä½Ã°£Àº Áõ°¡ÇÏ°Ô µÈ´Ù.
- 4. µû¶ó¼­ ÀÎÃâ¿¡ °É¸®´Â ½Ã°£ÀÌ °¡Àå ÀûÀº »ç¶÷À» ¸ÕÀú ¼±ÅÃÇÏ´Â °Í¸¸ÀÌ ÃÖÀûÇØ¸¦ µµÃâÇÒ ¼ö ÀÖ´Ù.
-
-2) ÃÖÀû ºÎºÐ±¸Á¶ Áõ¸í
- Ã¹ ¹øÂ° »ç¶÷À» ¼±ÅÃÈÄ ³ª¸ÓÁö »ç¶÷µéÀÇ ¼ø¼­¸¦ Â¥´Â ºÎºÐ¹®Á¦°¡ ³²´Âµ¥, ÀÌ ¶§ ¶ÇÇÑ ÇÕÇÑ ½Ã°£À» ÃÖ¼ÒÈ­ÇÏ´Â °°Àº ±âÁØÀ» Àû¿ëÇÏ¸é ÀüÃ¼¿¡µµ ÃÖÀûÀÇ °á°ú¸¦ °¡Á®¿À¹Ç·Î ÃÖÀû ºÎºÐ±¸Á¶´Â ÀÚ¸íÇÏ°Ô ¼º¸³ÇÑ´Ù.
-
-*/
-
 int ATM_min(int N, vector<int> time) {
-	int min = 0; // ÃÖ¼Ò°ªÀ» ÀúÀåÇÒ º¯¼ö
+	int min = 0; // ìµœì†Œê°’ì„ ì €ìž¥í•  ë³€ìˆ˜
 
-	// 2. Á¤·ÄÇÔ¼ö¸¦ ÅëÇØ ¹è¿­ Á¤·Ä
+	// 2. ì •ë ¬í•¨ìˆ˜ë¥¼ í†µí•´ ë°°ì—´ ì •ë ¬
 	sort(time.begin(), time.end());
 
 	for (int i = 0; i < N; i++) {
@@ -62,16 +17,16 @@ int ATM_min(int N, vector<int> time) {
 }
 
 int main() {
-	int N; // ATM¿¡ ÁÙ ¼­ÀÖ´Â »ç¶÷ÀÇ ¼ö
+	int N; // ATMì— ì¤„ ì„œìžˆëŠ” ì‚¬ëžŒì˜ ìˆ˜
 	
 	int temp_time;
-	vector<int> time; // »ç¶÷µéÀÌ ÀÎÃâ¿¡ °É¸®´Â ½Ã°£À» ¹ÞÀ» º¤ÅÍ
+	vector<int> time; // ì‚¬ëžŒë“¤ì´ ì¸ì¶œì— ê±¸ë¦¬ëŠ” ì‹œê°„ì„ ë°›ì„ ë²¡í„°
 
-	int min = 0; // ÃÖ¼Ò°ªÀ» ÀúÀåÇÒ º¯¼ö
+	int min = 0; // ìµœì†Œê°’ì„ ì €ìž¥í•  ë³€ìˆ˜
 
 	cin >> N;
 
-	// 1. µé¾î¿Â °ª º¤ÅÍ¿¡ ¹Þ±â
+	// 1. ë“¤ì–´ì˜¨ ê°’ ë²¡í„°ì— ë°›ê¸°
 	for (int i = 0; i < N; i++) {
 		cin >> temp_time;
 		time.push_back(temp_time);
