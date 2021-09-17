@@ -4,57 +4,23 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-
- - º¯¼ö
-N: ÁÖ¾îÁö´Â ´Ü¾îÀÇ °³¼ö
-
- - º¯¼ö, °ª¿¡ ´ëÇÑ Á¦ÇÑ
-´Ü¾îÀÇ °³¼ö´Â 1~10°³ÀÌ´Ù.
-´Ü¾î´Â ¾ËÆÄºª ´ë¹®ÀÚ·Î¸¸ ÀÌ·ç¾îÁø´Ù.
-¸ðµç ´Ü¾î¿¡ Æ÷ÇÔµÇ¾î ÀÖ´Â ¾ËÆÄºªÀº ÃÖ´ë 10°³ÀÌ´Ù.
-°¢ ´Ü¾îÀÇ ÃÖ´ë ±æÀÌ´Â 8ÀÌ´Ù
-¼­·Î ´Ù¸¥ ¹®ÀÚ´Â ¼­·Î ´Ù¸¥ ¼ýÀÚ¸¦ ³ªÅ¸³½´Ù.
-
- - ¹®Á¦ »óÈ²
- Ã¹Â° ÁÙ¿¡ ÁÖ¾îÁø ´Ü¾îÀÇ ÇÕÀÇ ÃÖ´ñ°ªÀ» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- => °¢ °ªµéÀ» Á¤È®È÷ Ãâ·ÂÇÏ´Â °ÍÀÌ ¾Æ´Ï¹Ç·Î, ÀüÃ¼¸¦ ÇÕÇÑ ÃÖ´ñ°ªÀ» °¢ ´Ü¾î¸¦ ´Ü¾î ±×´ë·Î º¸´Â °ÍÀÌ ¾Æ´Ï¶ó °¢ ¾ËÆÄºªº°·Î Á¤¸®ÇÏ¿© Á¶ÀÛÀÌ °¡´ÉÇÏ´Ù!
-
-
- µû¶ó¼­ °¢ ¾ËÆÄºª¿¡ ÇØ´çÇÏ´Â ¹è¿­À» ¸¸µç ÈÄ, ÀÚ¸®¼ö À§Ä¡¿¡ µû¶ó 1, 10, 100, ... À» °¢ ¾ËÆÄºªÀÇ ÀÚ¸®¿¡ ³Ö¾îÁØ ÈÄ ÇØ´ç ¹è¿­À» Á¤·ÄÇÏ¿© °ªÀ» °è»êÇÑ´Ù!
-=> °¢ °ªµéÀ» Á¤È®È÷ Ãâ·ÂÇÏÁö ¾Ê¾Æµµ µÇ¹Ç·Î, ÀÓÀÇÀÇ ¼ø¼­·Î ¹Ù²î¾îµµ »ó°üÀÌ ¾ø´Ù!
-
-µû¶ó¼­ ÀÚ¼¼ÇÑ °úÁ¤Àº ´ÙÀ½°ú °°´Ù.
-
-1. °¢ ´Ü¾î¸¦ ¹ÞÀ¸¸ç, °¢ ´Ü¾îÀÇ ÇÑ ÀÚ¸®¾¿ ÇØ´çÇÏ´Â ¾ËÆÄºªÀÇ À§Ä¡¿¡ ÀÚ¸®¼ö¸¦ °öÇÏ¿© ´õÇØÁØ´Ù.
-2. ¸ðµç ´Ü¾î¸¦ Ã³¸®ÈÄ ¹ÞÀº ¹è¿­À» ³»¸²Â÷¼øÀ¸·Î Á¤¸®ÇÑ´Ù.
-3. °¡Àå ¾ÕºÎÅÍ 10°³ÀÇ °ª¿¡ 9ºÎÅÍ 0À» °¢°¢ °öÇÏ¿© ¸ðµÎ ÇÕÇÑ´Ù.
-
-3. °èÈ¹ °ËÁõ
-°¢ °ªÀÌ ³ª¿À´Â ºóµµ¿Í ÀÚ¸´¼ö¸¦ ¸ðµÎ °í·ÁÇÏ¿© ÇÕÇÑ °ªÀÌ Á¤·Ä±âÁØÀÌ µÇ¾úÀ¸¹Ç·Î, ³»¸²Â÷¼øÀ¸·Î Á¤·ÄÇÑ °ªµé¿¡ Á¤·ÄÇÑ ¼ø¼­´ë·Î ¸Å±ä´Ù¸é ÃÖ´ë°ªÀ» ±¸ÇÒ ¼ö ÀÖ´Ù!
-
- */
-
 int get_min_num(string *words, int N) {
 
-	int max_num = 0; // ÇÕÇÑ °ªÀ» ´õÇÒ º¯¼ö
-	int alpha_num[26] = { 0, }; // °¢ ´Ü¾îÀÇ °¡ÁßÄ¡¸¦ ±â·ÏÇØÁÙ º¯¼ö
+	int max_num = 0; // í•©í•œ ê°’ì„ ë”í•  ë³€ìˆ˜
+	int alpha_num[26] = { 0, }; // ê° ë‹¨ì–´ì˜ ê°€ì¤‘ì¹˜ë¥¼ ê¸°ë¡í•´ì¤„ ë³€ìˆ˜
 
 	for (int i = 0; i < N; i++) {
 		int word_length = words[i].length();
 		for (int j = 0; j < word_length; j++) {
-			// °¢ ¾ËÆÄºª¿¡ ÇØ´çÇÏ´Â ¹è¿­ÀÇ À§Ä¡¿¡ °ª ´õÇØÁÖ±â
+			// ê° ì•ŒíŒŒë²³ì— í•´ë‹¹í•˜ëŠ” ë°°ì—´ì˜ ìœ„ì¹˜ì— ê°’ ë”í•´ì£¼ê¸°
 			alpha_num[words[i][j] - 65] += pow(10, word_length - (j + 1));
 		}
 	}
 
-	// °ª Á¤·ÄÇÏ±â
+	// ê°’ ì •ë ¬í•˜ê¸°
 	sort(alpha_num, alpha_num + 26, greater<int>());
 
-
+	// ë¹ˆë„ì™€ ìžë¦¬ìˆ˜ë¥¼ ê³ ë ¤í–ˆì„ ë•Œ ê°€ìž¥ ìš°ì„ ìˆœìœ„ê°€ ë†’ì€ ì•ŒíŒŒë²³ë¶€í„° ìˆ«ìž ë§¤ê¸°ê¸°
 	for (int i = 0; i < 10; i++) {
 		max_num += alpha_num[i] * (9 - i);
 	}
@@ -64,7 +30,7 @@ int get_min_num(string *words, int N) {
 
 int main() {
 
-	int N; // ´Ü¾îÀÇ °³¼ö
+	int N; // ë‹¨ì–´ì˜ ê°œìˆ˜
 
 	cin >> N;
 
