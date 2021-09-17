@@ -15,7 +15,7 @@ void solution(string N) {
 
 	sort(num_vector.begin(), num_vector.end(), greater<int>());
 
-	// 3ÀÇ ¹è¼ö°¡ ¾Æ´Ï°Å³ª 10ÀÇ ¹è¼ö°¡ ¾Æ´Ï¸é -1 Ãâ·Â
+	// 3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆê±°ë‚˜ 10ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆë©´ -1 ì¶œë ¥
 	if (accumulate(num_vector.begin(), num_vector.end(), 0) % 3 != 0 || num_vector[num_vector.size() - 1] != 0) {
 		cout << -1;
 	}
