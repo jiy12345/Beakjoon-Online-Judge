@@ -3,63 +3,29 @@
 #include<cmath>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-
-- º¯¼ö
-N: ¾çÀÇ Á¤¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-2 <= N <= 1,000,000
-
-
- - ¹®Á¦ »óÈ²
-°¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù °¢ ÀÎ¼ö¿Í ±× ÀÎ¼ö°¡ °öÇØÁø È½¼ö¸¦ Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-¸Å¹ø µÚÁýÀ¸¸ç ¹Ýº¹À» ÁøÇàÇÏ¸é »ó´çÈ÷ ¿À·¡ °É¸±°ÍÀÌ´Ù!
-
-µû¶ó¼­ is_reversed º¯¼ö¸¦ ¼±¾ðÇÏ¿© µÚÁýÈù »óÅÂÀÎÁö ¶È¹Ù·Î µÈ »óÅÂÀÎÁö ¸¦ Ç¥½ÃÇÏ°í
-
-¼ö¸¦ ÇÏ³ª ¹ö¸±¶§´Â µÚÁýÈù »óÅÂ¶ó¸é ¾Õ¿¡¼­ ÇÏ³ª¸¦ ¹ö¸®°í, µÚÁýÈ÷Áö ¾ÊÀº »óÅÂ¶ó¸é µÚ¿¡¼­ ÇÏ³ª¸¦ ¹ö¸°´Ù!
- => ¾Õ µÚ¿¡¼­ ¸ðµÎ »èÁ¦°¡ ÀÌ·ç¾îÁö¹Ç·Î deque¸¦ »ç¿ëÇÏ´Â °ÍÀÌ È¿À²ÀûÀÏ µí ÇÏ´Ù!
-¸¶Áö¸·¿¡´Â µÚÁýÈù »óÅÂ¶ó¸é µÚÁý¾î¼­ Ãâ·ÂÇÑ´Ù!
-
-1. Å×½ºÆ® ÄÉÀÌ½º º¯¼ö¸¦ ÀÔ·Â¹Þ´Â´Ù.
-2. Å×½ºÆ® ÄÉÀÌ½º º¯¼öÀÇ Å©±â¸¸Å­ ¹Ýº¹¹®À» µ¹¸®¸ç, AC¿Í ¹è¿­À» ÀÔ·Â¹Þ´Â´Ù.
-3. ¹è¿­À» ÀÔ·Â¹ÞÀ» ¶§´Â  2n+1(´ë°ýÈ£¿Í ½°Ç¥¸¦ Æ÷ÇÔÇÏ¿©) °³ÀÇ ¹®ÀÚ¸¦ ÀÐ¾î Á¤¼ö¸é º¤ÅÍ¿¡ ÀúÀåÇÏµµ·Ï ÇÑ´Ù.
-
-
-´ÙÀ½°ú °°Àº °úÁ¤À» °ÅÄ¡ÀÚ
-
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
-
 void solution(int T) {
 	
 	for (int i = 0; i < T; i++) {
 		int N;
 		cin >> N;
 
-
+		// ì†Œì¸ìˆ˜ê°€ ë  ìˆ˜ ìžˆëŠ” ê°€ìž¥ ìž‘ì€ ìˆ˜ì¸ 2ë¶€í„° ì‹œìž‘
 		int prime_factor = 2;
 		int cnt = 0;
 		while (true) {
+			// ë‚˜ëˆ ì§ˆ ê²½ìš° ë‚˜ëˆ„ê³  í˜„ìž¬ ì†Œì¸ìˆ˜ì˜ ê°œìˆ˜ +1
 			if (N % prime_factor == 0) {
 				N /= prime_factor;
 				cnt++;
 			}
-			else {
-				if (cnt != 0) {
+			else { // ë”ì´ìƒ í˜„ìž¬ ì†Œì¸ìˆ˜ë¡œ ë‚˜ëˆ„ì–´ì§€ì§€ ì•Šì„ ê²½ìš° ì†Œì¸ìˆ˜ì™€ ì†Œì¸ìˆ˜ ê°œìˆ˜ ì¶œë ¥í•˜ê³  ë‹¤ìŒ ìˆ˜ë¡œ
+				if (cnt != 0) { // í•œ ê°œ ì´ìƒ ë°œê²¬ëœ ì†Œì¸ìˆ˜ì— ëŒ€í•´ì„œë§Œ ì¶œë ¥ ì§„í–‰
 					cout << prime_factor << " " << cnt << "\n";
 					cnt = 0;
 				}
 				prime_factor++;
 			}
-			if (N == 1) {
+			if (N == 1) { // ë‹¤ ë‚˜ëˆ„ì–´ì ¸ ë”ì´ìƒ ë‚˜ëˆŒ ìˆ˜ ì—†ì„ ê²½ìš°
 				if (cnt != 0) {
 					cout << prime_factor << " " << cnt << "\n";
 					cnt = 0;
@@ -71,7 +37,7 @@ void solution(int T) {
 }
 
 int main() {
-	int T; // ATM¿¡ ÁÙ ¼­ÀÖ´Â »ç¶÷ÀÇ ¼ö
+	int T; // í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ìˆ˜
 
 	cin >> T;
 
