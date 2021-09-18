@@ -3,38 +3,6 @@
 #include<numeric>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-
- - º¯¼ö
-K: ÁÖ¾îÁö´Â Á¤¼öÀÇ °³¼ö
-
- - º¯¼ö, °ª¿¡ ´ëÇÑ Á¦ÇÑ
-KÀÇ ¹üÀ§ 1~100,000 => O(NlogN) È¤Àº ±×º¸´Ù È¿À²ÀûÀÎ ¾Ë°í¸®Áò ¼³°è
-Á¤¼ö´Â 0~1,000,000 »çÀÌÀÇ °ªÀ» °¡Áø´Ù.
-ÃÖÁ¾ÀûÀ¸·Î Àû¾î³½ ¼öÀÇ ÇÕÀº 2^31-1º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼ö => intÇü¿¡ ÀúÀå °¡´É
-
- - ¹®Á¦ »óÈ²
-¹Þ¾Æ¿Â Á¤¼ö°¡ 0ÀÏ °æ¿ì °¡Àå ÃÖ±Ù¿¡ ¾´ ¼ö¸¦ Áö¿ì°í, ¾Æ´Ò °æ¿ì ÇØ´ç ¼ö¸¦ ¾´´Ù!
-
-2. Ç®ÀÌ °èÈ¹
-°¡Àå ÃÖ±Ù¿¡ ¾´ ¼ö¸¦ Áö¿î´Ù´Â °ÍÀÌ¼­ FILO(First In Last Out)ÀÌ ¹Ù·Î »ý°¢³µ°í, stack±¸Á¶·Î ±¸ÇöÇÒ ¼ö ÀÖ°Ú´Ù´Â »ý°¢À» Çß´Ù.
-
-Á¤¼ö°¡ 0ÀÏ °æ¿ì¿¡ Áö¿ï ¼ö ÀÖ´Â ¼ö°¡ º¸ÀåµÇ¹Ç·Î, 0ÀÏ °æ¿ì ½ºÅÃÀÌ ºñ¾îÀÖ´ÂÁö Ã¼Å©ÇÒ ÇÊ¿ä´Â ¾ø´Ù.
-
-±×·±µ¥ c++¿¡´Â vector¶ó´Â Æí¸®ÇÑ ±¸Á¶°¡ ÀÖÀ¸¹Ç·Î »ç¿ëÇÏÀÚ.
-
-ÀÚ¼¼ÇÑ ±¸Á¶´Â ´ÙÀ½°ú °°´Ù.
-
-1. ÀÔ·ÂÀ» ¹ÞÀ¸¸ç ¼ýÀÚ¸¦ º¤ÅÍ¿¡ ÀÔ·ÂÇÏ°í, 0ÀÌ ÀÔ·ÂµÉ °æ¿ì º¤ÅÍ¿¡¼­ ¼ö¸¦ pop ÇÑ´Ù.
-2. ¸¶Áö¸·¿¡ ¸ðµç ¼ö¸¦ ´õÇÑ´Ù.
-
-
-3. °èÈ¹ °ËÁõ
-°¢ °ªÀÌ ³ª¿À´Â ºóµµ¿Í ÀÚ¸´¼ö¸¦ ¸ðµÎ °í·ÁÇÏ¿© ÇÕÇÑ °ªÀÌ Á¤·Ä±âÁØÀÌ µÇ¾úÀ¸¹Ç·Î, ³»¸²Â÷¼øÀ¸·Î Á¤·ÄÇÑ °ªµé¿¡ Á¤·ÄÇÑ ¼ø¼­´ë·Î ¸Å±ä´Ù¸é ÃÖ´ë°ªÀ» ±¸ÇÒ ¼ö ÀÖ´Ù!
-
- */
-
 int get_sum(int K) {
 
 	int temp;
@@ -42,21 +10,21 @@ int get_sum(int K) {
 
 	for (int i = 0; i < K; i++) {
 		cin >> temp;
-		if (temp == 0) {
+		if (temp == 0) { // 0ì´ ìž…ë ¥ë˜ì—ˆì„ ê²½ìš° ë§ˆì§€ë§‰ ìˆ˜ ì œê±°
 			num_vector.pop_back();
 		}
-		else {
+		else { // 0 ì´ì™¸ì˜ ìˆ˜ëŠ” push
 			num_vector.push_back(temp);
 		}
 
 	}
-
+	// ë²¡í„°ì˜ ëª¨ë“  ê°’ ë”í•œ ê°’ ë¦¬í„´
 	return accumulate(num_vector.begin(), num_vector.end(), 0);
 }
 
 int main() {
 
-	int K; // ´Ü¾îÀÇ °³¼ö
+	int K; // ì£¼ì–´ì§€ëŠ” ì •ìˆ˜ì˜ ê°œìˆ˜
 
 	cin >> K;
 
