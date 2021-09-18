@@ -12,6 +12,7 @@
 
 ## - Mathematics
  * [10610: 30](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10610%20-%2030.cpp)
+ * [9461: 파도반 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9461%20-%20%ED%8C%8C%EB%8F%84%EB%B0%98%20%EC%88%98%EC%97%B4.cpp)
 
 ## - String
  * [9935: 문자열 폭발](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/9935%20-%20%EB%AC%B8%EC%9E%90%EC%97%B4%20%ED%8F%AD%EB%B0%9C.cpp)
