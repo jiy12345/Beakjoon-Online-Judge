@@ -17,6 +17,7 @@
 ## - Mathematics
  * [10610: 30](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10610%20-%2030.cpp)
  * [9461: 파도반 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9461%20-%20%ED%8C%8C%EB%8F%84%EB%B0%98%20%EC%88%98%EC%97%B4.cpp)
+ * [1026: 보물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1026%20-%20%EB%B3%B4%EB%AC%BC.cpp)
 
 ## - Number Theory
  * [2312: 수 복원하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Number%20Theory/2312-%20%EC%88%98%20%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0.cpp)
