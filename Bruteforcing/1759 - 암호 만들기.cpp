@@ -6,36 +6,10 @@ using namespace std;
 
 string vowel = "aeiou";
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-L: ¾ÏÈ£ÀÇ ±æÀÌ
-C: »ç¿ëµÈ ¹®ÀÚÀÇ ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ
-3 <= L <= C <= 11
-
-- ¹®Á¦ »óÈ²
-¾ËÆÄºªÀº ¾ÏÈ£ ³»¿¡¼­ Ç×»ó Áõ°¡ÇÏ´Â ¼ø¼­·Î ¹è¿­µÇ¾î¾ß ÇÑ´Ù.
-¾ÏÈ£´Â ÃÖ¼Ò ÇÑ °³ÀÇ ¸ğÀ½°ú µÎ °³ÀÇ ÀÚÀ½À¸·Î ±¸¼ºµÇ¾î ÀÖ¾î¾ß ÇÑ´Ù.
-ÀÌ ¶§, °¡´ÉÇÑ ¸ğµç ¾ÏÈ£¸¦ Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-ÇÏ³ªÀÇ ¼±ÅÃ: ¾ËÆÄºª ÇÏ³ª ¼±ÅÃ
-
-- ±âÀú »ç·Ê: L°³ÀÇ ¾ËÆÄºª ¼±ÅÃ
-
-ÀÏ´Ü Áõ°¡ÇÏ´Â ¼ø¼­ÀÌ¹Ç·Î Á¤·ÄÀÌ ÀÌ·ç¾îÁ®¾ß ÇÒ °Í °°´Ù.
-
-=> ÇöÀç ´Ü°è¿¡¼­ °¡´ÉÇÑ ¾ËÆÄºªÀº ÀÌÀü´Ü°è ´ÙÀ½ ¾ËÆÄºªºÎÅÍ C-»Ì¾Æ¾ßÇÒ ¾ËÆÄºª(L-cypher.size)
-
-*/
-
 void solution(int L, int C, vector<char> alpha, string cypher, int cur_index, int num_vowel, int num_consonent) {
 	int cur_size = cypher.size();
 	if (cur_size == L) {
-		// Á¶°ÇÀ» ¸¸Á·½ÃÅ³ °æ¿ì¿¡¸¸ Ãâ·Â
+		// ì¡°ê±´ì„ ë§Œì¡±ì‹œí‚¬ ê²½ìš°ì—ë§Œ ì¶œë ¥
 		if (num_vowel >= 1 && num_consonent >= 2) {
 			cout << cypher << endl;
 		}
@@ -43,10 +17,10 @@ void solution(int L, int C, vector<char> alpha, string cypher, int cur_index, in
 	}
 
 	for (int i = cur_index;i < C - (L - cur_size) + 1;i++) {
-		if (vowel.find(alpha[i]) == string::npos) { // ÀÚÀ½ÀÏ °æ¿ì
+		if (vowel.find(alpha[i]) == string::npos) { // ììŒì¼ ê²½ìš°
 			solution(L, C, alpha, cypher + alpha[i], cur_index + (i - cur_index) + 1, num_vowel, num_consonent + 1);
 		}
-		else { // ¸ğÀ½ÀÏ °æ¿ì
+		else { // ëª¨ìŒì¼ ê²½ìš°
 			solution(L, C, alpha, cypher + alpha[i], cur_index + (i - cur_index) + 1, num_vowel + 1, num_consonent);
 		}
 	}
@@ -65,6 +39,7 @@ int main() {
 		alpha.push_back(temp);
 	}
 
+	// ì…ë ¥ëœ ì•ŒíŒŒë²³ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 	sort(alpha.begin(), alpha.end());
 
 	solution(L, C, alpha, "", 0, 0, 0);
