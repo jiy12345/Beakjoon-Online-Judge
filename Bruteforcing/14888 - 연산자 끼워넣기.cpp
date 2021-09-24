@@ -11,13 +11,13 @@ using namespace std;
 #define INT_MAX 2147483647
 
 void *solution(int N, vector<int> num, int *num_operator, int *answer, int calculated_value, int num_used_operator) {
-  // 기저 사례: 모든 연산자를 다 뽑았을 경우
+	// 기저 사례: 모든 연산자를 다 뽑았을 경우
 	if (num_used_operator == N - 1) {
-    // 현재 연산한 값이 최대값보다 크면 최대값 
+    		// 현재 연산한 값이 최대값보다 크면 최대값 
 		if (answer[0] < calculated_value) {
 			answer[0] = calculated_value;
 		}
-    // 현재 연산한 값이 최소값보다 작으면 최소값 갱신
+    		// 현재 연산한 값이 최소값보다 작으면 최소값 갱신
 		if (answer[1] > calculated_value) {
 			answer[1] = calculated_value;
 		}
@@ -25,10 +25,10 @@ void *solution(int N, vector<int> num, int *num_operator, int *answer, int calcu
 
 	for (int i = 0;i < 4;i++) {
 		if (num_operator[i] != 0) {
-      // 연산자 하나 사용
+  		  	// 연산자 하나 사용
 			num_operator[i]--;
 			switch(i) {
-      // 각 연산을 진행한 값 넘겨주기
+      			// 각 연산을 진행한 값 넘겨주기
 			case PLUS:
 				solution(N, num, num_operator, answer, calculated_value + num[num_used_operator + 1], num_used_operator + 1);
 				break;			
@@ -42,7 +42,7 @@ void *solution(int N, vector<int> num, int *num_operator, int *answer, int calcu
 				solution(N, num, num_operator, answer, calculated_value / num[num_used_operator + 1], num_used_operator + 1);
 				break;
 			}		
-      // 현 단계에서는 사용하지 않은 상태 유지해주기
+      			// 현 단계에서는 사용하지 않은 상태 유지해주기
 			num_operator[i]++;
 		}
 	}
