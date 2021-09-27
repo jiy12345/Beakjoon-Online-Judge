@@ -2,6 +2,7 @@
 백준 문제 풀이
 
 ## - Bruteforcing
+ * [1062: 가르침](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1062%20-%20%EA%B0%80%EB%A5%B4%EC%B9%A8.cpp)
  * [1759: 암호 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1759%20-%20%EC%95%94%ED%98%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)
  * [14888: 연산자 끼워넣기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14888%20-%20%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.cpp)
 
