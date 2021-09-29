@@ -1,98 +1,87 @@
-#include<iostream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
 
-/*
-1. 문제 분석
-
-- 변수
-N, M: 종이조각의 세로 크기와 가로 크기
-
-- 변수 제한 사항
-1 <= M, N <= 4
-
- - 문제 상황
- 종이를 가로크기가 1이거나 세로크기가 1인 조각들로 잘라 해당 종이에 적힌 수들을 모두 합한 값을 구한다.
-
-2. 풀이 계획
- 이 문제의 핵심은 종이를 자르는 것을 어떻게 경우의 수로 표현할까이다. 
-
-인덱스를 오른쪽으로 진행하며, 오른쪽 끝에 다다랐을때는 아래로 가 다시 왼쪽끝부터 진행하자.
-
-이때, 이미 사용한 수임을 표시하여야 하기 때문에 bool형 M*N 배열을 선언하고, 다른 조각에 포함된 수임을 표시하여야 할 것 같다.
-
-그렇다면 한 조각이 끝났음을 어떻게 표시하며, 재귀에서의 한번의 선택은 어떻게 되어야 할까?
-
-정리해보면, 첫 위치에서의 선택만 세가지이며, 나머지 위치에서의 선택은 두가지라고 볼 수 있다.
-
-1) 첫 위치에서의 선택
- - 오른쪽으로 수를 더 포함시키기
- - 아래쪽으로 수를 더 포함시키기
- - 멈추기
-
-2) 오른쪽이나 아래쪽으로 이미 진행한 상태에서의 선택
- - 오른쪽이나 아래쪽으로 수를 더 포함시키기
- - 멈추기
-
-따라서, 자세한 계획을 정리해보면 다음과 같다.
-
-1. 한 행을 하나의 문자열로 하여 배열에 수를 입력받는다.
-2. 함수 내에서 이중 반복문을 돌려 모든 위치에서 다음의 알고리즘을 반복한다.
- 아래의 알고리즘들은 모두 현 위치의 수가 다른 조각에 포함되지 않은 수일 때만 진행한다.
- if 첫위치일 경우
-  1. 오른쪽으로 수를 더 포함시키도록 함수를 재귀적으로 호출한다.
-  2. 아래쪽으로 수를 더 포함시키도록 함수를 재귀적으로 호출한다.
-  3. 현 위치에서 멈추고 전체값에 더한다.
-
- if 재귀적으로 호출되어 이미 뽑는 중일 경우
-  1. 현재 진행중인 방향으로 수를 더 포함시키도록 함수를 재귀적으로 호출한다.
-  2. 현위치에서 멈추고 전체 값에 더한다.
-
- 마지막 위치까지 계산한 후 현재 저장되어 있는 값보다 큰 값이 도출되었다면, 현재 도출된 값으로 값을 갱신한다.
-
-3. 계획 검증
-
-
-*/
-
-int N, M;
-int answer = 0;
 vector<string> paper;
+bool is_used[4][4] = { false, };
+int N, M, answer = 0;
 
-void solution(int cur_i_index, int cur_j_index, string cur_paper, int cur_sum) {
-	// 기저사례: 오른쪽 아래의 끝까지 진행했을 경우
-	if (cur_i_index == N && cur_j_index == M) {
-		if (cur_sum > answer) {
-			answer = cur_sum;
-		}
+// num: 배열을 한줄로 늘어놨을 때의 위치
+// sum: 현재까지의 합
+void solution(int num, int sum) {
+	int cur_j_index = num % M;
+	int cur_i_index = num / M;
+
+	// 기저 사례: 배열의 위치를 벗어났을 경우
+	if (num >= N * M) {
+		answer = max(answer, sum);
 		return;
 	}
 
+	// 현 위치가 사용된 경우에는 다음 위치로 넘어가기
+	if (is_used[cur_i_index][cur_j_index]) {
+		solution(num + 1, sum);
+	}
+	else {
+		int ni, nj;
+		string cur_paper;
+		cur_paper = paper[cur_i_index][cur_j_index];
+
+		// 1. 현 위치만 사용한 것
+		is_used[cur_i_index][cur_j_index] = true;
+		solution(num + 1, sum + stoi(cur_paper));
+		is_used[cur_i_index][cur_j_index] = false;
+
+		// 2. 밑으로 자르기
+		// 자를 수 있는 위치를 제한하여 인덱스 벗어나지 않게 하기!
+		for (int k = 1; k < N - cur_i_index; k++) {
+			// 항상 오른쪽으로 이동하고, 밑으로만 자르므로 밑으로 자를 경우에는 사용된 인덱스가 나올 일이 없음
+
+			// 현위치 잡아주기
+			nj = cur_j_index;
+			ni = cur_i_index + k;
+			// 값 하나가 추가되면 현 위치의 값의 자리수가 하나씩 증가하는 것이므로 추가
+			cur_paper += paper[ni][nj];
+
+			// 현 위치까지만 자른 것
+			for (int j = 1; j <= k; j++)
+				is_used[cur_i_index + j][nj] = true;
+			solution(num + 1, sum + stoi(cur_paper));
+			for (int j = 1; j <= k; j++)
+				is_used[cur_i_index + j][nj] = false;
+		}
+		cur_paper = paper[cur_i_index][cur_j_index];
+		// 3. 오른쪽으로 자르기
+		// 자를 수 있는 위치를 제한하여 인덱스 벗어나지 않게 하기!
+		for (int k = 1; k < M - cur_j_index; k++) {
+			// 현 위치 잡아주기
+			ni = cur_i_index;
+			nj = cur_j_index + k;
+
+			// 현 위치가 사용된 위치일 경우 더이상 진행하지 않고 리턴
+			if (is_used[ni][nj]) return;
+			cur_paper += paper[ni][nj];
+			
+			// 현 위치까지만 자른 것
+			for (int j = 1; j <= k; j++) 
+				is_used[ni][cur_j_index + j] = true;
+			solution(num + 1, sum + stoi(cur_paper));
+			for (int j = 1; j <= k; j++)
+				is_used[ni][cur_j_index + j] = false;
+		}
+	}
 }
 
 int main() {
-
-	string temp;
-
+	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 	cin >> N >> M;
-
-	bool **is_used = new bool* [N];
-	for (int i = 0; i < N; i++)
-		is_used[i] = new bool[M];
-
+	string str;
 	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {
-			is_used[i][j] = false;
-		}
+		cin >> str;
+		paper.push_back(str);
 	}
-
-	for (int i = 0; i < N; i++) {
-		cin >> temp;
-		paper.push_back(temp);
-	}
-
-	solution();
-
+	solution(0, 0);
+	cout << answer;
 	return 0;
 }
