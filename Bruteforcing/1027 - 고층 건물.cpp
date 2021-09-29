@@ -28,8 +28,6 @@ int solution(int N) {
 		building_h.push_back(temp);
 	}
 
-
-
 	for (i = 0; i < N; i++) {
 		for (j = i + 1; j < N; j++) { // i와 j 건물 비교
 			// 두 지점 사이의 직선의 방정식 구하기
