@@ -6,7 +6,7 @@
  * [1062: 가르침](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1062%20-%20%EA%B0%80%EB%A5%B4%EC%B9%A8.cpp)
  * [1182: 부분수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1182%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp)
  * [1759: 암호 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1759%20-%20%EC%95%94%ED%98%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)
- * [14391: 종이 조각](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14391%20-%20%EC%A2%85%EC%9D%B4%20%EC%A1%B0%EA%B0%81.cpp)
+ * [14391: 종이 조각(다시 해보기)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14391%20-%20%EC%A2%85%EC%9D%B4%20%EC%A1%B0%EA%B0%81.cpp)
  * [14888: 연산자 끼워넣기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14888%20-%20%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.cpp)
 
 ## - Greedy Algorithm
