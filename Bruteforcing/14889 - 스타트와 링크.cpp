@@ -4,80 +4,50 @@
 #include<climits>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
+int N; // ì´ ì¸ì› ìˆ˜
+int answer = INT_MAX; // ë‹µìœ¼ë¡œ ì¶œë ¥í•  ìµœì†Œê°’ì„ ì €ìž¥í•  ë³€ìˆ˜
+int status[20][20]; // ì‚¬ëžŒ ì¡°í•©ì— ë”°ë¥¸ íŒ€ì˜ ëŠ¥ë ¥ì¹˜ì— ë”í•´ì§ˆ ê°’ì„ ì €ìž¥í•  ë°°ì—´
+// ê° ì¸ì›ì´ ì–´ë–¤ íŒ€ì— ì†í• ì§€ ë‚˜íƒ€ë‚¼ ë°°ì—´
+bool team[20] = { false, }; // true: ìŠ¤íƒ€íŠ¸ íŒ€ / false: ë§í¬ íŒ€
 
-- º¯¼ö
-N: Ãà±¸¸¦ À§ÇØ ¸ðÀÎ »ç¶÷ÀÇ ¼ö
-S[i][j], S[j][i]: i¹ø »ç¶÷°ú j¹ø »ç¶÷ÀÌ °°Àº ÆÀ¿¡ ¼ÓÇßÀ» ¶§ ÆÀ¿¡ ´õÇØÁö´Â ´É·ÂÄ¡
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-4 <= N <= 20, NÀº Â¦¼ö
-
- - ¹®Á¦ »óÈ²
- N¸íÀÇ »ç¶÷À» N/2¸íÀ¸·Î ³ª´³À» ¶§, µÎ ÆÀ°£ÀÇ ´É·ÂÄ¡ Â÷°¡ ÃÖ¼Ò°ªÀ» Ãâ·ÂÇÑ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
- µÎ ÆÀÀÇ ÀÎ¿ø¼ö¸¦ ÇÕÇÏ¸é ÀüÃ¼ ÀÎ¿øÀÌ µÇ¹Ç·Î, ÇÑÆÀÀ» ¸ðµÎ »ÌÀ¸¸é ´Ù¸¥ ÆÀ¿¡ ÀÎ¿øµµ È®Á¤µÇ°Ô µÈ´Ù.
-µû¶ó¼­ N¸í Áß N/2¸íÀ» »Ì´Â Á¶ÇÕ ¹®Á¦¶ó°í º¼ ¼ö ÀÖ´Ù.
-
-
-
-1. 2Â÷¿ø ¹è¿­¿¡ ´É·ÂÄ¡ Á¤º¸¸¦ ÀÔ·Â¹Þ´Â´Ù.
-2. Àç±ÍÇÔ¼ö¸¦ ±¸ÇöÇÏ¿© ½ºÅ¸Æ® ÆÀÀ» »ÌÀ» ¼ö ÀÖ´Â ¸ðµç °æ¿ìÀÇ ¼ö¸¦ ±¸ÇÑ´Ù.
- - ºÎºÐ ¹®Á¦: ÆÀ¿ø ÇÑ¸í ¼±ÅÃ
- - ±âÀú »ç·Ê: ½ºÅ¸Æ® ÆÀ¿¡ N/2¸íÀ» »Ì¾ÒÀ» ¶§
- - °°Àº ´Ü°è¿¡¼­ÀÇ ¹Ýº¹: Çö À§Ä¡ ~ ³¡¿¡¼­ »Ì¾Æ¾ßÇÒ °³¼ö »« °Í
-
-3. ±âÀú»ç·Ê¿¡ µµ´ÞÇßÀ» °æ¿ì ÀÌÁß ¹Ýº¹¹®À» µ¹·Á °¢°¢ ÆÀÀÇ ´É·ÂÄ¡ÀÇ ÇÕÀ» ±¸ÇÑ ÈÄ, ±× µÑ°£ÀÇ Â÷¸¦ ±¸ÇÑ´Ù.
-4. ÇöÀç ÀúÀåµÈ ÃÖ¼Ò°ª°ú ºñ±³ÇÏ¿© ÇöÀç °ªÀÌ ´õ ÀÛ´Ù¸é °ªÀ» °»½ÅÇÑ´Ù.
-
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
-int N;
-int answer = INT_MAX;
-int status[20][20];
-bool team[20] = { false, }; // true: ½ºÅ¸Æ® ÆÀ / false: ¸µÅ© ÆÀ
-
+// start_team_cnt: í˜„ìž¬ê¹Œì§€ ìŠ¤íƒ€íŠ¸ íŒ€ì— ë½‘ížŒ ì¸ì› ìˆ˜
+// cur_index: í˜„ìž¬ ì¸ë±ìŠ¤
 void solution(int start_team_cnt, int cur_index) {
 
-	// ±âÀú»ç·Ê
+	// ê¸°ì €ì‚¬ë¡€: ìŠ¤íƒ€íŠ¸ íŒ€ì— N/2 ì‚¬ëžŒì´ ë½‘í˜”ì„ ê²½ìš°
 	if (start_team_cnt == N/2) {
-		int start_team_status_sum = 0;
-		int link_team_status_sum = 0;
+		int start_team_status_sum = 0; // ìŠ¤íƒ€íŠ¸ íŒ€ ëŠ¥ë ¥ì¹˜ í•©
+		int link_team_status_sum = 0; // ë§í¬ íŒ€ ëŠ¥ë ¥ì¹˜ í•©
 		
-		bool is_start_team; // true: ½ºÅ¸Æ® ÆÀ / false: ¸µÅ© ÆÀ
+		bool is_start_team; // true: ìŠ¤íƒ€íŠ¸ íŒ€ / false: ë§í¬ íŒ€
 
-		// °¢ ÆÀÀÇ ´É·ÂÄ¡ °è»ê
+		// ê° íŒ€ì˜ ëŠ¥ë ¥ì¹˜ ê³„ì‚°
 		for (int i = 0; i < N; i++) {
-			is_start_team = team[i];
-			for (int j = i + 1; j < N; j++) {
-				if (is_start_team == team[j]) {
-					if (is_start_team) {
+			is_start_team = team[i]; // í•œ ì‚¬ëžŒ ë½‘ê¸°
+			for (int j = i + 1; j < N; j++) { // ë½‘ì•„ ë†“ì€ ì‚¬ëžŒê³¼ ì¡°í•©ë  ì‚¬ëžŒ ë½‘ê¸° 
+				if (is_start_team == team[j]) { // ë‘ ì‚¬ëžŒì˜ íŒ€ì´ ê°™ì•˜ì„ ê²½ìš°ì—ë§Œ ë™ìž‘
+					if (is_start_team) { // ë‘ ì‚¬ëžŒì´ ê°™ì´ ìŠ¤íƒ€íŠ¸ íŒ€ì¼ ê²½ìš°
 						start_team_status_sum += (status[i][j] + status[j][i]);
 					}
-					else {
+					else { // ë‘ ì‚¬ëžŒì´ ê°™ì´ ë§í¬ íŒ€ì¼ ê²½ìš°
 						link_team_status_sum += (status[i][j] + status[j][i]);
 					}
 				}
 			}
 		}
 
+		// ë‘ íŒ€ì˜ ëŠ¥ë ¥ì¹˜ ì°¨ ê³„ì‚°
 		int diff = abs(start_team_status_sum - link_team_status_sum);
 
-		answer = min(answer, diff); // µÎ ¼öÁß ´õ ÀÛÀº ¼ö·Î °»½Å
+		answer = min(answer, diff); // ë‘ ìˆ˜ì¤‘ ë” ìž‘ì€ ìˆ˜ë¡œ ê°±ì‹ 
 
 		return;
 	}
 
 	for (int i = cur_index; i < N - (N/2 - start_team_cnt); i++){
-		team[i] = true; // ½ºÅ¸Æ® ÆÀ¿¡ ÇÑ¸í »ÌÀº °ÍÀ» Ç¥Çö
+		team[i] = true; // ìŠ¤íƒ€íŠ¸ íŒ€ì— í•œëª… ë½‘ì€ ê²ƒì„ í‘œí˜„
 		solution(start_team_cnt + 1, i + 1);
-		team[i] = false; // ÇÔ¼ö ¸¶Ä¡°í ¿ÔÀ¸¸é ÇöÀç ´Ü°è¿¡¼­´Â ¾È»ÌÀº »óÅÂ À¯Áö
+		team[i] = false; // í•¨ìˆ˜ ë§ˆì¹˜ê³  ì™”ìœ¼ë©´ í˜„ìž¬ ë‹¨ê³„ì—ì„œëŠ” ì•ˆë½‘ì€ ìƒíƒœ ìœ ì§€
 	}
 
 }
