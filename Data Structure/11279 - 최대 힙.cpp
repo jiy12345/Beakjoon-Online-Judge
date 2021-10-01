@@ -2,61 +2,35 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-
-- º¯¼ö
-N: ÁÖ¾îÁú ¿¬»êÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-4 <= N <= 100,000
-0 <= ÀÔ·ÂµÇ´Â¼ö <= 2^31
-
- - ¹®Á¦ »óÈ²
- ÀÔ·ÂµÇ´Â ¼ö°¡ ÀÚ¿¬¼ö¶ó¸é ¹è¿­¿¡ ÀÚ¿¬¼ö¸¦ ÀÔ·ÂÇÏ°í, ÀÚ¿¬¼ö°¡ ¾Æ´Ñ 0ÀÌ¶ó¸é ¹è¿­¿¡¼­ °¡Àå Å« °ªÀ» Ãâ·ÂÇÏ°í ±× °ªÀ» ¹è¿­¿¡¼­ Á¦°ÅÇÏ´Â µ¿ÀÛÀ» ÇÏµµ·Ï ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
- ÀÌ ¶§ ¹è¿­ÀÌ ºñ¾îÀÖ´Âµ¥ Ãâ·ÂÀ» ¿ä±¸ÇÑ °æ¿ì 0À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- ÀÌ ¹®Á¦´Â c++¿¡¼­ Á¦°øÇÏ´Â <queue>¶óÀÌºê·¯¸®(¿ì¼±¼øÀ§ Å¥¸¦ ±¸ÇöÇÑ ¶óÀÌºê·¯¸®)¸¦ »ç¿ëÇÏ¸é ¾î·ÆÁö ¾Ê°Ô Ç® ¼ö ÀÖÀ» µí ÇÏ´Ù.
-
- ¿ì¼±¼øÀ§ Å¥´Â Á¶°Ç¿¡ µû¶ó ¸ðµç ¿ø¼Ò¿¡ ´ëÇØ ºñ±³¿ìÀ§¿¡ ÀÖ´Â °ª(¿¹¸¦ µé¸é ÃÖ´ë°ª, ÃÖ¼Ò°ª µî)À» top¿¡ À§Ä¡½ÃÄÑ, ÇØ´ç °ªÀº O(1)ÀÇ ½Ã°£º¹Àâµµ·Î Å½»öÀÌ °¡´ÉÇÏ°Ô ÇÏ´Â ÀÚ·á±¸Á¶ÀÌ´Ù.
-
- µû¶ó¼­ ÀÚ¼¼ÇÑ °úÁ¤Àº ´ÙÀ½°ú °°´Ù.
-
-1. topÀÌ Ç×»ó ÃÖ´ë°ªÀÎ ¿ì¼±¼øÀ§ Å¥¸¦ ¼±¾ðÇÑ´Ù.
-2. ÀÔ·Â¿¡ µû¶ó ´ÙÀ½ Çàµ¿À» ÁøÇàÇÑ´Ù.
- 1) 0ÀÌ ÀÔ·ÂµÇ¸é top¿¡ ÀÖ´Â °ªÀ» Ãâ·ÂÇÏ°í top¿¡ ÀÖ´Â °ªÀ» »èÁ¦ÇÑ´Ù.
- 2) ÀÚ¿¬¼ö°¡ ÀÔ·ÂµÇ¸é ÀÚ¿¬¼ö¸¦ ¿ì¼±¼øÀ§ Å¥¿¡ »ðÀÔÇÑ´Ù.
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
 int N;
 
 void solution() {
+	// ìµœëŒ€ íž™ ìƒì„±
 	priority_queue<int> max_heap;
 	int input;
 
 	for (int i = 0; i < N; i++) {
-		cin >> input;
-		if (input == 0) {
-			if (max_heap.empty()) {
+		cin >> input; // ê°’ ìž…ë ¥ë°›ê¸°
+		if (input == 0) { // ìž…ë ¥ì´ 0ì¼ ê²½ìš°
+			if (max_heap.empty()) { // íž™ì´ ë¹„ì—ˆì„ ê²½ìš° 
+				// 0 ì¶œë ¥
 				cout << 0 << '\n';
 			}
-			else {
+			else { // íž™ì— ê°’ì´ ìžˆì„ ê²½ìš° 
+				// topì— ìžˆëŠ” ê°’ ì¶œë ¥í•˜ê³  topì— ìžˆëŠ” ê°’ pop
 				cout << max_heap.top() << '\n';
 				max_heap.pop();
 			}
 		}
 		else {
+			// 0ì´ ì•„ë‹Œ ë‚˜ë¨¸ì§€ ê²½ìš°ì—ëŠ” heapì— í•­ìƒ í‘¸ì‹œ
 			max_heap.push(input);
 		}
 	}
 }
 
 int main() {
+	// ë¹ ë¥¸ ìž…ì¶œë ¥ì„ ìœ„í•œ ìž…ë ¥
 	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
 	cin >> N;
