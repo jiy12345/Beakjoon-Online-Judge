@@ -11,7 +11,7 @@
  * [14889: 스타트와 링크](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14889%20-%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%99%80%20%EB%A7%81%ED%81%AC.cpp)
 
 ## - Data Structures
- * [1027: 고층 건물](https://www.naver.com/)
+ * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
 
 ## - Greedy Algorithm
  * [1339: 단어 수학](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1339%20-%20%EB%8B%A8%EC%96%B4%20%EC%88%98%ED%95%99.cpp)
