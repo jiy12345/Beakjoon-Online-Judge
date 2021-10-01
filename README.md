@@ -10,6 +10,9 @@
  * [14888: 연산자 끼워넣기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14888%20-%20%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.cpp)
  * [14889: 스타트와 링크](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14889%20-%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%99%80%20%EB%A7%81%ED%81%AC.cpp)
 
+## - Data Structures
+ * [1027: 고층 건물](https://www.naver.com/)
+
 ## - Greedy Algorithm
  * [1339: 단어 수학](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1339%20-%20%EB%8B%A8%EC%96%B4%20%EC%88%98%ED%95%99.cpp)
  * [1541: 잃어버린 괄호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1541%20-%20%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%20%EA%B4%84%ED%98%B8.cpp)
