@@ -12,6 +12,7 @@
 
 ## - Data Structures
  * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
+ * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
 
 ## - Greedy Algorithm
  * [1339: 단어 수학](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1339%20-%20%EB%8B%A8%EC%96%B4%20%EC%88%98%ED%95%99.cpp)
