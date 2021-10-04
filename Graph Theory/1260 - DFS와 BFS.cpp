@@ -1,69 +1,42 @@
 #include<iostream>
-#include<vector>
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
+int N, M; // ì •ì  ê°œìˆ˜, ê°„ì„  ê°œìˆ˜
 
-- º¯¼ö
-N: Á¤Á¡ÀÇ °³¼ö
-M: °£¼±ÀÇ °³¼ö
-V: Å½»öÀ» ½ÃÀÛÇÒ ÁöÁ¡
+bool link[1001][1001] = { {false,}, }; // ë‘ ì§€ì ê°„ì˜ ê°„ì„ ì´ ìˆëŠ”ì§€ í‘œì‹œí•˜ëŠ” ë°°ì—´ 
 
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1~1,000
-M: 1~10,000
-µÎ Á¤Á¡ »çÀÌ¿¡ ¿©·¯°³ÀÇ °£¼±ÀÌ ÀÖÀ» ¼ö ÀÖÀ½!
-
-- ¹®Á¦ »óÈ²
-ÀÔ·ÂÀ¸·Î µé¾î¿Â ±×·¡ÇÁ¸¦ DFS·Î Å½»öÇÑ °á°ú¿Í BFS·Î Å½»öÇÑ °á°ú¸¦ Ãâ·ÂÇÑ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
-ÀÏ´Ü µÎ Á¤Á¡ »çÀÌ¿¡ ¿©·¯°³ÀÇ °£¼±ÀÌ ÀÖÀ» ¼ö ÀÖÀ¸¹Ç·Î, intÇü 1000 x 1000 º£¿­À» ¸¸µé¾î °£¼±ÀÇ °³¼ö¸¦ Á¤ÇÑ´Ù!
-
-°¢°¢ÀÇ ÇÔ¼ö¸¦ Á¤ÀÇÇÏ¿© dfs
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-int N, M;
-
-int num_of_link_dfs[1001][1001] = { {0,}, }; // µÎ ÁöÁ¡°£ÀÇ °£¼±ÀÇ °³¼ö Ç¥½ÃÇÏ´Â 
-int num_of_link_bfs[1001][1001] = { {0,}, }; // µÎ ÁöÁ¡°£ÀÇ °£¼±ÀÇ °³¼ö Ç¥½ÃÇÏ´Â 
-
+// ê° ì•Œê³ ë¦¬ì¦˜ì—ì„œ íƒìƒ‰ ì‹œ ë°©ë¬¸í•œ ë…¸ë“œë¥¼ í‘œì‹œí•˜ê¸° ìœ„í•œ ë°°ì—´!
 bool node_visited_dfs[1001] = { false, };
 bool node_visited_bfs[1001] = { false, };
 
-
 void DFS(int cur_node) {
+	// ì²« ë…¸ë“œëŠ” ë¬´ì¡°ê±´ ë°©ë¬¸í•´ì•¼ í•˜ë¯€ë¡œ
 	node_visited_dfs[cur_node] = true;
-	cout << cur_node <<" ";
-	// Á¾·áÁ¶°ÇÀÌ µüÈ÷ ¾øÀÌ ´õÀÌ»ó ¿¬°áÇÒ ³ëµå°¡ ¾øÀ¸¸é Á¾·áµÊ!
+	cout << cur_node << " ";
+	// ì¢…ë£Œì¡°ê±´ì´ ë”±íˆ ì—†ì´ ë”ì´ìƒ íƒìƒ‰í•  ë…¸ë“œê°€ ì—†ìœ¼ë©´ ì¢…ë£Œë¨!
 	for (int i = 1; i <= N;i++) {
-		if (num_of_link_dfs[cur_node][i] != 0 && node_visited_dfs[i] == false) {
-			num_of_link_dfs[cur_node][i]--;
-			num_of_link_dfs[i][cur_node]--;
-
+		// ì—°ê²°ë˜ì–´ ìˆìœ¼ë©°, ì•„ì§ ë°©ë¬¸í•˜ì§€ ì•Šì€ ë…¸ë“œì¼ ê²½ìš°ì—ë§Œ íƒìƒ‰
+		if (link[cur_node][i] == true && node_visited_dfs[i] == false) {
 			DFS(i);
 		}
 	}
 }
 
 void BFS(int start_node) {
-	queue<int> bfs_queue;
-	bfs_queue.push(start_node);
+	queue<int> bfs_queue; // ë°©ë¬¸í•  ë…¸ë“œì˜ ìˆœì„œë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ í
+	bfs_queue.push(start_node); // íì— í˜„ì¬ ë…¸ë“œ ì§‘ì–´ ë„£ê¸°
+	node_visited_bfs[start_node] = true; // ì²« ë…¸ë“œëŠ” ë¬´ì¡°ê±´ ë°©ë¬¸í•´ì•¼ í•˜ë¯€ë¡œ
 	while (!bfs_queue.empty()) {
+		// íì˜ ê°€ì¥ ì•ìª½ì— ìˆëŠ” ë…¸ë“œ ë¹¼ì˜¤ê¸°
 		int cur_node = bfs_queue.front();
 		bfs_queue.pop();
-		node_visited_bfs[cur_node] = true;
 		cout << cur_node << " ";
-
+		
 		for (int i = 1; i <= N; i++) {
-			if (num_of_link_bfs[cur_node][i] != 0 && node_visited_bfs[i] == false) {
-				num_of_link_bfs[cur_node][i]--;
-				num_of_link_bfs[i][cur_node]--;
+			// ì—°ê²°ë˜ì–´ ìˆìœ¼ë©°, ì•„ì§ ë°©ë¬¸í•˜ì§€ ì•Šì€ ë…¸ë“œì¼ ê²½ìš°ì—ë§Œ ë‹¤ìŒ íƒìƒ‰í•  ëª©ë¡ì— ë„£ìŒ
+			if (link[cur_node][i] == true && node_visited_bfs[i] == false) {
+				node_visited_bfs[i] = true; 
 				bfs_queue.push(i);
 			}
 		}
@@ -71,17 +44,18 @@ void BFS(int start_node) {
 }
 
 int main() {
-	int V;
+	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+
+	int V; // íƒìƒ‰ ì‹œì‘ì§€ì 
 
 	cin >> N >> M >> V;
 
 	int start, end;
 	for (int i = 0; i < M; i++) {
 		cin >> start >> end;
-		num_of_link_dfs[start][end]++;
-		num_of_link_dfs[end][start]++;
-		num_of_link_bfs[start][end]++;
-		num_of_link_bfs[end][start]++;
+		// ê°„ì„ ì€ ì–‘ë°©í–¥ì´ë¯€ë¡œ ì–‘ìª½ë°©í–¥ìœ¼ë¡œ ëª¨ë‘ ì…ë ¥
+		link[start][end]=true;
+		link[end][start]=true;
 	}
 
 	DFS(V);
