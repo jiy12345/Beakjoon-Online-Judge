@@ -5,96 +5,44 @@
 #include<string>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-
-- º¯¼ö
-N, M: ¹Ì·ÎÀÇ °¡·Î, ¼¼·ÎÅ©±â
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 2~100
-
-- ¹®Á¦ »óÈ²
-(1, 1)¿¡¼­ Ãâ¹ßÇÏ¿© (N,M)ÀÇ À§Ä¡·Î ÀÌµ¿ÇÒ ¶§ Áö³ª¾ß ÇÏ´Â ÃÖ¼ÒÀÇ Ä­ ¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó!
-
-2. Ç®ÀÌ °èÈ¹
-°¢°¢ÀÇ ¼öµéÀÌ ºÙ¿©¼­ ÁÖ¾îÁö¹Ç·Î, ¹Ì·ÎÀÇ ÀÔ·ÂÀº ¹®ÀÚ¿­·Î ¹Þ¾Æ¾ß Ã³¸®°¡ ½¬¿ï °Í °°´Ù!
-¿¹¿Ü Ã³¸®¸¦ ÁÙÀÌ±â À§ÇØ, »ç¹æÇâÀÇ ³¡ ÁÙ¿¡ 0µéÀ» ºÙÀÌµµ·Ï ÇÏÀÚ! => ÀÌ·¸°Ô µÇ¸é ¹è¿­¿¡¼­ÀÇ ÀÎµ¦½ºµµ (1, 1) => (N, M)ÀÌ µÈ´Ù!
-
-DFS·Î ±¸ÇöÇÏ¸é ½Ã°£ÃÊ°ú°¡ ¹ß»ýÇÒ ¼ö¹Û¿¡ ¾ø´Ù!
- => µû¶ó¼­ BFS·Î ±¸ÇöÇØ¾ßÇÑ´Ù!
-
-BFS·Î ±¸ÇöÇÑ´Ù¸é, °°Àº ±íÀÌ¶ó´Â °ÍÀ» ¾î¶»°Ô ³ªÅ¸³¾±î?
-
-
-1. DFS·Î ±¸Çö
- => ½Ã°£ ÃÊ°ú ¹ß»ý
- ½Ã°£º¹Àâµµ °è»êÇØº¸±â
-
-2. bfs·Î ±¸Çö
- => ¾î¶»°Ô ÃÖ¼Ò°ªÀ» Ç¥ÇöÇÒ Áö ¾î·Á¿ò °ÞÀ½
- => °°Àº ±íÀÌ(°Å¸®)¸¦ °£ °Í ³¢¸® °°ÀÌ µûÁö¹Ç·Î, °¡Àå ¸ÕÀú µµÂøÇÒ ¶§ °Å¸®°¡ ÃÖ´Ü °æ·ÎÀÓ!
- => µû¶ó¼­ Å¥¿¡ Çª½ÃÇÒ ¶§ ±íÀÌ(°Å¸®) Á¤º¸±îÁö °°ÀÌ Çª½ÃÇÏ±â!
-
-3. ¸Þ¸ð¸® ÃÊ°ú ¹ß»ý
- => Áú¹®À» °Ë»öÇÏ´Ù°¡ ¾Ë°Ô µÈ »ç½Ç: Å¥¿¡¼­ ÆË ÇÒ¶§ ¹æ¹®Çß´Ù´Â Ç¥½Ã¸¦ Çß¾ú´Âµ¥, ÀÌ·¸°Ô µÇ¸é ÆË ÇÏ±â Àü¿¡ Áßº¹ ¹æ¹®ÇÏ´Â °æ·Î°¡ ¸Å¿ì ¸¹ÀÌ »ý±â°Ô µÈ´Ù!
-
-dfs¸¦ »ç¿ëÇØ¼­ ÃÖ´Ü°æ·Î¸¦ Ã£À¸·ÁÇÏ¸é Áö¼ö½Ã°£ÀÌ °É¸°´Ù°í ¾Ë°íÀÖ½À´Ï´Ù. (¸ðµç °æ·Î¸¦ ´ÙÃ£¾Æ¾ßÇÏ°í, Áö±Ý Ã£Àº °æ·Îº¸´Ù ³ªÁß¿¡ Ã£Àº °æ·Îº¸´Ù ´õ µ¹¾Æ°¡°í ½Ã°£ÀÌ ¿À·¡°É¸±¼ö ÀÖÀ¸¹Ç·Î ´Ù Å½»öÀ» ÇØÁà¾ßÇÏ´Ï)
-
-Àú´Â °¡ÁßÄ¡°¡ µ¿ÀÏÇÑ ±×·¡ÇÁ¿¡¼­ ÃÖ´Ü °æ·Î(ÃÖ´Ü ½Ã°£ Æ÷ÇÔ) ¹®Á¦´Â bfs¸¦ »ç¿ëÇÏ°í ÀÖ½À´Ï´Ù.
-
-
-ÃÖ´Ü °Å¸® ¹®Á¦´Â DFS·Î ÇÒ ¼ö ¾ø½À´Ï´Ù. °¢ Ä­¿¡ Ã³À½À¸·Î µµ´ÞÇÑ ¼ø°£ÀÌ °¡Àå ºü¸£°Ô µµ´ÞÇÑ °æ·Î¶ó´Â º¸ÀåÀÌ ¾ø±â ¶§¹®¿¡ ¸Å¹ø Àç¹æ¹®À» ÇØ¾ß ÇÏ´Âµ¥, ÀÌ°ÍÀÌ ¹Ýº¹µÇ¸é ½Ã°£ º¹Àâµµ°¡ Áö¼ö ÇüÅÂ°¡ µÇ¾î ³Ê¹« ¿À·¡ °É¸®°Ô µË´Ï´Ù.
-
-
-DFS¿Í °°ÀÌ ¿ÏÀü Å½»öÀ» ÇÏ´Â ±â¹ýÀÇ °æ¿ì ÀÏ¹ÝÀûÀ¸·Î Áö¼ö ½Ã°£ º¹Àâµµ°¡ °É¸³´Ï´Ù. Áö¼ö º¹Àâµµ¶ó´Â °ÍÀº ÀÏ¹ÝÀûÀ¸·Î ¾î¸¶¾î¸¶ÇÏ°Ô Å« º¹ÀâµµÀÌ¹Ç·Î, ÀÔ·ÂÀÌ ¸Å¿ì ÀÛÀº °æ¿ì°¡ ¾Æ´Ï¸é »ç¿ëÇÒ ¼ö ¾ø´Ù°í º¸½Ã¸é µË´Ï´Ù.
-
-¿¹¸¦ µé¾î, ¸Å Ä­¸¶´Ù ¹æ¹®ÇÒ ¼ö ÀÖ´Â ´ÙÀ½ »óÅÂ°¡ 2°³¾¿¸¸ µÇ´õ¶óµµ, ±× ±íÀÌ°¡ 100È¸¸¸ µÉ ¼ö ÀÖ´õ¶óµµ 2^100ÀÌ¶ó´Â ¼ö°¡ ³ª¿À°í ÀÌ ¼ö´Â ¿¬»êÀÌ ¾Æ¹«¸® ºü¸£´õ¶óµµ ¿ìÁÖ°¡ ¸ê¸ÁÇÒ ¶§±îÁö ´Ù °è»êÀ» ÇÒ ¼ö ¾øÀ» Á¤µµ·Î Å« ¼öÀÔ´Ï´Ù. Ä­ÀÌ 100*100Ä­ÀÌ¶ó¸é 2^10000ÀÌ µÉ °ÍÀÌ°í, ÀÌ´Â ´õ´õ¿í Àý´ë °¡´ÉÇÒ ¼ö°¡ ¾ø´Â ¼öÄ¡°¡ µË´Ï´Ù.
-
-½Ã°£ º¹ÀâµµÀÇ °³³ä¿¡ ´ëÇØ °øºÎÇØ º¸½Ã°í, n, nlogn, n^2, 2^n, 3^n µîÀÌ ¾ó¸¶³ª ºü¸£°Ô Ä¿Áö´Â ¼öÀÎÁö Á÷Á¢ °è»êÇØ¼­ ºñ±³ÇØº¸½Ã¸é ±× Â÷ÀÌ¸¦ ´À³¢½Ç ¼ö ÀÖÀ» °ÍÀÔ´Ï´Ù. ÀÏ¹ÝÀûÀ¸·Î ÄÄÇ»ÅÍ´Â 1ÃÊ¿¡ 10¾ï È¸ Á¤µµÀÇ ¿¬»êÀ» ÇÒ ¼ö ÀÖ´Â °ÍÀ¸·Î º¸°í, ½Ã°£ Á¦ÇÑ°ú ½Ã°£ º¹Àâµµ¿¡¼­ °è»êµÈ ¼ö°¡ ¾î´À Á¤µµÀÎÁö ´ë·«ÀûÀÎ ºñ±³¸¦ ÅëÇØ ÄÚµå°¡ ¾ó¸¶³ª ¸¹Àº ½Ã°£ÀÌ °É¸±Áö ´ë·«ÀûÀ¸·Î ¿¹ÃøÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
 int N, M;
 
+// ë¯¸ë¡œë¥¼ ìž…ë ¥ë°›ê¸° ìœ„í•œ ë°°ì—´
 vector<string> maze;
 
+// 4ë°©í–¥ ì´ë™ì„ ë‚˜íƒ€ë‚´ê¸° ìœ„í•œ ë°°ì—´
 //         down,right,up,left 
 int di[4] = { 0, +1, 0, -1 };
 int dj[4] = { +1, 0, -1, 0 };
 
-int answer = 2000; // ¸ðµç Ä­À» ¹æ¹®ÇÏ¿©µµ 1000
+int answer = 2000; // ëª¨ë“  ì¹¸ì„ ë°©ë¬¸í•˜ì—¬ë„ 1000
 
 
 int solution(int start_i, int start_j) {
-	queue<vector<int>> bfs_queue; // ¹æ¹®ÇÒ ÁÂÇ¥¿Í ±× ±íÀÌ¸¦ °°ÀÌ °¡Áö°í ÀÖ´Â Å¥
+	queue<vector<int>> bfs_queue; // ë°©ë¬¸í•  ì¢Œí‘œì™€ ê·¸ ê¹Šì´ë¥¼ ê°™ì´ ê°€ì§€ê³  ìžˆëŠ” í
 	
-	bfs_queue.push({ start_i, start_j, 1 }); // Ã¹ ÁÂÇ¥ Çª½Ã
+	bfs_queue.push({ start_i, start_j, 1 }); // ì²« ì¢Œí‘œ í‘¸ì‹œ
 
-	maze[start_i][start_j] = '0'; // ÇöÀç³ëµå ¹æ¹®Çß´Ù´Â Ç¥½ÃÇÏ±â
+	maze[start_i][start_j] = '0'; // í˜„ìž¬ë…¸ë“œ ë°©ë¬¸í–ˆë‹¤ëŠ” í‘œì‹œí•˜ê¸°
 
 	while (!bfs_queue.empty()) {
 
 		vector<int> cur_node = bfs_queue.front();
 		bfs_queue.pop();
-		int cur_i = cur_node[0];
-		int cur_j = cur_node[1];
-		int cur_depth = cur_node[2];
+		int cur_i = cur_node[0]; // i ì¢Œí‘œ
+		int cur_j = cur_node[1]; // j ì¢Œí‘œ
+		int cur_depth = cur_node[2]; // ê·¸ëž˜í”„ì˜ ê¹Šì´(ì‹œìž‘ì ë¶€í„°ì˜ ê±°ë¦¬)
 
 		if (cur_i == N && cur_j == M) {
 			return cur_depth;
 		}
 
-		// À§, ¾Æ·¡, ¿ÞÂÊ, ¿À¸¥ÂÊ Å½»ö
-		// °¥ ¼ö ÀÖ´Â ¹æÇâÀÎ 1ÀÌ ÀÖ´Â ¹æÇâÀ¸·Î¸¸ Å½»ö
-		// ¾Æ·¡ÂÊ
-
+		// ì•„ëž˜, ì˜¤ë¥¸ìª½, ìœ„, ì™¼ìª½ ìˆœìœ¼ë¡œ íƒìƒ‰
+		// ê°ˆ ìˆ˜ ìžˆëŠ” ë°©í–¥ì¸ 1ì´ ìžˆëŠ” ë°©í–¥ìœ¼ë¡œë§Œ íƒìƒ‰
 		for (int i = 0; i < 4; i++) {
-			if (maze[cur_i + di[i]][cur_j + dj[i]] == '1') {
-				maze[cur_i + di[i]][cur_j + dj[i]] = '0'; // Áßº¹ ¹æ¹® ¹æÁö¸¦ À§ÇØ ¹Ì¸® ¹æ¹® Ç¥½ÃÇÏ±â
-				bfs_queue.push({ cur_i + di[i], cur_j + dj[i], cur_depth + 1 });
+			if (maze[cur_i + di[i]][cur_j + dj[i]] == '1') { // ê°ˆ ìˆ˜ ìžˆëŠ” ê³³ì¼ ê²½ìš°
+				maze[cur_i + di[i]][cur_j + dj[i]] = '0'; // ì¤‘ë³µ ë°©ë¬¸ ë°©ì§€ë¥¼ ìœ„í•´ ë¯¸ë¦¬ ë°©ë¬¸ í‘œì‹œí•˜ê¸°
+				bfs_queue.push({ cur_i + di[i], cur_j + dj[i], cur_depth + 1 }); // ì¢Œí‘œ ì •ë³´ì™€ ê±°ë¦¬ ì •ë³´ í‘¸ì‹œ
 			}
 		}
 	}
@@ -102,27 +50,26 @@ int solution(int start_i, int start_j) {
 }
 
 int main() {
-
 	cin >> N >> M;
 
-	string maze_row; // ¹Ì·ÎÀÇ °¢ ÇÑ ÇàÀ» ¸¸µé±â
+	string maze_row; // ë¯¸ë¡œì˜ ê° í•œ í–‰ì„ ë§Œë“¤ê¸°
 
-	string wall = ""; // À§¿Í ¾Æ·¡ º® ¸¸µé±â
+	string wall = ""; // ìœ„ì™€ ì•„ëž˜ ë²½ ë§Œë“¤ê¸°
 	for (int i = 0; i < M + 2; i++) {
 		wall += "0";
 	}
 
-	maze.push_back(wall); // ¹Ì·ÎÀÇ À§ º® Ç¥½Ã
+	maze.push_back(wall); // ë¯¸ë¡œì˜ ìœ„ ë²½ í‘œì‹œ
 
 	for (int i = 0; i < N; i++) {
 		cin >> maze_row;
-		maze.push_back("0" + maze_row + "0"); // ¿ÞÂÊ°ú ¿À¸¥ÂÊ º®À» ºÙ¿©¼­ ÀÔ·Â
+		maze.push_back("0" + maze_row + "0"); // ì™¼ìª½ê³¼ ì˜¤ë¥¸ìª½ ë²½ì„ ë¶™ì—¬ì„œ ìž…ë ¥
 	}
 
-	maze.push_back(wall); // ¹Ì·ÎÀÇ ¾Æ·¡ÂÊ º® Ç¥½Ã
+	maze.push_back(wall); // ë¯¸ë¡œì˜ ì•„ëž˜ìª½ ë²½ í‘œì‹œ
 
-	// º®À» À§Ä¡½ÃÄ×À¸¹Ç·Î (0, 0)ÀÌ ¾Æ´Ñ (1, 1) À§Ä¡ºÎÅÍ ½ÃÀÛ
-	// Áö³ª°£ Ä­ ¼ö¸¦ ¼¼´Â °ÍÀÌ¹Ç·Î ÇöÀç Ä­µµ Æ÷ÇÔ½ÃÄÑ 1ºÎÅÍ ½ÃÀÛ
+	// ë²½ì„ ìœ„ì¹˜ì‹œì¼°ìœ¼ë¯€ë¡œ (0, 0)ì´ ì•„ë‹Œ (1, 1) ìœ„ì¹˜ë¶€í„° ì‹œìž‘
+	// ì§€ë‚˜ê°„ ì¹¸ ìˆ˜ë¥¼ ì„¸ëŠ” ê²ƒì´ë¯€ë¡œ í˜„ìž¬ ì¹¸ë„ í¬í•¨ì‹œì¼œ 1ë¶€í„° ì‹œìž‘
 	cout<< solution(1, 1);
 
 	return 0;
