@@ -5,65 +5,36 @@
 #include<string>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-N: ÁöµµÀÇ Å©±â(Á¤»ç°¢ÇüÀÌ¹Ç·Î °¡·Î¿Í ¼¼·ÎÀÇ Å©±â °°À½
-
-Áöµµ¿¡¼­ 0: ÁıÀÌ ¾ø´Â °÷
-Áöµµ¿¡¼­ 1: ÁıÀÌ ÀÖ´Â °÷
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 5~25
-
-- ¹®Á¦ »óÈ²
- ÁıÀÌ »ó, ÇÏ, ÁÂ, ¿ì·Î ¿¬°áµÇ¾î ÀÖÀ» ¶§¸¦ °°Àº ´ÜÁö¶ó°í º»´Ù.
-
-ÀÌ ¶§, Ã¹ ÁÙ¿¡´Â ÃÑ ´ÜÁö¼ö¸¦ Ãâ·ÂÇÏ°í, °¢ ´ÜÁö³» ÁıÀÇ ¼ö¸¦ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÏ¿© ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ Ãâ·ÂÇÑ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
- ÀÏ´Ü 25 * 25ÀÌ°í ¼±ÅÃÇÒ ¼ö ÀÖ´Â ¹æÇâÀÌ Àû¾îµµ 4°¡ÁöÀÌ¹Ç·Î, DFS·Î ±¸ÇöÇÒ ½Ã ½Ã°£ÃÊ°ú°¡ ¹ß»ıÇÒ °Í °°´Ù.
-
- µû¶ó¼­ BFS·Î °¢°¢ÀÇ ´ÜÁöÀÇ Áı ¼ö¸¦ ¼¼¾ß ÇÒ°Í °°´Ù.
-
- ÀÌ¹Ì ¼ö¸¦ ¼¾ ÁıÀº ´õÀÌ»ó ÀÇ¹Ì°¡ ¾ø°í Áßº¹À¸·Î ¹æ¹®µÇ¾î¼­µµ ¾ÈµÇ¹Ç·Î, ¹æ¹®ÀÌ ¿¹Á¤µÇ¾î BFSÀÇ Å¥¿¡ Çª½ÃµÇ´Â ¼ø°£ ´õÀÌ»ó ÁıÀÌ ¾ø´Ù°í ³ªÅ¸³»¸é µÉ µí ÇÏ´Ù.
-
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
 int N;
 vector<string> map;
 
-//         down,right,up,left => ²ª¿©ÀÖ°Å³ª ÇÒ ¼öµµ ÀÖÀ¸¹Ç·Î À§ÂÊ°ú ¿ŞÂÊµµ Ã¼Å©ÇØ¾ß!
+//         down,right,up,left => êº¾ì—¬ìˆê±°ë‚˜ í•  ìˆ˜ë„ ìˆìœ¼ë¯€ë¡œ ìœ„ìª½ê³¼ ì™¼ìª½ë„ ì²´í¬í•´ì•¼!
 int di[4] = { 0, +1, 0, -1 };
 int dj[4] = { +1, 0, -1, 0 };
 
 
 int solution(int start_i, int start_j) {
 	int num_of_houses = 0; 
-	map[start_i][start_j] = '0'; // ÇöÀç³ëµå ¹æ¹®Çß´Ù´Â Ç¥½ÃÇÏ±â
+	map[start_i][start_j] = '0'; // í˜„ì¬ë…¸ë“œ ë°©ë¬¸í–ˆë‹¤ëŠ” í‘œì‹œí•˜ê¸°
 
-	queue<vector<int>> bfs_queue; // ¹æ¹®ÇÒ ÁÂÇ¥¸¦ °¡Áö°í ÀÖ´Â Å¥
+	queue<vector<int>> bfs_queue; // ë°©ë¬¸í•  ì¢Œí‘œë¥¼ ê°€ì§€ê³  ìˆëŠ” í
 
-	bfs_queue.push({ start_i, start_j}); // Ã¹ ÁÂÇ¥ Çª½Ã
+	bfs_queue.push({ start_i, start_j}); // ì²« ì¢Œí‘œ í‘¸ì‹œ
 
 	while (!bfs_queue.empty()) {
 
 		vector<int> cur_node = bfs_queue.front();
 		bfs_queue.pop();
-		num_of_houses++; // popÇÒ¶§¸¶´Ù Áı ÇÏ³ª¾¿ ¼¼±â
+		num_of_houses++; // popí• ë•Œë§ˆë‹¤ ì§‘ í•˜ë‚˜ì”© ì„¸ê¸°
 
 		int cur_i = cur_node[0];
 		int cur_j = cur_node[1];
 
-		// À§, ¾Æ·¡, ¿ŞÂÊ, ¿À¸¥ÂÊ Å½»ö
-		// °¥ ¼ö ÀÖ´Â ¹æÇâÀÎ 1ÀÌ ÀÖ´Â ¹æÇâÀ¸·Î¸¸ Å½»ö
+		// ìœ„, ì•„ë˜, ì™¼ìª½, ì˜¤ë¥¸ìª½ íƒìƒ‰
+		// ê°ˆ ìˆ˜ ìˆëŠ” ë°©í–¥ì¸ 1ì´ ìˆëŠ” ë°©í–¥ìœ¼ë¡œë§Œ íƒìƒ‰
 		for (int i = 0; i < 4; i++) {
 			if (map[cur_i + di[i]][cur_j + dj[i]] == '1') {
-				map[cur_i + di[i]][cur_j + dj[i]] = '0'; // Áßº¹ ¹æ¹® ¹æÁö¸¦ À§ÇØ ¹Ì¸® ¹æ¹® Ç¥½ÃÇÏ±â
+				map[cur_i + di[i]][cur_j + dj[i]] = '0'; // ì¤‘ë³µ ë°©ë¬¸ ë°©ì§€ë¥¼ ìœ„í•´ ë¯¸ë¦¬ ë°©ë¬¸ í‘œì‹œí•˜ê¸°
 				bfs_queue.push({ cur_i + di[i], cur_j + dj[i]});
 			}
 		}
@@ -75,22 +46,22 @@ int main() {
 
 	cin >> N;
 
-	string map_row; // ¹Ì·ÎÀÇ °¢ ÇÑ ÇàÀ» ÀÔ·Â¹Ş±â À§ÇÑ º¯¼ö
+	string map_row; // ì§€ë„ì˜ ê° í•œ í–‰ì„ ì…ë ¥ë°›ê¸° ìœ„í•œ ë³€ìˆ˜
 	vector<int> num_of_houses_list;
 
-	string wall = ""; // À§¿Í ¾Æ·¡ º® ¸¸µé±â
+	string wall = ""; // ìœ„ì™€ ì•„ë˜ ë²½ ë§Œë“¤ê¸°
 	for (int i = 0; i < N + 2; i++) {
 		wall += "0";
 	}
 
-	map.push_back(wall); // ¹Ì·ÎÀÇ À§ º® Ç¥½Ã
+	map.push_back(wall); // ì§€ë„ì˜ ìœ„ìª½ ê²½ê³„ í‘œì‹œ
 
 	for (int i = 0; i < N; i++) {
 		cin >> map_row;
-		map.push_back("0" + map_row + "0"); // ¿ŞÂÊ°ú ¿À¸¥ÂÊ º®À» ºÙ¿©¼­ ÀÔ·Â
+		map.push_back("0" + map_row + "0"); // ì™¼ìª½ê³¼ ì˜¤ë¥¸ìª½ ë²½ì„ ë¶™ì—¬ì„œ ì…ë ¥
 	}
 
-	map.push_back(wall); // ¹Ì·ÎÀÇ ¾Æ·¡ÂÊ º® Ç¥½Ã
+	map.push_back(wall); // ë¯¸ë¡œì˜ ì•„ë˜ìª½ ê²½ê³„ í‘œì‹œ
 
 	for (int i = 1; i <= N; i++) {
 		for (int j = 1; j <= N; j++) {
@@ -100,11 +71,11 @@ int main() {
 		}
 	}
 
-	cout << num_of_houses_list.size() << endl;
+	cout << num_of_houses_list.size() << endl; // ë‹¨ì§€ ìˆ˜ ì¶œë ¥
 
-	sort(num_of_houses_list.begin(), num_of_houses_list.end());
+	sort(num_of_houses_list.begin(), num_of_houses_list.end()); // ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 
-	for (int i = 0; i < num_of_houses_list.size(); i++) {
+	for (int i = 0; i < num_of_houses_list.size(); i++) { // ê° ë‹¨ì§€ì˜ ì§‘ ìˆ˜ ì¶œë ¥
 		cout << num_of_houses_list[i] << endl;;
 	}
 	
