@@ -18,7 +18,8 @@
 ## - Graph Theory
  * [1260: DFS와 BFS](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1260%20-%20DFS%EC%99%80%20BFS.cpp)
  * [2178: 미로 탐색](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2178%20-%20%EB%AF%B8%EB%A1%9C%20%ED%83%90%EC%83%89.cpp)
- * [2667 - 단지번호붙이기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2667%20-%20%EB%8B%A8%EC%A7%80%EB%B2%88%ED%98%B8%EB%B6%99%EC%9D%B4%EA%B8%B0.cpp)
+ * [2606: 바이러스](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2606%20-%20%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.cpp)
+ * [2667: 단지번호붙이기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2667%20-%20%EB%8B%A8%EC%A7%80%EB%B2%88%ED%98%B8%EB%B6%99%EC%9D%B4%EA%B8%B0.cpp)
 
 ## - Greedy Algorithm
  * [1339: 단어 수학](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1339%20-%20%EB%8B%A8%EC%96%B4%20%EC%88%98%ED%95%99.cpp)
@@ -28,7 +29,6 @@
  * [1931: 회의실 배정](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1931%20-%20%ED%9A%8C%EC%9D%98%EC%8B%A4%20%EB%B0%B0%EC%A0%95.cpp)
  * [11047: 동전 0](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11047%20-%20%EB%8F%99%EC%A0%84%200.cpp)
  * [11399: ATM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11399%20-%20ATM.cpp)
-
 
 ## - Implementation
  * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp)
