@@ -37,6 +37,7 @@
 ## - Mathematics
  * [1026: 보물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1026%20-%20%EB%B3%B4%EB%AC%BC.cpp)
  * [1644: 소수의 연속합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1644%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EC%97%B0%EC%86%8D%ED%95%A9.cpp)
+ * [1676:팩토리얼 0의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1676%20-%20%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC%200%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)
  * [9461: 파도반 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9461%20-%20%ED%8C%8C%EB%8F%84%EB%B0%98%20%EC%88%98%EC%97%B4.cpp)
  * [10610: 30](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10610%20-%2030.cpp)
 
