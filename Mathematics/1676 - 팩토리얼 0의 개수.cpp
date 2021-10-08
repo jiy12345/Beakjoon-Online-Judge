@@ -1,51 +1,17 @@
 #include<iostream>
 using namespace std;
 
-
-
-/*
-1. ¹®Á¦ ºÐ¼®
-
-- º¯¼ö
-N: ÆÑÅä¸®¾ó ¿¬»êÀ» ÁøÇàÇÒ ¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-0 <= N <= 500
-
- - ¹®Á¦ »óÈ²
-N!¿¡¼­ µÚ¿¡¼­ºÎÅÍ Ã³À½ 0ÀÌ ¾Æ´Ñ ¼ýÀÚ°¡ ³ª¿Ã ¶§±îÁö 0ÀÇ °³¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó!
-
-2. Ç®ÀÌ °èÈ¹
-
-500!À» °è»êÇÏ¸é, 1.22e+1134ÀÌ¶ó´Â 1134ÀÚ¸®¼ö°¡ ³ª¿À°Ô µÈ´Ù. µû¶ó¼­ °è»êÇØ¼­ º¯¼ö¿¡ ÀúÀåÇÏ´Â °ÍÀº ºÒ°¡´ÉÇÏ´Ù!
-
-µû¶ó¼­ ¹Ýº¹¹®À» µ¹¸®¸ç °öÇÏ¸é¼­, °öÇÒ ¶§¸¶´Ù 10À¸·Î ³ª´­ ¼ö ÀÖÀ» ¶§±îÁö ³ª´©¸ç, ±× 10À¸·Î ³ª´« È½¼ö¸¦ ¼¼¸é µÉ µí ÇÏ´Ù!
-
-=> ÀÌ·± ¹æ¹ýµµ ÀÚ¸®¼ö°¡ Ä¿Áö°í 0ÀÇ °³¼ö´Â ±×¸® ¸¹Áö ¾ÊÀ¸¹Ç·Î ¿À¹öÇÃ·Î¿ì°¡ ¹ß»ýÇÏ°Ô µÈ´Ù.
-
-=> µû¶ó¼­ °öÇÏÁö ¾Ê°í °¢°¢ÀÇ ¼ö¸¦ 2¿Í 5·Î ³ª´©¾î ºÁ 2ÀÇ °³¼ö¿Í 5ÀÇ °³¼ö¸¦ ¼¼°í, ´õ ÀÛÀº °³¼ö¸¦ °¡Áø ¼ö¸¦ Ãâ·ÂÇÏ¸é 10ÀÇ °³¼ö°¡ µÈ´Ù.
-
-
-
-µû¶ó¼­ ÀÚ¼¼ÇÑ °úÁ¤Àº ´ÙÀ½°ú °°´Ù.
-
-1. 1ºÎÅÍ N±îÁö ¹Ýº¹ÇÏ¸ç, °¢°¢À» 2¿Í 5·Î ³ª´©¾î ºÁ ¼ÒÀÎ¼ö ºÐÇØ ÇÏ¿´À» ¶§ 2¿Í 5°¡ ¸î°³ ÀÖ´Â Áö ´©ÀûÇÏ¿© ¼¾´Ù.
-2. 2¿Í 5ÀÇ °³¼ö Áß ÀûÀº °ÍÀÇ °³¼ö°¡ 10ÀÇ °³¼ö(2¿Í 5°¡ °öÇØÁ®¾ß 10ÀÌ ³ª¿À¹Ç·Î)¸¦ ÃÖ¼Ò°ªÀ¸·Î ÇÏ¿© Ãâ·ÂÇÑ´Ù.
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
-
 int solution(int N) {
 	int answer = 0;
 
+	// íŒ©í† ë¦¬ì–¼ ì—°ì‚°ì—ì„œ ê³±í•´ì§ˆ ëª¨ë“  ìˆ˜ë“¤ì„ ì†Œì¸ìˆ˜ ë¶„í•´
+	// ì†Œì¸ìˆ˜ ë¶„í•´í•˜ì˜€ì„ ë•Œ 2ì™€ 5ì˜ ê°œìˆ˜ ì„¸ê¸°
 	int num_of_two = 0;
 	int num_of_five = 0;
 
 	for (int i = 1; i <= N; i++) {
 		int temp = i;
+		// 2 ì°¾ê¸°
 		while (temp % 2 == 0) {
 			temp /= 2;
 			num_of_two++;
@@ -53,6 +19,7 @@ int solution(int N) {
 				break;
 			}
 		}
+		// 5ì°¾ê¸°
 		while (temp % 5 == 0) {
 			temp /= 5;
 			num_of_five++;
@@ -62,6 +29,7 @@ int solution(int N) {
 		}
 	}
 
+	// 2ì™€ 5ê°€ ê³±í•´ì ¸ 10ì´ ë˜ë¯€ë¡œ ë‘˜ ì¤‘ ì ì€ ìˆ˜ê°€ 0ì˜ ê°œìˆ˜(10ì´ ê³±í•´ì§„ ìˆ˜)ê°€ ë¨
 	answer = min(num_of_five, num_of_two);
 
 	return answer;
