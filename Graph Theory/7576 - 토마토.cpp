@@ -2,61 +2,20 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-M, N: Åä¸¶Åä »óÀÚÀÇ °¡·Î, ¼¼·Î Å©±â
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-M, N : 2~1,000
-
- => Åä¸¶Åä »óÀÚ¹è¿­ÀÇ °¢ °ªÀÇ ÀÇ¹Ì
-1: ÀÍÀº Åä¸¶Åä
-0: ÀÍÁö ¾ÊÀº Åä¸¶Åä
--1: ºñ¾îÀÖ´Â ºÎºÐ
-
-- ¹®Á¦ »óÈ²
- ÀÍÀº Åä¸¶Åä´Â »ó, ÇÏ, ÁÂ, ¿ìÀÇ ÀÍÁö ¾ÊÀº Åä¸¶Åä¸¦ ÀÍÈ÷¸ç, ÇÏ·ç¸¶´Ù ÇÑ¹ø¾¿ ÀÍÀº Åä¸¶Åä°¡ ÁÖº¯ÀÇ Åä¸¶Åä¸¦ ÀÍÈù´Ù.
-ÀÌ¶§ Åä¸¶Åä°¡ ¸ðµÎ ÀÍÀ»¶§±îÁö °É¸®´Â ÃÖ¼Ò ³¯Â¥¸¦ Ãâ·ÂÇÏ¶ó.
-=> ¸ðµç Åä¸¶Åä°¡ ÀÍÁö ¸øÇÏ´Â »óÈ²ÀÌ¶ó¸é -1À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- Åä¸¶Åä°¡ ÀÍ´Â °ÍÀº ¸ðµç °÷¿¡¼­ µ¿½Ã¿¡ ÁøÇàµÈ´Ù. 
- µû¶ó¼­ Ã¹ ³¯ Á¸ÀçÇÏ´Â °¢°¢ÀÇ ÀÍÀº Åä¸¶Åä¿¡ ´ëÇØ BFS Å½»öÀ» Á¦¿ÜÇÏ°í, ÇØ´ç Åä¸¶Åä¿¡ °¥ ¼ö ÀÖ´Â ¾ÈÀÍÀº Åä¸¶Åä°¡ ¾øÀ» °æ¿ì °¢°¢ÀÇ Å½»öÀ» ¸ÕÀú ³¡³»¸é µÉµí ÇÏ´Ù.
- ±×·¸°Ô ÇÏ¿´À» ¶§ ¸¶Áö¸·À¸·Î Á¾·áµÇ´Â BFS Å½»öÀÇ ±íÀÌ°¡ ÀüÃ¼ Åä¸¶Åä°¡ ÀÍ´Â ÃÖ¼Ò ³¯Â¥¶ó°í º¸¸é µÉµí ÇÏ´Ù.
- ÀÌ ¶§ ¸¶Áö¸·¿¡ ÀüÃ¼ ¹è¿­¿¡ 0ÀÌ ¾ÆÁ÷ ³²¾ÆÀÖ´Ù¸é -1À» Ãâ·ÂÇÏ°í, ±×·¸Áö ¾Ê´Ù¸é ±¸ÇÑ ÃÖ¼Ò ³¯Â¥¸¦ Ãâ·ÂÇÏ¸é µÉµí ÇÏ´Ù!
-
-µû¶ó¼­ ÀÚ¼¼ÇÑ °èÈ¹Àº ´ÙÀ½°ú °°´Ù.
-
-1. Åä¸¶Åä »óÀÚÀÇ Á¤º¸¸¦ -1·Î µÑ·¯½Î ÀÔ·Â¹Þ´Â´Ù.
-2. Åä¸¶Åä »óÀÚ¿¡¼­ ÇöÀç ÀÍÀº Åä¸¶ÅäÀÇ À§Ä¡µéÀ» ¸ðµÎ Ã£°í, ÇØ´ç À§Ä¡¿¡ ´ëÇØ °¢°¢ BFS¸¦ ÁøÇàÇÑ´Ù.
- => BFS Å¥¸¦ °¢ ÀÍÀº Åä¸¶ÅäÀÇ À§Ä¡º°·Î ¸¸µç´Ù!
-3. °¡Àå ¿À·§µ¿¾È Å½»öÀÌ ÁøÇàµÈ BFSÀÇ ±íÀÌ¸¦ ÀÏ´Ü ÃÖ¼Ò ³¯Â¥·Î ÀúÀåÇÑ´Ù.
-4. ¸¶Áö¸·À¸·Î »óÀÚ ¹è¿­À» Å½»öÇÏ¿© 0ÀÌ ³²¾ÒÀ» °æ¿ì ¸ðµç Åä¸¶Åä°¡ ÀÍÁö ¾ÊÀº °ÍÀÌ¹Ç·Î -1À» Ãâ·ÂÇÏ°í, ±×·¸Áö ¾ÊÀ¸¸é 0À» Ãâ·ÂÇÑ´Ù.
-
-3. °èÈ¹ °ËÁõ
-
- - ½Ã°£º¹Àâµµ Ãø¸é:
-
- - °ø°£º¹Àâµµ Ãø¸é: 1,000 x 1,000 = 4,000,000
-
-*/
-
 int tomato_box[1000][1000];
 int M, N;
 
-//         ¾Æ·¡, À§, ¿À¸¥ÂÊ, ¿ÞÂÊ
+//         ì•„ëž˜, ìœ„, ì˜¤ë¥¸ìª½, ì™¼ìª½
 int di[4] = { +1, -1,   0,  0 };
 int dj[4] = {  0,  0,  +1, -1};
 
 
 int solution() {
 	int answer = 0;
-	// °¢ ÀÍÀº Åä¸¶Åä¿¡ ´ëÇÑ BFS Å¥¸¦ °¡Áö°í ÀÖ´Â ¹è¿­
-	// °¢ Å¥´Â ´ÙÀ½ Å½»öÇÒ ÁÂÇ¥°ª°ú ±íÀÌ°ªÀ» °¡Áö°í ÀÖÀ½
+	// BFSë¥¼ ì§„í–‰í•˜ê¸° ìœ„í•œ í
 	queue<vector<int>> bfs_queue; 
 	
-	// °¢ ½ÃÀÛÁ¡À» Å¥¿¡ Çª½Ã
+	// ê° ì‹œìž‘ì (ì²˜ìŒì— ì¡´ìž¬í•˜ëŠ” ìµì€ í† ë§ˆí† )ì„ íì— í‘¸ì‹œ
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < M; j++) {
 			if (tomato_box[i][j] == 1) {
@@ -65,24 +24,28 @@ int solution() {
 		}
 	}
 
+	// í† ë§ˆí†  ìµížˆëŠ” ê³¼ì •
 	while (!bfs_queue.empty()) {
+		// í˜„ìž¬ ë…¸ë“œ ê°€ì ¸ì˜¤ê¸°
 		vector<int> cur_node;
 		cur_node = bfs_queue.front();
 		bfs_queue.pop();
-		answer = cur_node[2]; // °¢°¢ÀÇ ³ëµå Áß °¡Àå ±íÀº °ªÀÌ ´äÀÌ µÊ
+		answer = cur_node[2]; // í˜„ìž¬ ê°ˆ ìˆ˜ ìžˆëŠ” ê³³ ì¤‘ ê°€ìž¥ ê¹Šì´ê°€ ì–•ì€(ê±°ë¦¬ê°€ ê°€ê¹Œìš´) ë…¸ë“œë¶€í„° ë°©ë¬¸í•˜ë¯€ë¡œ, í•­ìƒ ê¹Šì´ê°€ ìµëŠ”ë° ê±¸ë¦¬ëŠ” ê¸°ê°„ì´ ë¨!
 
 		for (int j = 0; j < 4; j++) {
+			// ë‹¤ìŒì— ì§„í–‰í•  ë…¸ë“œì˜ ì¢Œí‘œì •ë³´
 			int cur_i = cur_node[0] + di[j];
 			int cur_j = cur_node[1] + dj[j];
-			if (0 <= cur_i && cur_i < N && 0 <= cur_j && cur_j < M) { // ¹üÀ§ ³» °ªÀÏ ¶§¸¸ ÁøÇà
+			if (0 <= cur_i && cur_i < N && 0 <= cur_j && cur_j < M) { // ë²”ìœ„ ë‚´ ê°’ì¼ ë•Œë§Œ ì§„í–‰
 				if (tomato_box[cur_i][cur_j] == 0) {
-					tomato_box[cur_i][cur_j] = 1; // ÀÍ¾ú´Ù´Â Ç¥½Ã ¹Ì¸® ÇØ³õ±â
-					bfs_queue.push({ cur_i, cur_j, cur_node[2] + 1 });
+					tomato_box[cur_i][cur_j] = 1; // ì¤‘ë³µ ë°©ë¬¸ ë°©ì§€ë¥¼ ìœ„í•´ ìµì—ˆë‹¤ëŠ” í‘œì‹œ ë¯¸ë¦¬ í•´ë†“ê¸°
+					bfs_queue.push({ cur_i, cur_j, cur_node[2] + 1 }); 
 				}
 			}
 		}
 	}
 
+	// ì•ˆìµì€ í† ë§ˆí† ê°€ ì•„ì§ ë‚¨ì•˜ë‹¤ë©´ -1ë°˜í™˜
 	for (int i = 0;i < N; i++) {
 		for (int j = 0; j < M; j++) {
 			if (tomato_box[i][j] == 0) {
@@ -91,6 +54,7 @@ int solution() {
 		}
 	}
 
+	// ëª¨ë‘ ìµì—ˆë‹¤ë©´ ìµœì†Œ ë‚ ì§œ ë°˜í™˜
 	return answer;
 }
 
