@@ -39,7 +39,6 @@ void solution() {
 			}
 		}
 	}
-
 }
 
 int main() {
