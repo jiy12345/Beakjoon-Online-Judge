@@ -1,66 +1,43 @@
 #include<iostream>
 #include<vector>
-#include<map>
 #include<algorithm>
 using namespace std;
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¹è¿­ÀÇ Å©±â
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1~50
-¹è¿­ÀÇ ¿ø¼Ò: 1~1,000
-
-- ¹®Á¦ »óÈ²
- ¼ö¿­ P¸¦ ¹è¿­ A¿¡ Àû¿ëÇÑ ¹è¿­ B´Â
-
- B[P[i]] = A[i]
-
- ºñ³»¸²Â÷¼ø: ¹Ù·Î ¾ÕÀÇ ¿ø¼Ò¿Í °°À» ¼öµµ ÀÖ´Â ¿À¸§Â÷¼ø
-
- ¹è¿­ A°¡ ÁÖ¾îÁ³À» ¶§, ¼ö¿­ P¸¦ Àû¿ëÇÑ °á°ú°¡ ºñ³»¸²Â÷¼øÀ¸·Î Á¤·ÄµÇµµ·ÏÇÏ´Â ¼ö¿­ P¸¦ ±¸ÇÏ¶ó
-
-
-
-2. Ç®ÀÌ °èÈ¹
-
-µû¶ó¼­ ÀÚ¼¼ÇÑ °èÈ¹Àº ´ÙÀ½°ú °°´Ù.
-
-1. ¹è¿­À» ÀÔ·Â¹ÞÀº ÈÄ Á¤·ÄÇÑ´Ù. ¸ÅÄªÇÑ ¹è¿­À» È°¿ëÇÏ±â À§ÇØ ÇöÀç ¹è¿­ÀÇ »óÅÂ´Â À¯ÁöÇÑ´Ù.
-2. Á¤·ÄÇÑ ³»¿ëÀ» À¯ÁöÇÏ°í, Á¤·ÄÇÑ ³»¿ëÀ» °¢ ÀÎµ¦½º¿Í ¸ÅÄªÇÏ¿© ¸ÊÀ¸·Î ¸¸µç´Ù.
-3. ¸ÊÀ» °¢ Å°¸¦ ¿ø·¡ ÀÔ·ÂµÈ ¹è¿­ÀÇ ¼ø¼­´ë·Î Áý¾î³Ö´Â´Ù.
-
-
-
-3. °èÈ¹ °ËÁõ
-
-*/
 
 int N;
 
 void solution() {
-	map<int, int> array_map;
+	// ê° ê°’ë“¤ì˜ ì •ë ¬ëœ ë°°ì—´ì—ì„œì˜ ìœ„ì¹˜ì™€ ê°’ì„ ì—°ê²°í•´ì£¼ê¸° ìœ„í•œ pair ë°°ì—´
+	vector<pair<int, int>> array_map;
 	vector<int> A;
 
+	// A ë°°ì—´ ìž…ë ¥ë°›ê¸°
 	int temp;
 	for (int i = 0; i < N; i++) {
 		cin >> temp;
 		A.push_back(temp);
 	}
 
+	// ì •ë ¬ë˜ì§€ ì•Šì€ ìƒíƒœ ì €ìž¥í•´ë†“ê¸°
 	vector<int> unordered_A = A;
 
+	// ì •ë ¬
 	sort(A.begin(), A.end());
 
+	// ì •ë ¬ëœ ë°°ì—´ì—ì„œì˜ ì¸ë±ìŠ¤ì™€ ê°’ ì—°ê²°í•´ë†“ê¸°
 	for (int i = 0; i < N; i++) {
-		array_map[A[i]] = i;
+		array_map.push_back(make_pair(i, A[i]));
 	}
 
-
-	for (int i : unordered_A) {
-		cout << array_map[i] << " ";
+	// ì •ë ¬ë˜ì§€ ì•Šì€ ì›ë³¸ ë°°ì—´ì˜ ê°’ì„ array_mapì—ì„œ ì°¾ê¸°
+	for (int item : unordered_A) {
+		for (int i = 0;i < array_map.size();i++) {
+			if (array_map[i].second == item) {
+				cout << array_map[i].first << " ";
+				// ì¤‘ë³µëœ ê°’ì´ ë‹¤ì‹œ ì°¾ì•„ì§€ëŠ” ê²ƒì„ ë§‰ê¸° ìœ„í•´ ì§€ì›Œì£¼ê¸°
+				array_map.erase(array_map.begin() + i);
+				break;
+			}
+		}
 	}
 
 }
