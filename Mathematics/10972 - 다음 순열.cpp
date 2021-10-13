@@ -3,41 +3,10 @@
 #include<vector>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¼ø¿­À» ±¸¼ºÇÏ´Â ¼öÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1~10,000
-
-- ¹®Á¦ »óÈ²
- ¼ø¿­ ÇÏ³ª°¡ ÁÖ¾îÁú ¶§, ±× ´ÙÀ½¿¡ À§Ä¡ÇÒ ¼ø¿­À» Ãâ·ÂÇÏ¶ó
-
-
-2. Ç®ÀÌ °èÈ¹
-¼öÀÇ °³¼ö°¡ 10,000°³ÀÌ¹Ç·Î, ÀüÃ¼¸¦ ÇØº¸´Â °ÍÀº 10,000! °¡ÁöÀÇ °æ¿ìÀÇ ¼ö°¡ ÀÖÀ¸¹Ç·Î ºÒ°¡´ÉÇÒ µí º¸ÀÎ´Ù.
-
-µû¶ó¼­ ±ÔÄ¢¼ºÀ» Ã£¾Æ ÀÌÀü ¼ø¿­¸¸ º¸°í ±×´ÙÀ½ ¼ø¿­À» Ã£À» ¼ö ÀÖ´Â ¹æ¹ýÀ» ±¸ÇØ¾ß ÇÑ´Ù!
-
-´ÙÀ½ ¼ø¿­À» ¾î¶»°Ô ±¸ÇØ¾ßÇÒ Áö ¶°¿À¸£Áö ¾Ê¾Æ °ï¶õÇß´Âµ¥, ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾Ë°í¸®ÁòÀÌ ÀÖ¾ú´Ù.
-
-±× ¾Ë°í¸®ÁòÀº ´ÙÀ½°ú °°´Ù.
-
-1. arr[k] < arr[k+1]À» ¸¸Á·ÇÏ´Â °¡Àå Å« k¸¦ ±¸ÇÑ´Ù.
-2. k ´ÙÀ½ À§Ä¡ºÎÅÍ arr[k] < arr[i]¸¦ ¸¸Á·ÇÏ´Â °¡Àå Å« i¸¦ ±¸ÇÑ´Ù.
-3. arr[k]¿Í arr[i]¸¦ ¹Ù²Û´Ù.
-4. k ´ÙÀ½ À§Ä¡ºÎÅÍ, arr[k+1] ~ arr[end]ÀÇ °ªµéÀ» µÚÁý´Â´Ù(ÁÂ¿ì¹ÝÀü)
-
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
 int N;
 
 void next_permutation() {
-	// ¼ø¿­ ÀÔ·Â¹Þ±â
+	// ìˆœì—´ ìž…ë ¥ë°›ê¸°
 	vector<int> arr;
 
 	int temp;
@@ -45,17 +14,18 @@ void next_permutation() {
 		cin >> temp;
 		arr.push_back(temp);
 	}
-
+	
+	// 1ì§œë¦¬ ìˆœì—´ì€ í•­ìƒ ë§ˆì§€ë§‰ ìœ„ì¹˜ì˜ ìˆœì—´ì´ë¯€ë¡œ, ë¬´ì¡°ê±´ -1 ì¶œë ¥í•˜ê³  ëë‚´ê¸°
 	if (N == 1) {
 		cout << -1;
 		return;
 	}
 
 	int k = N - 2;
-	// 1. arr[k] < arr[k+1]À» ¸¸Á·ÇÏ´Â °¡Àå Å« k¸¦ ±¸ÇÑ´Ù.
+	// 1. arr[k] < arr[k+1]ì„ ë§Œì¡±í•˜ëŠ” ê°€ìž¥ í° kë¥¼ êµ¬í•œë‹¤.
 	while (arr[k] > arr[k + 1]) {
 		if (k == 0) {
-			// ¹Ý´ë·Î Á¤·ÄµÇ¾î ÀÖÀ» °æ¿ì -1 Ãâ·Â
+			// ë°˜ëŒ€ë¡œ ì •ë ¬ë˜ì–´ ìžˆì„ ê²½ìš° -1 ì¶œë ¥
 			cout << -1;
 			return;
 		}
@@ -70,18 +40,19 @@ void next_permutation() {
 		}
 	}
 
-	// 3. arr[k]¿Í arr[i]¸¦ ¹Ù²Û´Ù.
+	// 3. arr[k]ì™€ arr[i]ë¥¼ ë°”ê¾¼ë‹¤.
 	temp = arr[k];
 	arr[k] = arr[i];
 	arr[i] = temp;
 
-	// 4. k ´ÙÀ½ À§Ä¡ºÎÅÍ, arr[k + 1] ~arr[end]ÀÇ °ªµéÀ» µÚÁý´Â´Ù(ÁÂ¿ì¹ÝÀü)
+	// 4. k ë‹¤ìŒ ìœ„ì¹˜ë¶€í„°, arr[k + 1] ~arr[end]ì˜ ê°’ë“¤ì„ ë’¤ì§‘ëŠ”ë‹¤(ì¢Œìš°ë°˜ì „)
 	for (int i = 1; i < (int)floor((N - k - 1)/2) + 1; i++) {
 		temp = arr[k + i];
 		arr[k + i] = arr[N - i];
 		arr[N - i] = temp;
 	}
 
+	// ëª¨ë“  ì²˜ë¦¬ê°€ ëë‚œ ìˆœì—´ ì¶œë ¥
 	for (int i = 0; i < N; i++) {
 		cout << arr[i] << " ";
 	}
