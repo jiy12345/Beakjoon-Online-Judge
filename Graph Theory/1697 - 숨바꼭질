@@ -5,8 +5,6 @@ using namespace std;
 int N, K;
 bool is_explored[100001] = { false, }; // 위치를 나타낼 배열.
 
-
-
 int solution() {
   if (K <= N) { // 동생이 더 뒤에 있을 경우 뒤로 가는 방법은 하나씩밖에 못가므로
 		return N - K;
