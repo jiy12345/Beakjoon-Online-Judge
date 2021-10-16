@@ -28,7 +28,7 @@ int solution() {
 		int next_N;
 		// 3으로 나누어 떨어질 경우
 		if (cur_N % 3 == 0) {
-			// 3으로 나누는 연산
+			// 1. 3으로 나누는 연산
 			next_N = cur_N / 3;
 			// 이미 계산된 값이 아닐 경우에만 계산
 			if (is_visited[next_N] == false) {
@@ -38,7 +38,7 @@ int solution() {
 		}		
 		// 2로 나누어 떨어질 경우
 		if (cur_N % 2 == 0) {
-			// 2로 나누는 연산
+			// 2. 2로 나누는 연산
 			next_N = cur_N / 2;
 			// 이미 계산된 값이 아닐 경우에만 계산
 			if (is_visited[next_N] == false) {
@@ -46,6 +46,7 @@ int solution() {
 				bfs_queue.push({ next_N, cur_depth + 1 });
 			}
 		}
+		// 3. 1을 빼는 연산
 		next_N = cur_N - 1;
 		// 이미 계산된 값이 아닐 경우에만 계산
 		if (is_visited[next_N] == false) {
