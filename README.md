@@ -10,6 +10,11 @@
  * [14888: 연산자 끼워넣기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14888%20-%20%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.cpp)
  * [14889: 스타트와 링크](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14889%20-%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%99%80%20%EB%A7%81%ED%81%AC.cpp)
 
+## - Danamic Programming
+ * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
+ * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
+ * [11286: 절댓값 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11286%20-%20%EC%A0%88%EB%8C%93%EA%B0%92%20%ED%9E%99.cpp)
+
 ## - Data Structures
  * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
  * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
