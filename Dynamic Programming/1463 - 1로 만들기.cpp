@@ -3,30 +3,7 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- N: ¿¬»êÀ» ÁøÇàÇÒ º¯¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 1~1,000,000
-
-- ¹®Á¦ »óÈ²
-Á¤¼ö X¿¡ »ç¿ëÇÒ ¼ö ÀÖ´Â ¿¬»êÀÌ ´ÙÀ½°ú °°ÀÌ 3°¡Áö¶ó°í ÇßÀ» ¶§,
-
-1. X°¡ 3À¸·Î ³ª´©¾î ¶³¾îÁö¸é, 3À¸·Î ³ª´«´Ù.
-2. X°¡ 2·Î ³ª´©¾î ¶³¾îÁö¸é, 2·Î ³ª´«´Ù.
-3. 1À» »«´Ù.
-
-À§ÀÇ ¿¬»êµéÀ» »ç¿ëÇÏ¿© X¸¦ 1·Î ¸¸µé ¼ö ÀÖ´Â ¿¬»ê È½¼öÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ¿©¶ó.
-
-2. Ç®ÀÌ °èÈ¹
- BFS·ÎÇÏ¿© ¹æ¹®ÇÑ ³ëµå´Â ´Ù½Ã ¹æ¹®ÇÏÁö ¾Êµµ·Ï ÇÏ¸é µÉµíÇÏ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
+// ì´ë¯¸ ë°©ë¬¸í•œ ë…¸ë“œë¥¼ í‘œì‹œí•´ì£¼ê¸° ìœ„í•œ ë°°ì—´
 bool is_visited[1000001] = { false };
 
 int N;
@@ -34,6 +11,7 @@ int N;
 int solution() {
 	queue<vector<int>> bfs_queue;
 
+	// ì‹œìž‘ ìœ„ì¹˜ì™€ ì‹œìž‘ ê¹Šì´ì¸ 0 íì— í‘¸ì‹œ
 	bfs_queue.push({ N, 0 });
 
 	while (!bfs_queue.empty()) {
@@ -42,31 +20,34 @@ int solution() {
 		int cur_N = temp[0];
 		int cur_depth = temp[1];
 
+		// BFSë¡œ íƒìƒ‰í•˜ì˜€ìœ¼ë¯€ë¡œ, ì²˜ìŒ 1ì´ ë°œê²¬ëœ ìˆœê°„ ë°”ë¡œ ê·¸ ìˆœê°„ì˜ ê¹Šì´ê°€ ìµœì†Œ ì—°ì‚°ì˜ íšŸìˆ˜ê°€ ë¨!
 		if (cur_N == 1) {
 			return cur_depth;
 		}
 
 		int next_N;
-		// 3À¸·Î ³ª´©¾î ¶³¾îÁú °æ¿ì
+		// 3ìœ¼ë¡œ ë‚˜ëˆ„ì–´ ë–¨ì–´ì§ˆ ê²½ìš°
 		if (cur_N % 3 == 0) {
+			// 3ìœ¼ë¡œ ë‚˜ëˆ„ëŠ” ì—°ì‚°
 			next_N = cur_N / 3;
-			// ÀÌ¹Ì °è»êµÈ °ªÀÌ ¾Æ´Ò °æ¿ì¿¡¸¸ °è»ê
+			// ì´ë¯¸ ê³„ì‚°ëœ ê°’ì´ ì•„ë‹ ê²½ìš°ì—ë§Œ ê³„ì‚°
 			if (is_visited[next_N] == false) {
 				is_visited[next_N] = true;
 				bfs_queue.push({ next_N, cur_depth + 1 });
 			}
 		}		
-		// 2·Î ³ª´©¾î ¶³¾îÁú °æ¿ì
+		// 2ë¡œ ë‚˜ëˆ„ì–´ ë–¨ì–´ì§ˆ ê²½ìš°
 		if (cur_N % 2 == 0) {
+			// 2ë¡œ ë‚˜ëˆ„ëŠ” ì—°ì‚°
 			next_N = cur_N / 2;
-			// ÀÌ¹Ì °è»êµÈ °ªÀÌ ¾Æ´Ò °æ¿ì¿¡¸¸ °è»ê
+			// ì´ë¯¸ ê³„ì‚°ëœ ê°’ì´ ì•„ë‹ ê²½ìš°ì—ë§Œ ê³„ì‚°
 			if (is_visited[next_N] == false) {
 				is_visited[next_N] = true;
 				bfs_queue.push({ next_N, cur_depth + 1 });
 			}
 		}
 		next_N = cur_N - 1;
-		// ÀÌ¹Ì °è»êµÈ °ªÀÌ ¾Æ´Ò °æ¿ì¿¡¸¸ °è»ê
+		// ì´ë¯¸ ê³„ì‚°ëœ ê°’ì´ ì•„ë‹ ê²½ìš°ì—ë§Œ ê³„ì‚°
 		if (is_visited[next_N] == false) {
 			is_visited[next_N] = true;
 			bfs_queue.push({ next_N, cur_depth + 1 });
@@ -74,7 +55,6 @@ int solution() {
 	}
 	return 0;
 }
-
 
 int main() {
 	cin >> N;
