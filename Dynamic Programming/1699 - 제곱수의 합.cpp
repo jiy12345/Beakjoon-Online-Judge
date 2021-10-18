@@ -3,24 +3,7 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
- N: Á¦°ö¼öÀÇ ÇÕÀ¸·Î ³ªÅ¸³¾ º¯¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 1~100,000
-
-- ¹®Á¦ »óÈ²
- ÁÖ¾îÁø ÀÚ¿¬¼ö NÀ» Á¦°ö¼öµéÀÇ ÇÕÀ¸·Î Ç¥ÇöÇÒ ¶§, ±× Ç×ÀÇ ÃÖ¼Ò °³¼ö¸¦ ±¸ÇÏ¶ó.
-
-2. Ç®ÀÌ °èÈ¹
- BFS·ÎÇÏ¿© ¹æ¹®ÇÑ ³ëµå´Â ´Ù½Ã ¹æ¹®ÇÏÁö ¾Êµµ·Ï ÇÏ¸é µÉµíÇÏ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
+// ì´ë¯¸ ê³„ì‚°í•œ ìˆ˜ëŠ” ê³„ì‚°í•˜ì§€ ì•Šë„ë¡ í•˜ê¸°
 bool is_visited[100001] = { false };
 
 int N;
@@ -28,6 +11,7 @@ int N;
 int solution() {
 	queue<vector<int>> bfs_queue;
 
+	// Në¶€í„° ì‹œì‘í•˜ì—¬ ì œê³±ìˆ˜ë¥¼ ë¹¼ê°€ë©° ê³„ì‚°
 	bfs_queue.push({ N, 0 });
 
 	while (!bfs_queue.empty()) {
@@ -36,6 +20,8 @@ int solution() {
 
 		bfs_queue.pop();
 		
+		// í˜„ì¬ 0ì¼ ê²½ìš° ì œê³±ìˆ˜ì˜ í•©ìœ¼ë¡œ ë‚˜íƒ€ë‚¸ ê²ƒ
+		// BFSë¡œ íƒìƒ‰í•˜ì˜€ìœ¼ë¯€ë¡œ ê°€ì¥ ë¨¼ì € ì—°ì‚°í•œ ê²ƒì´ ìµœì†Œ ê°œìˆ˜ ì—°ì‚°!
 		if (cur_num == 0) {
 			return cur_depth;
 		}
@@ -43,8 +29,10 @@ int solution() {
 		int next_num;
 		int k = 1;
 
+		// cur_numë³´ë‹¤ ì»¤ì§€ì§€ ì•ŠëŠ” ì œê³±ìˆ˜ì— ëŒ€í•´ ëª¨ë‘ ì—°ì‚°
 		while (k * k <= cur_num) {
 			next_num = cur_num - k * k;
+			// ì—°ì‚°í•˜ì§€ ì•Šì€ ê°’ì— ëŒ€í•´ì„œë§Œ ì—°ì‚°
 			if (is_visited[next_num] == false) {
 				is_visited[next_num] = true;
 				bfs_queue.push({ next_num, cur_depth + 1 });
