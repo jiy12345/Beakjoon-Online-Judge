@@ -55,7 +55,6 @@ string combination(int n, int r){
     string& result = cache[n][r];
 
     if (result != "")
-
         return result;
 
     result = bigNumberAdd(combination(n - 1, r - 1), combination(n - 1, r));
