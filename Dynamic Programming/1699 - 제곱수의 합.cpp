@@ -42,7 +42,6 @@ int solution() {
 	}
 }
 
-
 int main() {
 	cin >> N;
 
