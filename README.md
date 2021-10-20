@@ -12,6 +12,9 @@
 
 ## - Danamic Programming
  * [1463: 1로 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1463%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)
+ * [1699: 제곱수의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1699%20-%20%EC%A0%9C%EA%B3%B1%EC%88%98%EC%9D%98%20%ED%95%A9.cpp)
+ * [9095: 1, 2, 3 더하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9095%20-%201%2C%202%2C%203%20%EB%8D%94%ED%95%98%EA%B8%B0.cpp)
+ * [11726: 2xn 타일링](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11726%20-%202xn%20%ED%83%80%EC%9D%BC%EB%A7%81.cpp)
 
 ## - Data Structures
  * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
