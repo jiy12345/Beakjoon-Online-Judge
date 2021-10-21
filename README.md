@@ -11,7 +11,7 @@
  * [14889: 스타트와 링크](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14889%20-%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%99%80%20%EB%A7%81%ED%81%AC.cpp)
 
 ## - Danamic Programming
- * [1149: RGB거리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1463%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)
+ * [1149: RGB거리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1149%20-%20RGB%EA%B1%B0%EB%A6%AC.cpp)
  * [1463: 1로 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1463%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)
  * [1699: 제곱수의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1699%20-%20%EC%A0%9C%EA%B3%B1%EC%88%98%EC%9D%98%20%ED%95%A9.cpp)
  * [9095: 1, 2, 3 더하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9095%20-%201%2C%202%2C%203%20%EB%8D%94%ED%95%98%EA%B8%B0.cpp)
