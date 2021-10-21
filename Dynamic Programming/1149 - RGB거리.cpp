@@ -3,79 +3,54 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ÁýÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2~1,000
-
-- ¹®Á¦ »óÈ²
- °¢ À§Ä¡ÀÇ ÁýÀ» »¡°­, ÃÊ·Ï, ÆÄ¶ûÀ¸·Î Ä¥ÇÏ´Â ºñ¿ëÀÌ ÁÖ¾îÁ³À» ¶§, ¹Ù·Î ¿·ÀÇ Áý¿¡ °°Àº »öÀÌ Ä¥ÇØÁöÁö ¾ÊÀ¸¸é¼­ ¸ðµç ÁýÀ» Ä¥ÇÏ´Â ºñ¿ëÀÇ ÃÖ¼Ò°ªÀ» ±¸ÇÏ¶ó!
-
-
-2. Ç®ÀÌ °èÈ¹
-
-Àç±ÍÀûÀ¸·Î ±¸ÇöÇÏµÇ °¢ À§Ä¡¿¡¼­ Æ¯Á¤ »öÀ» ¼±ÅÃÇßÀ» ¶§ÀÇ ÃÖ¼Ò°ªÀ» ÀúÀåÇØ³õ´Â´Ù.
-Æ¯Á¤ À§Ä¡¿¡¼­ Æ¯Á¤ »öÀ» ¼±ÅÃÇßÀ» ¶§ÀÇ ÃÖ¼Ò ºñ¿ëÀº ´ÙÀ½¿¡ ¾î¶² »öÀ» ¼±ÅÃÇÏµçÁö »ó°ü ¾øÀÌ
-
-µû¶ó¼­ ÀÚ¼¼ÇÑ °èÈ¹Àº ´ÙÀ½°ú °°´Ù.
-1. 3Â÷¿ø ¹è¿­¿¡ »öÀ» Ä¥ÇÒ ¶§ µå´Â ºñ¿ëÀ» ÀÔ·Â¹Þ´Â´Ù.
-2. BFS·Î N¹øÂ° ÁýºÎÅÍ ±ÔÄ¢¿¡ µû¶ó °¢ ÁýÀ» ¼±ÅÃÇÏ´Â ÄÚµå¸¦ ±¸ÇöÇÑ´Ù.
- => ÀÌ ¶§ ÇØ´ç À§Ä¡¿¡¼­ °è»êÇÑ ±× »öÀ» ¼±ÅÃÇßÀ» ¶§ÀÇ ÃÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
-*/
-
-// °¢ À§Ä¡¿¡¼­ Æ¯Á¤ »öÀ» ¼±ÅÃÇßÀ» ¶§ÀÇ ÃÖ¼Ò°ª ÀúÀåÇÒ ¹è¿­
+// ê° ìœ„ì¹˜ì—ì„œ íŠ¹ì • ìƒ‰ì„ ì„ íƒí–ˆì„ ë•Œì˜ ìµœì†Œê°’ ì €ìž¥í•  ë°°ì—´
 int min_nums[1000][3] = { {0, } };
-// °ªÀ» ÀÔ·Â¹ÞÀ» ¹è¿­
+// ê°’ì„ ìž…ë ¥ë°›ì„ ë°°ì—´
 int RGB_cost[1000][3] = { {0, } };
 
-int N; // ÁýÀÇ ¼ö
+int N; // ì§‘ì˜ ìˆ˜
 
-// 00, 01, 10
-
-// n: ¾î¶² À§Ä¡ÀÇ °ªÀÎÁö¸¦ ÀúÀåÇÒ º¯¼ö
-// RGB: ¾î¶² »öÀ» ¼±ÅÃÇß´ÂÁö¸¦ ÀúÀåÇÒ º¯¼ö
+// n: ì–´ë–¤ ìœ„ì¹˜ì˜ ê°’ì¸ì§€ë¥¼ ì €ìž¥í•  ë³€ìˆ˜
+// RGB: ì–´ë–¤ ìƒ‰ì„ ì„ íƒí–ˆëŠ”ì§€ë¥¼ ì €ìž¥í•  ë³€ìˆ˜
 int solution(int n, int RGB) {
-	// ÀÌ¹Ì °è»êµÈ ÃÖ¼Ò°ªÀÌ ÀÖÀ» °æ¿ì ±×´ë·Î ¹ÝÈ¯
+	// ì´ë¯¸ ê³„ì‚°ëœ ìµœì†Œê°’ì´ ìžˆì„ ê²½ìš° ê·¸ëŒ€ë¡œ ë°˜í™˜
 	if (min_nums[n][RGB] != 0) {
 		return min_nums[n][RGB];
 	}
 	else {
-		// ÀÌÀü¿¡ ¾î¶² »öÀ» ¼±ÅÃÇß´À³Ä¿¡ µû¶ó ÃÖ¼Ò°ªÀ» ÀúÀåÇÒ º¯¼ö
+		// ì´ì „ì— ì–´ë–¤ ìƒ‰ì„ ì„ íƒí–ˆëŠëƒì— ë”°ë¼ ìµœì†Œê°’ì„ ì €ìž¥í•  ë³€ìˆ˜
 		vector<int> previous_min_num;
 		for (int i = 0;i < 3;i++) {
-			// ÇöÀç »ö°ú ´Ù¸¦¶§¸¸ °è»êÇÏ±â
+			// í˜„ìž¬ ìƒ‰ê³¼ ë‹¤ë¥¼ë•Œë§Œ ê³„ì‚°í•˜ê¸°
 			if (i != RGB) {
 				previous_min_num.push_back(solution(n - 1, i));
 			}
 		}
-		// Çö À§Ä¡ÀÇ °ª°ú 
+		// í˜„ ìœ„ì¹˜ì˜ ê°’ê³¼ ì´ì „ ìœ„ì¹˜ì˜ ìµœì†Œê°’ë“¤ ì¤‘ ë” ìž‘ì€ ê²ƒê³¼ì˜ í•©ì„ í˜„ìž¬ì˜ ìµœì†Œê°’ìœ¼ë¡œ ì €ìž¥
 		min_nums[n][RGB] = RGB_cost[n][RGB] + *min_element(previous_min_num.begin(), previous_min_num.end());
 		return min_nums[n][RGB];
 	}
 }
 
 int main() {
-
 	cin >> N;
 
 	for (int i = 0;i < N;i++) {
 		cin >> RGB_cost[i][0] >> RGB_cost[i][1] >> RGB_cost[i][2];
 	}
 
-	// Ã¹ À§Ä¡ÀÇ ÃÖ¼Ò°ªµéÀº Ã¹ À§Ä¡ÀÇ ºñ¿ë ±×´ë·ÎÀÌ¹Ç·Î ±×´ë·Î ÀúÀå
+	// ì²« ìœ„ì¹˜ì˜ ìµœì†Œê°’ë“¤ì€ ì²« ìœ„ì¹˜ì˜ ë¹„ìš© ê·¸ëŒ€ë¡œì´ë¯€ë¡œ ê·¸ëŒ€ë¡œ ì €ìž¥
 	for (int i = 0;i < 3;i++) {
 		min_nums[0][i] = RGB_cost[0][i];
 	}
 
-	// ¸¶Áö¸· ÁýÀÇ »öÀº 3°¡Áö »ö ¸ðµÎ °¡´ÉÇÏ¹Ç·Î ¸ðµÎ ½Ãµµ!
+	// ë§ˆì§€ë§‰ ì§‘ì˜ ìƒ‰ì€ 3ê°€ì§€ ìƒ‰ ëª¨ë‘ ê°€ëŠ¥í•˜ë¯€ë¡œ ëª¨ë‘ ì‹œë„!
 	vector<int> previous_min_num;
 	for (int i = 0;i < 3;i++) {
-		// 0ºÎÅÍ ½ÃÀÛÇÏ´Â ÀÎµ¦½ºÀÌ¹Ç·Î N-1ÀÌ ¸¶Áö¸·
+		// 0ë¶€í„° ì‹œìž‘í•˜ëŠ” ì¸ë±ìŠ¤ì´ë¯€ë¡œ N-1ì´ ë§ˆì§€ë§‰ ìœ„ì¹˜ì¸ N ìœ„ì¹˜!
 		previous_min_num.push_back(solution(N - 1, i));
 	}
 
+	// ì„¸ê°€ì§€ ìƒ‰ì„ ì„ íƒí–ˆì„ ê²½ìš° ì¤‘ ê°€ìž¥ ìµœì†Œê°’ì„ ë„ì¶œí•œ ìƒ‰ ì„ íƒí•˜ì—¬ ì¶œë ¥
 	cout<< *min_element(previous_min_num.begin(), previous_min_num.end());
 }
