@@ -1,60 +1,29 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-°è´ÜÀÇ °³¼ö: 1~300
-°è´Ü¿¡ ¾²¿©Áø Á¡¼ö: 1~10,000
-
-- ¹®Á¦ »óÈ²
-°è´ÜÀÇ °³¼ö¿Í °¢ °è´ÜÀ» ¹â¾ÒÀ» ¶§ÀÇ Á¡¼ö°¡ ÁÖ¾îÁö°í,
-
-´ÙÀ½ÀÇ ±ÔÄ¢¿¡ µû¶ó
-
-1. °è´ÜÀº ÇÑ ¹ø¿¡ ÇÑ °è´Ü¾¿ ¶Ç´Â µÎ °è´Ü¾¿ ¿À¸¦ ¼ö ÀÖ´Ù. Áï, ÇÑ °è´ÜÀ» ¹âÀ¸¸é¼­ ÀÌ¾î¼­ ´ÙÀ½ °è´ÜÀÌ³ª, ´ÙÀ½ ´ÙÀ½ °è´ÜÀ¸·Î ¿À¸¦ ¼ö ÀÖ´Ù.
-2. ¿¬¼ÓµÈ ¼¼ °³ÀÇ °è´ÜÀ» ¸ðµÎ ¹â¾Æ¼­´Â ¾È µÈ´Ù. ´Ü, ½ÃÀÛÁ¡Àº °è´Ü¿¡ Æ÷ÇÔµÇÁö ¾Ê´Â´Ù.
-3. ¸¶Áö¸· µµÂø °è´ÜÀº ¹Ýµå½Ã ¹â¾Æ¾ß ÇÑ´Ù.
-
-°è´ÜÀ» ¹â¾Æ¾ß ÇÑ´Ù°í ÇÒ ¶§, ¾òÀ» ¼ö ÀÖ´Â ÃÑ Á¡¼öÀÇ ÃÖ´ë°ªÀ» ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-Àç±ÍÀûÀ¸·Î ±¸ÇöÇÏµÇ °¢ À§Ä¡¿¡¼­ ÇÑ°è´ÜÀ» ¿Ã¶ó¿Ô³Ä, µÎ °è´ÜÀ» ¿Ã¶ó¿Ô³Ä¿¡ µû¸¥ ÃÖ´ë°ªÀ» °¢°¢ ÀúÀåÇØ³õÀ¸¸é µÉµí ÇÏ´Ù!
-ÇÑ°è´Ü ¿Ã¶ó¿Â °Í¿¡ ´ëÇÑ °è»êÀ» ÇÒ ¶§´Â µÎ °è´ÜÀ» ¿Ã¶ó¿Â °ÍÀÇ ÃÖ´ë°ª¸¸ »ç¿ëÇØ¾ß ÇÏ¸ç,
-µÎ°è´ÜÀ» ¿Ã¶ó¿Â °Í¿¡ ´ëÇÑ °è»êÀ» ÇÒ ¶§´Â µÎ °è´ÜÀ» ¿Ã¶ó¿ÔÀ» ¶§¿Í ÇÑ °è´ÜÀ» ¿Ã¶ó¿ÔÀ» ¶§ Áß ÃÖ´ë°ªÀ» »ç¿ëÇÏ¸é µÉ µí ÇÏ´Ù!
-
-µû¶ó¼­ ÀÚ¼¼ÇÑ °èÈ¹Àº ´ÙÀ½°ú °°´Ù.
-1. ¹è¿­¿¡ °¢ °è´ÜÀÇ Á¡¼ö¸¦ ÀÔ·Â¹Þ´Â´Ù.
-2. BFS·Î N¹øÂ° °è´ÜºÎÅÍ ±ÔÄ¢¿¡ µû¶ó °¢ °è´ÜÀ» ¹â¾ÒÀ» ¶§ÀÇ ÃÖ´ë°ªÀ» ÀúÀåÇÏ°í, ¹ÝÈ¯ÇÑ´Ù!.
- => ÀÌ ¶§ ÇØ´ç À§Ä¡¿¡ ¾î¶»°Ô ¿Ã¶ó¿Ô´À³Ä¿¡ µû¶ó ´Ù¸¥ ÃÖ´ë°ªÀ» ÀúÀåÇÑ´Ù!
-*/
-
-// °¢ À§Ä¡¿¡ ¾î¶² ¹æ½ÄÀ¸·Î ¿Ô´À³Ä¿¡ µû¶ó Á¤ÇØÁø ÃÖ´ë°ª
-// 0: ÇÑ°è´Ü ¿À¸£±â, 1: µÎ°è´Ü ¿À¸£±â
+// ê° ìœ„ì¹˜ì— ì–´ë–¤ ë°©ì‹ìœ¼ë¡œ ì™”ëŠëƒì— ë”°ë¼ ì •í•´ì§„ ìµœëŒ€ê°’
+// 0: í•œê³„ë‹¨ ì˜¤ë¥´ê¸°, 1: ë‘ê³„ë‹¨ ì˜¤ë¥´ê¸°
 int max_nums[300][2] = { {0, } };
-// °ªÀ» ÀÔ·Â¹ÞÀ» ¹è¿­
+// ê°’ì„ ìž…ë ¥ë°›ì„ ë°°ì—´
 int stair_point[300] = { 0, };
 
-int N; // °è´ÜÀÇ °³¼ö
+int N; // ê³„ë‹¨ì˜ ê°œìˆ˜
 
-// n: ÇöÀç °è´Ü 
-// one_or_two: ÀÌÀü °è´Ü¿¡¼­ ¿Ã¶ó¿Ã ¶§ ¾î¶² ¹æ¹ýÀ» ¼±ÅÃÇØ¾ß ÇÏ´ÂÁö
+// n: í˜„ìž¬ ê³„ë‹¨ 
+// one_or_two: ì´ì „ ê³„ë‹¨ì—ì„œ ì˜¬ë¼ì˜¬ ë•Œ ì–´ë–¤ ë°©ë²•ì„ ì„ íƒí•´ì•¼ í•˜ëŠ”ì§€
 int solution(int n, int one_or_two) {
-	// ÀÌ¹Ì °è»êµÈ ÃÖ´ë°ªÀÌ ÀÖÀ» °æ¿ì ±×´ë·Î ¹ÝÈ¯
+	// ì´ë¯¸ ê³„ì‚°ëœ ìµœëŒ€ê°’ì´ ìžˆì„ ê²½ìš° ê·¸ëŒ€ë¡œ ë°˜í™˜
 	if (max_nums[n][one_or_two] != 0) {
 		return max_nums[n][one_or_two];
 	}
 	else {
-		if (one_or_two == 0) { // 1°è´Ü ¿Ã¶ó¿Â °æ¿ì
-			// ¹Ýµå½Ã ÀÌÀü °è´Ü¿¡¼­´Â µÎ°è´ÜÀ» ¿Ã¶ó¿À´Â ¹æ¹ýÀ» ¼±ÅÃÇØ¾ß ÇÔ
+		if (one_or_two == 0) { // 1ê³„ë‹¨ ì˜¬ë¼ì˜¨ ê²½ìš°
+			// ë°˜ë“œì‹œ ì´ì „ ê³„ë‹¨ì—ì„œëŠ” ë‘ê³„ë‹¨ì„ ì˜¬ë¼ì˜¤ëŠ” ë°©ë²•ì„ ì„ íƒí•´ì•¼ í•¨
 			max_nums[n][0] = solution(n - 1, 1) + stair_point[n];
 			return max_nums[n][0];
 		}
-		else { // 2°è´Ü ¿Ã¶ó¿Â °æ¿ì
-			// ÀÌÀü °è´Ü¿¡¼­´Â ÇÑ°è´Ü ¿Ã¶ó¿À°Å³ª µÎ°è´Ü ¿Ã¶ó¿À´Â ¹æ¹ýÁß ÇÏ³ª¸¦ ¼±ÅÃ °¡´É!
+		else { // 2ê³„ë‹¨ ì˜¬ë¼ì˜¨ ê²½ìš°
+			// ì´ì „ ê³„ë‹¨ì—ì„œëŠ” í•œê³„ë‹¨ ì˜¬ë¼ì˜¤ê±°ë‚˜ ë‘ê³„ë‹¨ ì˜¬ë¼ì˜¤ëŠ” ë°©ë²•ì¤‘ í•˜ë‚˜ë¥¼ ì„ íƒ ê°€ëŠ¥!
 			max_nums[n][1] = max(solution(n - 2, 0), solution(n - 2, 1)) + stair_point[n];
 			return max_nums[n][1];
 		}
@@ -69,14 +38,14 @@ int main() {
 		cin >> stair_point[i];
 	}
 
-	// Ã¹ À§Ä¡¿Í µÎ¹øÂ° À§Ä¡ÀÇ °ª ÀúÀå
-	// Ã¹ À§Ä¡´Â ±×´ë·Î Ã¹ À§Ä¡ÀÇ Á¡¼ö
+	// ì²« ìœ„ì¹˜ì™€ ë‘ë²ˆì§¸ ìœ„ì¹˜ì˜ ê°’ ì €ìž¥
+	// ì²« ìœ„ì¹˜ëŠ” ê·¸ëŒ€ë¡œ ì²« ìœ„ì¹˜ì˜ ì ìˆ˜
 	max_nums[0][0] = stair_point[0]; 
 	max_nums[0][1] = stair_point[0];
-	// µÎ¹øÂ° À§Ä¡¿¡¼­´Â ¹æ¹ý¿¡ µû¶ó Á¡¼ö°¡ ´Þ¶óÁü
-	max_nums[1][0] = stair_point[0] + stair_point[1];
-	max_nums[1][1] = stair_point[1];
+	// ë‘ë²ˆì§¸ ìœ„ì¹˜ì—ì„œëŠ” ë°©ë²•ì— ë”°ë¼ ì ìˆ˜ê°€ ë‹¬ë¼ì§
+	max_nums[1][0] = stair_point[0] + stair_point[1]; // ì²« ê³„ë‹¨ ê±°ì³ì„œ ë‘ë²ˆì§¸ ê³„ë‹¨ì„ ì˜¤ë¯€ë¡œ
+	max_nums[1][1] = stair_point[1]; // ë‘ë²ˆì§¸ ê³„ë‹¨ë§Œ ì„ íƒ
 
-	// ¸¶Áö¸· À§Ä¡¿¡ ¾î¶»°Ô ¿Ô´À³Ä¿¡ µû¶ó ´Ù¸¥ °ª ÀúÀå ÈÄ ±× Áß ´õ Å«°ª ¼±ÅÃ
+	// ë§ˆì§€ë§‰ ìœ„ì¹˜ì— ì–´ë–»ê²Œ ì™”ëŠëƒì— ë”°ë¼ ë‹¤ë¥¸ ê°’ ì €ìž¥ í›„ ê·¸ ì¤‘ ë” í°ê°’ ì„ íƒ
 	cout << max(solution(N - 1, 0), solution(N - 1, 1));
 }
