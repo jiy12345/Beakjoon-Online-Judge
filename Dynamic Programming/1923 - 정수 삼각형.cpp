@@ -39,7 +39,6 @@ int solution() {
 	return *max_element(dp + (n * (n - 1) / 2), dp + (n * (n + 1) / 2));
 }
 
-
 int main() {
 	cin >> n;
 
