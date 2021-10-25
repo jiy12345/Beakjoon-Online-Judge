@@ -1,39 +1,5 @@
 #include<iostream>
-#include<algorithm>
 using namespace std;
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- n: Á¤¼öÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 1~100,000
- ¼ö¿­ÀÌ °¡Áø ¼öÀÇ ¹üÀ§:-1,000~1,000
-
-- ¹®Á¦ »óÈ²
- ¹Ýµå½Ã ÇÑ°³ ÀÌ»óÀÇ ¼ö¸¦ ¼±ÅÃÇÑ´Ù°í ÇÒ ¶§, ¿¬¼ÓµÈ ¸î °³ÀÇ ¼ö¸¦ ¼±ÅÃÇØ¼­ ±¸ÇÒ ¼ö ÀÖ´Â ÇÕ Áß °¡Àå Å« ÇÕÀ» ±¸ÇÏ¿©¶ó.
-
-2. Ç®ÀÌ °èÈ¹
- ¿¬¼ÓÇÕÀÌ¶ó´Â °ÍÀº ÀÌ¾îÁ® ÀÖ´Ù´Â ¶æÀÌ°í, µû¶ó¼­ °¢ À§Ä¡ÀÇ ÃÖ´ë°ªÀº ÇöÀ§Ä¡ÀÇ °ª ±×´ë·Î°Å³ª, ÀÌÀüÀÇ ¿¬¼Ó°ª°ú ÇöÀçÀÇ °ªÀ» ÇÕÇÑ °Í Áß ÇÏ³ªÀÌ´Ù.
-±×·¸´Ù¸é ¾î¶² Á¶°Ç¿¡ µû¶ó µÎ°¡Áö °æ¿ì°¡ ´Þ¶óÁö´Â °É±î?
-ÀÌÀüÀÇ ¿¬¼Ó°ªÀÌ À½¼ö¶ó¸é Çö À§Ä¡ÀÇ °ª¸¸ »ç¿ëÇÏ´Â °ÍÀÌ ´õ Å©°Ô µÇ°í, ¾ç¼ö¶ó¸é ÇÕÇÏ´Â °ÍÀÌ ´õ Å©°Ô µÈ´Ù. µû¶ó¼­ ½ÄÀ¸·Î ³ªÅ¸³»¸é ´ÙÀ½°ú °°´Ù.
-ÀÌ·¯ÇÑ °úÁ¤À» °ÅÄ¡°Ô µÇ¸é °¢ À§Ä¡¿¡¼­´Â ¿¬¼ÓÇÕÀÇ ÃÖ´ë°ª¸¸ À¯ÁöÇÏ¹Ç·Î, ´ÙÀ½Ç×ÀÇ ÃÖ´ë°ªÀ» °è»êÇÏ´Âµ¥ ¹®Á¦¾øÀÌ »ç¿ëÇÒ ¼ö ÀÖ´Ù!
-
-
- µû¶ó¼­ ÀÚ¼¼ÇÑ °èÈ¹À» Â¥º¸¸é ´ÙÀ½°ú °°´Ù.
-
-1. 1Â÷¿ø ¹è¿­¿¡ ÀüÃ¼ »ï°¢ÇüÀ» ÀÔ·Â¹Þ´Â´Ù.
-2. »ï°¢ÇüÀÇ Å©±â¸¸Å­ ¹Ýº¹¹®À» µ¹¸®¸ç, °¢ ÃþÀÇ ÃÖ´ë°ªµéÀ» ±¸ÇÑ´Ù.
-3. »ï°¢ÇüÀÇ ¸¶Áö¸· Ãþ¿¡ ÇØ´çÇÏ´Â ºÎºÐ¿¡¼­ °¡Àå Å« °ªÀ» Ã£´Â´Ù.
-
-3. °èÈ¹ °ËÁõ
-500 * 501 / 2 = 122,250
-
-501000
-0.501
-*/
-
 
 int n;
 
@@ -42,7 +8,7 @@ int dp[100000];
 
 int solution() {
 	
-	dp[0] = sequence[0]; // °¡Àå Ã¹ À§Ä¡´Â ÀÚ±â ÀÚ½Å¹Û¿¡ ¾øÀ¸¹Ç·Î
+	dp[0] = sequence[0]; // ê°€ìž¥ ì²« ìœ„ì¹˜ëŠ” ìžê¸° ìžì‹ ë°–ì— ì—†ìœ¼ë¯€ë¡œ
 
 	int answer = dp[0];
 
@@ -57,7 +23,6 @@ int solution() {
 	}
 	return answer;
 }
-
 
 int main() {
 	ios_base::sync_with_stdio(false);
