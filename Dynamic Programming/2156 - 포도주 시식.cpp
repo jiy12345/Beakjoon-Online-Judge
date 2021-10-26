@@ -24,7 +24,6 @@ int solution() {
 	return dp[n - 1];
 }
 
-
 int main() {
 	cin >> n;
 
