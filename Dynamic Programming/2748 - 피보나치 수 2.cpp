@@ -1,53 +1,23 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- n: ÇÇº¸³ªÄ¡ ¼ö¿¡¼­ Ç× ¹øÈ£
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- n: 1~90
-
-- ¹®Á¦ »óÈ²
- Æ÷µµÁÖ ½Ã½Ä¿¡ ´ÙÀ½°ú °°Àº ±ÔÄ¢ÀÌ ÀÖÀ» ¶§,
-
-1. Æ÷µµÁÖ ÀÜÀ» ¼±ÅÃÇÏ¸é ±× ÀÜ¿¡ µé¾îÀÖ´Â Æ÷µµÁÖ´Â ¸ðµÎ ¸¶¼Å¾ß ÇÏ°í, ¸¶½Å ÈÄ¿¡´Â ¿ø·¡ À§Ä¡¿¡ ´Ù½Ã ³õ¾Æ¾ß ÇÑ´Ù.
-2. ¿¬¼ÓÀ¸·Î ³õ¿© ÀÖ´Â 3ÀÜÀ» ¸ðµÎ ¸¶½Ç ¼ö´Â ¾ø´Ù.
-
-ÃÖ´ë·Î ¸¶½Ç ¼ö ÀÕ´Â Æ÷µµÁÖÀÇ ¾çÀ» Ãâ·ÂÇÑ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
- n¹øÂ° ÇÇº¸³ªÄ¡ ¼ö¸¦ ±¸ÇÏ¿©¶ó
-
-
-3. °èÈ¹ °ËÁõ
-°¢°¢ÀÌ ÃÖ´ë°ªÀ» À¯ÁöÇÏ°í ÀÖ´Â°¡, ±ÔÄ¢À» ¾î±â°í ÀÖÁö´Â ¾ÊÀº°¡¸¦ ºÁ¾ßÇÔ!
-
-ÇãÁ¡ÀÌ ÀÖÀ»°Å¶ó°í ¿¹»óÀ» ÇÏ±ä Çß´Âµ¥ ½ÇÁ¦·Î ÇãÁ¡ÀÌ ¹ß»ýÇÏ¿´´Ù!
-Ã³À½¿¡´Â ÇöÀç ÀÜÀ» ¸¶½Ã´Â °æ¿ì¸¸ Æ÷ÇÔÇÏ¿© ºñ±³ÇÏ¿´´Âµ¥, ÀÌ·¸°Ô µÉ °æ¿ì °í·ÁÇÏÁö ¸øÇÏ´Â °æ¿ìÀÇ ¼ö°¡ ¹ß»ýÇÏ°Ô µÈ´Ù!
-
-ÇöÀçÀÜÀ» ¸¶½ÃÁö ¸»¾Æ¾ß¸¸ ÇÏ´Â °æ¿ì¿¡´Â ÃÖ´ë°ªÀ» Á¦´ë·Î °í·ÁÇÏÁö ¸øÇÏ°Ô µÇ´Â °ÍÀÌ´Ù!
-
-*/
-
-// °¢ Ç×±îÁöÀÇ ÃÖ´ë°ªÀ» ÀúÀåÇÒ ¹è¿­
+// ê° í•­ê¹Œì§€ì˜ ìµœëŒ€ê°’ì„ ì €ìž¥í•  ë°°ì—´
 long long dp[90] = { 0, };
 
 int n;
 
 long long solution() {
+	// 1í•­ë¶€í„° ì“°ê¸°
 	dp[0] = 1;
 	dp[1] = 1;
 
 	for (int i = 2; i < n; i++) {
-		// Á¡È­½Ä: Fn = Fn-1 + Fn-2 (n ¡Ã 2)
+		// ì í™”ì‹: Fn = Fn-1 + Fn-2 (n â‰¥ 2)
 		dp[i] = dp[i - 1] + dp[i - 2];
 	}
 
 	return dp[n - 1];
 }
-
 
 int main() {
 	cin >> n;
