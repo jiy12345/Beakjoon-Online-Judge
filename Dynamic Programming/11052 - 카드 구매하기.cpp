@@ -1,79 +1,48 @@
 #include<iostream>
+#include<vector>
+#include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- N: °è´Ü ¼öÀÇ ±æÀÌ
+// Pi
+int P[1000] = { 0, };
 
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1~100
+// ê° ì¹´ë“œì˜ ê°œìˆ˜ë¥¼ êµ¬í•˜ëŠ”ë° í•„ìš”í•œ ê°€ê²©ì¤‘ ìµœëŒ€ê°’
+int dp[1000] = { 0, };
 
-- ¹®Á¦ »óÈ²
- ÀÎÁ¢ÇÑ ¸ðµç ÀÚ¸®ÀÇ Â÷ÀÌ°¡ 1ÀÎ ¼ö¸¦ °è´Ü¼ö¶ó°í ÇÑ´Ù.
+int N; // êµ¬ë§¤í•˜ë ¤ëŠ” ì¹´ë“œì˜ ê°œìˆ˜
 
-NÀÌ ÁÖ¾îÁú ¶§, ±æÀÌ°¡ NÀÎ °è´Ü ¼ö°¡ ÃÑ ¸î °³ ÀÖ´ÂÁö ±¸ÇÏ¿©¶ó
+int solution() {
+	// 1ìž¥ì€ ê·¸ëŒ€ë¡œ 1ìž¥ ì‚¬ëŠ” ê²ƒì´ ìµœëŒ€ê°’
+	dp[0] = P[0];
 
-2. Ç®ÀÌ °èÈ¹
-°¢ ½ÃÀÛ ¼ö(1~9)º°·Î °è´Ü ¼öÀÇ °æ¿ìÀÇ ¼ö¸¦ ±¸ÇÏ¸é µÉ µí ÇÏ´Ù!
-
-±¸ÇØ¾ß ÇÏ´Â °ª
-¸ðµç °è´Ü ¼öÀÇ °æ¿ìÀÇ ¼ö
-
-ºÎºÐ ¹®Á¦
-°¢ ½ÃÀÛÀ§Ä¡¿¡ µû¸¥ °è´Ü ¼öÀÇ °æ¿ìÀÇ °ª
-
-ºÎºÐ ¹®Á¦ÀÇ ºÎºÐ ¹®Á¦
-°¢ À§Ä¡¿¡¼­ ¼ö¿¡ µû¸¥ °æ¿ìÀÇ ¼ö
-
-
-
-*/
-
-// °¢ À§Ä¡ÀÇ ¼ö¿¡ µû¸¥ °æ¿ìÀÇ ¼ö
-long long dp[10][100] = { {0,}, };
-
-int N; // °è´ÜÀÇ °³¼ö
-
-// cur_index: Çö À§Ä¡ÀÇ ÀÎµ¦½º 
-// cur_num: Çö À§Ä¡ÀÇ ¼ö
-long long solution(int cur_index, int cur_num) {
-	// ±âÀú »ç·Ê
-	if (cur_index == N - 1) {
-		return 1;
+	for (int i = 1;i < N;i++) {
+		// ê° ìœ„ì¹˜ì—ì„œ ë¹„êµí•´ì•¼í•  ê°’ë“¤ì„ ëª¨ë‘ ì €ìž¥í•  ë²¡í„°
+		vector<int>cur_comparison_values;
+		// ê° ìœ„ì¹˜ì— ì €ìž¥ëœ ìµœëŒ€ê°’ë“¤ê³¼ í•´ë‹¹ ê°œìˆ˜ë¡œë¶€í„° ë” ì‚¬ì•¼ í•˜ëŠ” ì¹´ë“œ ê°œìˆ˜ì˜ íŒ©ì„ ìƒ€ì„ ë•Œì˜ í•©ì„ ê³„ì‚°
+		for (int j = 0;j < i;j++) {
+			cur_comparison_values.push_back(dp[j] + P[i - j - 1]);
+		}
+		// í˜„ìž¬ ì¹´ë“œì˜ ê°œìˆ˜ë¥¼ ê°€ì§„ íŒ©ì„ ê·¸ëŒ€ë¡œ ì‚¬ëŠ” ê²ƒë„ ê³ ë ¤
+		cur_comparison_values.push_back(P[i]);
+		
+		// ê³„ì‚°ëœ ê°’ë“¤ ì¤‘ ìµœëŒ€ê°’ êµ¬í•˜ê¸°
+		dp[i] = *max_element(cur_comparison_values.begin(), cur_comparison_values.end());
 	}
 
-	// ÀÌ¹Ì ÀúÀåµÈ °ªÀÌ ÀÖÀ» °æ¿ì ±×´ë·Î ¸®ÅÏ
-	if (dp[cur_num][cur_index] != 0) {
-		return dp[cur_num][cur_index];
-	}
-
-	// 0ÀÏ °æ¿ì ´ÙÀ½ ¼ö´Â ¹«Á¶°Ç 1ÀÌ¾î¾ß ÇÔ
-	if (cur_num == 0) {
-		dp[cur_num][cur_index] = solution(cur_index + 1, 1) % 1000000000;
-		return dp[cur_num][cur_index];
-	}
-	// 9ÀÏ °æ¿ì ´ÙÀ½ ¼ö´Â ¹«Á¶°Ç 8ÀÌ¾î¾ß ÇÔ
-	else if (cur_num == 9) {
-		dp[cur_num][cur_index] = solution(cur_index + 1, 8) % 1000000000;
-		return dp[cur_num][cur_index];
-	}
-	// ³ª¸ÓÁö °æ¿ì À§ ¾Æ·¡ ¸ðµÎ·Î ÁøÇà °¡´É
-	else {
-		dp[cur_num][cur_index] = ((solution(cur_index + 1, cur_num + 1) % 1000000000) + (solution(cur_index + 1, cur_num - 1) % 1000000000)) % 1000000000;
-		return dp[cur_num][cur_index];
-	}
+	// ìµœì¢…ì ì¸ ê°’ ë¦¬í„´
+	return dp[N - 1];
 }
 
 int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+
 	cin >> N;
 
-	long long answer = 0;
-
-	for (int i = 1;i < 10;i++) {
-		answer += (solution(0, i) % 1000000000);
+	for (int i = 0;i < N;i++) {
+		cin >> P[i];
 	}
 
-	cout << answer % 1000000000;
+	cout << solution();
 }
 
