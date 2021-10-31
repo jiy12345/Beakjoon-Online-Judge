@@ -22,7 +22,7 @@
  * [2748: 피보나치 수 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2748%20-%20%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%20%EC%88%98%202.cpp)
  * [9095: 1, 2, 3 더하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9095%20-%201%2C%202%2C%203%20%EB%8D%94%ED%95%98%EA%B8%B0.cpp)
  * [10884: 쉬운 계단 수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/10884%20-%20%EC%89%AC%EC%9A%B4%20%EA%B3%84%EB%8B%A8%20%EC%88%98.cpp)
- * [11052 - 카드 구매하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11052%20-%20%EC%B9%B4%EB%93%9C%20%EA%B5%AC%EB%A7%A4%ED%95%98%EA%B8%B0.cpp)
+ * [11052: 카드 구매하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11052%20-%20%EC%B9%B4%EB%93%9C%20%EA%B5%AC%EB%A7%A4%ED%95%98%EA%B8%B0.cpp)
  * [**11053: 가장 긴 증가하는 부분 수열**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11053%20-%20%EA%B0%80%EC%9E%A5%20%EA%B8%B4%20%EC%A6%9D%EA%B0%80%ED%95%98%EB%8A%94%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4.cpp)
  * [11726: 2xn 타일링](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11726%20-%202xn%20%ED%83%80%EC%9D%BC%EB%A7%81.cpp)
  * [11727: 2xn 타일링 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11727%20-%202xn%20%ED%83%80%EC%9D%BC%EB%A7%81%202.cpp)
