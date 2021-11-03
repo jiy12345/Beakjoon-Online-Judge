@@ -1,6 +1,4 @@
 #include<iostream>
-#include<vector>
-#include<algorithm>
 using namespace std;
 
 int sticker[2][100000] = { {0, } };
