@@ -2,59 +2,26 @@
 #include<numeric>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- N: ¿À¸£¸· ¼öÀÇ ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 1~1,000
-
-- ¹®Á¦ »óÈ²
-¿À¸£¸·¼ö´Â ¼öÀÇ ÀÚ¸®°¡ ¿À¸§Â÷¼øÀ» ÀÌ·ç¸ç ÀÎÁ¢ÇÑ ¼ö°¡ °°À» ¼öµµ ÀÖ´Â ¼ö¶ó°í ÇÑ´Ù.
-
-¿À¸£¸·¼öÀÇ ±æÀÌ NÀÌ ÁÖ¾îÁ³À» ¶§, °¡´ÉÇÑ ¿À¸£¸· ¼öÀÇ °³¼ö¸¦ ±¸ÇÏ¿©¶ó.
-
-=> ÀÌ¶§, ¼ö´Â 0À¸·Î ½ÃÀÛÇÒ ¼ö ÀÖ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
-¼ö½ÄÀ» ¼¼¿ì±â ½±°Ô ÇÏµµ·Ï, ÀüÃ¼ ¹®Á¦¸¦ »ìÂ¦ ¼öÁ¤ÇÏ¿´´Ù!
- - ÀüÃ¼ ¹®Á¦: ³¡³ª´Â ¼ö°¡ nÀÎ(0 <= n <= 9) N±æÀÌÀÇ ¿À¸£¸· ¼ö¸¦ ¸¸µå´Â °æ¿ìÀÇ ¼ö ±¸ÇÏ±â
- - ºÎºÐ ¹®Á¦:  ³¡³ª´Â ¼ö°¡ nÀÎ(0 <= n <= 9) k(1 <= k < N)±æÀÌÀÇ ¿À¸£¸· ¼ö¸¦ ¸¸µå´Â °æ¿ìÀÇ ¼ö ±¸ÇÏ±â
-
- ÀÌ·¸°Ô ¸ðµÎ ±¸ÇÑ ÈÄ, N±æÀÌÀÇ ¿À¸£¸· ¼ö °æ¿ìÀÇ ¼öµéÀ» ¸ðµÎ ÇÕÇÏ¸é ´äÀÌ µÈ´Ù!
-
-³¡³ª´Â ¼ö°¡ nÀÎ k±æÀÌÀÇ ¿À¸£¸· ¼öÀÇ °æ¿ìÀÇ ¼ö´Â k-1 ±æÀÌÀÇ ¿À¸£¸· ¼ö Áß ³¡³ª´Â ¼ö°¡ 0~nÀÎ °æ¿ìÀÇ ¼ö¸¦ ¸ðµÎ ÇÕÇÑ °Í°ú °°´Ù!
-
- µû¶ó¼­ Á¡È­½ÄÀ¸·Î ½áº¸¸é ´ÙÀ½°ú °°´Ù.
-
- dp[n][k] = dp[0][k-1] + dp[1][k-1] + ... + dp[n][k-1] 
-
- ÀÌ·¸°Ô °¢ ´Ü°èÀÇ ¸ðµç n(0~9)¿¡ ´ëÇØ °æ¿ìÀÇ ¼ö¸¦ ±¸ÇÏ°í, ¸¶Áö¸·¿¡´Â ¸ðµç n¿¡ ´ëÇÑ °æ¿ìÀÇ ¼ö¸¦ ÇÕÇÏ¿© ±¸ÇÑ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
-// dp[i][j]: j·Î ³¡³ª´Â i±æÀÌ ¿À¸£¸· ¼öÀÇ °æ¿ìÀÇ ¼ö
+// dp[i][j]: jë¡œ ëë‚˜ëŠ” iê¸¸ì´ ì˜¤ë¥´ë§‰ ìˆ˜ì˜ ê²½ìš°ì˜ ìˆ˜
 int dp[1000][10] = { {0, } };
 
 int N;
 
 int solution() {
-	// °¢°¢ÀÇ Ã¹ À§Ä¡´Â ÇÏ³ªÀÇ °æ¿ìÀÇ ¼ö¸¸ °¡Áü
+	// ê°ê°ì˜ ì²« ìœ„ì¹˜ëŠ” í•˜ë‚˜ì˜ ê²½ìš°ì˜ ìˆ˜ë§Œ ê°€ì§
 	for (int i = 0; i < 10; i++) {
 		dp[0][i] = 1;
 	}
 
 	for (int i = 1; i < N; i++) {
 		for (int j = 0; j < 10; j++) {
+			// dp[i][j] = dp[i-1][0] + dp[i-1][1] + ... + dp[i-1][j] 
+			// ëª¨ë“ˆëŸ¬ ì—°ì‚°ì˜ ì„±ì§ˆ í™œìš©
 			dp[i][j] = accumulate(dp[i - 1], dp[i - 1] + j + 1, 0) % 10007;
-			// cout << dp[i][j] << " ";
 		}
 	}
 
+	// ëª¨ë“ˆëŸ¬ ì—°ì‚°ì˜ ì„±ì§ˆ í™œìš©
 	return accumulate(dp[N - 1], dp[N - 1] + 10, 0) % 10007;
 }
 
