@@ -25,7 +25,6 @@ int solution() {
 	return accumulate(dp[N - 1], dp[N - 1] + 10, 0) % 10007;
 }
 
-
 int main() {
 
 	cin >> N;
