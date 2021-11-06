@@ -1,76 +1,62 @@
 #include<iostream>
-#include<algorithm>
 using namespace std;
-
-/*
-1. 문제 분석
-- 변수
- n: 동전 종류의 수
- k: 구하려는 가치의 합
-
-- 변수 제한 사항
- n: 1~100
- k: 1~10,000
-
- 각 동전의 가치: 1~100,000
-
- 전체 경우의 수의 개수: 2^31보다 작음 => int형으로 나타낼 수 있음!
-
-- 문제 상황
- k와 각 동전의 가치가 주어질 때, k를 구성할 수 있는 경우의 수를 구하여라.
-
-2. 풀이 계획
- - 전체 문제: k금액을 만드는 경우의 수
- - 부분 문제: n(1 <= n < k) n금액을 만드는 경우의 수
-
-n 금액을 만드는 경우의 수는 동전의 종류 수만큼 존재한다.
-
-각 동전의 가치를 빼준 수만큼의 수가 존재하는 것이다.
-
- 따라서 점화식으로 써보면 다음과 같다.
-
- dp[n] = dp[n-1] + 2*dp[n-2]
- 
-
-3. 계획 검증
-
-
-*/
 
 // k 금액을 만들기 위한 경우의 수
 int dp[10001] = { 0, };
 
 int coin[100] = { 0, };
 
-int combination(int n, int r)
-{
-	if (n == r || r == 0)
-		return 1;
-	else
-		return combination(n - 1, r - 1) + combination(n - 1, r);
+int n, k;
+
+// 조합으로 구하기
+// 사용한 동전의 구성이 같은데, 순서만 다른 경우는 같은 경우로 볼 경우
+int solution() {
+
+	// 정확히 각 코인의 가치를 가진 금액을 만들 때를 위한 초기값
+	dp[0] = 1;
+
+	// 모든 코인에 대해 반복
+	for (int i = 0; i < n; i++) {
+		// 모든 금액에 대해 반복
+		// 현재 코인 금액 이하의 금액은 만들 수 없으므로,
+		// 현재 코인의 금액부터 시작
+		for (int j = coin[i]; j <= k; j++) {
+			dp[j] += dp[j - coin[i]];
+		}
+	}
+
+	return dp[k];
 }
 
-
-int solution(int n, int k) {
-	
-
-	return dp[n] = 0;
-}
-
+// 순열로 구하기
+// 사용한 동전의 구성이 같은데, 순서만 다른 것도 다른 경우로 볼 경우
+//int solution() {
+//
+//	// 정확히 각 코인의 가치를 가진 금액을 만들 때를 위한 초기값
+//	dp[0] = 1;
+//
+//	// 모든 금액에 대해 반복
+//	for (int i = 1; i <= k; i++) {
+//		// 모든 코인에 대해 반복
+//		for (int j = 0; j < n; j++) {
+//			if (i - coin[j] >= 0) {
+//				dp[i] += dp[i - coin[j]];
+//			}
+//		}
+//	}
+//
+//	return dp[k];
+//}
 
 int main() {
-	int n, k;
 
 	cin >> n >> k;
-
 
 	for (int i = 0; i < n; i++) {
 		cin >> coin[i];
 	}
 
-	sort(coin, coin + n);
-
-	cout << solution(n, k);
+	cout << solution();
 
 	return 0;
 }
