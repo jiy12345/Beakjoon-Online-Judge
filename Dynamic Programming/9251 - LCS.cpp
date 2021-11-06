@@ -9,7 +9,6 @@ int dp[1001][1001] = { {0, } };
 string string1;
 string string2;
 
-
 int solution() {
 	for (int i = 1;i <= string2.length();i++) {
 		for (int j = 1;j <= string1.length();j++) {
