@@ -23,7 +23,7 @@
  * [2579: 계단 오르기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2579%20-%20%EA%B3%84%EB%8B%A8%20%EC%98%A4%EB%A5%B4%EA%B8%B0.cpp)
  * [2748: 피보나치 수 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2748%20-%20%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%20%EC%88%98%202.cpp)
  * [9095: 1, 2, 3 더하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9095%20-%201%2C%202%2C%203%20%EB%8D%94%ED%95%98%EA%B8%B0.cpp)
- * [9251: **LCS**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9251%20-%20LCS.cpp)
+ * [**9251: LCS**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9251%20-%20LCS.cpp)
  * [9465: 스티커](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9465%20-%20%EC%8A%A4%ED%8B%B0%EC%BB%A4.cpp)
  * [10884: 쉬운 계단 수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/10884%20-%20%EC%89%AC%EC%9A%B4%20%EA%B3%84%EB%8B%A8%20%EC%88%98.cpp)
  * [11052: 카드 구매하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11052%20-%20%EC%B9%B4%EB%93%9C%20%EA%B5%AC%EB%A7%A4%ED%95%98%EA%B8%B0.cpp)
