@@ -2,73 +2,36 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¼ö¿­ÀÇ Å©±â
-A[i]: ¼ö¿­ AÀÇ i¹øÂ° ¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 1~1,000
- A[i]: 1~1,000
-
-
-- ¹®Á¦ »óÈ²
- N°ú ¼ö¿­ A°¡ ÁÖ¾îÁú ¶§, ¼ö¿­ AÀÇ °¡Àå ±ä °¨¼ÒÇÏ´Â ºÎºÐ ¼ö¿­ÀÇ ±æÀÌ¸¦ Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-ÀÌÇ× °è¼ö´Â Á¶ÇÕ°ú °°À¸¹Ç·Î, NCK¸¦ ±¸ÇØ¾ßÇÏ´Â ¹®Á¦ÀÌ¸ç, Á¶ÇÕÀº ´ÙÀ½°ú °°Àº °ø½Ä¿¡ µû¶ó ºÐÇÒÁ¤º¹ÀÌ °¡´ÉÇÏ´Ù.
-
-nCk = n-1Ck-1 + n-1Ck
-
-µû¶ó¼­ 2Â÷¿ø¹è¿­·Î ±¸¼ºÇÏ¿©, Top-down ¹æ½ÄÀ¸·Î Àç±Í·Î ±¸ÇöÇÏ°í, ÀÌ¹Ì ±¸ÇØÁø °ªÀº ´Ù½Ã ±¸ÇÏÁö ¾Êµµ·Ï ÇÏ¿© ¹Ýº¹À» ÁÙ¿©¾ß ÇÒ µí ÇÏ´Ù!
-
-Top-down ¹æ½ÄÀ¸·Î ÇÏ´Â ÀÌÀ¯´Â ¹®Á¦¸¦ º¸¸é À§¿¡ ±¸ÇØ¾ß ÇÏ´Â °ªÀº ÇÏ³ª·Î ¸ðÀÌÁö¸¸, ¾Æ·¡·Î °¥ ¼ö·Ï ±¸ÇØ¾ß ÇÏ´Â °ªÀÌ
-
-±×¸®°í Á¶ÇÕÀÇ °ø½Ä¿¡´Â ´ÙÀ½°ú °°Àº °ÍÀÌ ÀÖ´Ù!
-
-nCk = nCn-k
-
-k ºÎºÐÀÌ ÀÛÀ¸¸é °è»êÀÌ ¿ëÀÌÇÏ¹Ç·Î, k¿Í n-kÁß ÀÛÀº ¼ö¸¦ ¼±ÅÃÇÏ·Á ÇÑ´Ù!
-
- - ÀüÃ¼ ¹®Á¦: N¹øÂ° ¼ö¸¦ Æ÷ÇÔÇÏ´Â N±æÀÌÀÇ ¼ö¿­ AÁß °¡Àå ±ä °¨¼ÒÇÏ´Â ºÎºÐ ¼ö¿­ÀÇ ±æÀÌ
- - ºÎºÐ ¹®Á¦: k(1 <= k < N)¹øÂ° ¼ö¸¦ Æ÷ÇÔÇÏ´Â k±æÀÌÀÇ ¼ö¿­ AÁß °¡Àå ±ä °¨¼ÒÇÏ´Â ºÎºÐ ¼ö¿­ÀÇ ±æÀÌ
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
-// dp[N][K] = ÀÌÇ×°è¼ö (N, K) 
+// dp[N][K] = ì´í•­ê³„ìˆ˜ (N, K) 
 int dp[1001][501] = { 0, };
 
-
-
-int solution(int N, int K) {
-	if (K > N) {
-		return 0;
-	}
-	if (K == 1) {
-		return N;
-	}
-	else if (K == 0) {
+int solution(int n, int k) {
+	// kê°€ ìŒìˆ˜ë¡œ ê°€ê±°ë‚˜ kê°€ në³´ë‹¤ ì»¤ì§€ëŠ” ê²½ìš°ëŠ” ëª¨ë‘ 0ì´ë¯€ë¡œ
+	// ë” ì´ìƒ ë°˜ë³µì„ ì§„í–‰í•˜ì§€ ì•ŠìŒ!
+	// nC0 = n-1C0 + n-1C-1 => n-1C-1ì€ ì¡´ìž¬í•˜ì§€ ì•Šìœ¼ë¯€ë¡œ 0
+	// nCn = n-1Cn + n-1Cn-1 => n-1Cnì€ ì¡´ìž¬í•˜ì§€ ì•Šìœ¼ë¯€ë¡œ 0
+	// ìœ„ì˜ ë‘ ì‹ì—ì„œ n-1C0 = n-1Cn-1 = 1ì´ë¯€ë¡œ, 1ë§Œ ë¦¬í„´
+	if (k == 0 || n == k) {
 		return 1;
 	}
 
-	if (dp[N][K] != 0) {
-		return dp[N][K] % 10007;
+	// ì´ë¯¸ ì €ìž¥ëœ ê°’ì´ ìžˆì„ ê²½ìš°
+	if (dp[n][k] != 0) {
+		return dp[n][k];
 	}
+	// ì•„ì§ ì €ìž¥ëœ ê°’ì´ ì—†ì„ ê²½ìš°
 	else {
-		dp[N][K] = solution(N - 1, K - 1) + solution(N - 1, K);
-		return dp[N][K] % 10007;
+		// ìƒˆë¡œ ê³„ì‚°!
+		dp[n][k] = (solution(n - 1, k - 1) + solution(n - 1, k)) % 10007;
+		return dp[n][k];
 	}
 }
-
 
 int main() {
 	int N, K;
 	cin >> N >> K;
 
+	// ì¡°í•©ì˜ ì„±ì§ˆ ì´ìš©
 	K = min(K, N - K);
 
 	cout << solution(N, K);
