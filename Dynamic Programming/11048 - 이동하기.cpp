@@ -35,7 +35,7 @@ int solution(int n, int m) {
 int main() {
 	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
   
-  // 배열의 모든 값 -1로 초기화
+  	// 배열의 모든 값 -1로 초기화
 	memset(dp, -1, sizeof(int) * 1001 * 1001);
 
 	// 초기값 입력
