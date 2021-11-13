@@ -3,59 +3,33 @@
 #include<cstring>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- M, N: ¹Ì·ÎÀÇ ¼¼·Î, °¡·Î Å©±â
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-M, N: 1~500
-°¢ À§Ä¡ÀÇ ³ôÀÌ: 1~10,000
-
-- ¹®Á¦ »óÈ²
- M, NÀÌ ÁÖ¾îÁö°í, °¢ À§Ä¡ÀÇ ³ôÀÌ°¡ ÁÖ¾îÁú ¶§, °¡´ÉÇÑ °æ·ÎÀÇ ¼ö¸¦ ±¸ÇÏ¶ó! 
-
-2. Ç®ÀÌ °èÈ¹
- - ÀüÃ¼ ¹®Á¦: M, N À§Ä¡±îÁö °¥ ¼ö ÀÖ´Â °æ·ÎÀÇ ¼ö
- - ºÎºÐ ¹®Á¦: m, n ±îÁö °¥ ¼ö ÀÖ´Â °æ·ÎÀÇ ¼ö 
-
- ¾Õ¼­¼­ ¾î¶² À§Ä¡¿¡¼­ ¿ÃÁö ¸ð¸£¹Ç·Î, Å¾´Ù¿î ¹æ½ÄÀ¸·Î ±¸ÇöÇØ¾ßÇÒµí ÇÏ´Ù!
-
-M, N À§Ä¡¿¡¼­ ½ÃÀÛÇÏ¿©, °¢ À§Ä¡º°·Î ÇØ´ç À§Ä¡º¸´Ù ³ôÀº À§Ä¡¿¡ ´ëÇØ¼­¸¸ ±¸ÇÏ¸é µÉ µí ÇÏ´Ù!
-
-4¹æÇâÀ¸·Î ÀÌµ¿ÇÏ¹Ç·Î ¹«ÇÑÁ¤ µ¹°Ô µÇ´Â »óÈ²À» ÁÖÀÇÇØ¾ß ÇÏÁö¸¸, ¿À¸£¸·À¸·Î¸¸ ÀÌµ¿ÇÏ¹Ç·Î Å« ¹®Á¦´Â ¾øÀ» µí ÇÏ´Ù!
-
-°¢ À§Ä¡º°·Î °¢ À§Ä¡º¸´Ù ³ôÀº ÁÖº¯ 4¹æÇâÀÇ À§Ä¡±îÁöÀÇ °æ·ÎÀÇ ¼ö¸¦ ´õÇÏ¸é µÉ µí ÇÏ´Ù!
-
-3. °èÈ¹ °ËÁõ
-*/
-//      ¾Æ·¡, À§, ¿À¸¥ÂÊ, ¿ÞÂÊ
+//      ì•„ëž˜, ìœ„, ì˜¤ë¥¸ìª½, ì™¼ìª½
 int dx[4] = { 0,0,1,-1 };
 int dy[4] = { 1,-1,0,0 };
 
-// ¿ÜºÎ °æ°è¸¦ 0À¸·Î ÇÏ¿© ¿ÜºÎ´Â °í·ÁÇÏÁö ¾Êµµ·Ï ÇÏ±â!
+// ì™¸ë¶€ ê²½ê³„ë¥¼ 0ìœ¼ë¡œ í•˜ì—¬ ì™¸ë¶€ëŠ” ê³ ë ¤í•˜ì§€ ì•Šë„ë¡ í•˜ê¸°!
 int map[502][502];
 
-// dp[i][j]: i, j±îÁö °¥ ¼ö ÀÖ´Â °æ·ÎÀÇ ¼ö
+// dp[i][j]: i, jê¹Œì§€ ê°ˆ ìˆ˜ ìžˆëŠ” ê²½ë¡œì˜ ìˆ˜
 int dp[502][502];
 
 int M, N;
 
 int solution(int m, int n) {
-    // ÀÌ¹Ì °è»êµÈ °ªÀÌ ÀÖ´Ù¸é »ç¿ë
+    // ì´ë¯¸ ê³„ì‚°ëœ ê°’ì´ ìžˆë‹¤ë©´ ì‚¬ìš©
     if (dp[m][n] != -1) {
         return dp[m][n];
     }
 
-    // 4¹æÇâÀ¸·Î ÁøÇà
+    // 4ë°©í–¥ìœ¼ë¡œ ì§„í–‰
     for(int i = 0;i < 4;i++) {
-        // ´õ ³ôÀº À§Ä¡¿¡ ´ëÇØ¼­¸¸ °í·ÁÇÏ±â
+        // ë” ë†’ì€ ìœ„ì¹˜ì— ëŒ€í•´ì„œë§Œ ê³ ë ¤í•˜ê¸°
         if (map[m][n] < map[m + dx[i]][n + dy[i]]) {
             dp[m][n] += solution(m + dx[i], n + dy[i]);
         }
     }
 
-    // -1·Î ÃÊ±âÈ­ µÇ¾îÀÖÀ¸¹Ç·Î 1´õÇØÁÖ±â
+    // -1ë¡œ ì´ˆê¸°í™” ë˜ì–´ìžˆìœ¼ë¯€ë¡œ 1ë”í•´ì£¼ê¸°
     dp[m][n]++;
 
     return dp[m][n];
@@ -63,10 +37,11 @@ int solution(int m, int n) {
 
 
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+    ios_base::sync_with_stdio(false); cin.tie(NULL);
 
     cin >> M >> N;
 
+    // 0ë„ ì €ìž¥ë  ìˆ˜ ìžˆìœ¼ë¯€ë¡œ -1ë¡œ ì´ˆê¸°í™”
     memset(dp, -1, 502 * 502 * sizeof(int));
 
     for (int i = 1;i <= M;i++) {
@@ -75,7 +50,7 @@ int main() {
         }
     }
 
-    // °¡Àå Ã¹ À§Ä¡´Â ¹«Á¶°Ç °¥ ¼ö ÀÖÀ¸¹Ç·Î 1·Î ÃÊ±âÈ­
+    // ê°€ìž¥ ì²« ìœ„ì¹˜ëŠ” ë¬´ì¡°ê±´ ê°ˆ ìˆ˜ ìžˆìœ¼ë¯€ë¡œ 1ë¡œ ì´ˆê¸°í™”
     dp[1][1] = 1;
 
     cout << solution(M, N);
