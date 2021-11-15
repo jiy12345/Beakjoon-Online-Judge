@@ -2,41 +2,6 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¼ö¿­ÀÇ ±æÀÌ
-Ai: ¼ö¿­ÀÇ i¹øÂ° ¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1~1,000
-Ai: 1~1,000
-
-- ¹®Á¦ »óÈ²
-¼ö¿­ S°¡ ¾î¶² ¼ö Sk¸¦ ±âÁØÀ¸·Î S1 < S2 < ... Sk-1 < Sk > Sk+1 > ... SN-1 > SNÀ» ¸¸Á·ÇÑ´Ù¸é, ±× ¼ö¿­À» ¹ÙÀÌÅä´Ð ¼ö¿­ÀÌ¶ó°í ÇÑ´Ù.
-
-¼ö¿­ AÀÇ ºÎºÐ ¼ö¿­ Áß¿¡¼­ °¡Àå ±ä ¹ÙÀÌÅä´Ð ¼ö¿­ÀÇ ±æÀÌ¸¦ Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-ÀÌ ¹®Á¦´Â °¡Àå ±ä Áõ°¡ ºÎºÐ ¼ö¿­¹®Á¦¿Í ¸Å¿ì À¯»çÇÏ´Ù!
-
-°¡Àå ±ä ¹ÙÀÌÅä´Ð ¼ö¿­À» ±¸ÇÏ·Á¸é ¾î¶»°Ô ÇØ¾ßÇÒ±î?
-
-ÀÏ´Ü °¢ À§Ä¡°¡ Á¦ÀÏ ³ôÀº ¼öÀÏ ¶§¿¡ ´ëÇØ ¸ðµÎ °í·ÁÇØÁà¾ß ÇÑ´Ù.
-
-±× ¼ö¿¡ ´ëÇÑ °¡Àå ±ä ¹ÙÀÌÅä´Ð ¼ö¿­Àº 
-±× ¼ö ¿ÞÂÊºÎÅÍ´Â °¡Àå ±ä Áõ°¡ ºÎºÐ ¼ö¿­ÀÌ, ±× ¼ö ¿À¸¥ÂÊºÎÅÍ´Â °¡Àå ±ä °¨¼Ò ºÎºÐ¼ö¿­ÀÌ ¿Ã °ÍÀÌ´Ù!
-
-µû¶ó¼­ ¿ÞÂÊ ³¡ºÎÅÍ ½ÃÀÛÇÏ´Â °¢ ¼ö¸¦ Æ÷ÇÔÇÏ´Â °¡Àå ±ä Áõ°¡ ºÎºÐ ¼ö¿­°ú
-¿À¸¥ÂÊ ³¡ºÎÅÍ ½ÃÀÛÇÏ´Â °¢ ¼ö¸¦ Æ÷ÇÔÇÏ´Â °¡Àå ±ä °¨¼Ò ºÎºÐ ¼ö¿­¿ï ±¸ÇÏ¿©
-
-±× µÎ ¼ö¿­À» ´õÇÏ¿© °¢ À§Ä¡ÀÇ ¼ö¸¦ Áß½ÉÀ¸·Î ÇÏ´Â °¡Àå ±ä ¹ÙÀÌÅä´Ð ¼ö¿­À» ±¸ÇÒ ¼ö ÀÖÀ» µí ÇÏ´Ù.
-±×·±µ¥ ÀÌ ¶§ ±âÁØ ¼ö´Â Áõ°¡ ¼ö¿­°ú °¨¼Ò ¼ö¿­¿¡ ¸ðµÎ Æ÷ÇÔµÇ¹Ç·Î, °è»êµÈ °ª¿¡¼­ 1À» »©Áà¾ß ÇÑ´Ù!
-
-
-*/
-
 int dp_increase[1001];
 int dp_decrease[1001];
 int dp_bitonic[1001];
@@ -46,41 +11,41 @@ int A[1001];
 int N;
 
 int solution() {
-	// ÃÊ±â°ª ¼³Á¤
+	// ì´ˆê¸°ê°’ ì„¤ì •
 	dp_increase[1] = 1;
 	dp_decrease[N] = 1;
 
-	// ¸ðµç ¼ö¿¡ ´ëÇØ ¹Ýº¹
+	// ì¦ê°€ ìˆ˜ì—´ êµ¬í•˜ê¸°
 	for (int i = 2;i <= N;i++) {
-		// ¾ÕÂÊºÎÅÍ ÇöÀç ¼ö±îÁöÀÇ °¡Àå ±ä Áõ°¡ ºÎºÐ ¼ö¿­ ±¸ÇÏ±â
+		// ì•žìª½ë¶€í„° í˜„ìž¬ ìˆ˜ê¹Œì§€ì˜ ê°€ìž¥ ê¸´ ì¦ê°€ ë¶€ë¶„ ìˆ˜ì—´ êµ¬í•˜ê¸°
 		for (int j = 1;j < i;j++) {
-			// Áõ°¡ ¼ö¿­ÀÇ Á¶°ÇÀ» ÃæÁ·ÇÒ ¶§¸¸ °í·ÁÇÏ±â
+			// ì¦ê°€ ìˆ˜ì—´ì˜ ì¡°ê±´ì„ ì¶©ì¡±í•  ë•Œë§Œ ê³ ë ¤í•˜ê¸°
 			if (A[i] > A[j]) {
-				// ÀÌÀü À§Ä¡±îÁöÀÇ Áõ°¡ ¼ö¿­ Áß ÃÖÀå ±æÀÌ ±¸ÇÏ±â
+				// ì´ì „ ìœ„ì¹˜ê¹Œì§€ì˜ ì¦ê°€ ìˆ˜ì—´ ì¤‘ ìµœìž¥ ê¸¸ì´ êµ¬í•˜ê¸°
 				dp_increase[i] = max(dp_increase[i], dp_increase[j]);
 			}
 		}
-		// ÇöÀç °ªÀº Ç×»ó Æ÷ÇÔµÇ¾î¾ß ÇÏ¹Ç·Î 1 ´õÇØÁÖ±â
+		// í˜„ìž¬ ê°’ì€ í•­ìƒ í¬í•¨ë˜ì–´ì•¼ í•˜ë¯€ë¡œ 1 ë”í•´ì£¼ê¸°
 		dp_increase[i]++;
 	}
 
-	// ¸ðµç ¼ö¿¡ ´ëÇØ ¹Ýº¹
+	// ê°ì†Œ ìˆ˜ì—´ êµ¬í•˜ê¸°
 	for (int i = N - 1;i >= 1;i--) {
-		// µÚÂÊºÎÅÍ ÇöÀç ¼ö±îÁöÀÇ °¡Àå ±ä °¨¼Ò ºÎºÐ ¼ö¿­ ±¸ÇÏ±â
+		// ë’¤ìª½ë¶€í„° í˜„ìž¬ ìˆ˜ê¹Œì§€ì˜ ê°€ìž¥ ê¸´ ê°ì†Œ ë¶€ë¶„ ìˆ˜ì—´ êµ¬í•˜ê¸°
 		for (int j = i + 1;j <= N;j++) {
-			// °¨¼Ò ¼ö¿­ÀÇ Á¶°ÇÀ» ÃæÁ·ÇÒ ¶§¸¸ °í·ÁÇÏ±â
+			// ê°ì†Œ ìˆ˜ì—´ì˜ ì¡°ê±´ì„ ì¶©ì¡±í•  ë•Œë§Œ ê³ ë ¤í•˜ê¸°
 			if (A[i] > A[j]) {
-				// ÀÌÀü À§Ä¡±îÁöÀÇ Áõ°¡ ¼ö¿­ Áß ÃÖÀå ±æÀÌ ±¸ÇÏ±â
+				// ì´ì „ ìœ„ì¹˜ê¹Œì§€ì˜ ì¦ê°€ ìˆ˜ì—´ ì¤‘ ìµœìž¥ ê¸¸ì´ êµ¬í•˜ê¸°
 				dp_decrease[i] = max(dp_decrease[i], dp_decrease[j]);
 			}
 		}
-		// ÇöÀç °ªÀº Ç×»ó Æ÷ÇÔµÇ¾î¾ß ÇÏ¹Ç·Î 1 ´õÇØÁÖ±â
+		// í˜„ìž¬ ê°’ì€ í•­ìƒ í¬í•¨ë˜ì–´ì•¼ í•˜ë¯€ë¡œ 1 ë”í•´ì£¼ê¸°
 		dp_decrease[i]++;
 	}
 
-
+	// ë°”ì´í† ë‹‰ ìˆ˜ì—´ êµ¬í•˜ê¸°
 	for (int i = 1;i <= N;i++) {
-		// Çö À§Ä¡ ¼ö¸¦ Áß½ÉÀ¸·Î ÇÏ´Â ¹ÙÀÌÅä´Ð ¼ö¿­ÀÇ ±æÀÌ °è»ê
+		// í˜„ ìœ„ì¹˜ ìˆ˜ë¥¼ ì¤‘ì‹¬ìœ¼ë¡œ í•˜ëŠ” ë°”ì´í† ë‹‰ ìˆ˜ì—´ì˜ ê¸¸ì´ ê³„ì‚°
 		dp_bitonic[i] = dp_increase[i] + dp_decrease[i] - 1;
 	}
 
@@ -88,7 +53,6 @@ int solution() {
 }
 
 int main() {
-	// ÃÊ±â°ª ÀÔ·Â
 	cin >> N;
 
 	for (int i = 1;i <= N;i++) {
