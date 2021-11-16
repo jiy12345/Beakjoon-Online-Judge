@@ -2,34 +2,8 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-w: ³Êºñ
-h: ³ôÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-w, h: 0~50!
-
-- ¹®Á¦ »óÈ²
-ÀÔ·ÂÀº ¿©·¯ °³ÀÇ Å×½ºÆ® ÄÉÀÌ½º·Î ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, °¢ Å×½ºÆ® ÄÉÀÌ½º¿¡¼­´Â ³Êºñ w¿Í ³ôÀÌ h°¡ ÁÖ¾îÁö°í,
-
-´Ù¸¥ Á¤»ç°¢Çü°ú °¡·Î, ¼¼·Î, ¶Ç´Â ´ë°¢¼±À¸·Î ¿¬°áµÇ¾î ÀÖ´Â »ç°¢ÇüÀÇ ¸ğÀÓÀ» ÇÏ³ªÀÇ ¼¶ÀÌ¶ó°í ÇÒ ¶§,
-
-Áöµµ°¡ 1Àº ¶¥, 0Àº ¹Ù´Ù·Î ÁÖ¾îÁú ¶§, ¼¶ÀÇ °³¼ö¸¦ ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-¸ğµç 1ÀÎ ºÎºĞ(¶¥)¿¡ ´ëÇØ BFS¸¦ ÁøÇàÇÏ¸ç, 
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
 int dx[8] = { -1,  0,  1, -1, 1, -1, 0, 1 };
 int dy[8] = { -1, -1, -1,  0, 0,  1, 1, 1 };
-
 
 void bfs(int map[][52], pair<int, int> start_node) {
 	queue<pair<int, int>> bfs_queue;
@@ -39,12 +13,12 @@ void bfs(int map[][52], pair<int, int> start_node) {
 		pair<int, int> cur_node = bfs_queue.front();
 		bfs_queue.pop();
 
-		// 8 ¹æÇâ¿¡ ´ëÇØ ¸ğµÎ Ã¼Å©
+		// 8 ë°©í–¥ì— ëŒ€í•´ ëª¨ë‘ ì²´í¬
 		for (int i = 0;i < 8;i++) {
 			int cur_x = cur_node.first + dx[i];
 			int cur_y = cur_node.second + dy[i];
 
-			// ÀÌ¹Ì Å½»öÇÑ ³ëµå Ç¥½Ã
+			// ì´ë¯¸ íƒìƒ‰í•œ ë…¸ë“œ í‘œì‹œ
 			if (map[cur_x][cur_y] == 1) {
 				map[cur_x][cur_y] = 0;
 				bfs_queue.push({ cur_x, cur_y });
@@ -56,10 +30,14 @@ void bfs(int map[][52], pair<int, int> start_node) {
 int solution(int map[][52], int w, int h) {
 	int cnt = 0;
 
+	// ëª¨ë“  ë…¸ë“œì— ëŒ€í•´ íƒìƒ‰
 	for (int i = 1;i <= h;i++) {
 		for (int j = 1;j <= w;j++) {
+			// ê° ë…¸ë“œê°€ ìœ¡ì§€ì¼ ê²½ìš°
 			if (map[i][j] == 1) {
+				// ì„¬ì˜ ê°œìˆ˜ 1 ë”í•´ì£¼ê¸°
 				cnt++;
+				// í•´ë‹¹ ë…¸ë“œë¡œë¶€í„° íƒìƒ‰í•  ìˆ˜ ìˆëŠ” ìœ¡ì§€ bfsë¡œ íƒìƒ‰
 				bfs(map, { i, j });
 			}
 		}
@@ -75,6 +53,7 @@ int main() {
 	while (true) {
 		cin >> w >> h;
 
+		// ì¢…ã…‡ë£Œ ì¡°ê±´
 		if (w == 0 && h == 0) {
 			break;
 		}
