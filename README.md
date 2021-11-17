@@ -50,6 +50,7 @@
  * [1260: DFS와 BFS](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1260%20-%20DFS%EC%99%80%20BFS.cpp)
  * [1697: 숨바꼭질](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1697%20-%20%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88)
  * [2178: 미로 탐색](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2178%20-%20%EB%AF%B8%EB%A1%9C%20%ED%83%90%EC%83%89.cpp)
+ * [2468: 안전영역](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2468%20-%20%EC%95%88%EC%A0%84%EC%98%81%EC%97%AD.cpp)
  * [2606: 바이러스](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2606%20-%20%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.cpp)
  * [2667: 단지번호붙이기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2667%20-%20%EB%8B%A8%EC%A7%80%EB%B2%88%ED%98%B8%EB%B6%99%EC%9D%B4%EA%B8%B0.cpp)
  * [4963: 섬의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/4963%20-%20%EC%84%AC%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)
