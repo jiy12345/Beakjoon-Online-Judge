@@ -38,6 +38,7 @@
  * [11726: 2xn 타일링](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11726%20-%202xn%20%ED%83%80%EC%9D%BC%EB%A7%81.cpp)
  * [11727: 2xn 타일링 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11727%20-%202xn%20%ED%83%80%EC%9D%BC%EB%A7%81%202.cpp)
  * [11955: 가장 큰 증가 부분 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11955%20-%20%EA%B0%80%EC%9E%A5%20%ED%81%B0%20%EC%A6%9D%EA%B0%80%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4.cpp)
+ * [12015: 가장 긴 증가하는 부분 수열 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/12015%20-%20%EA%B0%80%EC%9E%A5%20%EA%B8%B4%20%EC%A6%9D%EA%B0%80%ED%95%98%EB%8A%94%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4%202.cpp)
  * [14051: 퇴사](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/14051%20-%20%ED%87%B4%EC%82%AC.cpp)
 
 ## - Data Structures
