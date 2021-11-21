@@ -2,54 +2,29 @@
 #include<numeric>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: °ÔÀÓÆÇÀÇ °¡·Î, ¼¼·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 4~100
-Ä­¿¡ ÀûÇôÀÖ´Â ¼ö: 0~9
-
-°æ·ÎÀÇ °³¼ö´Â 2^63 - 1º¸´Ù ÀÛ°Å³ª °°´Ù! => long longÀ¸·Î ÇØ¾ß!
-
-- ¹®Á¦ »óÈ²
-°¢ Ä­¿¡ ÀûÇôÀÖ´Â ¼ö´Â ÇöÀç Ä­¿¡¼­ °¥ ¼ö ÀÖ´Â °Å¸®¸¦ ÀÇ¹ÌÇÏ¸ç, ¹Ýµå½Ã ¿À¸¥ÂÊÀÌ³ª ¾Æ·¡ÂÊÀ¸·Î¸¸ ÀÌµ¿ÇØ¾ß ÇÑ´Ù!
-ÇÑ¹ø Á¡ÇÁ¸¦ ÇÒ ¶§ ¹æÇâÀ» ¹Ù²Ù¸é ¾ÈµÇ¸ç, Áï ÇÑ Ä­¿¡¼­ ¿À¸¥ÂÊ¸¸ ÀÌµ¿ÇÏ°Å³ª ¾Æ·¡ÂÊÀ¸·Î¸¸ ÀÌµ¿ÇØ¾ß ÇÑ´Ù!
-
-0Àº ´õ ÀÌ»ó ÁøÇàÀ» ¸·´Â Á¾ÂøÁ¡ÀÌ´Ù.
-
-°¢ À§Ä¡ÀÇ °¥ ¼ö ÀÖ´Â °Å¸®°¡ ÁÖ¾îÁú ¶§, 
-°¡Àå ¿ÞÂÊ À§ Ä­¿¡¼­ °¡Àå ¿À¸¥ÂÊ ¾Æ·¡ Ä­À¸·Î ±ÔÄ¢¿¡ ¸Â°Ô ÀÌµ¿ÇÒ ¼ö ÀÖ´Â °æ·ÎÀÇ °³¼ö¸¦ ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-°¢ À§Ä¡º°·Î ÇÏ³ª¾¿ ´õÇØ°¡¸é µÉ µí ÇÏ´Ù!
-
-*/
-
-
+// ê° ìœ„ì¹˜ê¹Œì§€ì˜ ê²½ë¡œìˆ˜ë¥¼ ì €ìž¥í•  ë°°ì—´
 long long dp[100][100];
 
+// ê° ìœ„ì¹˜ì—ì„œ ê°ˆ ìˆ˜ ìžˆëŠ” ì´ë™ê±°ë¦¬ë¥¼ ìž…ë ¥ë°›ì„ ë°°ì—´
 int map[100][100];
 
 int N;
 
 long long solution() {
-	// Ã¹ À§Ä¡´Â ¹«Á¶°Ç °¥ ¼ö ÀÖÀ¸¹Ç·Î Ç¥½Ã!
+	// ì²« ìœ„ì¹˜ëŠ” ë¬´ì¡°ê±´ ê°ˆ ìˆ˜ ìžˆìœ¼ë¯€ë¡œ í‘œì‹œ!
 	dp[0][0] = 1;
 
 	for (int i = 0;i < N;i++) {
 		for (int j = 0;j < N;j++) {
-			// Çö À§Ä¡°¡ 0ÀÏ °æ¿ì °è»ê x
+			// í˜„ ìœ„ì¹˜ê°€ 0ì¼ ê²½ìš° ê³„ì‚° x
 			if (map[i][j] == 0) {
 				continue;
 			}
-			// ¾Æ·¡·Î ÀÌµ¿
+			// ì•„ëž˜ë¡œ ì´ë™
 			if (i + map[i][j] < N) {
 				dp[i + map[i][j]][j] += dp[i][j];
 			}
-			// ¿À¸¥ÂÊ ÀÌµ¿
+			// ì˜¤ë¥¸ìª½ ì´ë™
 			if (j + map[i][j] < N) {
 				dp[i][j + map[i][j]] += dp[i][j];
 			}
