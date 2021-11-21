@@ -1,5 +1,4 @@
 #include<iostream>
-#include<numeric>
 using namespace std;
 
 // 각 위치까지의 경로수를 저장할 배열
