@@ -25,6 +25,7 @@
  * [**2225: 합분해**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2225%20-%20%ED%95%A9%EB%B6%84%ED%95%B4.cpp)
  * [**2293: 동전 1**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2293%20-%20%EB%8F%99%EC%A0%84%201.cpp)
  * [2294: 동전 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2294%20-%20%EB%8F%99%EC%A0%84%202.cpp)
+ * [2565: 전깃줄](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2565%20-%20%EC%A0%84%EA%B9%83%EC%A4%84.cpp)
  * [2579: 계단 오르기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2579%20-%20%EA%B3%84%EB%8B%A8%20%EC%98%A4%EB%A5%B4%EA%B8%B0.cpp)
  * [2748: 피보나치 수 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2748%20-%20%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%20%EC%88%98%202.cpp)
  * [9095: 1, 2, 3 더하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9095%20-%201%2C%202%2C%203%20%EB%8D%94%ED%95%98%EA%B8%B0.cpp)
