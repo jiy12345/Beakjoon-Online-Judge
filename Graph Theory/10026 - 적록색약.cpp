@@ -7,30 +7,6 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-N: ±×¸²ÀÇ ¼¼·Î ¹Ø °¡·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1~100
-
-- ¹®Á¦ »óÈ²
-Àû·Ï»ö¾àÀº »¡°£»ö°ú ÃÊ·Ï»öÀ» ±¸ºĞÇÏÁö ¸øÇÑ´Ù.
-
-±×¸²ÀÌ ÁÖ¾îÁú ¶§ Àû·Ï»ö¾àÀÌ º¸´Â ±¸¿ªÀÇ ¼ö¿Í ¾Æ´Ñ »ç¶÷ÀÌ º¸´Â ±¸¿ªÀÇ ¼ö¸¦ °¢°¢ ±¸ÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹
- ¿µ¿ªÀÌ ¾î¶»°Ô µÇ´ÂÁö ¾Ë±â À§ÇØ¼­´Â ÇÑ ºÎºĞ´ç ÇÑ¹øÀÇ Å½»ö¸¸ ÀÖÀ¸¸é µÇ°í, °¢°¢ÀÇ ÀÌµ¿¿¡ °¡ÁßÄ¡°¡ ¾øÀ¸¹Ç·Î,
-
-¹æ¹® Ç¥½Ã¸¦ ¹Ì¸®ÇÏ°í Å½»öÀ» ÁøÇàÇÏ´Â BFS¸¦ ÅëÇØ Ç® ¼ö ÀÖ´Â ¹®Á¦Ã³·³ º¸ÀÎ´Ù!
-
-µû¶ó¼­ Àû·Ï »ö¾àÀÏ ¶§¿Í ¾Æ´Ò¶§¿¡ ´ëÇØ °¢°¢ ¸ğµç ¾ÆÁ÷ ¹æ¹®ÇÏÁö ¾ÊÀº À§Ä¡¿¡¼­ÀÇ bfs¸¦ ÁøÇàÇÏ¸é µÉ µí ÇÏ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
 int di[4] = { 1, -1, 0, 0 };
 int dj[4] = { 0, 0, 1, -1 };
 
@@ -57,7 +33,7 @@ void bfs(int start_i, int start_j, vector<char> cur_color) {
 			int next_i = cur_i + di[i];
 			int next_j = cur_j + dj[i];
 			if (0 <= next_i && next_i < N && 0 <= next_j && next_j < N) {
-				// ¹æ¹®ÇÏÁö ¾Ê¾Ò°í, °°Àº »öÀÏ¶§¸¸ push
+				// ë°©ë¬¸í•˜ì§€ ì•Šì•˜ê³ , ê°™ì€ ìƒ‰ì¼ë•Œë§Œ push
 				if (is_visited[next_i][next_j] == 0 && find(cur_color.begin(), cur_color.end(), picture[next_i][next_j]) != cur_color.end()) {
 					is_visited[next_i][next_j] = 1;
 					bfs_queue.push({ next_i, next_j });
@@ -68,7 +44,7 @@ void bfs(int start_i, int start_j, vector<char> cur_color) {
 }
 
 void solution() {
-	// Á¤»óÀûÀÎ »ç¶÷ÀÇ °æ¿ì
+	// ì •ìƒì ì¸ ì‚¬ëŒì˜ ê²½ìš°
 	int normal_cnt = 0;
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
@@ -81,6 +57,7 @@ void solution() {
 
 	memset(is_visited, 0, sizeof(is_visited));
 
+	// ì ë¡ ìƒ‰ì•½ì´ ìˆëŠ” ì‚¬ëŒì˜ ê²½ìš°
 	int rg_weakness_cnt = 0;
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
@@ -98,7 +75,6 @@ void solution() {
 
 	cout << normal_cnt << " " << rg_weakness_cnt;
 }
-
 
 int main() {
 	ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
