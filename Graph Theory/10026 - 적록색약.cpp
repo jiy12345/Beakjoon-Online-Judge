@@ -28,7 +28,6 @@ void bfs(int start_i, int start_j, vector<char> cur_color) {
 		int cur_i = cur_node.first;
 		int cur_j = cur_node.second;
 
-
 		for (int i = 0; i < 4; i++) {
 			int next_i = cur_i + di[i];
 			int next_j = cur_j + dj[i];
