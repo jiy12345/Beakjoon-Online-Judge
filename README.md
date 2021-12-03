@@ -67,7 +67,7 @@
  * [2606: 바이러스](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2606%20-%20%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.cpp)
  * [2667: 단지번호붙이기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2667%20-%20%EB%8B%A8%EC%A7%80%EB%B2%88%ED%98%B8%EB%B6%99%EC%9D%B4%EA%B8%B0.cpp)
  * [4963: 섬의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/4963%20-%20%EC%84%AC%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)
- * [10026: 적록색약](hthttps://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/10026%20-%20%EC%A0%81%EB%A1%9D%EC%83%89%EC%95%BD.cpp)
+ * [10026: 적록색약](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/10026%20-%20%EC%A0%81%EB%A1%9D%EC%83%89%EC%95%BD.cpp)
  * [11403: 경로 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11403%20-%20%EA%B2%BD%EB%A1%9C%20%EC%B0%BE%EA%B8%B0.cpp)
  * [11724: 연결 요소의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11724%20-%20%EC%97%B0%EA%B2%B0%20%EC%9A%94%EC%86%8C%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)
 
