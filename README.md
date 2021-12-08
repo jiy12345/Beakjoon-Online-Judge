@@ -55,6 +55,9 @@
  * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
  * [11286: 절댓값 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11286%20-%20%EC%A0%88%EB%8C%93%EA%B0%92%20%ED%9E%99.cpp)
 
+## - Divide And Conquer 
+ * [1992: 쿼드 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Divide%20And%20Conquer/1992%20-%20%EC%BF%BC%EB%93%9C%20%ED%8A%B8%EB%A6%AC.cpp)
+
 ## - Geometry
  * [11758: CCW](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Geometry/11758%20-%20CCW.cpp)
  * [17386: 선분 교차 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Geometry/17386%20-%20%EC%84%A0%EB%B6%84%20%EA%B5%90%EC%B0%A8%201.cpp) 
