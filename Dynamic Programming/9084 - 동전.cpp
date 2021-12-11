@@ -1,38 +1,14 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- T: Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö
- N: µ¿Àü Á¾·ùÀÇ ¼ö
- M: µ¿ÀüÀ¸·Î ¸¸µé¾î¾ß ÇÒ ±Ý¾×
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- T: 1~10
- N: 1~20
- M: 1~10,000
-
-¹æ¹ýÀÇ ¼ö 2^31 - 1 º¸´Ù ÀÛ´Ù => intÇüÀ¸·Î ³ªÅ¸³¾ ¼ö ÀÖ´Ù.
-°°Àº °¡Ä¡ÀÇ µ¿ÀüÀÌ ¿©·¯¹ø ÁÖ¾îÁö´Â °æ¿ì´Â ¾ø´Ù.
-
-- ¹®Á¦ »óÈ²
- µ¿ÀüÀÇ °¡Áö ¼ö¿Í °¢ µ¿ÀüÀÇ ±Ý¾×ÀÌ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÁÖ¾îÁú ¶§, µ¿ÀüÀ¸·Î ¸ñÇ¥ ±Ý¾×À» ¸¸µå´Â ¸ðµç ¹æ¹ýÀÇ ¼ö¸¦ ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
- ¼ø¼­¿¡ »ó°ü ¾øÀÌ »Ì´Â °ÍÀÌ¹Ç·Î, Á¶ÇÕ ¹®Á¦ÀÌ¸ç, Á¶ÇÕ ¹®Á¦´Â µ¿Àü ¼ø¼­´ë·Î °í·ÁÇØ °¡´Â °ÍÀ¸·Î ÆÇ´ÜÀ» ÁøÇàÇÑ´Ù!
-
-*/
-
 int T, N, M;
 
 int coin[20];
 
-
 int solution() {
 	int dp[10001] = { 0, };
 
-	// µü ¸Â´Â ±Ý¾×À» ¸¸µé¾ú´Ù´Â ÀÇ¹ÌÀÇ 1
+	// ë”± ë§žëŠ” ê¸ˆì•¡ì„ ë§Œë“¤ì—ˆë‹¤ëŠ” ì˜ë¯¸ì˜ 1
 	dp[0] = 1;
 	
 	for (int i = 0;i < N;i++) {
