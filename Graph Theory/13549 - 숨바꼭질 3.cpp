@@ -2,39 +2,6 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- N: ¼öºóÀÌÀÇ ÇöÀç À§Ä¡
- K µ¿»ýÀÇ ÇöÀç À§Ä¡
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 1~100,000
- K: 1~100,000
-
-
-- ¹®Á¦ »óÈ²
-¼öºóÀÌÀÇ ÀÌµ¿ ¹æ¹ýÀº ´ÙÀ½°ú °°´Ù.
-
- ¼öºóÀÌÀÇ ÇöÀç À§Ä¡¸¦ X¶ó°í ÇÒ ¶§, 
-
- 1. °È±â: 1ÃÊÈÄ X-1È¤Àº X+1 À§Ä¡·Î ÀÌµ¿
-
- 2. ¼ø°£ÀÌµ¿: 1ÃÊÈÄ 2*XÀ§Ä¡·Î ÀÌµ¿
-
- µ¿»ý°ú ¼öºóÀÌÀÇ À§Ä¡°¡ ÁÖ¾îÁú ¶§, °¡Àå ºü¸¥ ½Ã°£ÀÌ ¸î ÃÊ ÈÄÀÎÁö¿Í °¡Àå ºü¸¥ ½Ã°£À¸·Î Ã£´Â ¹æ¹ýÀÌ ¸î°¡ÁöÀÎÁö¸¦ Ã£¾Æ¶ó!
-
-
-2. Ç®ÀÌ °èÈ¹
-
-ÀÏ´Ü °¡ÁßÄ¡°¡ °°Àº °æ·ÎÃ£±â ¹®Á¦ÀÌ¹Ç·Î ´ç¿¬È÷ BFS·Î Ã³¸®ÇÏ¸é µÉµí ÇÏ°í,
-
-¸¶Áö¸·¿¡ ÃÖÀû °æ·Î¸¦ Ã£À¸¸é ¹Ù·Î ºüÁ®³ª°¡´Â °ÍÀÌ ¾Æ´Ñ ±× ±íÀÌ¿¡ ÀÖ´Â °Íµé Áß ¿øÇÏ´Â À§Ä¡¿¡ µµÂøÇÑ °æ·ÎµéÀÇ °³¼ö¸¦ ¼¼°í,
-
-±íÀÌ°¡ ´ÙÀ½ ±íÀÌ·Î ³Ñ¾Æ°¬À» °æ¿ì ¸ØÃß¸é µÉ µí ÇÏ´Ù!
-
-*/
-
 int N, K;
 
 bool is_visited[100001];
@@ -45,7 +12,7 @@ void solution() {
 
 	queue<pair<int, int>> bfs_queue;
 
-	// Ã¹ À§Ä¡ ¼³Á¤
+	// ì²« ìœ„ì¹˜ ì„¤ì •
 	bfs_queue.push({ N, 0 });
 
 	is_visited[N] = true;
@@ -55,9 +22,10 @@ void solution() {
 		int cur_depth = bfs_queue.front().second;
 		bfs_queue.pop();
 
-		// popÇÒ ½Ã ¹æ¹® Ç¥½Ã
+		// popí•  ì‹œ ë°©ë¬¸ í‘œì‹œ
 		is_visited[X] = true;
 
+		// ìµœì  ì‹œê°„ ì´ìƒì˜ ì‹œê°„ íƒìƒ‰ì´ ì‹œìž‘ë˜ì—ˆì„ ë•Œ ë¹ ì ¸ë‚˜ê°€ê¸°
 		if (cur_depth > optimal_time) {
 			break;
 		}
