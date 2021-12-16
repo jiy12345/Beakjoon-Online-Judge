@@ -3,66 +3,37 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
- V: Á¤Á¡ÀÇ °³¼ö
- E: °£¼±ÀÇ °³¼ö
- W: °£¼±ÀÇ °¡ÁßÄ¡(ºñ¿ë)
- K: ½ÃÀÛ Á¤Á¡ÀÇ ¹øÈ£
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- V: 1~20,000
- E: 1~300,000
- W: 1~10
-
- ¼­·Î ´Ù¸¥ µÎ Á¤Á¡ »çÀÌ¿¡ ¿©·¯ °³ÀÇ °£¼±ÀÌ Á¸ÀçÇÒ ¼öµµ ÀÖÀ½
-
-- ¹®Á¦ »óÈ²
- Á¤Á¡°ú °£¼±ÀÇ ¿¬°á »óÅÂ¿Í ½ÃÀÛ Á¤Á¡ÀÌ ÁÖ¾îÁú ¶§, 
-
-
-2. Ç®ÀÌ °èÈ¹
- ÀüÇüÀûÀÎ ´ÙÀÍ½ºÆ®¶ó ¹®Á¦ÀÌ´Ù!
-
- ±×·±µ¥ Á¤Á¡ÀÇ °³¼ö°¡ 20000°³ÀÌ¹Ç·Î, Á¤Á¡ÀÇ °³¼ö·Î 2Â÷¿ø ¹è¿­À» ¸¸µé¸é 20,000*20,000*4=1.6±â°¡°¡ µÇ¾î ¸Å¿ì Ä¿Áö°Ô µÈ´Ù.
-
- µû¶ó¼­ linked 
-
-*/
-
 #define INF 200000;
 
 int V, E;
-
 
 vector<pair<int, int>> V_state[20001];
 
 int min_distance[20001];
 
 void solution(int startNode) {
-	// ÀÚ½Å ³ëµå·ÎÀÇ ÀÌµ¿Àº 0
+	// ìì‹  ë…¸ë“œë¡œì˜ ì´ë™ì€ 0
 	min_distance[startNode] = 0;
 	
-	// topÀ» ÃÖ¼Ò°ªÀ¸·Î À¯ÁöÇÏ´Â priority queue(min heap)
+	// topì„ ìµœì†Œê°’ìœ¼ë¡œ ìœ ì§€í•˜ëŠ” priority queue(min heap)
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>pq;
 
 	pq.push(make_pair(0, startNode));
 
 	while (!pq.empty()) {
-		// ÇöÀç ³ëµå±îÁöÀÇ ÃÖ¼Ò °Å¸®
+		// í˜„ì¬ ë…¸ë“œê¹Œì§€ì˜ ìµœì†Œ ê±°ë¦¬
 		int cur_distance = pq.top().first;
-		// ÇöÀç ¹æ¹®ÇÑ ³ëµå
+		// í˜„ì¬ ë°©ë¬¸í•œ ë…¸ë“œ
 		int cur_node = pq.top().second;
 
 		pq.pop();
 
-		// ÃÖ´Ü°Å¸®°¡ ¾Æ´Ò °æ¿ì ½ºÅµ
+		// ìµœë‹¨ê±°ë¦¬ê°€ ì•„ë‹ ê²½ìš° ìŠ¤í‚µ
 		if (min_distance[cur_node] < cur_distance) continue;
 		for (int i = 0;i < V_state[cur_node].size();i++) {
-			// ÇöÀç ³ëµå¸¦ °ÅÃÄ¼­ ´ÙÀ½ ³ëµå·Î °¡´Â ºñ¿ë
+			// í˜„ì¬ ë…¸ë“œë¥¼ ê±°ì³ì„œ ë‹¤ìŒ ë…¸ë“œë¡œ ê°€ëŠ” ë¹„ìš©
 			int next_distance = cur_distance + V_state[cur_node][i].first;
-			// ´ÙÀ½ ¹æ¹®ÇÒ ³ëµå
+			// ë‹¤ìŒ ë°©ë¬¸í•  ë…¸ë“œ
 			int next_node = V_state[cur_node][i].second;
 			
 			if (next_distance < min_distance[next_node]) {
