@@ -2,35 +2,6 @@
 #include<vector>
 #include<queue>
 using namespace std;
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-n: µµ½Ã(Á¤Á¡)ÀÇ °³¼ö
-m: ¹ö½º(°£¼±)ÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-n: 2~100
-m: 1~100,000
-ºñ¿ëÀº 100,000º¸´Ù ÀÛ°Å³ª °°Àº ÀÚ¿¬¼öÀÌ´Ù.
-½ÃÀÛ µµ½Ã¿Í µµÂø µµ½Ã°¡ °°Àº °æ¿ì´Â ¾ø´Ù.
-½ÃÀÛ µµ½Ã¿Í µµÂø µµ½Ã¸¦ ¿¬°áÇÏ´Â ³ë¼±Àº ÇÏ³ª°¡ ¾Æ´Ò ¼ö ÀÖ´Ù.
-
-- ¹®Á¦ »óÈ²
-n°³ÀÇ ÁÙ¿¡ °ÉÃÄ µµ½Ã i¿¡¼­ j·Î °¡´Âµ¥ ÇÊ¿äÇÑ ÃÖ¼Ò ºñ¿ëÀ» Ãâ·ÂÇÏ¶ó.
-¸¸¾à, i¿¡¼­ j·Î °¥ ¼ö ¾ø´Â °æ¿ì¿¡´Â ±× ÀÚ¸®¿¡ 0À» Ãâ·ÂÇÑ´Ù.
-
-
-
-2. Ç®ÀÌ °èÈ¹
- ¿µ¿ªÀÌ ¾î¶»°Ô µÇ´ÂÁö ¾Ë±â À§ÇØ¼­´Â ÇÑ ºÎºÐ´ç ÇÑ¹øÀÇ Å½»ö¸¸ ÀÖÀ¸¸é µÇ°í, °¢°¢ÀÇ ÀÌµ¿¿¡ °¡ÁßÄ¡°¡ ¾øÀ¸¹Ç·Î,
-
-¹æ¹® Ç¥½Ã¸¦ ¹Ì¸®ÇÏ°í Å½»öÀ» ÁøÇàÇÏ´Â BFS¸¦ ÅëÇØ Ç® ¼ö ÀÖ´Â ¹®Á¦Ã³·³ º¸ÀÎ´Ù!
-
-µû¶ó¼­ Àû·Ï »ö¾àÀÏ ¶§¿Í ¾Æ´Ò¶§¿¡ ´ëÇØ °¢°¢ ¸ðµç ¾ÆÁ÷ ¹æ¹®ÇÏÁö ¾ÊÀº À§Ä¡¿¡¼­ÀÇ bfs¸¦ ÁøÇàÇÏ¸é µÉ µí ÇÏ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
-*/
 
 int INF = 100001 * 100;
 
@@ -40,15 +11,15 @@ int min_distance[101][101];
 
 void solution() {
 
-	// i: °ÅÃÄ°¡´Â µµ½Ã
+	// i: ê±°ì³ê°€ëŠ” ë„ì‹œ
 	for (int i = 1; i <= n; i++) {
-		// j: Ãâ¹ß µµ½Ã
+		// j: ì¶œë°œ ë„ì‹œ
 		for (int j = 1; j <= n; j++) {
-			// k: µµÂø µµ½Ã
+			// k: ë„ì°© ë„ì‹œ
 			for (int k = 1; k <= n; k++) {
-				// Ãâ¹ß µµ½Ã¿Í µµÂø µµ½Ã°¡ ´Ù¸¦ ¶§¸¸ °è»ê ÁøÇà
+				// ì¶œë°œ ë„ì‹œì™€ ë„ì°© ë„ì‹œê°€ ë‹¤ë¥¼ ë•Œë§Œ ê³„ì‚° ì§„í–‰
 				if (j != k) {
-					// i¹øÂ° µµ½Ã¸¦ °ÅÃÄ°¡´Â °ÍÀÌ j¿¡¼­ k¸¦ ¹Ù·Î °¡´Â°Íº¸´Ù °¡±õ´Ù¸é °»½Å
+					// ië²ˆì§¸ ë„ì‹œë¥¼ ê±°ì³ê°€ëŠ” ê²ƒì´ jì—ì„œ kë¥¼ ë°”ë¡œ ê°€ëŠ”ê²ƒë³´ë‹¤ ê°€ê¹ë‹¤ë©´ ê°±ì‹ 
 					min_distance[j][k] = min(min_distance[j][k], min_distance[j][i] + min_distance[i][k]);
 				}
 			}
@@ -56,7 +27,7 @@ void solution() {
 	}
 
 	for (int i = 1; i <= n; i++) {
-		// j: Ãâ¹ß µµ½Ã
+		// j: ì¶œë°œ ë„ì‹œ
 		for (int j = 1; j <= n; j++) {
 			if (min_distance[i][j] == INF) {
 				cout << 0 << " ";
@@ -88,7 +59,7 @@ int main() {
 
 		cin >> startCity >> endCity >> cost;
 
-		// ÇöÀç °ªº¸´Ù ÀÛÀ»¶§¸¸ °»½Å
+		// í˜„ìž¬ ê°’ë³´ë‹¤ ìž‘ì„ë•Œë§Œ ê°±ì‹ 
 		min_distance[startCity][endCity] = min(min_distance[startCity][endCity], cost);
 	}
 
