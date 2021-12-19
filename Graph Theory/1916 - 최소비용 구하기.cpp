@@ -9,31 +9,31 @@ int V, E;
 
 vector<pair<int, int>> V_state[1001];
 
-int min_distance[20001];
+int min_distance[1001];
 
 int solution(int startNode, int endNode) {
-	// ÀÚ½Å ³ëµå·ÎÀÇ ÀÌµ¿Àº 0
+	// ìì‹  ë…¸ë“œë¡œì˜ ì´ë™ì€ 0
 	min_distance[startNode] = 0;
 
-	// topÀ» ÃÖ¼Ò°ªÀ¸·Î À¯ÁöÇÏ´Â priority queue(min heap)
+	// topì„ ìµœì†Œê°’ìœ¼ë¡œ ìœ ì§€í•˜ëŠ” priority queue(min heap)
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>pq;
 
 	pq.push(make_pair(0, startNode));
 
 	while (!pq.empty()) {
-		// ÇöÀç ³ëµå±îÁöÀÇ ÃÖ¼Ò °Å¸®
+		// í˜„ì¬ ë…¸ë“œê¹Œì§€ì˜ ìµœì†Œ ê±°ë¦¬
 		int cur_distance = pq.top().first;
-		// ÇöÀç ¹æ¹®ÇÑ ³ëµå
+		// í˜„ì¬ ë°©ë¬¸í•œ ë…¸ë“œ
 		int cur_node = pq.top().second;
 
 		pq.pop();
 
-		// ÃÖ´Ü°Å¸®°¡ ¾Æ´Ò °æ¿ì ½ºÅµ
+		// ìµœë‹¨ê±°ë¦¬ê°€ ì•„ë‹ ê²½ìš° ìŠ¤í‚µ
 		if (min_distance[cur_node] < cur_distance) continue;
 		for (int i = 0; i < V_state[cur_node].size(); i++) {
-			// ÇöÀç ³ëµå¸¦ °ÅÃÄ¼­ ´ÙÀ½ ³ëµå·Î °¡´Â ºñ¿ë
+			// í˜„ì¬ ë…¸ë“œë¥¼ ê±°ì³ì„œ ë‹¤ìŒ ë…¸ë“œë¡œ ê°€ëŠ” ë¹„ìš©
 			int next_distance = cur_distance + V_state[cur_node][i].first;
-			// ´ÙÀ½ ¹æ¹®ÇÒ ³ëµå
+			// ë‹¤ìŒ ë°©ë¬¸í•  ë…¸ë“œ
 			int next_node = V_state[cur_node][i].second;
 
 			if (next_distance < min_distance[next_node]) {
@@ -42,7 +42,6 @@ int solution(int startNode, int endNode) {
 			}
 		}
 	}
-
 	
 	return min_distance[endNode];
 }
