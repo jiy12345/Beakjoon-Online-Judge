@@ -3,39 +3,13 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-N, M: ¿¬±¸¼ÒÀÇ °¡·Î, ¼¼·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 3~8
-
-- ¹®Á¦ »óÈ²
- ÀÌ ¹ÙÀÌ·¯½º´Â »óÇÏÁÂ¿ì·Î ÀÎÁ¢ÇÑ ºó Ä­À¸·Î ¸ğµÎ ÆÛÁ®³ª°¥ ¼ö ÀÖ´Ù. »õ·Î ¼¼¿ï ¼ö ÀÖ´Â º®ÀÇ °³¼ö´Â 3°³ÀÌ¸ç, ²À 3°³¸¦ ¼¼¿ö¾ß ÇÑ´Ù°í ÇÒ ¶§,
-
-¾òÀ» ¼ö ÀÖ´Â ¾ÈÀü ¿µ¿ª Å©±âÀÇ ÃÖ´ë°ªÀ» ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-ÀÏ´Ü ¸ğµç °÷¿¡ º®À» ¼¼¿öºÁ¾ß ÇÑ´Ù. µû¶ó¼­ Á¶ÇÕÀ¸·Î °¢ N*M°³ÀÇ À§Ä¡ Áß 3°³ÀÇ À§Ä¡¸¦ »Ì¾Æ¾ß ÇÑ´Ù!
-
-¶ÇÇÑ ±× À§Ä¡¿¡ ¼¼¿üÀ» °æ¿ì, °¢ À§Ä¡ÀÇ ÁÂÇ¥¸¦ ±¸ÇÏ°í, ±× ÁÂÇ¥µé ¸ğµÎ°¡ ºó°÷ÀÌ¾úÀ» °æ¿ì¿¡¸¸ pushÇÒ¶§ Ç¥½ÃÇÏ´Â BFS¸¦ ÁøÇàÇÏ¿©
-
-¹ÙÀÌ·¯½º°¡ ¸î±ºµ¥¿¡ ÆìÁ® ÀÖ´Â Áö¸¦ ¼¼°í, ÀÌ ¶§ÀÇ °ªÀ» Ã³À½¿¡ ÀÔ·Â¹ŞÀ¸¸ç ¼Ã´ø 0ÀÇ °³¼ö¿¡¼­ »©¸é µÉ µí ÇÏ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
 int N, M;
 int laboratory[10][10];
 
 int di[4] = { 1, -1, 0, 0 };
 int dj[4] = { 0, 0, 1, -1 };
 
-// »õ·Î °¨¿°µÈ °ø°£À» Ç¥½ÃÇÏ°í ±× °ø°£ÀÇ °³¼ö ¹İÈ¯
+// ìƒˆë¡œ ê°ì—¼ëœ ê³µê°„ì„ í‘œì‹œí•˜ê³  ê·¸ ê³µê°„ì˜ ê°œìˆ˜ ë°˜í™˜
 int spreadVirus(int tempLaboratory[][10], int start_i, int start_j) {
 	int numOfNewlyInfectedSpace = 0;
 
@@ -71,13 +45,11 @@ int countSafeSpace(int numOfZeros, int tempLaboratory[][10]) {
 		}
 	}
 
-	// º®À» ¼¼¿î 3Ä­µµ ¸¶Àú »©Áà¾ß!
+	// ë²½ì„ ì„¸ìš´ 3ì¹¸ë„ ë§ˆì € ë¹¼ì¤˜ì•¼!
 	return (numOfZeros - numOfNewlyInfectedSpace - 3);
 }
 
 int solution(int numOfZeros) {
-
-
 	int maxSafeSpace = 0;
 
 	for (int i = 1; i <= N * M; i++) {
@@ -85,27 +57,27 @@ int solution(int numOfZeros) {
 			for (int k = j + 1; k <= N * M; k++) {
 				pair<int, int> newWall[3];
 
-				// Ã¹¹øÂ° º®ÀÇ i, j°ª
+				// ì²«ë²ˆì§¸ ë²½ì˜ i, jê°’
 				newWall[0].first = (i - 1) / M + 1;
 				newWall[0].second = (i - 1) % M + 1;
-				// µÎ¹øÂ° º®ÀÇ i, j°ª
+				// ë‘ë²ˆì§¸ ë²½ì˜ i, jê°’
 				newWall[1].first = (j - 1) / M + 1;
 				newWall[1].second = (j - 1) % M + 1;
-				// ¼¼¹øÂ° º®ÀÇ i, j°ª
+				// ì„¸ë²ˆì§¸ ë²½ì˜ i, jê°’
 				newWall[2].first = (k - 1) / M + 1;
 				newWall[2].second = (k - 1) % M + 1;
 
-				// º®À» ¼¼¿ö¾ß ÇÒ °÷ÀÌ ¸ğµÎ ºóÄ­ÀÏ ¶§¸¸ Å½»ö ÁøÇà
+				// ë²½ì„ ì„¸ì›Œì•¼ í•  ê³³ì´ ëª¨ë‘ ë¹ˆì¹¸ì¼ ë•Œë§Œ íƒìƒ‰ ì§„í–‰
 				if (laboratory[newWall[0].first][newWall[0].second] == 0 &&
 					laboratory[newWall[1].first][newWall[1].second] == 0 &&
 					laboratory[newWall[2].first][newWall[2].second] == 0) {
 					
 					int tempLaboratory[10][10];
 
-					// ÀÓ½Ã °ø°£¿¡ º¹»ç
+					// ì„ì‹œ ê³µê°„ì— ë³µì‚¬
 					copy(&laboratory[0][0], &laboratory[0][0] + 10 * 10, &tempLaboratory[0][0]);
 					
-					// ÀÓ½Ã °ø°£¿¡ »õ·Î¿î º® ¼¼¿ì±â
+					// ì„ì‹œ ê³µê°„ì— ìƒˆë¡œìš´ ë²½ ì„¸ìš°ê¸°
 					for (int l = 0; l < 3; l++) {
 						tempLaboratory[newWall[l].first][newWall[l].second] = 1;
 					}
@@ -129,13 +101,13 @@ int main() {
 
 	for (int i = 0; i <= N + 1; i++) {
 		for (int j = 0; j <= M + 1; j++) {
-			// ¿ÜºÎ´Â º®À¸·Î µÑ·¯½Î±â
+			// ì™¸ë¶€ëŠ” ë²½ìœ¼ë¡œ ë‘˜ëŸ¬ì‹¸ê¸°
 			if (i == 0 || j == 0 || i == N + 1 || j == M + 1) {
 				laboratory[i][j] = 1;
 			}
 			else {
 				cin >> laboratory[i][j];
-				// 0ÀÇ °³¼ö ¼¼±â
+				// 0ì˜ ê°œìˆ˜ ì„¸ê¸°
 				if (laboratory[i][j] == 0) numOfZeros++;
 			}
 		}
