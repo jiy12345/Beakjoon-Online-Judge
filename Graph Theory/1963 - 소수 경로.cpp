@@ -4,37 +4,12 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-T: Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö
-A, B: ½ÃÀÛ ¼Ò¼ö¿Í ¸ñÇ¥ ¼Ò¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-A, B: 1000~9999ÀÎ ¼Ò¼ö
-
- - ¹®Á¦ »óÈ²
- ½ÃÀÛ ¼Ò¼ö¿Í ¸ñÇ¥ ¼Ò¼ö°¡ ÁÖ¾îÁú ¶§, ´ÙÀ½ÀÇ Á¶°ÇÀ» ¸¸Á·ÇÏ¸ç ½ÃÀÛ ¼Ò¼ö¿¡¼­ ¸ñÇ¥ ¼Ò¼ö·Î ¹Ù²Ù´Âµ¥ µå´Â º¯È¯ÀÇ ÃÖ¼Ò È¸¼ö¸¦ ±¸ÇÏ¶ó.
-
- - ÇÑ¹ø¿¡ ÇÑÀÚ¸®ÀÇ ¼ö¸¸ º¯°æÀÌ °¡´ÉÇÏ´Ù.
- - º¯°æÇÏ´Â °úÁ¤¿¡¼­µµ 1000~9999ÀÎ ¼Ò¼ö¸¦ À¯ÁöÇØ¾ß ÇÑ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
- ÀÌ°Íµµ °£¼±ÀÇ °¡ÁßÄ¡°¡ ¾ø´Â ±×·¡ÇÁÀÇ ÃÖ¼Ò °Å¸®¸¦ ±¸ÇÏ´Â °ÍÀÌ¹Ç·Î, PUSHÇÒ ¶§ ¹æ¹® Ç¥½Ã¸¦ ÁøÇàÇÏ´Â BFS¸¦ ÁøÇàÇÏ¸é µÉ µí ÇÏ´Ù!
-
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
 #define MAX 9999
 
 bool isPrime[MAX + 1];
 
 void getPrimeNum() {
-	// ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼·Î 9999±îÁöÀÇ ¼Ò¼ö ±¸ÇÏ±â
+	// ì—ë¼í† ìŠ¤í…Œë„¤ìŠ¤ì˜ ì²´
 	for (int i = 2; i <= MAX; i++)
 		isPrime[i] = true;
 
@@ -52,9 +27,9 @@ void solution(string startNum, string endNum) {
 
 	queue<pair<string, int>> bfs_queue;
 
-	// Ã¹ ¼ö¿Í Ã³À½ÀÇ ±íÀÌÀÎ 0 Ç¥½Ã
+	// ì²« ìˆ˜ì™€ ì²˜ìŒì˜ ê¹Šì´ì¸ 0 í‘œì‹œ
 	bfs_queue.push(make_pair(startNum, 0));
-	// Ã¹ ¼ö ¹æ¹® Ç¥½Ã
+	// ì²« ìˆ˜ ë°©ë¬¸ í‘œì‹œ
 	isVisited[stoi(startNum)] = true;
 
 	while (!bfs_queue.empty()) {
@@ -67,14 +42,14 @@ void solution(string startNum, string endNum) {
 			break;
 		}
 
-		// 4ÀÚ¸® ¼ıÀÚ¿¡ ´ëÇØ ¹İº¹
+		// 4ìë¦¬ ìˆ«ìì— ëŒ€í•´ ë°˜ë³µ
 		for (int i = 0; i < 4; i++) {
 
-			// 0~9±îÁö ¹İº¹
+			// 0~9ê¹Œì§€ ë°˜ë³µ
 			for (int j = 0; j < 10; j++) {
 				string next_num_str = cur_num;
 
-				// i¹øÂ° ÀÚ¸® j·Î º¯°æ
+				// ië²ˆì§¸ ìë¦¬ jë¡œ ë³€ê²½
 				next_num_str[i] = j + 48;
 
 				int next_num = stoi(next_num_str);
@@ -83,7 +58,6 @@ void solution(string startNum, string endNum) {
 					isVisited[next_num] = true;
 					bfs_queue.push(make_pair(next_num_str, cur_depth + 1));
 				}
-
 			}
 		}
 	}
@@ -101,7 +75,7 @@ int main() {
 	cin.tie(NULL);
 	cout.tie(NULL);
 
-	// ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼·Î 9999±îÁöÀÇ ¼Ò¼ö ±¸ÇÏ±â
+	// ì—ë¼í† ìŠ¤í…Œë„¤ìŠ¤ì˜ ì²´ë¡œ 9999ê¹Œì§€ì˜ ì†Œìˆ˜ êµ¬í•˜ê¸°
 	getPrimeNum();
 
 	int T;
