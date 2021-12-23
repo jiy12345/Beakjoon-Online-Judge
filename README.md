@@ -97,6 +97,7 @@
  * [14503: 로봇 청소기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14503%20-%20%EB%A1%9C%EB%B4%87%20%EC%B2%AD%EC%86%8C%EA%B8%B0.cpp)
 
 ## - Mathematics
+ * [1016: 제곱 ㄴㄴ 수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1016%20-%20%EC%A0%9C%EA%B3%B1%20%E3%84%B4%E3%84%B4%20%EC%88%98.cpp)
  * [1026: 보물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1026%20-%20%EB%B3%B4%EB%AC%BC.cpp)
  * [1629: 곱셈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1629%20-%20%EA%B3%B1%EC%85%88.cpp)
  * [1644: 소수의 연속합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1644%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EC%97%B0%EC%86%8D%ED%95%A9.cpp)
