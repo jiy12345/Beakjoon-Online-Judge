@@ -1,58 +1,25 @@
 #include<iostream>
-#include<queue>
-#include<string>
-#include<algorithm>
 using namespace std;
-
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-
-min, max: ¹üÀ§ÀÇ Ã³À½°ú ³¡
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-min: 1~1,000,000,000,000
-max: min~min+1,000,000
-
- - ¹®Á¦ »óÈ²
- ¾î¶² Á¤¼ö X°¡ 1º¸´Ù Å« Á¦°ö¼ö·Î ³ª´©¾î ¶³¾îÁöÁö ¾ÊÀ» ¶§, ±× ¼ö¸¦ Á¦°ö ¤¤¤¤¼ö¶ó°í ÇÑ´Ù.
-
-  min, max°¡ ÁÖ¾îÁú ¶§, min°ú max »çÀÌ ¹üÀ§¿¡ ÀÖ´Â Á¦°ö ¤¤¤¤¼ö°¡ ¸î°³ ÀÖ´ÂÁö Ãâ·ÂÇÏ¶ó.
-
-2. Ç®ÀÌ °èÈ¹
- ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼¸¦ È°¿ëÇÏµÇ, °¢ ¼öÀÇ Á¦°ö ¼ö·Î ÁøÇàÇØ¾ß ÇÒ µí ÇÏ´Ù!
-
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
 
 long long minNum, maxNum;
 
 bool isNN[1000001];
 
 long long solution(long long minNum, long long maxNum) {
+	// ì „ì²´ ë²”ìœ„ì˜ ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¼ë‹¨ êµ¬í•´ ë†“ê¸°
+	// ì¼ë‹¨ ëª¨ë“  ìˆ˜ë¥¼ ì œê³± ã„´ã„´ ìˆ˜ë¡œ ìƒê°
 	long long answer = maxNum - minNum + 1;
-
-	// ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼·Î 9999±îÁöÀÇ ¼Ò¼ö ±¸ÇÏ±â
-	for (long long i = 0; i <= maxNum - minNum; i++)
-		isNN[i] = true;
 
 	for (long long i = 2; i * i <= maxNum; i++)
 	{	
+		// ë²”ìœ„ ë‚´ì—ì„œ ê°€ì¥ ì‘ì€ ì œê³± ìˆ˜ì˜ ë°°ìˆ˜ êµ¬í•˜ê¸°
 		long long startNum = ((minNum % (i * i)) == 0) ? minNum : minNum / (i * i) * (i * i) +(i * i);
 
-		//cout << "i: " << i << ", ";
-		//cout << "startNum: " << startNum << ", ";
-		//cout << "minNum % (i * i): " << minNum % (i * i) << ", ";
-		//cout << "minNum / (i * i): " << minNum / (i * i) << endl;
-
 		for (long long j = startNum; j <= maxNum; j += i * i) {
-			if (isNN[j - minNum]) {
-				isNN[j - minNum] = false;
+			// ì œê³± ã„´ã„´ìˆ˜ê°€ ì•„ë‹Œ ìˆ˜ë¥¼ ìƒˆë¡œ ë°œê²¬í•  ë•Œë§ˆë‹¤ í‘œì‹œ
+			if (!isNN[j - minNum]) {
+				isNN[j - minNum] = true;
+				// ì „ì²´ ìˆ˜ì—ì„œ 1 ë¹¼ì£¼ê¸°
 				answer--;
 			}
 		}				
