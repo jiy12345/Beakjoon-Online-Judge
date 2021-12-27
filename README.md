@@ -114,6 +114,7 @@
  * [2312: 수 복원하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Number%20Theory/2312-%20%EC%88%98%20%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0.cpp)
 
 ## - Sorting
+ * [2170: 선 긋기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2170%20-%20%EC%84%A0%20%EA%B8%8B%EA%B8%B0.cpp)
  * [5020: 전화번호 목록](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/5020%20-%20%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%20%EB%AA%A9%EB%A1%9D.cpp)
  * [10816: 숫자 카드 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/10816%20-%20%EC%88%AB%EC%9E%90%20%EC%B9%B4%EB%93%9C%202.cpp)
 
