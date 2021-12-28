@@ -21,7 +21,6 @@
  
 ## - Graph Theory
  * [1012: 유기농 배추](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1012%20-%20%EC%9C%A0%EA%B8%B0%EB%86%8D%20%EB%B0%B0%EC%B6%94.cpp)
- * [1092: 배](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1092%20-%20%EB%B0%B0.cpp)
  * [1260: DFS와 BFS](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1260%20-%20DFS%EC%99%80%20BFS.cpp)
  * [1697: 숨바꼭질](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1697%20-%20%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88)
  * [**1753: 최단경로**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1753%20-%20%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C.cpp)
@@ -47,6 +46,7 @@
  * [17070: 파이프 옮기기 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17070%20-%20%ED%8C%8C%EC%9D%B4%ED%94%84%20%EC%98%AE%EA%B8%B0%EA%B8%B0%201.cpp)
 
 ## - Greedy Algorithm
+ * [1092: 배](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1092%20-%20%EB%B0%B0.cpp)
  * [1339: 단어 수학](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1339%20-%20%EB%8B%A8%EC%96%B4%20%EC%88%98%ED%95%99.cpp)
  * [1541: 잃어버린 괄호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1541%20-%20%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%20%EA%B4%84%ED%98%B8.cpp)
  * [1715: 카드 정렬하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1715%20-%20%EC%B9%B4%EB%93%9C%20%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0.cpp)
