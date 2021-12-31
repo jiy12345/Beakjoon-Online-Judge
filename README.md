@@ -80,6 +80,7 @@
 ## - Sorting
  * [2170: 선 긋기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2170%20-%20%EC%84%A0%20%EA%B8%8B%EA%B8%B0.cpp)
  * [**2212: 센서**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2212%20-%20%EC%84%BC%EC%84%9C.cpp)
+ * [2230: 수 고르기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2230%20-%20%EC%88%98%20%EA%B3%A0%EB%A5%B4%EA%B8%B0.cpp)
  * [5020: 전화번호 목록](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/5020%20-%20%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%20%EB%AA%A9%EB%A1%9D.cpp)
  * [10816: 숫자 카드 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/10816%20-%20%EC%88%AB%EC%9E%90%20%EC%B9%B4%EB%93%9C%202.cpp)
 
