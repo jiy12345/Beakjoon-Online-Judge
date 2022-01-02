@@ -4,28 +4,6 @@
 #include<cmath>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-N: ¿ë¾×ÀÇ ¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 3~5,000
-¿ë¾×ÀÇ Æ¯¼º °ª: -1,000,000,000~1,000,000,000
-
-
- - ¹®Á¦ »óÈ²
- ¿ë¾×ÀÇ Æ¯¼º°ªµéÀÌ ÁÖ¾îÁú ¶§ Æ¯¼º°ªÀÇ ÇÕÀÌ 0¿¡ °¡Àå °¡±î¿î ¿ë¾×À» ¸¸µé¾î³»´Â ¼¼ ¿ë¾×ÀÇ Æ¯¼º°ªÀ» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
 int N, M;
 vector<int> values;
 
@@ -43,7 +21,7 @@ void solution() {
 		while (true) {
 			long long curValue = firstValue + values[leftPtr] + values[rightPtr];
 
-			// °»½ÅµÉ °æ¿ì
+			// ê°±ì‹ ë  ê²½ìš°
 			if (answer > abs(curValue)) {
 				curPtr[0] = i;
 				curPtr[1] = leftPtr;
