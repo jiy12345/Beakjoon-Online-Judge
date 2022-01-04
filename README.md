@@ -59,8 +59,8 @@
  * [11399: ATM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11399%20-%20ATM.cpp)
 
 ## - Implementation
- * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp)
- * [14503: 로봇 청소기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14503%20-%20%EB%A1%9C%EB%B4%87%20%EC%B2%AD%EC%86%8C%EA%B8%B0.cpp)
+ * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509993489))
+ * [14503: 로봇 청소기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14503%20-%20%EB%A1%9C%EB%B4%87%20%EC%B2%AD%EC%86%8C%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222510048011))
 
 ## - Mathematics
  * [1016: 제곱 ㄴㄴ 수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1016%20-%20%EC%A0%9C%EA%B3%B1%20%E3%84%B4%E3%84%B4%20%EC%88%98.cpp)
