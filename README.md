@@ -78,6 +78,7 @@
  * [2312: 수 복원하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Number%20Theory/2312-%20%EC%88%98%20%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0.cpp)
 
 ## - Sorting
+ * [1015: 수열 정렬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/1015%20-%20%EC%88%98%EC%97%B4%20%EC%A0%95%EB%A0%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222535198437))
  * [2170: 선 긋기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2170%20-%20%EC%84%A0%20%EA%B8%8B%EA%B8%B0.cpp)
  * [**2212: 센서**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2212%20-%20%EC%84%BC%EC%84%9C.cpp)
  * [2230: 수 고르기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2230%20-%20%EC%88%98%20%EA%B3%A0%EB%A5%B4%EA%B8%B0.cpp)
