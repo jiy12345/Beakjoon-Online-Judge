@@ -56,7 +56,7 @@
  * [**2437: 저울**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/2437%20-%20%EC%A0%80%EC%9A%B8.cpp)
  * [**11000: 강의실 배정**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11000%20-%20%EA%B0%95%EC%9D%98%EC%8B%A4%20%EB%B0%B0%EC%A0%95.cpp)
  * [11047: 동전 0](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11047%20-%20%EB%8F%99%EC%A0%84%200.cpp)
- * [11399: ATM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11399%20-%20ATM.cpp)
+ * [11399: ATM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11399%20-%20ATM.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222494105653))
 
 ## - Implementation
  * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509993489))
