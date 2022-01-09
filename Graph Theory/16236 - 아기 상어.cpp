@@ -4,44 +4,13 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-N: °ø°£ÀÇ °¡·Î, ¼¼·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2~20
-
-
- - ¹®Á¦ »óÈ²
- ¾Æ±â »ó¾î°¡ ´ÙÀ½°ú °°Àº ±ÔÄ¢¿¡ µû¶ó ÀÌµ¿ÇÑ´Ù°í ÇÒ ¶§,
-
- - ´õ ÀÌ»ó ¸ÔÀ» ¼ö ÀÖ´Â ¹°°í±â°¡ °ø°£¿¡ ¾ø´Ù¸é ¾Æ±â »ó¾î´Â ¾ö¸¶ »ó¾î¿¡°Ô µµ¿òÀ» ¿äÃ»ÇÑ´Ù.
- - ¸ÔÀ» ¼ö ÀÖ´Â ¹°°í±â°¡ 1¸¶¸®¶ó¸é, ±× ¹°°í±â¸¦ ¸ÔÀ¸·¯ °£´Ù.
- - ¸ÔÀ» ¼ö ÀÖ´Â ¹°°í±â°¡ 1¸¶¸®º¸´Ù ¸¹´Ù¸é, °Å¸®°¡ °¡Àå °¡±î¿î ¹°°í±â¸¦ ¸ÔÀ¸·¯ °£´Ù.
-°Å¸®´Â ¾Æ±â »ó¾î°¡ ÀÖ´Â Ä­¿¡¼­ ¹°°í±â°¡ ÀÖ´Â Ä­À¸·Î ÀÌµ¿ÇÒ ¶§, Áö³ª¾ßÇÏ´Â Ä­ÀÇ °³¼öÀÇ ÃÖ¼Ú°ªÀÌ´Ù.
-°Å¸®°¡ °¡±î¿î ¹°°í±â°¡ ¸¹´Ù¸é, °¡Àå À§¿¡ ÀÖ´Â ¹°°í±â, ±×·¯ÇÑ ¹°°í±â°¡ ¿©·¯¸¶¸®¶ó¸é, °¡Àå ¿ŞÂÊ¿¡ ÀÖ´Â ¹°°í±â¸¦ ¸Ô´Â´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-°¢ À§Ä¡·ÎºÎÅÍ ´ÙÀ½ ¸ÔÀ» ¹°°í±â À§Ä¡±îÁöÀÇ bfs¸¦ ÁøÇàÇÏ¿©, ÃÑ °É¸®´Â ½Ã°£(°æ·ÎÀÇ ±æÀÌ)À» ´õÇÏ¸é µÉ µí ÇÏ´Ù!
-
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
 int N;
 int space[22][22];
 
-//		   À§ -> ¿ŞÂÊ ¼øÀ¸·Î ÁøÇà
 int di[4] = { -1, 0, 1, 0 };
 int dj[4] = { 0, -1, 0, 1 };
 
-
-// ¸ÔÀº À§Ä¡ ¹İÈ¯
+// ë¨¹ì€ ìœ„ì¹˜ ë°˜í™˜
 int bfs(int curSpace[][22], pair<int, int>& startLocation, int curSize) {
 
 	priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>>bfs_queue;
@@ -55,9 +24,9 @@ int bfs(int curSpace[][22], pair<int, int>& startLocation, int curSize) {
 		int cur_fishSize = bfs_queue.top()[3];
 		bfs_queue.pop();
 
-		// ¸ÔÀ» ¼ö ÀÖ´Â ¹°°í±â¿´À» °æ¿ì
+		// ë¨¹ì„ ìˆ˜ ìˆëŠ” ë¬¼ê³ ê¸°ì˜€ì„ ê²½ìš°
 		if (cur_fishSize < curSize && cur_fishSize != 0) {
-			// ´ÙÀ½ bfs¸¦ À§ÇÑ Ãâ¹ß À§Ä¡ ¼³Á¤
+			// ë‹¤ìŒ bfsë¥¼ ìœ„í•œ ì¶œë°œ ìœ„ì¹˜ ì„¤ì •
 			startLocation = make_pair(cur_i, cur_j);
 			return cur_depth;
 		}
@@ -73,15 +42,13 @@ int bfs(int curSpace[][22], pair<int, int>& startLocation, int curSize) {
 		}
 	}
 
-	// ´Ù Å½»öÇßÀ½¿¡µµ ºÒ±¸ÇÏ°í ¸ÔÀ» ¼ö ÀÖ´Â ¹°°í±â¸¦ Ã£Áö ¸øÇß´Ù¸é 0 ¹İÈ¯
+	// ë‹¤ íƒìƒ‰í–ˆìŒì—ë„ ë¶ˆêµ¬í•˜ê³  ë¨¹ì„ ìˆ˜ ìˆëŠ” ë¬¼ê³ ê¸°ë¥¼ ì°¾ì§€ ëª»í–ˆë‹¤ë©´ 0 ë°˜í™˜
 	return 0;
 }
 
-
-
 int solution(pair<int, int> startLocation) {
-	int answer = 0; // ÃÑ ½Ã°£ÀÇ ÇÕ
-	int curSize = 2; // ÃÊ±â Å©±â´Â 2
+	int answer = 0; // ì´ ì‹œê°„ì˜ í•©
+	int curSize = 2; // ì´ˆê¸° í¬ê¸°ëŠ” 2
 	int numEat = 0;
 
 	while (true) {
@@ -91,17 +58,17 @@ int solution(pair<int, int> startLocation) {
 
 		int curTime = bfs(curSpace, startLocation, curSize);
 		numEat++;
-		// ¸Ô¾úÀ¸¹Ç·Î ºó Ä­À¸·Î Ç¥½Ã
+		// ë¨¹ì—ˆìœ¼ë¯€ë¡œ ë¹ˆ ì¹¸ìœ¼ë¡œ í‘œì‹œ
 		space[startLocation.first][startLocation.second] = 0;
 
-		// ¸ÔÀ» ¹°°í±â¸¦ Ã£Áö ¸øÇÏ¸é
+		// ë¨¹ì„ ë¬¼ê³ ê¸°ë¥¼ ì°¾ì§€ ëª»í•˜ë©´
 		if (curTime == 0) {
 			break;
 		}
 		
 		answer += curTime;
 
-		// ¸ñÇ¥ È½¼ö¸¸Å­ ¸ÔÀº °æ¿ì ¸öÁı Å°¿ì±â
+		// ëª©í‘œ íšŸìˆ˜ë§Œí¼ ë¨¹ì€ ê²½ìš° ëª¸ì§‘ í‚¤ìš°ê¸°
 		if (numEat == curSize) {
 			numEat = 0;
 			curSize++;
@@ -121,7 +88,7 @@ int main() {
 
 	for (int i = 0; i <= N + 1; i++) {
 		for (int j = 0; j <= N + 1; j++) {
-			// ¿Üº® µÎ¸£±â
+			// ì™¸ë²½ ë‘ë¥´ê¸°
 			if (i == 0 || j == 0 || i == N + 1 || j == N + 1) {
 				space[i][j] = 100;
 			}
@@ -138,7 +105,6 @@ int main() {
 			}
 		}
 	}
-
 	cout << solution(startLocation);
 
 	return 0;
