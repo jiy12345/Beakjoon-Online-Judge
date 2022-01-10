@@ -80,6 +80,7 @@
 
 ## - Sorting
  * [1015: 수열 정렬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/1015%20-%20%EC%88%98%EC%97%B4%20%EC%A0%95%EB%A0%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222535198437))
+ * [**1202: 보석 도둑**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/1202%20-%20%EB%B3%B4%EC%84%9D%20%EB%8F%84%EB%91%91.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222617750540))
  * [2170: 선 긋기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2170%20-%20%EC%84%A0%20%EA%B8%8B%EA%B8%B0.cpp)
  * [**2212: 센서**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2212%20-%20%EC%84%BC%EC%84%9C.cpp)
  * [2230: 수 고르기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2230%20-%20%EC%88%98%20%EA%B3%A0%EB%A5%B4%EA%B8%B0.cpp)
