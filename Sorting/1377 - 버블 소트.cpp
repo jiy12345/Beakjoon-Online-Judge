@@ -4,7 +4,7 @@
 using namespace std;
 
 int N;
-vector<pair<int, int>> A; // 가방 최대무게 저장
+vector<pair<int, int>> A;
 
 long long solution() {
 	sort(A.begin(), A.end());
