@@ -3,36 +3,8 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¹è¿­ÀÇ Å©±â
-A: Á¤·ÄÇØ¾ßÇÏ´Â ¹è¿­
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N:1~500,000
- A¿¡ µé¾îÀÖ´Â ¼ö: 0~1,000,000
-- ¹®Á¦ »óÈ²
- °¢°¢ÀÇ º¸¼®ÀÇ Á¤º¸¿Í °¡¹æÀÇ Á¤º¸°¡ ÁÖ¾îÁú ¶§, ÈÉÄ¥ ¼ö ÀÖ´Â º¸¼® °¡°ÝÀÇ ÇÕÀÇ ÃÖ´ñ°ªÀ» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- Ã³À½¿¡´Â º¸¼®¿¡ ´ëÇÑ Á¤º¸¸¦ °¡°Ý¿¡ ´ëÇØ Á¤·ÄÇÏ¿© È°¿ëÇÏ´Â °ÍÀ» »ý°¢ÇÏ¿´À¸³ª, ±×·¸°Ô ÇÒ °æ¿ì ¹«°Ô Á¤º¸¿Í Á¤·Ä ±âÁØÀÌ ´Þ¶óÁö¹Ç·Î Á¤·ÄÀÌ Å« ÀÇ¹Ì¸¦ °¡ÁöÁö ¸øÇÏ°Ô µÈ´Ù.
-
-¿ì¼±¼øÀ§ Å¥¿¡ ´ã¾Æ °¡°ÝÀÌ ÃÖ´ëÀÎ º¸¼®À» »Ì´õ¶óµµ, ÀÌ¸¦ ÀûÀýÇÑ °¡¹æ¿¡ ³Ö±â À§ÇØ¼­´Â ³ÖÀ» ¼ö ÀÖ´Â °¡¹æ Áß °¡Àå ¸Â´Â °¡¹æÀ» Ã£¾Æ¾ß ÇÏ´Âµ¥, ÀÌ ¶§ º¸¼®¿¡ ´ëÇÑ Á¤º¸´Â °¡°ÝÀ¸·Î, °¡¹æ¿¡ ´ëÇÑ Á¤º¸´Â ¹«°Ô ±âÁØÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î ÇÏ³ªÀÇ º¸¼®¸¶´Ù ÃÖ¾ÇÀÇ °æ¿ì ¸ðµç °¡¹æ¿¡ ´ëÇØ¼­ °í·ÁÇØ¾ß ÇÑ´Ù. µû¶ó¼­ ÃÖ¾ÇÀÇ °æ¿ì ½Ã°£ º¹Àâµµ´Â O(NK)·Î, È°¿ëÇÒ ¼ö ¾ø´Â ¼öÁØÀÌ µÈ´Ù.
-
-µû¶ó¼­ µÎ Á¤º¸µéÀ» ¸ðµÎ ¹«°Ô¶ó´Â °°Àº ±âÁØ¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÑ´Ù. ±× ÈÄ °¢ °¡¹æÀÇ ¹«°Ô¿¡ ´ëÇØ ±× °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®ÀÇ °¡°Ý Á¤º¸¸¦ topÀ» ÃÖ´ë°ªÀ¸·Î À¯ÁöÇÏ´Â ¿ì¼±¼øÀ§ Å¥¿¡ Áý¾î³Ö´Â´Ù.
-ÀÌ ¿ì¼±¼øÀ§ Å¥ÀÇ top¿¡ ÀÖ´Â °ªÀÌ ÇöÀçÀÇ °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â °¡°ÝÀÇ ÃÖ´ë°ªÀÌ µÇ¹Ç·Î, ÀÌ °ªÀ» ´©ÀûÇÏ¿© ´õÇØÁÖ¸é µÈ´Ù!
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int N;
-vector<pair<int, int>> A; // °¡¹æ ÃÖ´ë¹«°Ô ÀúÀå
-
+vector<pair<int, int>> A; // ê°€ë°© ìµœëŒ€ë¬´ê²Œ ì €ìž¥
 
 long long solution() {
 	sort(A.begin(), A.end());
