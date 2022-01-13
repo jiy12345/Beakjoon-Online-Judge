@@ -4,36 +4,6 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-A: 3x3 ¹è¿­
-r, c: °üÂûÇÏ´Â °ªÀÇ À§Ä¡
-k: ¸ñÇ¥·Î ÇÏ´Â °ª
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-r, c, k: 1~100
-
-- ¹®Á¦ »óÈ²
-A[r][c]¿¡ µé¾îÀÖ´Â °ªÀÌ k°¡ µÇ±â À§ÇÑ ¿¬»êÀÇ ÃÖ¼Ò ½Ã°£À» Ãâ·ÂÇÑ´Ù. 100ÃÊ°¡ Áö³ªµµ A[r][c] = k°¡ µÇÁö ¾ÊÀ¸¸é -1À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-R ¿¬»ê: ¹è¿­ AÀÇ ¸ðµç Çà¿¡ ´ëÇØ¼­ Á¤·ÄÀ» ¼öÇàÇÑ´Ù. ÇàÀÇ °³¼ö ¡Ã ¿­ÀÇ °³¼öÀÎ °æ¿ì¿¡ Àû¿ëµÈ´Ù.
-C ¿¬»ê: ¹è¿­ AÀÇ ¸ðµç ¿­¿¡ ´ëÇØ¼­ Á¤·ÄÀ» ¼öÇàÇÑ´Ù. ÇàÀÇ °³¼ö < ¿­ÀÇ °³¼öÀÎ °æ¿ì¿¡ Àû¿ëµÈ´Ù.
-
-R ¿¬»ê°ú C¿¬»ê ¸ðµÎ ´ÙÀ½°ú °°Àº °úÁ¤À» °ÅÃÄ ÁøÇàÇÑ´Ù.
-
-1. Çà(È¤Àº ¿­)À» Ã³À½ºÎÅÍ ³¡±îÁö Å½»öÇÏ¸ç mapÀ» ÅëÇØ °¢ ¼öÀÇ °³¼ö¸¦ ¼¾´Ù.
-2. ¼öÀÇ °³¼ö¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î, ±× ÈÄ ¼ö ÀÚÃ¼¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÑ´Ù.
-3. »ý¼ºÇÑ mapÀ» ¹è¿­¿¡ ÀÔ·ÂÇÑ´Ù. ÀÌ ¶§, °¡Àå ±ä mapº¸´Ù ÂªÀº mapµé¿¡ ´ëÇØ¼­ ³²Àº ºÎºÐÀº 0, 0À¸·Î Ã¤¿î´Ù!
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int r, c, k;
 int A[100][100];
 
@@ -52,29 +22,29 @@ long long solution() {
 	int rowSize = 3;
 	int columnSize = 3;
 
-	for (answer; answer < 100; answer++) {
+	for (answer; answer <= 100; answer++) {
 		if (A[r][c] == k) {
 			break;
 		}
 
-		// R¿¬»ê
+		// Rì—°ì‚°
 		if (rowSize <= columnSize) {
 			int curRowSize = 0;
 			map<int, int>* mapArr = new map<int, int>[columnSize];
 
-			// ¸ðµç ¿­¿¡ ´ëÇØ ¹Ýº¹
+			// ëª¨ë“  ì—´ì— ëŒ€í•´ ë°˜ë³µ
 			for (int i = 0; i < columnSize; i++) {
 				for (int j = 0; j < rowSize; j++) {
-					// °³¼ö ¼¼±â
+					// ê°œìˆ˜ ì„¸ê¸°
 					if (A[i][j] != 0) {
 						mapArr[i][A[i][j]]++;
 					}
 				}
 
-				// Çà Å©±â °»½Å
+				// í–‰ í¬ê¸° ê°±ì‹ 
 				curRowSize = max(curRowSize, (int)mapArr[i].size() * 2);
 
-				// 100º¸´Ù Ä¿Áú °æ¿ì 100À¸·Î ¼³Á¤
+				// 100ë³´ë‹¤ ì»¤ì§ˆ ê²½ìš° 100ìœ¼ë¡œ ì„¤ì •
 				if (curRowSize > 100) curRowSize = 100;
 			}
 
@@ -99,24 +69,24 @@ long long solution() {
 
 			delete[](mapArr);
 		}
-		// C¿¬»ê
+		// Cì—°ì‚°
 		else {
 			int curColumnSize = 0;
 			map<int, int>* mapArr = new map<int, int>[rowSize];
 
-			// ¸ðµç Çà¿¡ ´ëÇØ ¹Ýº¹
+			// ëª¨ë“  í–‰ì— ëŒ€í•´ ë°˜ë³µ
 			for (int i = 0; i < rowSize; i++) {
 				for (int j = 0; j < columnSize; j++) {
-					// °³¼ö ¼¼±â
+					// ê°œìˆ˜ ì„¸ê¸°
 					if (A[j][i] != 0) {
 						mapArr[i][A[j][i]]++;
 					}
 				}
 
-				// ¿­ Å©±â °»½Å
+				// ì—´ í¬ê¸° ê°±ì‹ 
 				curColumnSize = max(curColumnSize, (int)mapArr[i].size() * 2);
 
-				// 100º¸´Ù Ä¿Áú °æ¿ì 100À¸·Î ¼³Á¤
+				// 100ë³´ë‹¤ ì»¤ì§ˆ ê²½ìš° 100ìœ¼ë¡œ ì„¤ì •
 				if (curColumnSize > 100) curColumnSize = 100;
 			}
 
@@ -141,7 +111,7 @@ long long solution() {
 		}
 	}
 
-	// 100ÃÊ°¡ Áö³ªµµ A[r][c] = k°¡ µÇÁö ¾ÊÀº °æ¿ì!
+	// 100ì´ˆê°€ ì§€ë‚˜ë„ A[r][c] = kê°€ ë˜ì§€ ì•Šì€ ê²½ìš°!
 	if (answer == 100) {
 		answer = -1;
 	}
@@ -161,7 +131,7 @@ int main() {
 		}
 	}
 
-	// 0ºÎÅÍ ½ÃÀÛÇÏ´Â ÀÎµ¦½º »ç¿ë
+	// 0ë¶€í„° ì‹œìž‘í•˜ëŠ” ì¸ë±ìŠ¤ ì‚¬ìš©
 	r--;
 	c--;
 
