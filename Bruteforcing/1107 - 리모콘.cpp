@@ -1,34 +1,6 @@
 #include<iostream>
 #include<string>
-
 using namespace std;
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ÀÌµ¿ÇÏ·Á°í ÇÏ´Â Ã¤³Î
-M: °íÀå³­ ¹öÆ°ÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1~500,000
-M: 0~10
-
-- ¹®Á¦ »óÈ²
-ÇöÀç Ã¤³ÎÀÌ 100¹øÀÌ°í, ¾î¶² ¼ýÀÚ ¹öÆ°ÀÌ °íÀå³µ´ÂÁö ÁÖ¾îÁ³´Ù°í ÇÒ ¶§,
- 
-Ã¤³Î NÀ¸·Î ÀÌµ¿ÇÏ±â À§ÇØ ¹öÆ°À» ÃÖ¼Ò ¸î ¹ø ´­·¯¾ß ÇÏ´ÂÁö Ãâ·ÂÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹
- ÃÖ¼Ò°ªÀÌ µÉ ¼ö ÀÖ´Â °ªµéÀÇ ÈÄº¸¸¦ »ý°¢ÇØº¸¸é, ´ÙÀ½°ú °°´Ù.
-
- 1. ÇöÀç À§Ä¡¿¡¼­ +³ª -¸¸À» ÀÌ¿ëÇØ¼­ °¡±â
- 2. +³ª -·Î ÀÌµ¿ÇØ¼­ N±îÁö °¥ ¼ö ÀÖ´Â ÃÖ´ëÇÑ °¡±î¿î ¼ö·Î ÀÌµ¿ÇÑ ÈÄ, +³ª -·Î ÀÌµ¿ÇÏ±â
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
 
 bool isAbnormal[10];
 int N, M;
@@ -68,7 +40,7 @@ int solution() {
 				}
 			}
 
-			// ¸ðµç ¼ö°¡ ´©¸¦ ¼ö ÀÖ´Â ¼öÀÏ ¶§
+			// ëª¨ë“  ìˆ˜ê°€ ëˆ„ë¥¼ ìˆ˜ ìžˆëŠ” ìˆ˜ì¼ ë•Œ
 			if (j == numPlusLength) {
 				answer = min(answer, (numPlusLength + i));
 				break;
