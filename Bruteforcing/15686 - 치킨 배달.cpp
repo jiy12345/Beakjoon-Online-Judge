@@ -4,16 +4,16 @@
 using namespace std;
 
 int Map[50][50];
-vector<pair<int, int>> chickenPlace;
-vector<pair<int, int>> selectedChickenPlace;
+vector<pair<int, int>> chickenPlace;		// 현재 존재한 모든 치킨집의 좌표
+vector<pair<int, int>> selectedChickenPlace;	// 현재 선택된 모든 치킨집의 좌표
 int N, M;
 
-// 두 점 사이의 맨하탄 거리 구하기
+// 두 점 사이의 맨하탄 거리 구하는 함수
 int manhattanDistance(pair<int, int> x, pair<int, int> y) {
 	return abs(x.first - y.first) + abs(x.second - y.second);
 }
 
-// 
+// 각 집에서의 치킨 거리를 계산하는 함수
 int chickenDistance(pair<int, int> Housing) {
 	int minDistance = 200;
 	
@@ -24,6 +24,7 @@ int chickenDistance(pair<int, int> Housing) {
 	return minDistance;
 }
 
+// 조합으로 모든 치킨집 중 M개의 치킨집을 뽑아 치킨 거리를 계산하는 함수
 // curStartIndex:탐색을 시작해야 하는 위치
 int solution(int curStartIndex) {
 	int minDistance = 100000000;
