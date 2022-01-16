@@ -11,7 +11,7 @@
  * [**14391: 종이 조각**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14391%20-%20%EC%A2%85%EC%9D%B4%20%EC%A1%B0%EA%B0%81.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222521417180))
  * [14888: 연산자 끼워넣기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14888%20-%20%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222515810551))
  * [14889: 스타트와 링크](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14889%20-%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%99%80%20%EB%A7%81%ED%81%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222522227331))
-
+ * [15686: 치킨 배달](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15686%20-%20%EC%B9%98%ED%82%A8%20%EB%B0%B0%EB%8B%AC.cpp)
 
 ## - Danamic Programming
  * [1149: RGB거리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1149%20-%20RGB%EA%B1%B0%EB%A6%AC.cpp)
