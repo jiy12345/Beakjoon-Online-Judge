@@ -73,6 +73,7 @@
  * [**1753: 최단경로**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1753%20-%20%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C.cpp)
  * [1916: 최소비용 구하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1916%20-%20%EC%B5%9C%EC%86%8C%EB%B9%84%EC%9A%A9%20%EA%B5%AC%ED%95%98%EA%B8%B0.cpp)
  * [1963: 소수 경로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1963%20-%20%EC%86%8C%EC%88%98%20%EA%B2%BD%EB%A1%9C.cpp)
+ * [1967: 트리의 지름](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1967%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%A7%80%EB%A6%84.cpp)
  * [1987: 알파벳](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1987%20-%20%EC%95%8C%ED%8C%8C%EB%B2%B3.cpp)
  * [2178: 미로 탐색](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2178%20-%20%EB%AF%B8%EB%A1%9C%20%ED%83%90%EC%83%89.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222527790770))
  * [**2206: 벽 부수고 이동하기**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2206%20-%20%EB%B2%BD%20%EB%B6%80%EC%88%98%EA%B3%A0%20%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0.cpp)
