@@ -3,35 +3,9 @@
 #include<cstring>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-V: ³ëµåÀÇ °³¼ö
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-n: 2~100,000
-
-°£¼±ÀÇ °¡ÁßÄ¡: 1~100
-
-- ¹®Á¦ »óÈ²
-
- Æ®¸®ÀÇ ³ëµå¿Í °£¼±ÀÇ °¡ÁßÄ¡µéÀÌ ÁÖ¾îÁú ¶§, Æ®¸®ÀÇ Áö¸§À» ±¸ÇÏ¿©¶ó.
-
-2. Ç®ÀÌ °èÈ¹
- Æ®¸®ÀÇ Áö¸§ÀÌ µÉ ¼ö ÀÖ´Â °¡´É¼ºÀÌ ÀÖ´Â °æ·ÎµéÀº, µÎ ¸®ÇÁ³ëµå°£ÀÇ °Å¸®ÀÌ´Ù.
-
-¸®ÇÁ³ëµå°¡ ¾Æ´Ò °æ¿ì ¹«Á¶°Ç ÀÚ½ÄÀ¸·Î ÇÑ¹ø ´õ ³»·Á°¡ ±æ¾îÁö±â ¶§¹®ÀÌ´Ù!
-
-µû¶ó¼­ ¸®ÇÁ ³ëµå°¡ ¾Æ´Ñ ¸ğµç ³ëµå¿¡ ´ëÇØ ¾çÃøÀ¸·Î °¡´Â ÃÖ´ë°Å¸®¸¦ ´õÇÏ¸é µÉ µí ÇÏ´Ù.
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
 int V;
-bool isVisited[10002];
-vector<pair<int, int>> node[10002];
+bool isVisited[100002];
+vector<pair<int, int>> node[100002];
 
 pair<int, int> solution(int curPoint, int curDistance) {
     isVisited[curPoint] = true;
@@ -45,14 +19,14 @@ pair<int, int> solution(int curPoint, int curDistance) {
 
         int nextPoint = node[curPoint][i].first;
         if (isVisited[nextPoint] == false) {
-            // ´ÙÀ½ ÁöÁ¡À» nextPoint·Î ¼±ÅÃÇÏ¿´À» ¶§ÀÇ ÁöÁ¡°ú ÃÖ´ë °Å¸® ¹Ş±â
+            // ë‹¤ìŒ ì§€ì ì„ nextPointë¡œ ì„ íƒí•˜ì˜€ì„ ë•Œì˜ ì§€ì ê³¼ ìµœëŒ€ ê±°ë¦¬ ë°›ê¸°
             pair<int, int> endPointdistance(solution(nextPoint, curDistance + node[curPoint][i].second));
 
             point = endPointdistance.first;
             distance = endPointdistance.second;
         }
 
-        // ´õ ±ä °æ·Î ¹ß°ßÇß´Ù¸é º¯°æÇÏ±â
+        // ë” ê¸´ ê²½ë¡œ ë°œê²¬í–ˆë‹¤ë©´ ë³€ê²½í•˜ê¸°
         if (maxDistance < distance) {
             endPoint = point;
             maxDistance = distance;
@@ -79,20 +53,20 @@ int main() {
             }
             cin >> distance;
 
-            // ¾ç¹æÇâ ¿¬°á
+            // ì–‘ë°©í–¥ ì—°ê²°
             node[parent].push_back(make_pair(child, distance));
             node[child].push_back(make_pair(parent, distance));
         }
 
     }
 
-    // ·çÆ®³ëµå¿¡¼­ °¡Àå ¸Ö¸®ÀÖ´Â Á¤Á¡ ±¸ÇÏ±â
+    // ë£¨íŠ¸ë…¸ë“œì—ì„œ ê°€ì¥ ë©€ë¦¬ìˆëŠ” ì •ì  êµ¬í•˜ê¸°
     int firstEndPoint = solution(1, 0).first;
 
-    // ¹æ¹® Ç¥½Ã ¹è¿­ 0À¸·Î ÃÊ±âÈ­
+    // ë°©ë¬¸ í‘œì‹œ ë°°ì—´ 0ìœ¼ë¡œ ì´ˆê¸°í™”
     memset(isVisited, false, sizeof(isVisited));
 
-    // ·çÆ®³ëµå¿¡¼­ °¡Àå ¸Ö¸®ÀÖ´Â Á¤Á¡¿¡¼­ °¡Àå ¸Ö¸® ¶³¾îÁø Á¤Á¡ ±¸ÇÏ±â
+    // ë£¨íŠ¸ë…¸ë“œì—ì„œ ê°€ì¥ ë©€ë¦¬ìˆëŠ” ì •ì ì—ì„œ ê°€ì¥ ë©€ë¦¬ ë–¨ì–´ì§„ ì •ì  êµ¬í•˜ê¸°
     cout << solution(firstEndPoint, 0).second;
 
     return 0;
