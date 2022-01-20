@@ -121,6 +121,7 @@
  * [1644: 소수의 연속합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1644%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EC%97%B0%EC%86%8D%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222512581322))
  * [1676: 팩토리얼 0의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1676%20-%20%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC%200%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222531156973))
  * [1747: 소수and팰린드롬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1747%20-%20%EC%86%8C%EC%88%98and%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.cpp)
+ * [4375: 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/4375%20-%201.cpp)
  * [9461: 파도반 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9461%20-%20%ED%8C%8C%EB%8F%84%EB%B0%98%20%EC%88%98%EC%97%B4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509889782))
  * [10610: 30](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10610%20-%2030.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509363413))
  * [10972: 다음 순열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10972%20-%20%EB%8B%A4%EC%9D%8C%20%EC%88%9C%EC%97%B4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222536286898))
