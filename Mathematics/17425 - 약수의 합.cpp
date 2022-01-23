@@ -1,18 +1,22 @@
 #include<iostream>
-#include<vector>
+#include<algorithm>
 using namespace std;
 
 int N, T;
+int X[100000];
 long long FY[1000001];
+long long FX[1000001];
 
-void solution() {
-    vector<long long> FX(1000001, 1);
-    for (int i = 2; i <= 1000000; i++) {
-        for (int j = 1; i * j <= 1000000; j++) {
+void solution(int N) {
+
+    fill_n(FX, N + 1, 1);
+
+    for (int i = 2; i <= N; i++) {
+        for (int j = 1; i * j <= N; j++) {
             FX[i * j] += i;
         }
     }
-    for (int i = 1; i <= 1000000; i++) {
+    for (int i = 1; i <= N; i++) {
         FY[i] = FY[i - 1] + FX[i];
     }
 }
@@ -23,11 +27,16 @@ int main() {
 
     cin >> T;
 
-    solution();
+    for (int i = 0; i < T; i++) {
+        cin >> X[i];
+    }
+
+    int max_num = *max_element(X, X + T);
+
+    solution(max_num);
 
     for (int i = 0; i < T; i++) {
-        cin >> N;
-        cout << FY[N] << '\n';
+        cout << FY[X[i]] << '\n';
     }
 
     return 0;
