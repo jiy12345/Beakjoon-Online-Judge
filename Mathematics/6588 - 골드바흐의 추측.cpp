@@ -2,25 +2,6 @@
 #include<vector>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-n: °ñµå¹ÙÈå ÃßÃøÀÇ ´ë»óÀÌ µÉ Â¦¼ö Á¤¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-n: 6~1,000,000
-Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö: 1~100,000
-
-- ¹®Á¦ »óÈ²
-ÁÖ¾îÁø µÎ ¼öÀÇ ÃÖ´ë °ø¾à¼ö¿Í ÃÖ¼Ò °ø¹è¼ö¸¦ ±¸ÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹
- ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼·Î ¼Ò¼ö¸¦ ±¸ÇÑ ÈÄ, 
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
 bool isPrime[1000001];
 
 void ertosthenesSieve(int N) {
@@ -29,7 +10,7 @@ void ertosthenesSieve(int N) {
 
     for (int i = 2; i * i <= N; i++) {
         if (isPrime[i])
-            // i*k(k < i)¿¡ ´ëÇØ¼­´Â ÀÌÀü ¹İº¹¿¡¼­ ¸ÕÀú °Ë»çµÇ¾úÀ¸¹Ç·Î ½ÃÀÛ°ªÀ» i*i·Î ¼³Á¤
+            // i*k(k < i)ì— ëŒ€í•´ì„œëŠ” ì´ì „ ë°˜ë³µì—ì„œ ë¨¼ì € ê²€ì‚¬ë˜ì—ˆìœ¼ë¯€ë¡œ ì‹œì‘ê°’ì„ i*ië¡œ ì„¤ì •
             for (int j = i * i; j <= N; j += i)
                 isPrime[j] = false;
     }
@@ -56,7 +37,6 @@ void GoldbachsConjecture(int n) {
         cout << n << " = " << a << " + " << b << '\n';
     }
 }
-
 
 int main() {
     ios_base::sync_with_stdio(false);
