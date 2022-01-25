@@ -123,6 +123,7 @@
  * [1747: 소수and팰린드롬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1747%20-%20%EC%86%8C%EC%88%98and%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.cpp)
  * [2609: 최대공약수와 최소공배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2609%20-%20%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp)
  * [4375: 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/4375%20-%201.cpp)
+ * [6588: 골드바흐의 추측](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6588%20-%20%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%20%EC%B6%94%EC%B8%A1.cpp)
  * [9461: 파도반 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9461%20-%20%ED%8C%8C%EB%8F%84%EB%B0%98%20%EC%88%98%EC%97%B4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509889782))
  * [10610: 30](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10610%20-%2030.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509363413))
  * [10972: 다음 순열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10972%20-%20%EB%8B%A4%EC%9D%8C%20%EC%88%9C%EC%97%B4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222536286898))
