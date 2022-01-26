@@ -7,6 +7,7 @@
  * [1107: 리모콘](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1107%20-%20%EB%A6%AC%EB%AA%A8%EC%BD%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222622996411))
  * [1182: 부분수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1182%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222520968836))
  * [1759: 암호 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1759%20-%20%EC%95%94%ED%98%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222516074349))
+ * [3085: 사탕 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/3085%20-%20%EC%82%AC%ED%83%95%20%EA%B2%8C%EC%9E%84.cpp)
  * [7568: 덩치](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/7568%20-%20%EB%8D%A9%EC%B9%98.cpp)
  * [**14391: 종이 조각**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14391%20-%20%EC%A2%85%EC%9D%B4%20%EC%A1%B0%EA%B0%81.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222521417180))
  * [14888: 연산자 끼워넣기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14888%20-%20%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222515810551))
