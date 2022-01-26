@@ -2,47 +2,6 @@
 #include<string>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: º¸µåÀÇ °¡·Î/¼¼·Î ±æÀÌ
-
- - »çÅÁÀÇ »ö»ó
-  C: »¡°£»ö
-  P: ÆÄ¶õ»ö
-  Z: ÃÊ·Ï»ö
-  Y: ³ë¶õ»ö
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 3~50
-
-
-- ¹®Á¦ »óÈ²
-
-´ÙÀ½°ú °°Àº ±ÔÄ¢¿¡ µû¶ó »çÅÁÀ» ¸Ô´Â´Ù°í ÇÒ ¶§,
-
- »çÅÁÀÇ »öÀÌ ¼­·Î´Ù¸¥ ÀÎÁ¢ÇÑ µÎ Ä­À» °í¸¥ µÚ, °í¸¥ Ä­¿¡ µé¾îÀÖ´Â »çÅÁÀ» ¼­·Î ±³È¯ÇÑ ÈÄ
- ¸ðµÎ °°Àº »öÀ¸·Î ÀÌ·ç¾îÁ® ÀÖ´Â °¡Àå ±ä ¿¬¼Ó ºÎºÐÀ» °í¸¥ ´ÙÀ½ »çÅÁÀ» ¸ðµÎ ¸Ô´Â´Ù.
-
-»çÅÁÀÌ Ã¤¿öÁø »óÅÂ°¡ ÁÖ¾îÁö¸é ¸ÔÀ» ¼ö ÀÕ´Â »çÅÁÀÇ ÃÖ´ë °³¼ö¸¦ Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- ¹Ù²ÙÁö ¾ÊÀº »óÅÂ¿¡¼­ ÃÖ´ë°ªÀÌ ³ª¿Ã ¼ö ÀÖÀ¸¹Ç·Î, ÀÏ´Ü ¹Ù²ÙÁö ¾ÊÀº »óÅÂ¿¡¼­ÀÇ ÃÖ´ë°ªÀ» ¸ÕÀú °è»êÇÑ´Ù.
-
- ±× ÈÄ¿¡´Â ¸ðµç À§Ä¡¿¡ ´ëÇØ¼­ °Ë»ç¸¦ ÁøÇàÇÏ¸ç, ¿À¸¥ÂÊ°ú ¾Æ·¡ÂÊÀ¸·ÎÀÇ ºñ±³¸¦ ÁøÇàÇÏ¿© ´Ù¸¦°æ¿ì¿¡¸¸ ´ÙÀ½À» ¹Ýº¹ÇÑ´Ù.
-
- 1. µÎ À§Ä¡ÀÇ »çÅÁÀ» ¼­·Î ±³È¯ÇÑ´Ù.
- 2. º¯°æÀÌ »ý±æ ¼ö ÀÖ´Â ¿­ È¤Àº ÇàÀ» ¸ðµÎ °Ë»çÇÑ´Ù.
- 
- ¹Ù²Ù°í ³­ µÚÀÇ µÎ Çà°ú ÇÏ³ªÀÇ ¿­, È¤Àº ÇÏ³ªÀÇ Çà°ú µÎ°³ÀÇ ¿­¿¡ ´ëÇØ¼­¸é °Ë»ç¸¦ ÁøÇàÇÑ´Ù.
-
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int N;
 string Candy[50];
 char Colors[4] = { 'C', 'P', 'Z', 'Y'};
@@ -82,64 +41,64 @@ int crossCheck(int rowAndColumnNum, char Color) {
 int solution() {
 	int maxNum = 0;
 
-	// ¾Æ¹«°Íµµ ¹Ù²ÙÁö ¾Ê¾ÒÀ» ¶§ Ã¼Å©
-	// ¸ðµç »ö»ó¿¡ ´ëÇØ ¹Ýº¹
+	// ì•„ë¬´ê²ƒë„ ë°”ê¾¸ì§€ ì•Šì•˜ì„ ë•Œ ì²´í¬
+	// ëª¨ë“  ìƒ‰ìƒì— ëŒ€í•´ ë°˜ë³µ
 	for (int i = 0; i < 4; i++) {
-		// Çà°ú ¿­ µ¿½Ã¿¡ Ã¼Å©
+		// í–‰ê³¼ ì—´ ë™ì‹œì— ì²´í¬
 		for (int j = 0; j < N; j++) {
 			maxNum = max(maxNum, crossCheck(j, Colors[i]));
 		}
 	}
 	
-	// ´õ Ä¿Áú ¼ö´Â ¾øÀ¸¹Ç·Î
+	// ë” ì»¤ì§ˆ ìˆ˜ëŠ” ì—†ìœ¼ë¯€ë¡œ
 	if (maxNum == N) {
 		return N;
 	}
 
-	// ¹Ù²Ü ¼ö ÀÖ´Â ¸ðµç À§Ä¡¿¡¼­ Ã¼Å©
+	// ë°”ê¿€ ìˆ˜ ìžˆëŠ” ëª¨ë“  ìœ„ì¹˜ì—ì„œ ì²´í¬
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
-			// ¿À¸¥ÂÊ ³¡ ÁÂÇ¥°¡ ¾Æ´Ï¶ó¸é ¿À¸¥ÂÊ°úÀÇ ±³È¯ ÁøÇà
+			// ì˜¤ë¥¸ìª½ ë ì¢Œí‘œê°€ ì•„ë‹ˆë¼ë©´ ì˜¤ë¥¸ìª½ê³¼ì˜ êµí™˜ ì§„í–‰
 			if (j != N - 1) {
-				// ¿À¸¥ÂÊ°ú ±³È¯
+				// ì˜¤ë¥¸ìª½ê³¼ êµí™˜
 				if (Candy[i][j] != Candy[i][j + 1]) {
-					// ±³È¯
+					// êµí™˜
 					swap(Candy[i][j], Candy[i][j + 1]);
 
-					// ¸ðµç »ö»ó¿¡ ´ëÇØ ¹Ýº¹
+					// ëª¨ë“  ìƒ‰ìƒì— ëŒ€í•´ ë°˜ë³µ
 					for (int k = 0; k < 4; k++) {
-						// ÃÖ´ë°ªÀÇ º¯µ¿ÀÌ ÀÖÀ» ¼ö ÀÖ´Â À§Ä¡¿¡ ´ëÇØ¼­¸¸ Ã¼Å©
+						// ìµœëŒ€ê°’ì˜ ë³€ë™ì´ ìžˆì„ ìˆ˜ ìžˆëŠ” ìœ„ì¹˜ì— ëŒ€í•´ì„œë§Œ ì²´í¬
 						maxNum = max(maxNum, crossCheck(i, Colors[k]));
 						maxNum = max(maxNum, crossCheck(j, Colors[k]));
 						maxNum = max(maxNum, crossCheck(j + 1, Colors[k]));
 					}
 
-					// ¿ø»óº¹±Í
+					// ì›ìƒë³µê·€
 					swap(Candy[i][j], Candy[i][j + 1]);
 				}
 			}
 
-			// ¾Æ·¡ÂÊ ³¡ ÁÂÇ¥°¡ ¾Æ´Ï¶ó¸é ¾Æ·¡ÂÊ°úÀÇ ±³È¯ ÁøÇà
+			// ì•„ëž˜ìª½ ë ì¢Œí‘œê°€ ì•„ë‹ˆë¼ë©´ ì•„ëž˜ìª½ê³¼ì˜ êµí™˜ ì§„í–‰
 			if (i != N - 1) {
-				// ¾Æ·¡ÂÊ°ú ±³È¯
+				// ì•„ëž˜ìª½ê³¼ êµí™˜
 				if (Candy[i + 1][j] != Candy[i][j]) {
-					// ±³È¯
+					// êµí™˜
 					swap(Candy[i + 1][j], Candy[i][j]);
 
-					// ¸ðµç »ö»ó¿¡ ´ëÇØ ¹Ýº¹
+					// ëª¨ë“  ìƒ‰ìƒì— ëŒ€í•´ ë°˜ë³µ
 					for (int k = 0; k < 4; k++) {
-						// ÃÖ´ë°ªÀÇ º¯µ¿ÀÌ ÀÖÀ» ¼ö ÀÖ´Â À§Ä¡¿¡ ´ëÇØ¼­¸¸ Ã¼Å©
+						// ìµœëŒ€ê°’ì˜ ë³€ë™ì´ ìžˆì„ ìˆ˜ ìžˆëŠ” ìœ„ì¹˜ì— ëŒ€í•´ì„œë§Œ ì²´í¬
 						maxNum = max(maxNum, crossCheck(i, Colors[k]));
 						maxNum = max(maxNum, crossCheck(i + 1, Colors[k]));
 						maxNum = max(maxNum, crossCheck(j, Colors[k]));
 					}
 
-					// ¿ø»óº¹±Í
+					// ì›ìƒë³µê·€
 					swap(Candy[i + 1][j], Candy[i][j]);
 				}
 			}
 
-			// ´õ Ä¿Áú ¼ö´Â ¾øÀ¸¹Ç·Î
+			// ë” ì»¤ì§ˆ ìˆ˜ëŠ” ì—†ìœ¼ë¯€ë¡œ
 			if (maxNum == N) {
 				return N;
 			}
