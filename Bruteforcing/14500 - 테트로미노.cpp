@@ -1,37 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-N: Á¾ÀÌÀÇ ¼¼·Î ±æÀÌ
-M: Á¾ÀÌÀÇ °¡·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 4~500
-Á¾ÀÌ¿¡ ÀûÈù ¼ö: 1~1,000
-
-- ¹®Á¦ »óÈ²
- Á¾ÀÌÀÇ Å©±â°¡ ÁÖ¾îÁö°í, ±× Á¾ÀÌ¿¡ ¾²¿©ÀÖ´Â ¼ö°¡ ÁÖ¾îÁú ¶§, 
- Å×Æ®·Î¹Ì³ë¸¦ ¹èÄ¡ÇÏ¿© µ¤Àº Ä­ÀÇ ¼öµéÀÇ ÇÕÀÇ ÃÖ´ë°ªÀ» ±¸ÇÏ¿©¶ó 
-
- ÃÑ ´Ù¼¸°¡ÁöÀÇ Å×Æ®·Î¹Ì³ë´Â ´ëÄª, È¸ÀüÀÌ °¡´ÉÇÏ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-1. ±ä ¸ğ¾ç: ¼¼·Î °¡·Î 2°³
-2. ¤¤ÀÚ ¸ğ¾ç: È¸ÀüÇÑ °Í 4°³ + ´ëÄªÇÏ¿© È¸ÀüÇÑ °Í 4°³
-3. ¹ø°³¸ğ¾ç: È¸ÀüÇÑ °Í 2°³ + ´ëÄªÇÏ¿© È¸ÀüÇÑ °Í 2°³
-4. ¤Ç ¸ğ¾ç: 4°³
-5. Á¤»ç°¢¸ğ¾ç: 1°³
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ğµÎ ´ã¾ÆµĞ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°İÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int N, M;
 
 int paper[500][500];
@@ -43,13 +12,13 @@ bool isInRange(int i, int j) {
 
 int checkIMino(int i, int j) {
 	int maxNum = 0;
-	// ¤±
-	// ¤±
-	// ¤±
-	// ¤±
+	// ã…
+	// ã…
+	// ã…
+	// ã…
 	if (isInRange(i, j) && isInRange(i + 1, j) && isInRange(i + 2, j) && isInRange(i + 3, j)) 
 		maxNum = max(maxNum, paper[i][j] + paper[i + 1][j] + paper[i + 2][j] + paper[i + 3][j]);
-	// ¤±¤±¤±¤±
+	// ã…ã…ã…ã…
 	if (isInRange(i, j) && isInRange(i, j + 1) && isInRange(i, j + 2) && isInRange(i, j + 3)) 
 		maxNum = max(maxNum, paper[i][j] + paper[i][j + 1] + paper[i][j + 2] + paper[i][j + 3]);
 	
@@ -60,8 +29,8 @@ int checkIMino(int i, int j) {
 int checkOMino(int i, int j) {
 	int maxNum = 0;
 
-	// ¤±¤±
-	// ¤±¤±
+	// ã…ã…
+	// ã…ã…
 	if (isInRange(i, j) && isInRange(i + 1, j) && isInRange(i, j + 1) && isInRange(i + 1, j + 1))
 		maxNum = max(maxNum, paper[i][j] + paper[i + 1][j] + paper[i][j + 1] + paper[i + 1][j + 1]);
 
@@ -71,13 +40,13 @@ int checkOMino(int i, int j) {
 int checkZMino(int i, int j) {
 	int maxNum = 0;
 
-	// ¤±¤±
-	//   ¤±¤±
+	// ã…ã…
+	//   ã…ã…
 	if (isInRange(i, j) && isInRange(i, j + 1) && isInRange(i + 1, j + 1) && isInRange(i + 1, j + 2)) 
 		maxNum = max(maxNum, paper[i][j] + paper[i][j + 1] + paper[i + 1][j + 1] + paper[i + 1][j + 2]);
-	//   ¤±
-	// ¤±¤±
-	// ¤±
+	//   ã…
+	// ã…ã…
+	// ã…
 	if (isInRange(i, j + 1) && isInRange(i + 1, j + 1) && isInRange(i + 1, j) && isInRange(i + 2, j))
 		maxNum = max(maxNum, paper[i][j + 1] + paper[i + 1][j + 1] + paper[i + 1][j] + paper[i + 2][j]);
 
@@ -87,13 +56,13 @@ int checkZMino(int i, int j) {
 int checkSMino(int i, int j) {
 	int maxNum = 0;
 
-	//   ¤±¤±
-	// ¤±¤±
+	//   ã…ã…
+	// ã…ã…
 	if (isInRange(i + 1, j) && isInRange(i + 1, j + 1) && isInRange(i, j + 1) && isInRange(i, j + 2))
 		maxNum = max(maxNum, paper[i + 1][j] + paper[i + 1][j + 1] + paper[i][j + 1] + paper[i][j + 2]);
-	// ¤±
-	// ¤±¤±
-	//   ¤±
+	// ã…
+	// ã…ã…
+	//   ã…
 	if (isInRange(i, j) && isInRange(i + 1, j) && isInRange(i + 1, j + 1) && isInRange(i + 2, j + 1))
 		maxNum = max(maxNum, paper[i][j] + paper[i + 1][j] + paper[i + 1][j + 1] + paper[i + 2][j + 1]);
 
@@ -102,22 +71,22 @@ int checkSMino(int i, int j) {
 int checkJMino(int i, int j) {
 	int maxNum = 0;
 
-	//   ¤±
-	//   ¤±
-	// ¤±¤±
+	//   ã…
+	//   ã…
+	// ã…ã…
 	if (isInRange(i, j + 1) && isInRange(i + 1, j + 1) && isInRange(i + 2, j + 1) && isInRange(i + 2, j)) 
 		maxNum = max(maxNum, paper[i][j + 1] + paper[i + 1][j + 1] + paper[i + 2][j + 1] + paper[i + 2][j]);
-	// ¤±
-	// ¤±¤±¤±
+	// ã…
+	// ã…ã…ã…
 	if (isInRange(i, j) && isInRange(i + 1, j) && isInRange(i + 1, j + 1) && isInRange(i + 1, j + 2))
 		maxNum = max(maxNum, paper[i][j] + paper[i + 1][j] + paper[i + 1][j + 1] + paper[i + 1][j + 2]);
-	// ¤±¤±
-	// ¤±
-	// ¤±
+	// ã…ã…
+	// ã…
+	// ã…
 	if (isInRange(i, j) && isInRange(i, j + 1) && isInRange(i + 1, j) && isInRange(i + 2, j))
 		maxNum = max(maxNum, paper[i][j] + paper[i][j + 1] + paper[i + 1][j] + paper[i + 2][j]);
-	// ¤±¤±¤±
-	//     ¤±
+	// ã…ã…ã…
+	//     ã…
 	if (isInRange(i, j) && isInRange(i, j + 1) && isInRange(i, j + 2) && isInRange(i + 1, j + 2))
 		maxNum = max(maxNum, paper[i][j] + paper[i][j + 1] + paper[i][j + 2] + paper[i + 1][j + 2]);
 
@@ -127,22 +96,22 @@ int checkJMino(int i, int j) {
 int checkLMino(int i, int j) {
 	int maxNum = 0;
 
-	// ¤±
-	// ¤±
-	// ¤±¤±
+	// ã…
+	// ã…
+	// ã…ã…
 	if (isInRange(i, j) && isInRange(i + 1, j) && isInRange(i + 2, j) && isInRange(i + 2, j + 1))
 		maxNum = max(maxNum, paper[i][j] + paper[i + 1][j] + paper[i + 2][j] + paper[i + 2][j + 1]);
-	// ¤±¤±¤±
-	// ¤±
+	// ã…ã…ã…
+	// ã…
 	if (isInRange(i, j) && isInRange(i, j + 1) && isInRange(i, j + 2) && isInRange(i + 1, j))
 		maxNum = max(maxNum, paper[i][j] + paper[i][j + 1] + paper[i][j + 2] + paper[i + 1][j]);
-	// ¤±¤±
-	//   ¤±
-	//   ¤±
+	// ã…ã…
+	//   ã…
+	//   ã…
 	if (isInRange(i, j) && isInRange(i, j + 1) && isInRange(i + 1, j + 1) && isInRange(i + 2, j + 1))
 		maxNum = max(maxNum, paper[i][j] + paper[i][j + 1] + paper[i + 1][j + 1] + paper[i + 2][j + 1]);
-	//     ¤±
-	// ¤±¤±¤±
+	//     ã…
+	// ã…ã…ã…
 	if (isInRange(i + 1, j) && isInRange(i + 1, j + 1) && isInRange(i + 1, j + 2) && isInRange(i, j + 2))
 		maxNum = max(maxNum, paper[i + 1][j] + paper[i + 1][j + 1] + paper[i + 1][j + 2] + paper[i][j + 2]);
 
@@ -152,22 +121,22 @@ int checkLMino(int i, int j) {
 int checkTMino(int i, int j) {
 	int maxNum = 0;
 
-	// ¤±¤±¤±
-	//   ¤±
+	// ã…ã…ã…
+	//   ã…
 	if (isInRange(i, j) && isInRange(i, j + 1) && isInRange(i, j + 2) && isInRange(i + 1, j + 1))
 		maxNum = max(maxNum, paper[i][j] + paper[i][j + 1] + paper[i][j + 2] + paper[i + 1][j + 1]);
-	//   ¤±
-	// ¤±¤±
-	//   ¤±
+	//   ã…
+	// ã…ã…
+	//   ã…
 	if (isInRange(i, j + 1) && isInRange(i + 1, j + 1) && isInRange(i + 2, j + 1) && isInRange(i + 1, j))
 		maxNum = max(maxNum, paper[i][j + 1] + paper[i + 1][j + 1] + paper[i + 2][j + 1] + paper[i + 1][j]);
-	//   ¤±
-	// ¤±¤±¤±
+	//   ã…
+	// ã…ã…ã…
 	if (isInRange(i, j + 1) && isInRange(i + 1, j + 1) && isInRange(i + 1, j) && isInRange(i + 1, j + 2))
 		maxNum = max(maxNum, paper[i][j + 1] + paper[i + 1][j + 1] + paper[i + 1][j] + paper[i + 1][j + 2]);
-	// ¤±
-	// ¤±¤±
-	// ¤±
+	// ã…
+	// ã…ã…
+	// ã…
 	if (isInRange(i, j) && isInRange(i + 1, j) && isInRange(i + 1, j + 1) && isInRange(i + 2, j))
 		maxNum = max(maxNum, paper[i][j] + paper[i + 1][j] + paper[i + 1][j + 1] + paper[i + 2][j]);
 
