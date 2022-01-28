@@ -1,43 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-<M:N>: Ä«À× ´Þ·ÂÀÇ ¸¶Áö¸· ÇØ
-<x:y>: ¿¬µµ¸¦ ¾Ë¾Æ³»·Á´Â ÇØ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 1~40,000
-x: 1~M
-y: 1~N
-
-- ¹®Á¦ »óÈ²
-  Ã¹ ¹øÂ° ÇØ: <1:1>
-  µÎ ¹øÂ° ÇØ: <2:2>
-  <x:y>ÀÇ ´ÙÀ½ ÇØ: <x':y'>  x < M ÀÌ¸é x' = x + 1ÀÌ°í, ±×·¸Áö ¾ÊÀ¸¸é x' = 1
-                           y < N ÀÌ¸é y' = y + 1ÀÌ°í, ±×·¸Áö ¾ÊÀ¸¸é y' = 1
-  <M:N>: ´Þ·ÂÀÇ ¸¶Áö¸· ÇØ
-
-2. Ç®ÀÌ °èÈ¹
-
-ÇöÀçÀÇ ¿¬µµ¸¦ Á¤¼ö·Î Ç¥ÇöÇÑ °ªÀ» k¶ó ÇÒ ¶§,
-
- ÇöÀçÀÇ x°ªÀº k¸¦ MÀ¸·Î ³ª´« ³ª¸ÓÁö
- ÇöÀçÀÇ y°ªÀº k¸¦ NÀ¸·Î ³ª´« ³ª¸ÓÁö
-
- M:NÀº MxNÀÌ´Ù!
-
- µû¶ó¼­ MxN ÀÌ³»¿¡ 
-
- k¸¦ MÀ¸·Î ³ª´« ³ª¸ÓÁö°¡ x°¡ µÇ¸ç, k¸¦ NÀ¸·Î ³ª´« ³ª¸ÓÁö°¡ y°¡ µÇ´Â k¸¦ ±¸ÇÏ´Â °ÍÀÌ ¸ñÇ¥¶ó°í ÇÒ ¼ö ÀÖ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int M, N;
 int x, y;
 
@@ -60,6 +23,7 @@ int lcm(int a, int b) {
 }
 
 int solution() {
+	// y == Nì¼ ê²½ìš° yê°€ 0ìœ¼ë¡œ í‘œí˜„ë˜ë¯€ë¡œ 0ìœ¼ë¡œ ì„¤ì •!
 	if (y == N) y = 0;
 	int maxNum = lcm(M, N);
 
