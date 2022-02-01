@@ -19,6 +19,7 @@
  * [15652: N과 M (4)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15652%20-%20N%EA%B3%BC%20M%20(4).cpp)
  * [15654: N과 M (5)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15654%20-%20N%EA%B3%BC%20M%20(5).cpp)
  * [15655: N과 M (6)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15655%20-%20N%EA%B3%BC%20M%20(6).cpp)
+ * [15656: N과 M (7)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15656%20-%20N%EA%B3%BC%20M%20(7).cpp)
  * [15686: 치킨 배달](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15686%20-%20%EC%B9%98%ED%82%A8%20%EB%B0%B0%EB%8B%AC.cpp)
 
 ## - Danamic Programming
