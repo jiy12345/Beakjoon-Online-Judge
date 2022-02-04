@@ -19,7 +19,6 @@ int solution(int index, int curSize, int curSum) {
 		// 인접한 칸이 선택되지 않았을 경우에만 다음 단계 진행
 		if (isPicked[i] == 0) {
 
-
 			// 인덱스가 범위를 벗어나지 않을 때만 표시
 			if (adjacentIndexDown < N * M) {
 				isPicked[adjacentIndexDown]++;
