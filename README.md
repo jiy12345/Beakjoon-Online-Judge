@@ -22,7 +22,7 @@
  * [15656: N과 M (7)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15656%20-%20N%EA%B3%BC%20M%20(7).cpp)
  * [15657: N과 M (8)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15657%20-%20N%EA%B3%BC%20M%20(8).cpp)
  * [15686: 치킨 배달](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15686%20-%20%EC%B9%98%ED%82%A8%20%EB%B0%B0%EB%8B%AC.cpp)
- * 18290: NM과 K (1)([풀이 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp) ([풀이 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)))  ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
+ * 18290: NM과 K (1) [[풀이 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp)] [[풀이 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
 
 
 ## - Danamic Programming
