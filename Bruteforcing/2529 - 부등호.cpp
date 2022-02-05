@@ -2,29 +2,6 @@
 #include<string>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-k: ºÎµîÈ£ÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-k: 2~9
-
-- ¹®Á¦ »óÈ²
- Á¦½ÃµÈ ºÎµîÈ£°ü°è¸¦ ¸¸Á·ÇÏ´Â k+1ÀÚ¸®ÀÇ ÃÖ´ë, ÃÖ¼Ò Á¤¼ö¸¦ °¢°¢ Ãâ·ÂÇÑ´Ù!
-
-2. Ç®ÀÌ °èÈ¹
- ÀüÇüÀûÀÎ ¼ø¿­¹®Á¦ÀÌ´Ù. Àç±Í·Î ±¸ÇöÇÏ¸é µÉµí ÇÏ´Ù.
-
- Á¶ÇÕ¹®Á¦ÀÏ ¶§´Â ÀÌ¹Ì ¼±ÅÃÇÑ °Í ÀÌÈÄ·Î¸¸ ¼±ÅÃÇÏ¹Ç·Î ¼±ÅÃÇß´ÂÁö ¿©ºÎ¸¦ µûÁú ÇÊ¿ä°¡ ¾ø¾ú´Âµ¥, ¼ø¿­Àº ¾î¶»°Ô ÇÒ±î?
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ğµÎ ´ã¾ÆµĞ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°İÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 #define FORWARD true
 #define BACKWARD false
 
@@ -35,12 +12,9 @@ int isPicked[10];
 string minNum = "999999999";
 string maxNum = "0";
 
-// curOrder: ÇöÀç ¸î¹øÂ° ¼ö±îÁö »Ì¾Ò´ÂÁö
-// prevNum: ÀÌÀü¿¡ »ÌÀº ¼ö
+// curOrder: í˜„ì¬ ëª‡ë²ˆì§¸ ìˆ˜ê¹Œì§€ ë½‘ì•˜ëŠ”ì§€
+// prevNum: ì´ì „ì— ë½‘ì€ ìˆ˜
 void solution(int curOrder, int prevNum, string resultNum) {
-	//cout << "curOrder: " << curOrder;
-	//cout << ", inEqualitySigns[curOrder]: " << inEqualitySigns[curOrder];
-	//cout << ", resultNum: " << resultNum << '\n';
 	if (curOrder == k) {
 		minNum = min(minNum, resultNum);
 		maxNum = max(maxNum, resultNum);
