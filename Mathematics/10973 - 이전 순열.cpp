@@ -1,34 +1,8 @@
 #include<iostream>
-#include<cmath>
 #include<vector>
 using namespace std;
 
-
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-N: 1ºÎÅÍ N±îÁöÀÇ ¼ö·Î ÀÌ·ç¾îÁø ¼ø¿­À» ±¸ÇÏ±â À§ÇÑ ¹üÀ§
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1~10,000
-
-- ¹®Á¦ »óÈ²
- ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø ¼ø¿­ÀÇ ´ÙÀ½ ¼ø¿­À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-ÀÏ´Ü 10,000ÀÌ ÀÔ·ÂÀÇ ÃÖ´ë Å©±âÀÌ¹Ç·Î, ¹«ÀÛÁ¤ Ã³À½ºÎÅÍ µ¹¸®´Â °ÍÀº ºÒ°¡´ÉÇÏ´Ù.
-
-µû¶ó¼­ ´ÙÀ½ ¼ø¿­À» ½ÇÁ¦ ±¸ÇØ¾ß ÇÏ´Âµ¥, ´ÙÀ½ ¼ø¿­ÀÌ¶ó´Â °ÍÀº ¾î¶»°Ô Ç¥ÇöÇÒ±î?
-
-=> Á¤·ÄµÇ´Â °úÁ¤ÀÌ¶ó°í º¼ ¼öµµ ÀÖ°Ú´Ù.
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
-int N;
+int N; // ìˆœì—´ì˜ ê¸¸ì´
 
 void swap(int& a, int& b) {
 	int temp = a;
@@ -38,47 +12,48 @@ void swap(int& a, int& b) {
 
 void prev_permutation(vector<int> curPermutation) {
 	int length = curPermutation.size();
+	vector<int>prevPermutation(curPermutation);
 	int firstIndex = -1;
 	int secondIndex = - 1;
 
-	// 1. arr[k] > arr[k + 1]À» ¸¸Á·ÇÏ´Â °¡Àå Å« k¸¦ ±¸ÇÑ´Ù.
+	// 1. arr[k] > arr[k + 1]ì„ ë§Œì¡±í•˜ëŠ” ê°€ì¥ í° kë¥¼ êµ¬í•œë‹¤.
 	for (int k = length - 2; k >= 0; --k) {
-		if (curPermutation[k] > curPermutation[k + 1]) {
+		if (prevPermutation[k] > prevPermutation[k + 1]) {
 			firstIndex = k;
 			break;
 		}
 	}
 
-	// i¸¦ Ã£Áö ¸øÇÏ¸é ÇöÀç ¼ø¿­ÀÌ ¸¶Áö¸· ¼ø¿­ÀÌ´Ù.
+	// kë¥¼ ì°¾ì§€ ëª»í•˜ë©´ í˜„ì¬ ìˆœì—´ì´ ë§ˆì§€ë§‰ ìˆœì—´ì´ë‹¤.
 	if (firstIndex == -1) {
 		cout << -1;
 		return;
 	}
 
-	// 2. i >= 1ÀÎ iÁß arr[k] < arr[i]¸¦ ¸¸Á·ÇÏ´Â °¡Àå Å« i ±¸ÇÑ´Ù.
+	// 2. i >= 1ì¸ iì¤‘ arr[k] < arr[i]ë¥¼ ë§Œì¡±í•˜ëŠ” ê°€ì¥ í° ië¥¼ êµ¬í•œë‹¤.
 	for (int i = length - 1; i >= 1; --i) {
-		if (curPermutation[i] < curPermutation[firstIndex]) {
+		if (prevPermutation[i] < prevPermutation[firstIndex]) {
 			secondIndex = i;
 			break;
 		}
 	}
 
-	// 3. arr[k]¿Í arr[i]¸¦ ¹Ù²Û´Ù.
-	swap(curPermutation[firstIndex], curPermutation[secondIndex]);
+	// 3. arr[k]ì™€ arr[i]ë¥¼ ë°”ê¾¼ë‹¤.
+	swap(prevPermutation[firstIndex], prevPermutation[secondIndex]);
 
-	// 4. k ´ÙÀ½ À§Ä¡ºÎÅÍ, Áï arr[k + 1] ~ arr[end]ÀÇ °ªµéÀ» µÚÁı´Â´Ù(ÁÂ¿ì¹İÀü)
+	// 4. k ë‹¤ìŒ ìœ„ì¹˜ë¶€í„° ëê¹Œì§€, ì¦‰ arr[k + 1] ~ arr[end]ì˜ ê°’ë“¤ì„ ë’¤ì§‘ëŠ”ë‹¤(ì¢Œìš°ë°˜ì „)
 	int left = firstIndex + 1;
 	int right = length - 1;
 
 	while (left < right) {
-		swap(curPermutation[left], curPermutation[right]);
+		swap(prevPermutation[left], prevPermutation[right]);
 		left++;
 		right--;
 	}
 
-	// ¸ğµç Ã³¸®°¡ ³¡³­ ¼ø¿­ Ãâ·Â
+	// ëª¨ë“  ì²˜ë¦¬ê°€ ëë‚œ ìˆœì—´ ì¶œë ¥
 	for (int i = 0; i < length; i++) {
-		cout << curPermutation[i] << " ";
+		cout << prevPermutation[i] << " ";
 	}
 }
 
@@ -89,7 +64,7 @@ int main() {
 
 	cin >> N;
 
-	// ¼ø¿­ ÀÔ·Â¹Ş±â
+	// ìˆœì—´ ì…ë ¥ë°›ê¸°
 	vector<int> curPermutation;
 
 	int temp;
