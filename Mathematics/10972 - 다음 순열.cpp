@@ -24,7 +24,7 @@ void next_permutation(vector<int> curPermutation) {
 		}
 	}
 
-	// 를 찾지 못하면 현재 순열이 마지막 순열이다.
+	//  를 찾지 못하면 현재 순열이 마지막 순열이다.
 	if (firstIndex == -1) {
 		cout << -1;
 		return;
