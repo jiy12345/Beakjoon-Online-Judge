@@ -16,7 +16,7 @@ void next_permutation(vector<int> curPermutation) {
 	int firstIndex = -1;
 	int secondIndex = -1;
 
-	// 1. arr[k] < arr[k + 1]을 만족하는 가장 큰 k를 구한다.
+	// 1. ﻿arr[k] < arr[k + 1]을 만족하는 가장 큰 k를 구합니다.﻿
 	for (int k = length - 2; k >= 0; --k) {
 		if (nextPermutation[k] < nextPermutation[k + 1]) {
 			firstIndex = k;
@@ -24,13 +24,13 @@ void next_permutation(vector<int> curPermutation) {
 		}
 	}
 
-	// k 를 찾지 못하면 현재 순열이 마지막 순열이다.
+	// k 를 찾지 못하면 현재 순열이 마지막 순열입니다.
 	if (firstIndex == -1) {
 		cout << -1;
 		return;
 	}
 
-	// 2. i > k인 i중 arr[k] < arr[i]를 만족하는 가장 큰 i 구한다.
+	// ﻿2. arr[k] < arr[i]를 만족하는 가장 큰 i를 구합니다.﻿
 	int i = length - 1;
 	while (true) {
 		if (nextPermutation[i] > nextPermutation[firstIndex]) {
@@ -40,13 +40,12 @@ void next_permutation(vector<int> curPermutation) {
 		i--;
 	}
 	
-	// 3. arr[k]와 arr[i]를 바꾼다.
+	// 3. arr[k]와 arr[i]를 바꿉니다.
 	swap(nextPermutation[firstIndex], nextPermutation[secondIndex]);
 
-	// 4. k 다음 위치부터, 즉 arr[k + 1] ~ arr[end]의 값들을 뒤집는다(좌우반전)
+	// 4. ﻿k + 1 위치부터 끝 위치까지, 즉 arr[k + 1] ~ arr[N]까지를 서로 교환합니다.(좌우반전)﻿
 	int left = firstIndex + 1;
 	int right = length - 1;
-
 	while (left < right) {
 		swap(nextPermutation[left], nextPermutation[right]);
 		left++;
