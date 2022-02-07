@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int N; // 순열의 길이
+int N;
 
 void swap(int& a, int& b) {
 	int temp = a;
@@ -30,18 +30,20 @@ void prev_permutation(vector<int> curPermutation) {
 		return;
 	}
 
-	// 2. i >= 1인 i중 arr[k] < arr[i]를 만족하는 가장 큰 i를 구한다.
-	for (int i = length - 1; i >= 1; --i) {
+	// 2. arr[k] > arr[i]를 만족하는 가장 큰 i 구한다.
+	int i = length - 1;
+	while (true) {
 		if (prevPermutation[i] < prevPermutation[firstIndex]) {
 			secondIndex = i;
 			break;
 		}
+		i--;
 	}
 
 	// 3. arr[k]와 arr[i]를 바꾼다.
 	swap(prevPermutation[firstIndex], prevPermutation[secondIndex]);
 
-	// 4. k 다음 위치부터 끝까지, 즉 arr[k + 1] ~ arr[end]의 값들을 뒤집는다(좌우반전)
+	// 4. k 다음 위치부터, 즉 arr[k + 1] ~ arr[end]의 값들을 뒤집는다(좌우반전)
 	int left = firstIndex + 1;
 	int right = length - 1;
 
