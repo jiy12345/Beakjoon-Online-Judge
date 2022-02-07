@@ -30,7 +30,7 @@ void next_permutation(vector<int> curPermutation) {
 		return;
 	}
 
-	// 2. i > k인 i중 arr[k] > arr[i]를 만족하는 가장 큰 i 구한다.
+	// 2. i > k인 i중 arr[k] < arr[i]를 만족하는 가장 큰 i 구한다.
 	int i = length - 1;
 	while (true) {
 		if (nextPermutation[i] > nextPermutation[firstIndex]) {
@@ -39,6 +39,7 @@ void next_permutation(vector<int> curPermutation) {
 		}
 		i--;
 	}
+	
 	// 3. arr[k]와 arr[i]를 바꾼다.
 	swap(nextPermutation[firstIndex], nextPermutation[secondIndex]);
 
