@@ -1,65 +1,76 @@
 #include<iostream>
-#include<cmath>
 #include<vector>
 using namespace std;
 
 int N;
 
-void next_permutation() {
-	// 순열 입력받기
-	vector<int> arr;
+void swap(int& a, int& b) {
+	int temp = a;
+	a = b;
+	b = temp;
+}
 
-	int temp;
-	for (int i = 0; i < N; i++) {
-		cin >> temp;
-		arr.push_back(temp);
-	}
-	
-	// 1짜리 순열은 항상 마지막 위치의 순열이므로, 무조건 -1 출력하고 끝내기
-	if (N == 1) {
-		cout << -1;
-		return;
-	}
+void next_permutation(vector<int> curPermutation) {
+	int length = curPermutation.size();
+	int firstIndex = -1;
+	int secondIndex = -1;
 
-	int k = N - 2;
-	// 1. arr[k] < arr[k+1]을 만족하는 가장 큰 k를 구한다.
-	while (arr[k] > arr[k + 1]) {
-		if (k == 0) {
-			// 반대로 정렬되어 있을 경우 -1 출력
-			cout << -1;
-			return;
-		}
-		k--;
-	}
-
-	int i = N - 1;
-	while (arr[k] > arr[i]) {
-		i--;
-		if (i == k + 1) {
+	// 1. arr[k] < arr[k + 1]을 만족하는 가장 큰 k를 구한다.
+	for (int k = length - 2; k >= 0; --k) {
+		if (curPermutation[k] < curPermutation[k + 1]) {
+			firstIndex = k;
 			break;
 		}
 	}
 
-	// 3. arr[k]와 arr[i]를 바꾼다.
-	temp = arr[k];
-	arr[k] = arr[i];
-	arr[i] = temp;
+	// i를 찾지 못하면 현재 순열이 마지막 순열이다.
+	if (firstIndex == -1) {
+		cout << -1;
+		return;
+	}
 
-	// 4. k 다음 위치부터, arr[k + 1] ~arr[end]의 값들을 뒤집는다(좌우반전)
-	for (int i = 1; i < (int)floor((N - k - 1)/2) + 1; i++) {
-		temp = arr[k + i];
-		arr[k + i] = arr[N - i];
-		arr[N - i] = temp;
+	// 2. i > k인 i중 arr[k] > arr[i]를 만족하는 가장 큰 i 구한다.
+	//  => 조건을 주지 않아도 됨 앞서 1번에서 이미 구했기 때문에!
+	for (int i = length - 1; i >= firstIndex + 1; --i) {
+		if (curPermutation[i] > curPermutation[firstIndex]) {
+			secondIndex = i;
+			break;
+		}
+	}
+	
+	// 3. arr[k]와 arr[i]를 바꾼다.
+	swap(curPermutation[firstIndex], curPermutation[secondIndex]);
+
+	// 4. k 다음 위치부터, 즉 arr[k + 1] ~ arr[end]의 값들을 뒤집는다(좌우반전)
+	int left = firstIndex + 1;
+	int right = length - 1;
+
+	while (left < right) {
+		swap(curPermutation[left], curPermutation[right]);
+		left++;
+		right--;
 	}
 
 	// 모든 처리가 끝난 순열 출력
-	for (int i = 0; i < N; i++) {
-		cout << arr[i] << " ";
+	for (int i = 0; i < length; i++) {
+		cout << curPermutation[i] << " ";
 	}
 }
 
 int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+
+	vector<int> curPermutation;
+
 	cin >> N;
 
-	next_permutation();
+	int temp;
+	for (int i = 0; i < N; i++) {
+		cin >> temp;
+		curPermutation.push_back(temp);
+	}
+
+	next_permutation(curPermutation);
 }
