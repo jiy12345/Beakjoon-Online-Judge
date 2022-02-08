@@ -11,6 +11,7 @@
  * [2529: 부등호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2529%20-%20%EB%B6%80%EB%93%B1%ED%98%B8.cpp)
  * [3085: 사탕 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/3085%20-%20%EC%82%AC%ED%83%95%20%EA%B2%8C%EC%9E%84.cpp)
  * [7568: 덩치](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/7568%20-%20%EB%8D%A9%EC%B9%98.cpp)
+ * [10819: 차이를 최대로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10819%20-%20%EC%B0%A8%EC%9D%B4%EB%A5%BC%20%EC%B5%9C%EB%8C%80%EB%A1%9C.cpp)
  * [**14391: 종이 조각**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14391%20-%20%EC%A2%85%EC%9D%B4%20%EC%A1%B0%EA%B0%81.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222521417180))
  * [14888: 연산자 끼워넣기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14888%20-%20%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222515810551))
  * [14889: 스타트와 링크](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14889%20-%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%99%80%20%EB%A7%81%ED%81%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222522227331))
