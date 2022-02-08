@@ -3,36 +3,11 @@
 #include<cmath>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¹è¿­ÀÌ °¡Áø ¼öÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 3~8
-
-- ¹®Á¦ »óÈ²
-¹è¿­¿¡ µé¾îÀÖ´Â Á¤¼öÀÇ ¼ø¼­¸¦ ÀûÀýÈ÷ ¹Ù²ã ´ÙÀ½ ½ÄÀÇ °è»ê °á°ú¸¦ ÃÖ´ë·Î ÇÏ´Â ¼ö¿­ÀÇ °ªÀ» ±¸ÇÏ¿©¶ó
-
-|A[0] - A[1]| + |A[1] - A[2]| + ... + |A[N-2] - A[N-1]|
-
-2. Ç®ÀÌ °èÈ¹
-
- ¼ø¼­°¡ »ó°üÀÖ´Â ¹èÄ¡ÀÌ¹Ç·Î, ¼ø¿­ ¹®Á¦ÀÌ°í, N°³Áß N°³¸¦ »Ì´Â ¹®Á¦ÀÌ´Ù.
-
- Àç±Í·Î ±¸ÇöÇÏµÇ, ¸¶Áö¸·¿¡ °ª¸¸ °è»êÇØÁÖ¸é µÉ µí ÇÏ´Ù.
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int N;
 int maxNum = -100 * 8;
-int sequence[8];  // ÀÔ·Â¹ÞÀº ¼ö¿­ ÀúÀå
-bool isPicked[8]; // »ÌÈù ¼öÀÎÁö Ã¼Å©
-vector<int>subSequence; // ¹èÄ¡ÇÑ ¼ö¿­
+int sequence[8];  // ìž…ë ¥ë°›ì€ ìˆ˜ì—´ ì €ìž¥
+bool isPicked[8]; // ë½‘ížŒ ìˆ˜ì¸ì§€ ì²´í¬
+vector<int>subSequence; // ë°°ì¹˜í•œ ìˆ˜ì—´
 
 void permutation() {
 	int curSize = subSequence.size();
