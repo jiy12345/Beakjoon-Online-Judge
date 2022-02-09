@@ -1,45 +1,15 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: µµ½ÃÀÇ °³¼ö
-W[i][j]: µµ½Ã i¿¡¼­ j·Î °¡´Â ºñ¿ë
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2~8
-W[i][j]: 1~1,000,000 / °¥ ¼ö ¾ø´Â °æ¿ì 0ÀÌ ÁÖ¾îÁø´Ù!
-
-- ¹®Á¦ »óÈ²
-°¢ µµ½Ã°£¿¡ ÀÌµ¿ÇÏ´Âµ¥ µå´Â ºñ¿ëÀº Çà·Ä W[i][j]ÇüÅÂ·Î ÁÖ¾îÁú ¶§,
-
- N°³ÀÇ µµ½Ã¸¦ ÇÑ¹ø¾¿ ¸ðµÎ °ÅÃÄ ¿ø·¡ µµ½Ã·Î µ¹¾Æ¿À´Â ¼øÈ¸ ¿©Çà °æ·Î Áß °¡Àå ÀûÀº ºñ¿ëÀ» µéÀÌ´Â °æ·ÎÀÇ ºñ¿ë, Áï ÃÖ¼Ò°ªÀ¸ ±¸ÇÏ¶ó.
-
-2. Ç®ÀÌ °èÈ¹
-
- ¼ø¼­°¡ »ó°üÀÖ´Â ¹èÄ¡ÀÌ¹Ç·Î, ¼ø¿­ ¹®Á¦ÀÌ´Ù.
-  => µû¶ó¼­ ÀÌ¹Ì Áö³ª¿Â °÷ÀÎÁö¿¡ ´ëÇÑ Ç¥½Ã°¡ ÇÊ¿äÇÏ´Ù.
-
- ¼øÈ¸ÀÌ¹Ç·Î, ÀÓÀÇÀÇ Ãâ¹ßÁ¡À» Àâ¾Æ¼­ °¡¸é µÉ µí ÇÏ´Ù.
-  => ¾îÂ÷ÇÇ ´Ù¸¥ °÷¿¡¼­ Ãâ¹ßÇÑ °æ·Î ¶ÇÇÑ °°Àº ¼ø¼­·Î ÀÌ·ç¾îÁø ¼øÈ¸ °æ·Î¿¡ ÀÇÇØ °í·ÁµÉ °ÍÀÌ¹Ç·Î!
- 
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int N;
-int W[10][10];  // ÀÔ·Â¹ÞÀº ¼ö¿­ ÀúÀå
-bool isVisited[10]; // ¹æ¹®ÇÑ °÷ÀÎÁö Ã¼Å©
+int W[10][10];  // ìž…ë ¥ë°›ì€ ê° ê²½ë¡œë³„ ë¹„ìš©
+bool isVisited[10]; // ë°©ë¬¸í•œ ê³³ì¸ì§€ ì²´í¬
 
 int permutation(int curCity, int curCost, int curSize) {
 	int minNum = 10 * 1000000;
-	if (curSize == N) { // Ãâ¹ßÁ¡À» Á¦¿ÜÇÏ°í ÇÑ¹ø¾¿ ¹æ¹®ÇÑ °æ¿ì
+	if (curSize == N) { // ì¶œë°œì ì„ ì œì™¸í•˜ê³  í•œë²ˆì”© ë°©ë¬¸í•œ ê²½ìš°
 		
-		// ¿ø·¡ µµ½Ã·Î µ¹¾Æ°¡´Â °æ·Î°¡ ÀÖÀ» °æ¿ì¿¡¸¸ °í·ÁµÇµµ·Ï ÇÔ
+		// ì›ëž˜ ë„ì‹œë¡œ ëŒì•„ê°€ëŠ” ê²½ë¡œê°€ ìžˆì„ ê²½ìš°ì—ë§Œ ê³ ë ¤ë˜ë„ë¡ í•¨
 		if (W[curCity][0]) {
 			minNum = curCost + W[curCity][0];
 		}
@@ -47,7 +17,7 @@ int permutation(int curCity, int curCost, int curSize) {
 	}
 
 	for (int i = 0; i < N; i++) {
-		// ¹æ¹®ÇÏÁö ¾Ê¾Ò°í °æ·Î°¡ ÀÖ´Â °æ¿ì¿¡¸¸ Å½»ö ÁøÇà
+		// ë°©ë¬¸í•˜ì§€ ì•Šì•˜ê³  ê²½ë¡œê°€ ìžˆëŠ” ê²½ìš°ì—ë§Œ íƒìƒ‰ ì§„í–‰
 		if (isVisited[i] == false && W[curCity][i] != 0) {
 			isVisited[i] = true;
 			minNum = min(minNum, permutation(i, curCost+ W[curCity][i], curSize + 1));
@@ -70,7 +40,7 @@ int main() {
 		}
 	}
 
-	// ¼øÈ¸ °æ·ÎÀÌ¹Ç·Î, Ãâ¹ßÁ¡Àº ÇÑ °÷À¸·Î °íÁ¤ÇÏ¿©µµ ¸ðµç °æ¿ì¸¦ °í·ÁÇÒ ¼ö ÀÖÀ½!
+	// ìˆœíšŒ ê²½ë¡œì´ë¯€ë¡œ, ì¶œë°œì ì€ í•œ ê³³ìœ¼ë¡œ ê³ ì •í•˜ì—¬ë„ ëª¨ë“  ê²½ìš°ë¥¼ ê³ ë ¤í•  ìˆ˜ ìžˆìŒ!
 	isVisited[0] = true;
 	cout << permutation(0, 0, 1);
 }
