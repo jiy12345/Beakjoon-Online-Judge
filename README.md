@@ -10,6 +10,7 @@
  * [1759: 암호 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1759%20-%20%EC%95%94%ED%98%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222516074349))
  * [2529: 부등호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2529%20-%20%EB%B6%80%EB%93%B1%ED%98%B8.cpp)
  * [3085: 사탕 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/3085%20-%20%EC%82%AC%ED%83%95%20%EA%B2%8C%EC%9E%84.cpp)
+ * [6603: 로또](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/6603%20-%20%EB%A1%9C%EB%98%90.cpp)
  * [7568: 덩치](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/7568%20-%20%EB%8D%A9%EC%B9%98.cpp)
  * [10971: 외판원 순회 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10971%20-%20%EC%99%B8%ED%8C%90%EC%9B%90%20%EC%88%9C%ED%9A%8C%202.cpp)
  * [10819: 차이를 최대로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10819%20-%20%EC%B0%A8%EC%9D%B4%EB%A5%BC%20%EC%B5%9C%EB%8C%80%EB%A1%9C.cpp)
