@@ -3,32 +3,7 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-n: 1, 2, 3À¸·Î ³ªÅ¸³»¾ß ÇÏ´Â ¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-n:1~100,000
-
-- ¹®Á¦ »óÈ²
-°¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù, nÀ» 1, 2, 3ÀÇ ÇÕÀ¸·Î ³ªÅ¸³»´Â ¹æ¹ýÀÇ ¼ö¸¦ 1,000,000,009·Î ³ª´« ³ª¸ÓÁö¸¦ Ãâ·Â
-
-2. Ç®ÀÌ °èÈ¹
-
-¹®Á¦°¡ µÇ´Â Á¡: Á¶°ÇÀ» °í·ÁÇÑ °ÍÀ» ÇÑ¹ø¿¡ ¾î¶»°Ô ³ªÅ¸³¾ °ÍÀÌ³Ä?
-
-°¢ À§Ä¡¿¡¼­ÀÇ ÇÕÀº ¿ø·¡´Â 
-
-dp[n] = dp[n-1] + dp[n-2] + dp[n-3] ÀÌ¾î¾ß ÇÏ³ª, °¢ Á¶°Ç¿¡ µû¶ó ¶Ç ³ª´µ¾îÁ®¾ß ÇÑ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
-// dp[i][j]: i¸¦ ³ªÅ¸³¾ ¶§, ¸¶Áö¸·¿¡ j¸¦ »ç¿ëÇßÀ» ¶§ÀÇ °æ¿ìÀÇ ¼ö
+// dp[i][j]: ië¥¼ ë‚˜íƒ€ë‚¼ ë•Œ, ë§ˆì§€ë§‰ì— jë¥¼ ì‚¬ìš©í–ˆì„ ë•Œì˜ ê²½ìš°ì˜ ìˆ˜
 long long dp[100001][4];
 
 void solution(int maxNum) {
