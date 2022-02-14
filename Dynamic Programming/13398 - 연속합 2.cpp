@@ -1,47 +1,22 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-n: ¼ö¿­¿¡ ¼ÓÇÑ Á¤¼öÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-n:1~100,000
-¼ö¿­¿¡ ¼ÓÇÑ ¼ö: -1,000~1,000
-
-- ¹®Á¦ »óÈ²
- n°³ÀÇ ¼ö¸¦ °¡Áø ¼ö¿­ÀÌ ÁÖ¾îÁ³À» ¶§, ¿¬¼ÓµÈ ¸î°³ÀÇ ¼ö¸¦ ¼±ÅÃÇÏ¿© ±¸ÇÒ ¼ö ÀÖ´Â ÇÕ Áß °¡Àå Å« ÇÕÀ» ±¸ÇÏ¿©¶ó.
- ÀÌ ¶§, ¿¬¼ÓµÈ ¼ö Áß ÇÑ ¼ö´Â Á¦¿ÜµÉ ¼ö ÀÖ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- Á¦°Å ¾ÈÇÑ »óÅÂÀÇ ÇÕ°ú Á¦°Å ÇÑ »óÅÂÀÇ ÇÕÀ» µû·Î ÀúÀåÇÏ´Â°Ô ÁÁÀ» µí ÇÏ´Ù!
-
- Á¦°Å ¾ÈÇÑ »óÅÂÀÇ ÃÖ´ë°ª
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 #define NOT_REMOVED 0
 #define REMOVED 1
-// ÇöÀç À§Ä¡ÀÇ °ªÀ» Æ÷ÇÔÇÏ´Â °ªÀÇ ÇÕÀÇ ÃÖ´ë°ª
+// í˜„ìž¬ ìœ„ì¹˜ì˜ ê°’ì„ í¬í•¨í•˜ëŠ” ê°’ì˜ í•©ì˜ ìµœëŒ€ê°’
 int dp[100000][2];
 int sequence[100000];
 
 int solution(int n) {
 
-	dp[0][NOT_REMOVED] = sequence[0]; // °¡Àå Ã¹ À§Ä¡´Â ÀÚ±â ÀÚ½Å¹Û¿¡ ¾øÀ¸¹Ç·Î
-	dp[0][REMOVED] = sequence[0]; // °¡Àå Ã¹ À§Ä¡´Â ÀÚ±â ÀÚ½Å¹Û¿¡ ¾øÀ¸¹Ç·Î
+	dp[0][NOT_REMOVED] = sequence[0]; // ê°€ìž¥ ì²« ìœ„ì¹˜ëŠ” ìžê¸° ìžì‹ ë°–ì— ì—†ìœ¼ë¯€ë¡œ
+	dp[0][REMOVED] = sequence[0]; // ê°€ìž¥ ì²« ìœ„ì¹˜ëŠ” ìžê¸° ìžì‹ ë°–ì— ì—†ìœ¼ë¯€ë¡œ
 
 	int answer = dp[0][NOT_REMOVED];
 
 	for (int i = 1; i < n; i++) {
 		dp[i][NOT_REMOVED] = max(dp[i - 1][NOT_REMOVED] + sequence[i], sequence[i]);
-		//                   ÇöÀç ¼ö¸¦ Á¦°ÅÇÏ´Â °æ¿ì  / ÇöÀç ¼ö¸¦ Á¦°ÅÇÏÁö ¾Ê´Â °æ¿ì
+		//                   í˜„ìž¬ ìˆ˜ë¥¼ ì œê±°í•˜ëŠ” ê²½ìš°  / í˜„ìž¬ ìˆ˜ë¥¼ ì œê±°í•˜ì§€ ì•ŠëŠ” ê²½ìš°
 		dp[i][REMOVED] = max(dp[i - 1][NOT_REMOVED], dp[i - 1][REMOVED] + sequence[i]);
 	
 		answer = max(answer, max(dp[i][NOT_REMOVED], dp[i][REMOVED]));
