@@ -2,7 +2,7 @@
 #include<map>
 using namespace std;
 
-#define QUEUE_CAPACITY 5
+#define QUEUE_CAPACITY 10000
 
 enum QUEUE_COMMAND { PUSH, POP, SIZE, EMPTY, FRONT, BACK };
 map<string, int> queueCommandMap = { {"push", PUSH},
