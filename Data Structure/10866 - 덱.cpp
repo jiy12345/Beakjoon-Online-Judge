@@ -2,19 +2,6 @@
 #include<map>
 using namespace std;
 
-/*
-Å« ¹®Á¦Á¡
-
-ÀÎµ¦½º¸¦ ÀúÀå ÇÏ¿©¾ß ÇÒ À§Ä¡·Î ÇÒ °ÍÀÎ°¡, ÀúÀåµÈ À§Ä¡·Î ÇÒ °ÍÀÎ°¡?
-
-ÀüÀÚ´Â Ã³¸®ÇÒ ¿¹¿Ü°¡ ¸¹¾ÆÁö¸ç, ÈÄÀÚ´Â »çÀÌÁî³ª ºó Å¥ Ã¼Å©, ÃÊ±â »ğÀÔ¿¡ ¾î·Á¿òÀÌ ÀÖ´Ù!
-
-
-»çÀÌÁî Ã¼Å© ½Ã push_front·Î ¾ÕÂÊÀ¸·Î ³Ñ¾î°¬À» °æ¿ì¿Í 
-push_back_À¸·Î µÚÂÊÀ¸·Î ³Ñ¾î °¬À» °æ¿ì¸¦ ±¸ºĞÇØ¾ß ÇÏ¹Ç·Î, Â÷¶ó¸® size º¯¼ö¸¦ ÇÏ³ª ¸¸µé±â·Î Çß´Ù.
-
-*/
-
 #define DEQUE_CAPACITY 10000
 
 enum DEQUEUE_COMMAND { PUSH_FRONT, PUSH_BACK, POP_FRONT, POP_BACK, SIZE, EMPTY, FRONT, BACK };
@@ -32,8 +19,8 @@ map<string, int> dequeCommandMap = {
 class deque {
 private:
 	int dequeArray[DEQUE_CAPACITY] = { 0, };
-	int front_index; // ÇöÀç ÀúÀåµÈ °ªÀÇ ¿ŞÂÊ ³¡ À§Ä¡
-	int back_index; // ÀúÀåµÇ¾î¾ßÇÒ À§Ä¡
+	int front_index; // í˜„ì¬ ì €ì¥ëœ ê°’ì˜ ì™¼ìª½ ë ìœ„ì¹˜
+	int back_index; // ì €ì¥ë˜ì–´ì•¼í•  ìœ„ì¹˜
 
 public:
 	deque() {
