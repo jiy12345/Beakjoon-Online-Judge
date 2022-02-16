@@ -27,8 +27,8 @@ public:
 
 	void push(int X) {
 		queueArray[back_index] = X;
+
 		back_index++;
-		
 		if (back_index == QUEUE_CAPACITY) {
 			back_index = 0;
 		}
@@ -45,13 +45,14 @@ public:
 				front_index = 0;
 			}
 
-			return queueArray[front_index - 1];
+			// 큐의 인덱스가 앞으로 돌아왔을 경우를 대비하여
+			return (front_index == 0) ? queueArray[QUEUE_CAPACITY - 1] : queueArray[front_index - 1];
 		}
 	}
 
 	int size() {
 		if (back_index < front_index) {
-			return (QUEUE_CAPACITY - back_index) + back_index - 1;
+			return (QUEUE_CAPACITY - front_index) + back_index;
 		}
 		else {
 			return back_index - front_index;
@@ -76,7 +77,7 @@ public:
 			return -1;
 		}
 		else {
-			return queueArray[back_index - 1];
+			return(back_index == 0) ? queueArray[QUEUE_CAPACITY - 1] : queueArray[back_index - 1];
 		}
 	}
 
