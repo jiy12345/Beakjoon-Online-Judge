@@ -3,46 +3,9 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-K: Å×½ºÆ® ÄÉÀÌ½ºÀÇ ¼ö
-V: Á¤Á¡ÀÇ °³¼ö
-E: °£¼±ÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-K: 2 ~ 5
-V: 1 ~ 20,000
-E: 1 ~ 200,000
-
-- ¹®Á¦ »óÈ²
- ±×·¡ÇÁÀÇ Á¤Á¡À» µÎ ÁýÇÕÀ¸·Î ºÐ·ùÇÏ¿©, °¢ ÁýÇÕ¿¡ ¼ÓÇÑ Á¤Á¡³¢¸®´Â ¼­·Î ÀÎÁ¢ÇÏÁö ¾Êµµ·Ï ºÐÇÒÇÒ ¼ö ÀÖ´Â ±×·¡ÇÁ¸¦ ÀÌºÐ ±×·¡ÇÁ¶ó°í ÇÑ´Ù.
-
- ±×·¡ÇÁ°¡ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁ³À» ¶§, ÀÌ ±×·¡ÇÁ°¡ ÀÌºÐ ±×·¡ÇÁÀÎÁö ¾Æ´ÑÁö ÆÇº°ÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-¾î¶² ÀÌºÐ ±×·¡ÇÁ¶ó´Â °ÍÀº ±×·¡ÇÁ¿¡ ¼øÈ¯(cycle) °æ·Î°¡ Á¸ÀçÇÏÁö ¾Ê¾Æ¾ß ÇÑ´Ù´Â °ÍÀ» ¸»ÇÑ´Ù.
-
-µû¶ó¼­ ¼øÈ¯°æ·ÎÀÇ Á¸Àç¼º¸¸ Ã¼Å©ÇÏ¸é µÉ µí ÇÏ´Ù!
-
-1. ÀÎÁ¢ ¸®½ºÆ®ÀÇ ÇüÅÂ·Î ±×·¡ÇÁ¸¦ ÀÔ·Â ¹Þ´Â´Ù.
-2. ¸ðµç ³ëµå¿¡¼­ ½ÃÀÛÇÏ´Â °æ·Î¸¦ Ã¼Å©ÇÏµÇ, ÇÑ¹ø °æ·Î Å½»ö¿¡¼­ Ã¼Å©µÈ ³ëµå´Â ½ÃÀÛÁ¡À¸·Î ´Ù½Ã Ã¼Å©µÇÁö ¾Êµµ·ÏÇÑ´Ù.
-3. ¼øÈ¯ °æ·Î¸¦ ¹ß°ßÇÏ¿´´Ù¸é NO¸¦ Ãâ·ÂÇÏ°í, ¸ðµç ³ëµå¸¦ Å½»öÇÏ´Â µ¿¾È ¼øÈ¯ °æ·Î¸¦ ¹ß°ßÇÏÁö ¸øÇÏ¿´´Ù¸é
-
-¼øÈ¯ °æ·Î¸¦ Ã¼Å©ÇÏ±â À§ÇØ¼­´Â ÇöÀç ´Ü°è°¡ ÇöÀç À§Ä¡±îÁö ¿À´Âµ¥ °ÅÃÄ¿Â ³ëµåÀÇ ¸ñ·ÏÀ» ¾Ë¾Æ¾ß ÇÑ´Ù!
-
-=> ÀÌ ¸ñ·ÏÀ» ÀúÀåÇÑ ÈÄ ÀÌÀü ³ëµå°¡ ¾Æ´Ï¸é¼­ ¹æ¹®ÇÑ ³ëµå ¸ñ·Ï¿¡ ÀÖ´Â ³ëµå·Î °¡´Â °æ·Î°¡ ÀÖÀ» °æ¿ì¿¡ NO¸¦ Ãâ·ÂÇÏµµ·Ï ÇÏ¸é µÉ µí ÇÏ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 enum Color{NONE, RED, BLUE};
 
-// º¤ÅÍ ¶ÇÇÑ °ª¿¡ÀÇÇÑ È£ÃâÀÌ µÇ¹Ç·Î ¿ÜºÎ¿¡ÀÇ Àû¿ëÀ» À§ÇØ ÂüÁ¶¿¡ ÀÇÇÑ È£ÃâÀ» ÁøÇàÇØ¾ß!
+// ë²¡í„° ë˜í•œ ê°’ì—ì˜í•œ í˜¸ì¶œì´ ë˜ë¯€ë¡œ ì™¸ë¶€ì—ì˜ ì ìš©ì„ ìœ„í•´ ì°¸ì¡°ì— ì˜í•œ í˜¸ì¶œì„ ì§„í–‰í•´ì•¼!
 bool isCycle(int startNode, vector<bool> &isVisited, vector<int>* graph) {
 	vector<int>Color(isVisited.size());
 
