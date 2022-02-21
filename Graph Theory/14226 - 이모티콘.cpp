@@ -3,32 +3,6 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-S: ÀÌ¸ğÆ¼ÄÜÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-S: 2 ~ 1,000
-
-- ¹®Á¦ »óÈ²
- 1°³ÀÇ ÀÌ¸ğÆ¼ÄÜÀÌ ÀÔ·ÂµÇ¾î ÀÖÀ» ¶§, ´ÙÀ½°ú °°Àº 3°¡Áö ¿¬»êÀ» »ç¿ëÇÏ¿© ÀÌ¸ğÆ¼ÄÜÀ» S°³ ¸¸µå·Á°í ÇÑ´Ù.
-
- 1. È­¸é¿¡ ÀÖ´Â ÀÌ¸ğÆ¼ÄÜÀ» ¸ğ¸ğµÎ º¹»çÇÏ¿© Å¬¸³º¸µå¿¡ ÀúÀå
- 2. Å¬¸³º¸µå¿¡ ÀÖ´Â ¸ğµç ÀÌ¸ğÆ¼ÄÜÀ» È­¸é¿¡ ºÙ¿©³Ö±â
- 3. È­¸é¿¡ ÀÖ´Â ÀÌ¸ğÆ¼ÄÜ Áß ÇÏ³ª »èÁ¦
-
-2. Ç®ÀÌ °èÈ¹
-
-ÀüÇüÀûÀÎ BFS ¹®Á¦ÀÌ´Ù
-
-¾ÆÁ÷ ¹æ¹®ÇÏÁö ¾ÊÀº(Å¥¿¡ Çª½ÃµÇÁö ¾ÊÀº) ³ëµåÀÌ¸ç
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ğµÎ ´ã¾ÆµĞ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°İÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 #define MAX 1001
 
 bool isVisited[MAX][MAX];
@@ -38,7 +12,7 @@ int solution(int S) {
 
 	int timeSpent = -1;
 
-	// ÇöÀç ÀÌ¸ğÆ¼ÄÜÀÇ °³¼ö / Å¬¸³º¸µå¿¡ º¹»çµÈ ÀÌ¸ğÆ¼ÄÜÀÇ ¼ö / ÇöÀç °É¸° ½Ã°£
+	// í˜„ì¬ ì´ëª¨í‹°ì½˜ì˜ ê°œìˆ˜ / í´ë¦½ë³´ë“œì— ë³µì‚¬ëœ ì´ëª¨í‹°ì½˜ì˜ ìˆ˜ / í˜„ì¬ ê±¸ë¦° ì‹œê°„
 	bfs_queue.push({1, 0, 0});
 	isVisited[1][0] = true;
 
@@ -49,32 +23,25 @@ int solution(int S) {
 		int cur_depth = bfs_queue.front()[2];
 		bfs_queue.pop();
 
-		//cout << "cur_num: " << cur_num << ", ";
-		//cout << "cur_clipBoard: " << cur_clipBoard << ", ";
-		//cout << "cur_depth: " << cur_depth << endl;
-
-		//cout << "cur_num: " << cur_num << ", ";
-		//cout << "bfs_queue.size(): " << bfs_queue.size() << endl;
-
 		if (cur_num == S) {
 			timeSpent = cur_depth;
 			break;
 		}
 
-		// 1. Å¬¸³º¸µå¿¡ ÀúÀå
+		// 1. í´ë¦½ë³´ë“œì— ì €ì¥
 		if (isVisited[cur_num][cur_num] == false) {
 			isVisited[cur_num][cur_num] = true;
 			bfs_queue.push({ cur_num, cur_num, cur_depth + 1 });
 		}
 
-		// 2. Å¬¸³º¸µå¿¡ ÀÖ´Â ³»¿ë ºÙ¿©³Ö±â
+		// 2. í´ë¦½ë³´ë“œì— ìˆëŠ” ë‚´ìš© ë¶™ì—¬ë„£ê¸°
 		int next_num = cur_num + cur_clipBoard;
 		if (next_num < MAX && isVisited[next_num][cur_clipBoard] == false && cur_clipBoard != 0) {
 			isVisited[next_num][cur_clipBoard] = true;
 			bfs_queue.push({ next_num, cur_clipBoard, cur_depth + 1 });
 		}
 
-		// 3. È­¸é¿¡ ÀÖ´Â ÀÌ¸ğÆ¼ÄÜ »èÁ¦
+		// 3. í™”ë©´ì— ìˆëŠ” ì´ëª¨í‹°ì½˜ ì‚­ì œ
 		next_num = cur_num - 1;
 		if (next_num >= 0 && isVisited[next_num][cur_clipBoard] == false) {
 			isVisited[next_num][cur_clipBoard] = true;
