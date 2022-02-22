@@ -1,63 +1,95 @@
 #include<iostream>
-#include<queue>
+#include<vector>
+#include<deque>
 using namespace std;
 
-int N, K;
+/*
+1. ¹®Á¦ ºĞ¼®
+- º¯¼ö
+N: ¼öºóÀÌÀÇ ÇöÀç À§Ä¡
+K: µ¿»ıÀÇ ÇöÀç ÀÌ¤ÌÄ¡
 
-bool is_visited[100001];
+- º¯¼ö Á¦ÇÑ »çÇ×
+N: 0 ~ 100,000
+K: 0 ~ 100,000
 
-void solution() {
-	int optimal_time = 100001;
-	int num_optimal_route = 0;
+- ¹®Á¦ »óÈ²
+ ¼öºóÀÌ¿Í µ¿»ıÀÇ À§Ä¡°¡ ÁÖ¾îÁö°í, ¼öºóÀÌ´Â ´ÙÀ½°ú °°ÀÌ ÀÌµ¿ÇÑ´Ù°í ÇÏÀÚ.
 
-	queue<pair<int, int>> bfs_queue;
+ ¼öºóÀÌÀÇ Çö À§Ä¡°¡ XÀÏ ¶§,
 
-	// ì²« ìœ„ì¹˜ ì„¤ì •
-	bfs_queue.push({ N, 0 });
+ - °È±â: 1ÃÊÈÄ¿¡ X - 1 or X + 1
+ - ¼ø°£ÀÌµ¿: 0ÃÊ ÈÄ¿¡ 2 * X
 
-	is_visited[N] = true;
+ ¼öºóÀÌ°¡ µ¿»ıÀ» Ã£´Â °¡Àå ºü¸¥ ½Ã°£À» Ãâ·ÂÇÑ´Ù.
+
+2. Ç®ÀÌ °èÈ¹
+
+0 - 1 ·Î °£¼±ÀÌ ¼­·Î ´Ù¸¥ °¡ÁßÄ¡¸¦ °¡Áö°í ÀÖ±â´Â ÇÏÁö¸¸, 
+
+¿ì¼±¼øÀ§ Å¥¸¦ ÀÌµ¿ÇÑ´Ù¸é?
+ => ¾î¶² ³ëµå¸¦ ¸ÕÀú ¹æ¹® Çß´Ù°í ÇßÀ» ¶§, ±× ¹æ¹®±îÁö °É¸° ½Ã°£ÀÌ ÃÖ´Ü½Ã°£ÀÌ¶ó°í º¸ÀåÇÒ ¼ö ¾ø±â ¶§¹®¿¡ ¾ÈµÈ´Ù. 
+
+3. °èÈ¹ °ËÁõ
+
+ ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ğµÎ ´ã¾ÆµĞ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°İÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
+
+*/
+
+inline bool isInRange(int X) {
+	return (0 <= X && X <= 200000);
+}
+
+int solution(int N, int K) {
+	int distance[200001];
+	int timeSpent = 0;
+
+	fill_n(distance, 200001, 1e9);
+	distance[N] = 0;
+
+	deque<int>bfs_queue;
+
+	bfs_queue.push_back(N);
 
 	while (!bfs_queue.empty()) {
-		int X = bfs_queue.front().first;
-		int cur_depth = bfs_queue.front().second;
-		bfs_queue.pop();
+		int cur_location = bfs_queue.front();
+		bfs_queue.pop_front();
 
-		// popí•  ì‹œ ë°©ë¬¸ í‘œì‹œ
-		is_visited[X] = true;
-
-		// ìµœì  ì‹œê°„ ì´ìƒì˜ ì‹œê°„ íƒìƒ‰ì´ ì‹œì‘ë˜ì—ˆì„ ë•Œ ë¹ ì ¸ë‚˜ê°€ê¸°
-		if (cur_depth > optimal_time) {
+		if (cur_location == K) {
 			break;
 		}
 
-		if (X == K) {
-			optimal_time = cur_depth;
-			num_optimal_route++;
+		int next_location = cur_location + 1;
+		if (isInRange(next_location) && distance[cur_location] + 1 < distance[next_location]) {
+			distance[next_location] = distance[cur_location] + 1;
+			bfs_queue.push_back(next_location);
 		}
 
-
-		// X - 1
-		if ((X - 1 >= 0) && (is_visited[X - 1] == false)) {
-			bfs_queue.push({ X - 1, cur_depth + 1 });
-		}		
-
-		// X + 1
-		if ((X + 1 <= 100000) && (is_visited[X + 1] == false)) {
-			bfs_queue.push({ X + 1, cur_depth + 1 });
+		next_location = cur_location - 1;
+		if (isInRange(next_location) && distance[cur_location] + 1 < distance[next_location]) {
+			distance[next_location] = distance[cur_location] + 1;
+			bfs_queue.push_back(next_location);
 		}
 
-		// 2 * x
-		if ((2 * X  <= 100000) && (is_visited[2 * X] == false)) {
-			bfs_queue.push({ 2 * X, cur_depth + 1 });
+		next_location = 2 * cur_location;
+		if (isInRange(next_location) && distance[cur_location] < distance[next_location]) {
+			distance[next_location] = distance[cur_location];
+			bfs_queue.push_front(next_location);
 		}
 	}
 
-	cout << optimal_time << '\n';
-	cout << num_optimal_route << '\n';
+	return distance[K];
 }
 
 int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+
+	int N, K;
+
 	cin >> N >> K;
 
-	solution();
+	cout << solution(N, K);
+
+	return 0;
 }
