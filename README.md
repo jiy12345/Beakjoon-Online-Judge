@@ -143,6 +143,7 @@
  * [11723: 집합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/11723%20-%20%EC%A7%91%ED%95%A9.cpp)
  * [14503: 로봇 청소기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14503%20-%20%EB%A1%9C%EB%B4%87%20%EC%B2%AD%EC%86%8C%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222510048011))
  * [16926: 배열 돌리기 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/16926%20-%20%EB%B0%B0%EC%97%B4%20%EB%8F%8C%EB%A6%AC%EA%B8%B0%201.cpp)
+ * [16927: 배열 돌리기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/16927%20-%20%EB%B0%B0%EC%97%B4%20%EB%8F%8C%EB%A6%AC%EA%B8%B0%202.cpp)
  * [16935: 배열 돌리기 3](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/16935%20-%20%EB%B0%B0%EC%97%B4%20%EB%8F%8C%EB%A6%AC%EA%B8%B0%203.cpp)
  * [17140: 이차원 배열과 연산](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/17140%20-%20%EC%9D%B4%EC%B0%A8%EC%9B%90%20%EB%B0%B0%EC%97%B4%EA%B3%BC%20%EC%97%B0%EC%82%B0.cpp)
 
