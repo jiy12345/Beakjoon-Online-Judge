@@ -1,73 +1,67 @@
 #include<iostream>
-#include<string>
-#include<map>
 using namespace std;
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¿­, ÇàÀÇ ±æÀÌ
-L: °æ»ç·ÎÀÇ ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2 ~ 100
-L: 1 ~ N
-
-- ¹®Á¦ »óÈ²
- Áö³ª°¥ ¼ö ÀÖ´Â ±æÀº ´ÙÀ½°ú °°Àº Á¶°ÇÀ» ¸¸Á·½ÃÄÑ¾ß ÇÑ´Ù.
-
- - ±æ¿¡ ¼ÓÇÑ ¸ðµç Ä­ÀÇ ³ôÀÌ°¡ °°´Ù.
- - ¸ðµç Ä­ÀÇ ³ôÀÌ°¡ °°Áö ¾Ê´Ù¸é °æ»ç·Î·Î ÀÌ¾îÁ® ÀÖ¾î¾ß ÇÑ´Ù.
-
- °æ»ç·Î°¡ ´ÙÀ½°ú °°Àº Á¶°ÇÀ» °¡Áö°í ¼³Ä¡µÇ¸ç °³¼öÀÇ Á¦ÇÑÀÌ ¾ø´Ù°í ÇÒ ¶§, 
- 
- - °æ»ç·Î´Â ³·Àº Ä­¿¡ ³õÀ¸¸ç, L°³ÀÇ ¿¬¼ÓµÈ Ä­¿¡ °æ»ç·ÎÀÇ ¹Ù´ÚÀÌ ¸ðµÎ Á¢ÇØ¾ß ÇÑ´Ù.
- - ³·Àº Ä­°ú ³ôÀº Ä­ÀÇ ³ôÀÌ Â÷ÀÌ´Â 1ÀÌ¾î¾ß ÇÑ´Ù.
- - °æ»ç·Î¸¦ ³õÀ» ³·Àº Ä­ÀÇ ³ôÀÌ´Â ¸ðµÎ °°¾Æ¾ß ÇÏ°í, L°³ÀÇ Ä­ÀÌ ¿¬¼ÓµÇ¾î ÀÖ¾î¾ß ÇÑ´Ù.
-
- Áö³ª°¥ ¼ö ÀÖ´Â ±æÀÇ °³¼ö¸¦ ±¸ÇÏ¿©¶ó.
-
-2. Ç®ÀÌ °èÈ¹
-
-³ôÀº ÂÊ¿¡¼­ ³·Àº ÂÊÀ¸·Î ÁøÇàÇÏ¸ç, Á¶°ÇÀ» ¸¸Á·½ÃÅ°Áö ¸øÇßÀ» ¶§ ºüÁ®³ª°¡°í(Áö³ª°¥ ¼ö ¾ø´Â ±æ) ¸ðµç Á¶°ÇÀ» Åë°úÇßÀ» °æ¿ì Áö³ª°¥ ¼ö ÀÖ´Â ±æ·Î ÇÏ´Â °ÍÀ¸·Î ÇÏÀÚ.
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
 
 int N, L;
 int Map[100][100];
+int Map_Inv[100][100];
 
-bool isPassableRow(int j) {
+bool isPassable(int rowNum, int Map[][100]) {
 	bool isPassable = true;
+
+	int prevHeight = Map[rowNum][0];; // ì´ì „ì˜ ë†’ì´
+	int prevFlatNum = 1; // ì´ì „ê¹Œì§€ì˜ í‰í‰í•œ ë•…ì˜ ê°œìˆ˜ 
+	int cnt; // ê²½ì‚¬ë¡œë¥¼ ì„¤ì¹˜í• ë§Œí•œ ê³µê°„ì´ ìžˆëŠ”ì§€ ì„¸ê¸° ìœ„í•œ ë³€ìˆ˜
+
+	for (int i = 1; i < N; i++) {
+		// ì´ì „ê³¼ ê°™ì€ ë†’ì´ì¼ ê²½ìš°
+		if (Map[rowNum][i] == prevHeight) {
+			prevFlatNum++;
+			continue;
+		} // ì´ì „ë³´ë‹¤ í•˜ë‚˜ ë‚®ì€ ë†’ì´ì¼ ê²½ìš°
+		else if (Map[rowNum][i] == prevHeight - 1) {
+			cnt = L - 1;
+			while (true) {
+				// ì¡°ê±´ì„ ëª¨ë‘ ë§Œì¡±í•˜ì˜€ì„ ê²½ìš°
+				if (cnt == 0) {
+					break;
+				}
+
+				i++;
+				cnt--;
+				// ì¡°ê±´ 1. ê²½ì‚¬ë¡œë¥¼ ì„¤ì¹˜í•  ê³µê°„ì„ ë‘ì§€ ëª»í•˜ê²Œ ì§€ë„ì˜ ëì„ ë§Œë‚¬ì„ ê²½ìš°
+				if (i == N) return false;
+				// ì¡°ê±´ 2. ê²½ì‚¬ë¡œë¥¼ ì„¤ì¹˜í•  ê³µê°„ì„ ë‘ì§€ ëª»í•˜ê²Œ ë†’ì´ê°€ ë³€í™”í•˜ì˜€ì„ ê²½ìš°
+				if (Map[rowNum][i] != prevHeight - 1) return false;
+			}
+			prevFlatNum = 0; // í˜„ ìœ„ì¹˜ê¹Œì§€ ë‚´ë¦¬ë§‰ ê²½ì‚¬ë¡œê°€ ì„¤ì¹˜ë˜ì—ˆìœ¼ë¯€ë¡œ
+			prevHeight--;
+		}
+		else if (Map[rowNum][i] == prevHeight + 1) {
+			if (prevFlatNum < L) {
+				return false;
+			}
+
+			prevFlatNum = 1;
+			prevHeight++;
+		}
+		else {
+			return false;
+		}
+	}
 
 	return isPassable;
 }
 
-bool isPassableColumn(int j) {
-	bool isPassable = true;
 
-
-	return isPassable;
-}
-
-bool isPassable(int i, int j) {
-	if (i == 0) {
-		return isPassableColumn(j);
-	}
-	else if (j == 0) {
-		return isPassableRow(i);
-	}
-}
-void solution(string command) {
+int solution() {
 	int answer = 0;
 
 	for (int i = 0; i < N; i++) {
-		answer += isPassable(i, 0) ? 1 : 0;
-		answer += isPassable(0, i) ? 1 : 0;
+		answer += isPassable(i, Map) ? 1 : 0;
+		answer += isPassable(i, Map_Inv) ? 1 : 0;
 	}
+	
+	return answer;
 }
 
 int main() {
@@ -79,8 +73,11 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			cin >> Map[i][j];
+			Map_Inv[j][i] = Map[i][j];
 		}
 	}
+
+	cout << solution();
 
 	return 0;
 }
