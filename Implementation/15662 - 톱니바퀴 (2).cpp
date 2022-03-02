@@ -2,45 +2,11 @@
 #include<string>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-T: Åé´Ï¹ÙÄûÀÇ °³¼ö
-K: È¸Àü È½¼ö
-
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-T: 1 ~ 1,000
-N±Ø: 0
-S±Ø: 1
-
-K: 1 ~ 1,000
-½Ã°è¹æÇâ: 1
-¹İ½Ã°è¹æÇâ: -1
-
-- ¹®Á¦ »óÈ²
-
-ÀÌÀü Åé´Ï¹ÙÄû°¡ ½Ã°è ¶Ç´Â ¹İ½Ã°è ¹æÇâÀ¸·Î È¸ÀüÇÏ¿´À» ¶§,
-
-¸Â´êÀº ºÎºĞÀÇ ±Ø(ÀÌÀüÀÇ 2¹øÂ° ÀÌÈÄÀÇ 6¹øÂ°)ÀÌ ´Ù¸£´Ù¸é ÀÌÀüÀÇ Åé´Ï°¡ È¸ÀüÇÑ ¹İ´ë ¹æÇâÀ¸·Î È¸Àü
-¸Â´êÀº ºÎºĞÀÇ ±Ø(ÀÌÀüÀÇ 2¹øÂ° ÀÌÈÄÀÇ 6¹øÂ°)ÀÌ °°´Ù¸é È¸ÀüÇÏÁö ¾Ê´Â´Ù.
-
-
-2. Ç®ÀÌ °èÈ¹
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ğµÎ ´ã¾ÆµĞ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°İÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 #define CLOCKWISE 1
 #define COUNTERCLOCKWISE -1
 
 int T, K;
-string Gears[100];
+string Gears[1000];
 
 void Rotate(string & Gear, int directionOfRotation) {
 	cout << directionOfRotation << endl;
@@ -58,7 +24,7 @@ int solution() {
 	cin >> K;
 
 	for (int i = 0; i < K; i++) {
-		int whetherToRotate[100] = { 0, };
+		int whetherToRotate[1000] = { 0, };
 		int startGearNum;
 		int startDirectionOfRotation;
 		int DirectionOfRotation;
@@ -70,13 +36,13 @@ int solution() {
 
 		DirectionOfRotation = startDirectionOfRotation * -1;
 
-		// ¿À¸¥ÂÊ ¹æÇâÀÇ Åé´Ï¹ÙÄû È¸Àü
+		// ì˜¤ë¥¸ìª½ ë°©í–¥ì˜ í†±ë‹ˆë°”í€´ íšŒì „
 		for (int j = startGearNum + 1; j < T; j++) {
 			if (Gears[j - 1][2] == Gears[j][6]) {
 				break;
 			}
 			else {
-				// ÀÌÀü È¸Àü ¹æÇâ°ú ¹İ´ë¹æÇâ
+				// ì´ì „ íšŒì „ ë°©í–¥ê³¼ ë°˜ëŒ€ë°©í–¥
 				whetherToRotate[j] = DirectionOfRotation;
 				DirectionOfRotation = DirectionOfRotation * -1;
 			}
@@ -84,13 +50,13 @@ int solution() {
 
 		DirectionOfRotation = startDirectionOfRotation * -1;
 
-		// ¿ŞÂÊ ¹æÇâÀÇ Åé´Ï¹ÙÄû È¸Àü
+		// ì™¼ìª½ ë°©í–¥ì˜ í†±ë‹ˆë°”í€´ íšŒì „
 		for (int j = startGearNum - 1; j >= 0 ; j--) {
 			if (Gears[j][2] == Gears[j + 1][6]) {
 				break;
 			}
 			else {
-				// ÀÌÀü È¸Àü ¹æÇâ°ú ¹İ´ë¹æÇâ
+				// ì´ì „ íšŒì „ ë°©í–¥ê³¼ ë°˜ëŒ€ë°©í–¥
 				whetherToRotate[j] = DirectionOfRotation;
 				DirectionOfRotation = DirectionOfRotation * -1;
 			}
@@ -119,14 +85,6 @@ int main() {
 	}
 
 	cout << solution();
-
-	//string Gear = "10001010";
-
-	//Rotate(Gear, COUNTERCLOCKWISE);
-
-	//cout << Gear;
-
-
 
 	return 0;
 }
