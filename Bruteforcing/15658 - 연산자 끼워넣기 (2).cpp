@@ -46,8 +46,6 @@ int main() {
 	cin.tie(NULL);
 	cout.tie(NULL);
 
-	vector<int> curPermutation;
-
 	cin >> N;
 
 	for (int i = 0; i < N; i++) {
