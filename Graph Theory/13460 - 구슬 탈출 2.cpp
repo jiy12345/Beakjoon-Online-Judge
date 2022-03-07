@@ -3,46 +3,6 @@
 #include<queue>
 using namespace std;
 
-
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-N: º¸µåÀÇ ¼¼·Î ±æÀÌ
-M: º¸µåÀÇ °¡·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 3 ~ 10
-
-- ¹®Á¦ »óÈ²
-º¸µå´Â º®ÀÌ³ª ºóÄ­À¸·Î ÀÌ·ç¾îÁ® ÀÖ°í,
-
-µ¿ÀüÀÌ µÎ °³ÀÇ ºóÄ­¿¡ ³õ¿©Á® ÀÖ°í,
-
- µÎ µ¿ÀüÀº "¿ŞÂÊ", "¿À¸¥ÂÊ", "À§", "¾Æ·¡"¿Í °°ÀÌ 4°¡Áö ¹æÇâÀ¸·Î ÀÌµ¿ÇÒ ¼ö ÀÖÀ¸¸ç,
-
-µ¿ÀüÀÌ ´ÙÀ½°ú °°ÀÌ ÀÌµ¿ÇÑ´Ù°í ÇÒ ¶§,
-
-- µ¿ÀüÀÌ ÀÌµ¿ÇÏ·Á´Â Ä­ÀÌ º®ÀÌ¸é, µ¿ÀüÀº ÀÌµ¿ÇÏÁö ¾Ê´Â´Ù.
-- µ¿ÀüÀÌ ÀÌµ¿ÇÏ·Á´Â ¹æÇâ¿¡ Ä­ÀÌ ¾øÀ¸¸é µ¿ÀüÀº º¸µå ¹Ù±ùÀ¸·Î ¶³¾îÁø´Ù.
-- ±× ¿ÜÀÇ °æ¿ì¿¡´Â ÀÌµ¿ÇÏ·Á´Â ¹æÇâÀ¸·Î ÇÑ Ä­ ÀÌµ¿ÇÑ´Ù.ÀÌµ¿ÇÏ·Á´Â Ä­¿¡ µ¿ÀüÀÌ ÀÖ´Â °æ¿ì¿¡µµ ÇÑ Ä­ ÀÌµ¿ÇÑ´Ù.
-
- µÎ µ¿Àü Áß ÇÏ³ª¸¸ º¸µå¿¡¼­ ¶³¾î¶ß¸®±â À§ÇØ ÇØ¾ßÇÏ´Â ÀÌµ¿ÀÇ ÃÖ¼Ò È½¼ö¸¦ Ãâ·ÂÇÑ´Ù.
-
- ¸¸¾à µÎ µ¿ÀüÀ» ¶³¾î¶ß¸± ¼ö ¾ø°Å³ª, ¶³¾î¶ß¸®±â À§ÇØ ¹öÆ°À» 10¹øº¸´Ù ¸¹ÀÌ ´­·¯¾ß ÇÑ´Ù¸é -1À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-ÀÏ´Ü 10,000ÀÌ ÀÔ·ÂÀÇ ÃÖ´ë Å©±âÀÌ¹Ç·Î, ¹«ÀÛÁ¤ Ã³À½ºÎÅÍ µ¹¸®´Â °ÍÀº ºÒ°¡´ÉÇÏ´Ù.
-
-µû¶ó¼­ ´ÙÀ½ ¼ø¿­À» ½ÇÁ¦ ±¸ÇØ¾ß ÇÏ´Âµ¥, ´ÙÀ½ ¼ø¿­ÀÌ¶ó´Â °ÍÀº ¾î¶»°Ô Ç¥ÇöÇÒ±î?
-
-=> Á¤·ÄµÇ´Â °úÁ¤ÀÌ¶ó°í º¼ ¼öµµ ÀÖ°Ú´Ù.
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
 enum COLOR{RED, BLUE};
 enum DIRECTION{LEFT, RIGHT, UP, DOWN};
 
@@ -55,25 +15,25 @@ char Map[10][10];
 pair<int, int> holeLocation;
 
 void moveMarble(int& i, int& j, DIRECTION direction, COLOR color) {
-	// Çö À§Ä¡ ºó Ä­À¸·Î Ç¥½Ã
+	// í˜„ ìœ„ì¹˜ ë¹ˆ ì¹¸ìœ¼ë¡œ í‘œì‹œ
 	Map[i][j] = '.';
 
 	while (true) {
 		i += di[direction];
 		j += dj[direction];
 
-		// ¸·Èù °÷À» ¸¸³µÀ» °æ¿ì
+		// ë§‰íŒ ê³³ì„ ë§Œë‚¬ì„ ê²½ìš°
 		if (Map[i][j] == '#' || Map[i][j] == 'R' || Map[i][j] == 'B') {
-			// ÇÑ Ä­ ÀÌÀüÀ¸·Î µÇµ¹¸®±â
+			// í•œ ì¹¸ ì´ì „ìœ¼ë¡œ ë˜ëŒë¦¬ê¸°
 			i -= di[direction];
 			j -= dj[direction];
 
-			// Map¿¡ ±¸½½ À§Ä¡ Çö À§Ä¡·Î Ç¥½Ã
+			// Mapì— êµ¬ìŠ¬ ìœ„ì¹˜ í˜„ ìœ„ì¹˜ë¡œ í‘œì‹œ
 			Map[i][j] = (color == RED) ? 'R' : 'B';
 			break;
-		} // ±¸¸ÛÀ» ¸¸³µÀ» °æ¿ì
+		} // êµ¬ë©ì„ ë§Œë‚¬ì„ ê²½ìš°
 		else if (Map[i][j] == 'O') {
-			break; // ±×´ë·Î ºüÁ® ³ª°¡±â
+			break; // ê·¸ëŒ€ë¡œ ë¹ ì ¸ ë‚˜ê°€ê¸°
 		}
 	}
 }
@@ -100,16 +60,16 @@ int solution(vector<pair<int, int>> locationOfMarbles) {
 		int blueMarble_cur_j = bfs_queue.front().second[BLUE].second;
 		bfs_queue.pop();
 
-		// 11¹ø ´©¸¥ »óÈ²ÀÌ ¹ß»ıÇÏ¸é ºüÁ®³ª°¡±â
+		// 11ë²ˆ ëˆ„ë¥¸ ìƒí™©ì´ ë°œìƒí•˜ë©´ ë¹ ì ¸ë‚˜ê°€ê¸°
 		if (cur_depth == 11) break;
 
-		// »¡°£ ±¸½½¸¸ ±¸¸Û¿¡ µé¾î°¬À» °æ¿ì
+		// ë¹¨ê°„ êµ¬ìŠ¬ë§Œ êµ¬ë©ì— ë“¤ì–´ê°”ì„ ê²½ìš°
 		if (isInHole(redMarble_cur_i, redMarble_cur_j) && !isInHole(blueMarble_cur_i, blueMarble_cur_j)) {
 			answer = cur_depth;
 			break;
-		} // »¡°£ ±¸½½¸¸ µé¾î°¬À» °æ¿ì¸¦ Á¦¿ÜÇÑ ³ª¸ÓÁö ±¸½½ÀÌ µé¾î°£ °æ¿ì
+		} // ë¹¨ê°„ êµ¬ìŠ¬ë§Œ ë“¤ì–´ê°”ì„ ê²½ìš°ë¥¼ ì œì™¸í•œ ë‚˜ë¨¸ì§€ êµ¬ìŠ¬ì´ ë“¤ì–´ê°„ ê²½ìš°
 		else if (isInHole(redMarble_cur_i, redMarble_cur_j) || isInHole(blueMarble_cur_i, blueMarble_cur_j)) {
-			// ÀÌ »óÈ²¿¡¼­ÀÇ ´ÙÀ½ Å½»öÀº ÁøÇàÇÏÁö ¾ÊÀ½
+			// ì´ ìƒí™©ì—ì„œì˜ ë‹¤ìŒ íƒìƒ‰ì€ ì§„í–‰í•˜ì§€ ì•ŠìŒ
 			continue;
 		}
 
@@ -120,7 +80,7 @@ int solution(vector<pair<int, int>> locationOfMarbles) {
 			int blueMarble_next_j = blueMarble_cur_j;
 
 			if (i == LEFT) {
-				// ¿ŞÂÊ¿¡ °¡±î¿î °ÍºÎÅÍ ¸ÕÀú ¿òÁ÷ÀÌ±â
+				// ì™¼ìª½ì— ê°€ê¹Œìš´ ê²ƒë¶€í„° ë¨¼ì € ì›€ì§ì´ê¸°
 				if (redMarble_cur_j < blueMarble_cur_j) {
 					moveMarble(redMarble_next_i, redMarble_next_j, LEFT, RED);
 					moveMarble(blueMarble_next_i, blueMarble_next_j, LEFT, BLUE);
@@ -131,7 +91,7 @@ int solution(vector<pair<int, int>> locationOfMarbles) {
 				}
 			}
 			else if (i == RIGHT) {
-				// ¿À¸¥ÂÊ¿¡ °¡±î¿î °ÍºÎÅÍ ¸ÕÀú ¿òÁ÷ÀÌ±â
+				// ì˜¤ë¥¸ìª½ì— ê°€ê¹Œìš´ ê²ƒë¶€í„° ë¨¼ì € ì›€ì§ì´ê¸°
 				if (redMarble_cur_j > blueMarble_cur_j) {
 					moveMarble(redMarble_next_i, redMarble_next_j, RIGHT, RED);
 					moveMarble(blueMarble_next_i, blueMarble_next_j, RIGHT, BLUE);
@@ -142,7 +102,7 @@ int solution(vector<pair<int, int>> locationOfMarbles) {
 				}
 			}
 			else if (i == UP) {
-				// À§ÂÊ¿¡ °¡±î¿î °ÍºÎÅÍ ¸ÕÀú ¿òÁ÷ÀÌ±â
+				// ìœ„ìª½ì— ê°€ê¹Œìš´ ê²ƒë¶€í„° ë¨¼ì € ì›€ì§ì´ê¸°
 				if (redMarble_cur_i < blueMarble_cur_i) {
 					moveMarble(redMarble_next_i, redMarble_next_j, UP, RED);
 					moveMarble(blueMarble_next_i, blueMarble_next_j, UP, BLUE);
@@ -153,7 +113,7 @@ int solution(vector<pair<int, int>> locationOfMarbles) {
 				}
 			}
 			else if (i == DOWN) {
-				// ¾Æ·¡ÂÊ¿¡ °¡±î¿î °ÍºÎÅÍ ¸ÕÀú ¿òÁ÷ÀÌ±â
+				// ì•„ë˜ìª½ì— ê°€ê¹Œìš´ ê²ƒë¶€í„° ë¨¼ì € ì›€ì§ì´ê¸°
 				if (redMarble_cur_i > blueMarble_cur_i) {
 					moveMarble(redMarble_next_i, redMarble_next_j, DOWN, RED);
 					moveMarble(blueMarble_next_i, blueMarble_next_j, DOWN, BLUE);
@@ -171,11 +131,11 @@ int solution(vector<pair<int, int>> locationOfMarbles) {
 				cout << endl;
 			}
 
-			// ±¸½½³¢¸®ÀÇ Ãæµ¹À» ´ëºñÇÑ Ç¥½Ã Áö¿öÁÖ±â
+			// êµ¬ìŠ¬ë¼ë¦¬ì˜ ì¶©ëŒì„ ëŒ€ë¹„í•œ í‘œì‹œ ì§€ì›Œì£¼ê¸°
 			if (Map[redMarble_next_i][redMarble_next_j] != 'O') Map[redMarble_next_i][redMarble_next_j] = '.';
 			if (Map[blueMarble_next_i][blueMarble_next_j] != 'O') Map[blueMarble_next_i][blueMarble_next_j] = '.';
 
-			// µÎ ±¸½½ÀÇ À§Ä¡°¡ ³ª¿ÀÁö ¾ÊÀ» »óÈ²ÀÏ ¶§¸¸ Å½»ö ÁøÇà
+			// ë‘ êµ¬ìŠ¬ì˜ ìœ„ì¹˜ê°€ ë‚˜ì˜¤ì§€ ì•Šì•˜ë˜ ìƒí™©ì¼ ë•Œë§Œ íƒìƒ‰ ì§„í–‰
 			if (!isVisited[redMarble_next_i][redMarble_next_j][blueMarble_next_i][blueMarble_next_j]) {
 				isVisited[redMarble_next_i][redMarble_next_j][blueMarble_next_i][blueMarble_next_j] = true;
 				bfs_queue.push({ cur_depth + 1, {{redMarble_next_i, redMarble_next_j}, {blueMarble_next_i, blueMarble_next_j}} });
@@ -194,7 +154,6 @@ int main() {
 	vector<pair<int, int>> locationOfMarbles(2);
 
 	cin >> N >> M;
-
 
 	for (int i = 0; i < N; i++) {
 		string row;
