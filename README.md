@@ -1,7 +1,20 @@
+- [Bruteforcing](#Bruteforcing)
+- [Danamic Programming](#Danamic-Programming)
+- [Data Structures](#Data-Structures)
+- [Divide And Conquer](#Divide-And-Conquer )
+- [Geometry](#Geometry)
+- [Graph Theory](#Graph-Theory)
+- [Greedy Algorithm](#Greedy-Algorithm)
+- [Implementation](#Implementation)
+- [Number Theory](#Number-Theory)
+- [Sorting](#Sorting)
+- [String](#String)
+- [Two Pointers](#Two-Pointers)
+
 # Beakjoon Online Judge
 백준 문제 풀이
 
-## - Bruteforcing
+## Bruteforcing
  * [1027: 고층 건물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1027%20-%20%EA%B3%A0%EC%B8%B5%20%EA%B1%B4%EB%AC%BC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222520875048))
  * [1062: 가르침](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1062%20-%20%EA%B0%80%EB%A5%B4%EC%B9%A8.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222518670522))
  * [1107: 리모콘](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1107%20-%20%EB%A6%AC%EB%AA%A8%EC%BD%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222622996411))
@@ -34,7 +47,7 @@
  * 18290: NM과 K (1) [[풀이 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp)] [[풀이 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
 
 
-## - Danamic Programming
+## Danamic Programming
  * [1149: RGB거리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1149%20-%20RGB%EA%B1%B0%EB%A6%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222544331819))
  * [1309: 동물원](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1309%20-%20%EB%8F%99%EB%AC%BC%EC%9B%90.cpp)
  * [1463: 1로 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1463%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222538882005))
@@ -79,21 +92,21 @@
  * [15990: 1, 2, 3 더하기 5](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/15990%20-%201,%202,%203%20%EB%8D%94%ED%95%98%EA%B8%B0%205.cpp)
  * [16194: 카드 구매하기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/16194%20-%20%EC%B9%B4%EB%93%9C%20%EA%B5%AC%EB%A7%A4%ED%95%98%EA%B8%B0%202.cpp)
 
-## - Data Structures
+## Data Structures
  * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
  * [10845: 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10845%20-%20%ED%81%90.cpp)
  * [10866: 덱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10866%20-%20%EB%8D%B1.cpp)
  * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
  * [11286: 절댓값 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11286%20-%20%EC%A0%88%EB%8C%93%EA%B0%92%20%ED%9E%99.cpp)
 
-## - Divide And Conquer 
+## Divide And Conquer 
  * [1992: 쿼드 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Divide%20And%20Conquer/1992%20-%20%EC%BF%BC%EB%93%9C%20%ED%8A%B8%EB%A6%AC.cpp)
 
-## - Geometry
+## Geometry
  * [11758: CCW](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Geometry/11758%20-%20CCW.cpp)
  * [17386: 선분 교차 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Geometry/17386%20-%20%EC%84%A0%EB%B6%84%20%EA%B5%90%EC%B0%A8%201.cpp) 
  
-## - Graph Theory
+## Graph Theory
  * [1012: 유기농 배추](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1012%20-%20%EC%9C%A0%EA%B8%B0%EB%86%8D%20%EB%B0%B0%EC%B6%94.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222532780045))
  * [1167: 트리의 지름](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1167%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%A7%80%EB%A6%84.cpp)
  * [1260: DFS와 BFS](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1260%20-%20DFS%EC%99%80%20BFS.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222526875068))
@@ -129,7 +142,7 @@
  * [16236: 아기 상어](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/16236%20-%20%EC%95%84%EA%B8%B0%20%EC%83%81%EC%96%B4.cpp)
  * [17070: 파이프 옮기기 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17070%20-%20%ED%8C%8C%EC%9D%B4%ED%94%84%20%EC%98%AE%EA%B8%B0%EA%B8%B0%201.cpp)
 
-## - Greedy Algorithm
+## Greedy Algorithm
  * [1092: 배](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1092%20-%20%EB%B0%B0.cpp)
  * [1339: 단어 수학](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1339%20-%20%EB%8B%A8%EC%96%B4%20%EC%88%98%ED%95%99.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222498242449))
  * [1374: 강의실](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1374%20-%20%EA%B0%95%EC%9D%98%EC%8B%A4.cpp)
@@ -143,7 +156,7 @@
  * [11047: 동전 0](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11047%20-%20%EB%8F%99%EC%A0%84%200.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222494137695))
  * [11399: ATM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11399%20-%20ATM.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222494105653))
 
-## - Implementation
+## Implementation
  * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509993489))
  * [11723: 집합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/11723%20-%20%EC%A7%91%ED%95%A9.cpp)
  * [14499: 주사위 굴리기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14499%20-%20%EC%A3%BC%EC%82%AC%EC%9C%84%20%EA%B5%B4%EB%A6%AC%EA%B8%B0.cpp)
@@ -155,7 +168,7 @@
  * [16935: 배열 돌리기 3](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/16935%20-%20%EB%B0%B0%EC%97%B4%20%EB%8F%8C%EB%A6%AC%EA%B8%B0%203.cpp)
  * [17140: 이차원 배열과 연산](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/17140%20-%20%EC%9D%B4%EC%B0%A8%EC%9B%90%20%EB%B0%B0%EC%97%B4%EA%B3%BC%20%EC%97%B0%EC%82%B0.cpp)
 
-## - Mathematics
+## Mathematics
  * [1016: 제곱 ㄴㄴ 수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1016%20-%20%EC%A0%9C%EA%B3%B1%20%E3%84%B4%E3%84%B4%20%EC%88%98.cpp)
  * [1026: 보물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1026%20-%20%EB%B3%B4%EB%AC%BC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222511044280))
  * [1629: 곱셈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1629%20-%20%EA%B3%B1%EC%85%88.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222536998009))
@@ -174,10 +187,10 @@
  * [17425: 약수의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17425%20-%20%EC%95%BD%EC%88%98%EC%9D%98%20%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222629636361))
  * [17427: 약수의 합 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17427%20-%20%EC%95%BD%EC%88%98%EC%9D%98%20%ED%95%A9%202.cpp)
 
-## - Number Theory
+## Number Theory
  * [2312: 수 복원하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Number%20Theory/2312-%20%EC%88%98%20%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0.cpp)
 
-## - Sorting
+## Sorting
  * [1015: 수열 정렬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/1015%20-%20%EC%88%98%EC%97%B4%20%EC%A0%95%EB%A0%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222535198437))
  * [**1202: 보석 도둑**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/1202%20-%20%EB%B3%B4%EC%84%9D%20%EB%8F%84%EB%91%91.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222617750540))
  * [**1377: 버블 소트**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/1377%20-%20%EB%B2%84%EB%B8%94%20%EC%86%8C%ED%8A%B8.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222620359395))
@@ -185,13 +198,16 @@
  * [2170: 선 긋기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2170%20-%20%EC%84%A0%20%EA%B8%8B%EA%B8%B0.cpp)
  * [**2212: 센서**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2212%20-%20%EC%84%BC%EC%84%9C.cpp)
  * [2230: 수 고르기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2230%20-%20%EC%88%98%20%EA%B3%A0%EB%A5%B4%EA%B8%B0.cpp)
- * [2470: 두 용액](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2470%20-%20%EB%91%90%20%EC%9A%A9%EC%95%A1.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222619557693))
  * [**2473: 세 용액**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2473%20-%20%EC%84%B8%20%EC%9A%A9%EC%95%A1.cpp)
  * [5020: 전화번호 목록](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/5020%20-%20%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%20%EB%AA%A9%EB%A1%9D.cpp) 
  * [10816: 숫자 카드 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/10816%20-%20%EC%88%AB%EC%9E%90%20%EC%B9%B4%EB%93%9C%202.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509528634))
  * [**16678: 모독**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/16678%20-%20%EB%AA%A8%EB%8F%85.cpp)
 
-## - String
+## String
  * [4358: 생태학](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/4358%20-%20%EC%83%9D%ED%83%9C%ED%95%99.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222511787830))
  * [5430: AC](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/5430%20-%20AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222503817960))
  * [9935: 문자열 폭발](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/9935%20-%20%EB%AC%B8%EC%9E%90%EC%97%B4%20%ED%8F%AD%EB%B0%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509312906))
+
+## Two Pointers
+ * [2003: 수들의 합 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/2003%20-%20%EC%88%98%EB%93%A4%EC%9D%98%20%ED%95%A9%202.cpp) 
+ * [2470: 두 용액](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2470%20-%20%EB%91%90%20%EC%9A%A9%EC%95%A1.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222619557693))
