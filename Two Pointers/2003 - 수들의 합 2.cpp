@@ -20,10 +20,6 @@ int solution() {
 				sum += A[++j];
 			}
 
-			cout << "sum: " << sum << endl;
-			cout << "i: " << i << endl;
-			cout << "j: " << j << endl;
-
 			if (i >= N || j >= N) break;
 		}
 
