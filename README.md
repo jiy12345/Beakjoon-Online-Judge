@@ -1,3 +1,6 @@
+# Beakjoon Online Judge
+
+## 분류
 - [Bruteforcing](#Bruteforcing)
 - [Danamic Programming](#Danamic-Programming)
 - [Data Structures](#Data-Structures)
@@ -11,8 +14,6 @@
 - [String](#String)
 - [Two Pointers](#Two-Pointers)
 
-# Beakjoon Online Judge
-백준 문제 풀이
 
 ## Bruteforcing
  * [1027: 고층 건물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1027%20-%20%EA%B3%A0%EC%B8%B5%20%EA%B1%B4%EB%AC%BC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222520875048))
