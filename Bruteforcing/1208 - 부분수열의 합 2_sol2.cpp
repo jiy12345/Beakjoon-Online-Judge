@@ -1,5 +1,6 @@
 #include<iostream>
 #include<map>
+using namespace std;
 
 /*
 풀이 1과 다르게 일반 배열을 사용하였다.
@@ -9,8 +10,6 @@
 
 확실히 삽입이 많이 발생할 수 있을만한 문제이다보니, 배열을 사용한 것이 시간 측면에서 확연히 줄어든 것을 확인할 수 있었다.
 */
-
-using namespace std;
 
 enum FIRSTORSECOND { FIRST, SECOND };
 
