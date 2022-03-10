@@ -27,15 +27,12 @@ bool isInRange(int i, int j) {
 	return 1 <= i && i <= N && 1 <= j && j <= M;
 }
 
-int solution(vector<pair<int, int>> coinCoord) {
-	
+int solution(vector<pair<int, int>> coinCoord) {	
 	int answer = -1;
 
 	queue<pair<int, vector<pair<int, int>>>>bfs_queue;
 
 	bfs_queue.push(make_pair(0, coinCoord));
-
-	
 
 	while (!bfs_queue.empty()) {
 		int cur_depth = bfs_queue.front().first;
