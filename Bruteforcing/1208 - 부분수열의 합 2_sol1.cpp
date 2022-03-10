@@ -1,7 +1,15 @@
 #include<iostream>
 #include<map>
-
 using namespace std;
+
+/*
+풀이 2와 다르게 map을 사용하였다.
+
+사용한 메모리: 43868KB	
+걸린 시간: 760ms
+	
+확실히 삽입이 많이 발생할 수 있을만한 문제이다보니, 배열을 사용한 것보다 훨씬 시간이 오래 걸린 것을 알 수 잇었다.!
+*/
 
 enum FIRSTORSECOND { FIRST, SECOND };
 
@@ -17,13 +25,11 @@ void solution(int curIndex, int sum, int end, FIRSTORSECOND firstOrSecond) {
             // 하나의 수가 sum 자체일 때도 구해짐
             subsum[sum]++;
 
-            // 공집합인 경우가 항상 포함되므로, subsum[0]은 1이 된다.
+            // 공집합인 경우가 항상 포함되므로, subsum[0]은 항상 1 + (합이 0인 부분 수열의 개수)가 된다.
         }
         else { // 두번째 반쪽 배열을 계산할 시 두 수의 반
-            // 하나의 수가 sum 자체일 때는
-            cnt += subsum[S - sum];
-
-            
+            // 하나의 수가 sum 자체일 때 또한 subsum[0]을 이용하여 체크될 수 있다!
+            cnt += subsum[S - sum];            
         }
         return;
     }
