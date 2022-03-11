@@ -20,7 +20,7 @@
  * [1062: 가르침](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1062%20-%20%EA%B0%80%EB%A5%B4%EC%B9%A8.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222518670522))
  * [1107: 리모콘](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1107%20-%20%EB%A6%AC%EB%AA%A8%EC%BD%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222622996411))
  * [1182: 부분수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1182%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222520968836))
- * 1208: 부분수열의 합 2 [풀이 1(map 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1208%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9%202_sol1.cpp) [풀이 2(배열 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1208%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9%202_sol2.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222669388798))
+ * 1208: 부분수열의 합 2 [[풀이 1(map 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1208%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9%202_sol1.cpp)] [[풀이 2(배열 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1208%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9%202_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222669388798))
  * [1248: 맞춰봐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1248%20-%20%EB%A7%9E%EC%B6%B0%EB%B4%90.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222640273931))
  * [1759: 암호 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1759%20-%20%EC%95%94%ED%98%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222516074349))
  * [2529: 부등호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2529%20-%20%EB%B6%80%EB%93%B1%ED%98%B8.cpp)
@@ -44,9 +44,9 @@
  * [15657: N과 M (8)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15657%20-%20N%EA%B3%BC%20M%20(8).cpp)
  * [15658: 연산자 끼워넣기 (2)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15658%20-%20%EC%97%B0%EC%82%B0%EC%9E%90%20%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0%20(2).cpp)
  * [15686: 치킨 배달](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/15686%20-%20%EC%B9%98%ED%82%A8%20%EB%B0%B0%EB%8B%AC.cpp)
- * 16197: 두 동전 [풀이 1(방문 표시 o)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16197%20-%20%EB%91%90%20%EB%8F%99%EC%A0%84_sol1.cpp) [풀이 2(방문 표시 x)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16197%20-%20%EB%91%90%20%EB%8F%99%EC%A0%84_sol2.cpp) 
+ * 16197: 두 동전 [[풀이 1(방문 표시 o)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16197%20-%20%EB%91%90%20%EB%8F%99%EC%A0%84_sol1.cpp)] [[풀이 2(방문 표시 x)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16197%20-%20%EB%91%90%20%EB%8F%99%EC%A0%84_sol2.cpp)] 
  * [16198: 에너지 모으기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16198%20-%20%EC%97%90%EB%84%88%EC%A7%80%20%EB%AA%A8%EC%9C%BC%EA%B8%B0.cpp)
- * 18290: NM과 K (1) [[풀이 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp)] [[풀이 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
+ * 18290: NM과 K (1) [[풀이 1(복사 생성](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp)] [[풀이 2(더하기 빼기)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
 
 
 ## Danamic Programming
