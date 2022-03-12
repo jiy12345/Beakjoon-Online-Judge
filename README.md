@@ -143,6 +143,7 @@
  * [13913: 숨바꼭질 4](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/13913%20-%20%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88%204.cpp)
  * [14226: 이모티콘](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/14226%20-%20%EC%9D%B4%EB%AA%A8%ED%8B%B0%EC%BD%98.cpp)
  * [16236: 아기 상어](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/16236%20-%20%EC%95%84%EA%B8%B0%20%EC%83%81%EC%96%B4.cpp)
+ * [16929: Two Dots](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/16929%20-%20Two%20Dots.cpp)
  * [17070: 파이프 옮기기 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17070%20-%20%ED%8C%8C%EC%9D%B4%ED%94%84%20%EC%98%AE%EA%B8%B0%EA%B8%B0%201.cpp)
 
 ## Greedy Algorithm
