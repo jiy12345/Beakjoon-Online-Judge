@@ -3,45 +3,13 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-N, M: Çà·ÄÀÇ ¼¼·Î, °¡·Î ±æÀÌ
-
- - º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 1 ~ 1,000
-
-- ¹®Á¦ »óÈ²
- ¿ø·¡ ºó Ä­ÀÎ °÷Àº 0À» Ãâ·ÂÇÏ°í, º®ÀÎ °÷Àº ÀÌµ¿ÇÒ ¼ö ÀÖ´Â Ä­ÀÇ °³¼ö¸¦ 10À¸·Î ³ª´« ³ª¸ÓÁö¸¦ Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- °¡Àå ¸ÕÀú ¶°¿À¸£´Â °ÍÀº ±×³É °¢ À§Ä¡º°·Î BFS¸¦ ÁøÇàÇÏ´Â °ÍÀÌ´Ù.
-
- ±×·±µ¥ ±×·¸°Ô ÇÏ¸é, ÃÖ¾ÇÀÇ °æ¿ì ³Ê¹« ¸¹Àº È½¼öÀÇ ¹İº¹ÀÌ ÀÖ¾î¾ß ÇÑ´Ù.
-
- °æ¿ì¿¡ µû¶ó È¸¼ö°¡ ¸Å¿ì ´Ş¶óÁö¹Ç·Î Á¤È®È÷ ¾Ë ¼ö´Â ¾øÁö¸¸, 
-
- ±×·¸´Ù¸é ¾î¶»°Ô ÇØ¾ßÇÒ±î?
-
- ¿ÀÈ÷·Á ºóÄ­µé¿¡ ´ëÇØ ÀÎÁ¢ÇÑ Ä­µéÀÇ ³ĞÀÌ¸¦ °è»êÇØ³õ°í, °¢ Ä­ÀÇ 4¹æÇâ¿¡ ÀÖ´Â °ªµéÀ» ´õÇÏ¸é ¾î¶³±î?
-
- ÀÌ·¸°Ô ÇÏ¸é ÀÏ´Ü ÇÑ¹øÀÇ Å½»ö¾¿¸¸ ÀÌ·ç¾îÁö¹Ç·Î, ½Ã°£ º¹Àâµµ »óÀÇ ¹®Á¦´Â ¾ø¾îÁø´Ù.
-
- ¾Ë°í¸®Áò»óÀÇ °áÇÔÀÌ ¾ø´À³Ä°¡ ¹®Á¦ÀÎµ¥,
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ğµÎ ´ã¾ÆµĞ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°İÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int di[4] = { +1, -1, 0, 0 };
 int dj[4] = { 0, 0, +1, -1 };
 
 int N, M;
 bool isVisited[1000][1000];
 string map[1000];
-pair<int, int> blankArea[1000][1000]; // °¢ ¿¬°áµÈ ºóÄ­ÀÇ ¸éÀû ±â·Ï
+pair<int, int> blankArea[1000][1000]; // ê° ì—°ê²°ëœ ë¹ˆì¹¸ì˜ ë©´ì  ê¸°ë¡
 int blankAreaNum;
 
 inline bool isInRange(int i, int j) {
@@ -50,12 +18,12 @@ inline bool isInRange(int i, int j) {
 
 void areaCalc(int i, int j) {
 	queue<pair<int, int>> bfs_queue;
-	vector<pair<int, int>> includedArea; // ÇöÀç ¿µ¿ª¿¡ Æ÷ÇÔµÈ À§Ä¡Á¤º¸ ´ã±âÀ§ÇÑ º¤ÅÍ
+	vector<pair<int, int>> includedArea; // í˜„ì¬ ì˜ì—­ì— í¬í•¨ëœ ìœ„ì¹˜ì •ë³´ ë‹´ê¸°ìœ„í•œ ë²¡í„°
 
 	bfs_queue.push({i, j});
 	isVisited[i][j] = true;
 
-	int curArea = 0; // ÇöÀç ¿¬°áµÈ ºóÄ­µéÀÇ ¸éÀû °è»ê
+	int curArea = 0; // í˜„ì¬ ì—°ê²°ëœ ë¹ˆì¹¸ë“¤ì˜ ë©´ì  ê³„ì‚°
 
 	while (!bfs_queue.empty()) {
 		int cur_i = bfs_queue.front().first;
@@ -75,7 +43,7 @@ void areaCalc(int i, int j) {
 		}
 	}
 
-	// °°Àº ¿µ¿ª¿¡ ¼ÓÇÑ ¹üÀ§¿¡ ³ĞÀÌ¿Í ¹øÈ£ ÀÔ·ÂÇØÁÖ±â
+	// ê°™ì€ ì˜ì—­ì— ì†í•œ ë²”ìœ„ì— ë„“ì´ì™€ ë²ˆí˜¸ ì…ë ¥í•´ì£¼ê¸°
 	for (pair<int, int> location : includedArea) {
 		blankArea[location.first][location.second] = { curArea, blankAreaNum };
 	}
@@ -84,7 +52,7 @@ void areaCalc(int i, int j) {
 }
 
 void solution() {
-	// °¢ ÀÎÁ¢ÇÑ ºóÄ­µéÀÇ ³ĞÀÌ °è»ê
+	// ê° ì¸ì ‘í•œ ë¹ˆì¹¸ë“¤ì˜ ë„“ì´ ê³„ì‚°
 	for (int i = 0; i < N; i++)
 		for (int j = 0; j < M; j++)
 			if (isVisited[i][j] == false && map[i][j] == '0')
@@ -103,15 +71,15 @@ void solution() {
 					int area = blankArea[next_i][next_j].first;
 					int areaNum = blankArea[next_i][next_j].second;
 
-					// ¸ÊÀÇ ¹üÀ§ ³»ÀÌ°í,
-					// ¾ÆÁ÷ Æ÷ÇÔµÇÁö ¾ÊÀº ¿µ¿ªÀÌ¸ç, 
-					// º®ÀÌ ¾Æ´Ò ¶§¸¸ Æ÷ÇÔ
+					// ë§µì˜ ë²”ìœ„ ë‚´ì´ê³ ,
+					// ì•„ì§ í¬í•¨ë˜ì§€ ì•Šì€ ì˜ì—­ì´ë©°, 
+					// ë²½ì´ ì•„ë‹ ë•Œë§Œ í¬í•¨
 					if (isInRange(next_i, next_j) 
 						&& find(includedArea.begin(), includedArea.end(), areaNum) == includedArea.end()
 						&& area != 0
 						) {
 						curArea += area;
-						// ÀÌ¹Ì »ç¿ëÇÑ °ø°£ÀÌ¶ó´Â ±â·Ï ³²±â±â
+						// ì´ë¯¸ ì‚¬ìš©í•œ ê³µê°„ì´ë¼ëŠ” ê¸°ë¡ ë‚¨ê¸°ê¸°
 						includedArea.push_back(areaNum);
 					}
 				}
