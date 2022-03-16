@@ -147,6 +147,7 @@
  * [16928: 뱀과 사다리 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/16928%20-%20%EB%B1%80%EA%B3%BC%20%EC%82%AC%EB%8B%A4%EB%A6%AC%20%EA%B2%8C%EC%9E%84.cpp)
  * [16929: Two Dots](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/16929%20-%20Two%20Dots.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222671028664))
  * [16948: 데스 나이트](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/16948%20-%20%EB%8D%B0%EC%8A%A4%20%EB%82%98%EC%9D%B4%ED%8A%B8.cpp)
+ * [16946: 벽 부수고 이동하기 4](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/16946%20-%20%EB%B2%BD%20%EB%B6%80%EC%88%98%EA%B3%A0%20%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0%204.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222674577415))
  * [17070: 파이프 옮기기 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17070%20-%20%ED%8C%8C%EC%9D%B4%ED%94%84%20%EC%98%AE%EA%B8%B0%EA%B8%B0%201.cpp)
 
 ## Greedy Algorithm
