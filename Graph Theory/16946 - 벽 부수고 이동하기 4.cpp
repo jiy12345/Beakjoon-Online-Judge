@@ -101,20 +101,6 @@ int main() {
 
 	solution();
 
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {
-			cout << blankArea[i][j].first << " ";
-		}
-		cout << '\n';
-	}	
-	
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {
-			cout << blankArea[i][j].second << " ";
-		}
-		cout << '\n';
-	}
-
 	for (int i = 0; i < N; i++)
 		cout << map[i] << '\n';
 
