@@ -3,34 +3,6 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N, M: Çà·ÄÀÇ ¼¼·Î, °¡·Î ±æÀÌ
-K: º®À» ºÎ¼ú ¼ö ÀÖ´Â È½¼ö
-
- - º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 1 ~ 1,000
-K: 1 ~ 10
-
-(1, 1)°ú (N, M)Àº Ç×»ó ºó °ø°£ÀÌ´Ù!
-
-- ¹®Á¦ »óÈ²
- º®À» ÃÖ´ë K°³±îÁö ºÎ¼ú ¼ö ÀÖ´Ù°í ÇÒ ¶§, (1, 1) À§Ä¡¿¡¼­ N, MÀ§Ä¡·Î ÀÌµ¿ÇÏ´Â ÃÖ´Ü °Å¸®¸¦ Ãâ·ÂÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹
- °¢ À§Ä¡º°·Î ¹æ¹® Ç¥½Ã¸¦ ÁøÇàÇÏµÇ, ¹æ¹® Ç¥½Ã¸¦ ºÎ¼ø º®ÀÇ ¼ýÀÚ·Î ÁøÇàÇÏ¿©, ¼ýÀÚ°¡ ´õ ÀÛÀ» ¶§¸¸ »õ·Î ¹æ¹®ÇÒ ¼ö ÀÖµµ·Ï ÇÏ¸é µÉ µí ÇÏ´Ù.
-
- °°Àº À§Ä¡¿¡ µµÂøÇßÀ» ¶§ º®À» ºÎ¼ø È½¼ö°¡ ´õ ¸¹´Ù¸é °»½ÅÀÌ ÇÊ¿ä°¡ ¾øÀ¸³ª,
- º®À» ºÎ¼ø È½¼ö°¡ ´õ Àû´Ù¸é ÀÌÈÄ °æ·Î¿¡ ¿µÇâÀ» ³¢Ä¥ ¼ö ÀÖÀ¸¹Ç·Î °í·Á´ë»ó¿¡ ³Ö¾î¾ßÇÑ´Ù.
- °¢ À§Ä¡±îÁöÀÇ º®À» ºÎ¼ø È½¼ö¸¦ ±â·ÏÇÏ°í, Á¶±Ý ´õ ±ä °æ·Î¸¦ µ¹¾Æ¿Ô´õ¶óµµ ºÎ¼ø º®ÀÇ °³¼ö°¡ Àû´Ù¸é °í·Á´ë»ó¿¡ ³Ö´Â °ÍÀ¸·Î ÇÏ¸é µÉ µí ÇÏ´Ù.
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int di[4] = { +1, -1, 0, 0 };
 int dj[4] = { 0, 0, +1, -1 };
 
@@ -45,13 +17,13 @@ inline bool isInRange(int i, int j) {
 int solution() {
 	int answer = -1;
 
-	// Çö À§Ä¡±îÁö ³²Àº ±âÈ¸ ±â·Ï
-	// -1ÀÏ °æ¿ì ¾ÆÁ÷ ¹æ¹®ÇÏÁö ¾ÊÀº °æ¿ì
+	// í˜„ ìœ„ì¹˜ê¹Œì§€ ë‚¨ì€ ê¸°íšŒ ê¸°ë¡
+	// -1ì¼ ê²½ìš° ì•„ì§ ë°©ë¬¸í•˜ì§€ ì•Šì€ ê²½ìš°
 	vector<vector<int>> chanceLeft(N, vector<int>(M, -1));
 
 	queue<vector<int>> bfs_queue;
 
-	// Ã³À½ºÎÅÍ iÁÂÇ¥ / jÁÂÇ¥ / ±íÀÌ(°æ·ÎÀÇ ±æÀÌ) / ³²Àº º® ºÎ¼ú ¼ö ÀÖ´Â ±âÈ¸
+	// ì²˜ìŒë¶€í„° iì¢Œí‘œ / jì¢Œí‘œ / ê¹Šì´(ê²½ë¡œì˜ ê¸¸ì´) / ë‚¨ì€ ë²½ ë¶€ìˆ  ìˆ˜ ìžˆëŠ” ê¸°íšŒ
 	bfs_queue.push({ 0, 0, 1, K });
 	chanceLeft[0][0] = 0;
 
@@ -68,9 +40,9 @@ int solution() {
 			int next_i = cur_i + di[i];
 			int next_j = cur_j + dj[i];
 			if (!isInRange(next_i, next_j)) continue;
-			// º®ÀÏ °æ¿ì
+			// ë²½ì¼ ê²½ìš°
 			if (map[next_i][next_j] == '1') {
-				// ºÎ¼ú ±âÈ¸°¡ ¾øÀ» °æ¿ì ´õ ÁøÇàÇÒ ¼ö ¾øÀ½
+				// ë¶€ìˆ  ê¸°íšŒê°€ ì—†ì„ ê²½ìš° ë” ì§„í–‰í•  ìˆ˜ ì—†ìŒ
 				if (cur_chanceLeft == 0) continue;
 				
 				if (chanceLeft[next_i][next_j] < cur_chanceLeft - 1) {
@@ -78,7 +50,7 @@ int solution() {
 					bfs_queue.push({ next_i, next_j, cur_depth + 1, cur_chanceLeft - 1 });
 				}
 			}
-			else { // ±æÀÏ °æ¿ì
+			else { // ê¸¸ì¼ ê²½ìš°
 				if (chanceLeft[next_i][next_j] < cur_chanceLeft) {
 					chanceLeft[next_i][next_j] = cur_chanceLeft;
 					bfs_queue.push({ next_i, next_j, cur_depth + 1, cur_chanceLeft });
