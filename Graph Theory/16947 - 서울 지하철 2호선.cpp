@@ -2,49 +2,15 @@
 #include <vector>
 #include <cstring>
 #include <queue>
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¿ªÀÇ °³¼ö
-
- - º¯¼ö Á¦ÇÑ »çÇ×
-N: 3 ~ 3,000
-
-ÀÓÀÇÀÇ µÎ ¿ª »çÀÌ¿¡ °æ·Î°¡ Ç×»ó Á¸ÀçÇÏ´Â ³ë¼±¸¸ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø´Ù!
-
-- ¹®Á¦ »óÈ²
- ±×·¡ÇÁ°¡ ÁÖ¾îÁ³À» ¶§, °¢ ³ëµå¿Í »çÀÌÅ¬ »çÀÌÀÇ °Å¸®¸¦ ±¸ÇÏ¿©¶ó.
-
- ¹®Á¦¿¡ µüÈ÷ ¾ð±ÞµÇ¾îÀÖÁø ¾ÊÁö¸¸ »çÀÌÅ¬Àº ÇÑ°³¸¸ Á¸ÀçÇØ¾ß ÇÒ µí ÇÏ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- ÀÏ´Ü ±×·¡ÇÁ¸¦ ÀÔ·Â ¹Þ´Â °ÍÀº ´ç¿¬È÷ ¿¬°á ¸®½ºÆ® ÇüÅÂ·Î ¹Þ¾Æ¾ß ÇÒ µí ÇÏ´Ù.
-
- ¿Ö³ÄÇÏ¸é ¼øÈ¯¼±ÀÌ »ý±â·Á¸é °£¼±ÀÇ °³¼ö°¡ »ó´çÈ÷ Àû¾î¾ß ÇÏ¹Ç·Î
-
- ÀÏ´Ü ¼øÈ¯¼±À» ±¸ÇÑ ÈÄ, ¼øÈ¯¼±À¸·ÎºÎÅÍÀÇ °Å¸®¸¦ ±¸ÇÏ´Â ¼øÀ¸·Î ÇÏ¸é µÉ µí ÇÏ´Ù.
-
- 1. ¼øÈ¯¼±À» ±¸ÇÑ´Ù.
-
- 2. ¼øÈ¯¼±¿¡ Æ÷ÇÔµÇ´Â ³ëµåµéÀÇ °Å¸®´Â ¸ðµÎ 0À¸·Î ÃÊ±âÈ­ÇÑ´Ù.
-
- 3. ¼øÈ¯¼±°£ÀÇ °£¼±Àº »èÁ¦ÇÑ´Ù.
-
- 4. ¼øÈ¯¼±¿¡ Æ÷ÇÔµÇ´Â ¸ðµç ³ëµå·ÎºÎÅÍ bfs¸¦ ÁøÇàÇÏ¿©, °¢ ³ëµå±îÁöÀÇ °Å¸®¸¦ ±¸ÇÑ´Ù.
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
 
 #define MAX 3001
 using namespace std;
 int N;
-bool isCycle[MAX]; // »çÀÌÅ¬ÀÎÁö ¿©ºÎ ÆÇ´Ü
-vector<int> graph[MAX]; // ±×·¡ÇÁ
+bool isCycle[MAX]; // ì‚¬ì´í´ì¸ì§€ ì—¬ë¶€ íŒë‹¨
+vector<int> graph[MAX]; // ê·¸ëž˜í”„
 bool visited[MAX];
-int pre[MAX];// ÇöÀç ³ëµåÀÇ ÀÌÀü ³ëµå¸¦ Ç¥½ÃÇÏ±â À§ÇÑ ¹è¿­
-bool hasCycle; // »çÀÌÅ¬À» Ã£¾Ò´ÂÁö ¿©ºÎ ÀúÀåÀ» À§ÇÑ º¯¼ö
+int pre[MAX];// í˜„ìž¬ ë…¸ë“œì˜ ì´ì „ ë…¸ë“œë¥¼ í‘œì‹œí•˜ê¸° ìœ„í•œ ë°°ì—´
+bool hasCycle; // ì‚¬ì´í´ì„ ì°¾ì•˜ëŠ”ì§€ ì—¬ë¶€ ì €ìž¥ì„ ìœ„í•œ ë³€ìˆ˜
 int dist[MAX];
 
 void bfs() {
@@ -52,7 +18,7 @@ void bfs() {
 	for (int i = 1; i <= N; i++) {
 		if (isCycle[i]) {
 			visited[i] = true;
-			//       ÇöÀç ³ëµå / ±íÀÌ
+			//       í˜„ìž¬ ë…¸ë“œ / ê¹Šì´
 			bfs_queue.push({ i,0 });
 		}
 	}
@@ -74,14 +40,14 @@ void bfs() {
 void findCycle(int cur) {
 	visited[cur] = true;
 	for (int i = 0; i < graph[cur].size(); i++) {
-		// »çÀÌÅ¬À» Ã£¾Ò´Ù¸é Á¾·á
+		// ì‚¬ì´í´ì„ ì°¾ì•˜ë‹¤ë©´ ì¢…ë£Œ
 		if (hasCycle) return;
 
 		int next = graph[cur][i];
 
-		// ÀÌ¹Ì ¹æ¹®ÇÑ ³ëµåÀÏ ¶§
+		// ì´ë¯¸ ë°©ë¬¸í•œ ë…¸ë“œì¼ ë•Œ
 		if (visited[next]) {
-			// ºÎ¸ð°¡ ¾Æ´Ñ ´Ù¸¥ ¹æ¹®Çß´ø ³ëµå(¿ª°£¼±)ÀÌ¸é »çÀÌÅ¬ÀÓ
+			// ë¶€ëª¨ê°€ ì•„ë‹Œ ë‹¤ë¥¸ ë°©ë¬¸í–ˆë˜ ë…¸ë“œ(ì—­ê°„ì„ )ì´ë©´ ì‚¬ì´í´ìž„
 			if (next != pre[cur]) {
 				
 				isCycle[cur] = true;
@@ -94,7 +60,7 @@ void findCycle(int cur) {
 			}
 
 		}
-		else { // ¾ÆÁ÷ ¹æ¹®ÇÏÁö ¾ÊÀº ³ëµå¶ó¸é
+		else { // ì•„ì§ ë°©ë¬¸í•˜ì§€ ì•Šì€ ë…¸ë“œë¼ë©´
 			pre[next] = cur;
 			findCycle(next);
 		}
