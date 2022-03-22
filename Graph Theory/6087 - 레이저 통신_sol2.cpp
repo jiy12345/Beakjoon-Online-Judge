@@ -19,7 +19,6 @@ priority 큐는 내부를 정렬된 상태로 유지하는데 시간이 조금 �
 그래서 그런지 오히려 시간은 priority_queue를 사용하였을 때보다 오래 걸리는 것으로 확인되었다.
 */
 
-
 int di[9] = { +1, -1, 0, 0 };
 int dj[9] = { 0, 0, +1, -1 };
 
@@ -60,17 +59,12 @@ int solution(vector<pair<int, int>> C_Coords) {
 		}
 	}
 
-
-
 	while (!bfs_queue.empty()) {
 		int cur_numOfMirror = bfs_queue.front()[0];
 		int prev_direction = bfs_queue.front()[1];
 		int cur_i = bfs_queue.front()[2];
 		int cur_j = bfs_queue.front()[3];
-
 		bfs_queue.pop();
-
-		//cout << "cur_i: " << cur_i << ", cur_j: " << cur_j << ", cur_numOfMirror: " << cur_numOfMirror << endl;
 
 		if (cur_i == end_i && cur_j == end_j) {
 			answer = min(answer, cur_numOfMirror);
