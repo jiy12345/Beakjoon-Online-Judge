@@ -2,44 +2,23 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-W, H: ÁöµµÀÇ ¼¼·Î, °¡·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-W, H: 1 ~ 100
-
-.: ºó Ä­
-*: º®
-C: ·¹ÀÌÀú·Î ¿¬°áÇØ¾ß ÇÏ´Â Ä­
-
-C´Â Ç×»ó µÎ°³ÀÌ¸ç, ·¹ÀÌÀú·Î ¿¬°áÇÒ ¼ö ÀÖ´Â ÀÔ·Â¸¸ ÁÖ¾îÁø´Ù!
-
-- ¹®Á¦ »óÈ²
-
- µÎ °³ÀÇ c À§Ä¡¸¦ ¿¬°áÇÏ±â À§ÇØ »ç¿ëµÇ¾î¾ß ÇÏ´Â °Å¿ï(90µµ È¸Àü)ÀÇ °³¼öÀÇ ÃÖ¼Ò°ªÀ» ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
- ÀÏ¹ÝÀûÀÎ bfs¿Í ´Ù¸£°Ô, 90µµ È¸ÀüÀÇ °³¼ö¸¦ Ã¼Å©ÇÑ´Ù!
-
- 180µµ È¸ÀüÀº ¾îÂ÷ÇÇ ¹æ¹® Ç¥½Ã·Î ÀÎÇØ ÀÌ·ç¾îÁöÁö ¾ÊÀ» °ÍÀÌ¹Ç·Î, ¸ðµç È¸ÀüÀÇ °³¼ö(¹æÇâÀÌ ¹Ù²ï È½¼ö)¸¦ ¼¼¸é µÉ µí ÇÏ´Ù.
-
-
-
-3. °èÈ¹ °ËÁõ
-
-bfs´Â ±×·±µ¥ °Å¸®»ó °¡±î¿î ³ëµå°¡ ¸ÕÀú ³ª¿Â´Ù.
-
-°Å¸®°¡ °¡±î¿î °ÍÀÌ È¸Àü¼ö°¡ Àû´Ù´Â °ÍÀ» º¸ÀåÇÏ´Â°¡?
-±×·¸Áö ¾Ê´Ù. µû¶ó¼­ priority_queue¸¦ »ç¿ëÇÏ¿© È¸Àü ¼ö¿¡ µû¶ó¼­ Á¤·ÄµÇµµ·Ï ÇØ¾ßÇÒ µí ÇÏ´Ù.
-
-
-*/
-
 enum DIRECTION { SOUTH, NORTH, EAST, WEST, NUM_OF_DIRECTION };
 #define MAX 101
+
+/*
+- queueë¥¼ ì‚¬ìš©í•œ í’€ì´
+
+ì‚¬ìš©í•œ ë©”ëª¨ë¦¬: 2428KB	
+ê±¸ë¦° ì‹œê°„: 12ms
+	
+priority íëŠ” ë‚´ë¶€ë¥¼ ì •ë ¬ëœ ìƒíƒœë¡œ ìœ ì§€í•˜ëŠ”ë° ì‹œê°„ì´ ì¡°ê¸ˆ ë” ë“¤ì–´ê°€ë¯€ë¡œ, íë¥¼ ì‚¬ìš©í•˜ë©´ ê°œì„ ë˜ì§€ ì•Šì„ê¹Œ í•´ì„œ ì‹œë„í•´ë³´ì•˜ë‹¤.
+
+ê·¸ëŸ°ë° íë¥¼ ì´ìš©í•˜ë©´, ì²˜ìŒ ë„ì°©ì§€ë¥¼ ë§Œë‚¬ì„ ë•Œ ê±°ìš¸ì˜ ì‚¬ìš© íšŸìˆ˜ê°€ ìµœì†Œê°’ì´ë¼ëŠ” ê²ƒì„ ë³´ìž¥í•˜ì§€ ëª»í•˜ë¯€ë¡œ,
+ì²˜ìŒ ë„ì°©ì§€ë¥¼ ë§Œë‚¬ì„ ë•Œ ë°˜ë³µì„ ì¢…ë£Œí•˜ëŠ” ê²ƒì´ ì•„ë‹ˆë¼ ë” ì´ìƒ íƒìƒ‰í•  ìœ„ì¹˜ê°€ ì—†ì„ ë•Œê¹Œì§€ íƒìƒ‰í•´ì•¼ í•œë‹¤!
+
+ê·¸ëž˜ì„œ ê·¸ëŸ°ì§€ ì˜¤ížˆë ¤ ì‹œê°„ì€ priority_queueë¥¼ ì‚¬ìš©í•˜ì˜€ì„ ë•Œë³´ë‹¤ ì˜¤ëž˜ ê±¸ë¦¬ëŠ” ê²ƒìœ¼ë¡œ í™•ì¸ë˜ì—ˆë‹¤.
+*/
+
 
 int di[9] = { +1, -1, 0, 0 };
 int dj[9] = { 0, 0, +1, -1 };
@@ -67,7 +46,7 @@ int solution(vector<pair<int, int>> C_Coords) {
 	int end_i = C_Coords[1].first;
 	int end_j = C_Coords[1].second;
 
-	// 4¹æÇâÀÇ ÃÊ±â ÀÌµ¿ »óÈ² ¸ðµÎ Çª½Ã
+	// 4ë°©í–¥ì˜ ì´ˆê¸° ì´ë™ ìƒí™© ëª¨ë‘ í‘¸ì‹œ
 	for (int direction = 0; direction < NUM_OF_DIRECTION; direction++) {
 		int next_i = start_i + di[direction];
 		int next_j = start_j + dj[direction];
@@ -76,7 +55,7 @@ int solution(vector<pair<int, int>> C_Coords) {
 
 		if (Map[next_i][next_j] != '*') {
 			usedNumOfMirror[direction][next_i][next_j] = 0;
-			// »ç¿ëÇÑ °Å¿ïÀÇ °³¼ö / ÀÌÀü ¹æÇâ / iÁÂÇ¥ / jÁÂÇ¥ 
+			// ì‚¬ìš©í•œ ê±°ìš¸ì˜ ê°œìˆ˜ / ì´ì „ ë°©í–¥ / iì¢Œí‘œ / jì¢Œí‘œ 
 			bfs_queue.push({ 0, direction, next_i, next_j });
 		}
 	}
@@ -94,8 +73,7 @@ int solution(vector<pair<int, int>> C_Coords) {
 		//cout << "cur_i: " << cur_i << ", cur_j: " << cur_j << ", cur_numOfMirror: " << cur_numOfMirror << endl;
 
 		if (cur_i == end_i && cur_j == end_j) {
-			answer = cur_numOfMirror;
-			break;
+			answer = min(answer, cur_numOfMirror);
 		}
 
 		for (int cur_direction = 0; cur_direction < NUM_OF_DIRECTION; cur_direction++) {
@@ -105,13 +83,13 @@ int solution(vector<pair<int, int>> C_Coords) {
 
 			if (!isInRange(next_i, next_j)) continue;
 
-			// ¹æÇâ ÀüÈ¯ÀÌ ÀÖÀ» °æ¿ì
+			// ë°©í–¥ ì „í™˜ì´ ìžˆì„ ê²½ìš°
 			if (prev_direction != cur_direction) next_numOfMirror++;
 
 			if (Map[next_i][next_j] != '*' && usedNumOfMirror[cur_direction][next_i][next_j] > next_numOfMirror) {
 				usedNumOfMirror[cur_direction][next_i][next_j] = next_numOfMirror;
 
-				// »ç¿ëÇÑ °Å¿ïÀÇ °³¼ö / iÁÂÇ¥ / jÁÂÇ¥ / ÀÌÀü ¹æÇâ
+				// ì‚¬ìš©í•œ ê±°ìš¸ì˜ ê°œìˆ˜ / iì¢Œí‘œ / jì¢Œí‘œ / ì´ì „ ë°©í–¥
 				bfs_queue.push({ next_numOfMirror, cur_direction, next_i, next_j });
 			}
 		}
