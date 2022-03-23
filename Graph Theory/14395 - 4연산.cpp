@@ -3,44 +3,10 @@
 #include<set>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-s: ½ÃÀÛ Á¤¼ö
-t: ¸ñÇ¥ Á¤¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-s, t: 1 ~ 1,000,000,000
-
-
-- ¹®Á¦ »óÈ²
-°¡´ÉÇÑ ¹æ¹ýÀÌ ¿©·¯ °¡Áö¶ó¸é, ±æÀÌ°¡ °¡Àå ÂªÀº °ÍÀ» Ãâ·ÂÇÑ´Ù. 
-±æÀÌ°¡ °¡Àå ÂªÀº °ÍÀÌ ¿©·¯ °¡Áö¶ó¸é, »çÀü ¼øÀ¸·Î ¾Õ¼­´Â °ÍÀ» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- ÀÏ¹ÝÀûÀ¸·Î Çª½ÃÇÒ ¶§ ¹æ¹® Ç¥½Ã¸¦ Çß´ø ´Ù¸¥ ¹®Á¦µé°ú ´Ù¸£°Ô 
-
- ÀÌ ¹®Á¦¿¡¼­´Â pop ÇÒ ¶§ ¹æ¹® Ç¥½Ã¸¦ ÇØ¾ßÇÒ µí ÇÏ´Ù.
-
- ¿Ö³ÄÇÏ¸é °°Àº ³ëµå¿¡ °¡´õ¶óµµ ¾Õ¼­ Áö³ª¿Â °æ·Î°¡ ´Ù¸£´Ù¸é(¹°·Ð °æ·ÎÀÇ ±æÀÌ´Â °°¾Æ¾ß ÇÑ´Ù.) ¼­·Î ´Ù¸¥ °æ·Î·Î ÀÎÁ¤ÇÏ¿© °í·ÁÇØ¾ß ÇÏ±â ¶§¹®ÀÌ´Ù.
-
-
-
-3. °èÈ¹ °ËÁõ
-
-bfs´Â ±×·±µ¥ °Å¸®»ó °¡±î¿î ³ëµå°¡ ¸ÕÀú ³ª¿Â´Ù.
-
-°Å¸®°¡ °¡±î¿î °ÍÀÌ È¸Àü¼ö°¡ Àû´Ù´Â °ÍÀ» º¸ÀåÇÏ´Â°¡?
-±×·¸Áö ¾Ê´Ù. µû¶ó¼­ priority_queue¸¦ »ç¿ëÇÏ¿© È¸Àü ¼ö¿¡ µû¶ó¼­ Á¤·ÄµÇµµ·Ï ÇØ¾ßÇÒ µí ÇÏ´Ù.
-
-
-*/
-
 #define MAX 1000000001
 
 long long s, t;
 set<long long> isVisited;
-
 
 string solution() {
 	if (s == t) return "0";
@@ -82,7 +48,7 @@ string solution() {
 		}
 	}
 
-	// ¸øÃ£À» °æ¿ì
+	// ëª»ì°¾ì„ ê²½ìš°
 	if (answers.empty()) return "-1";
 
 	return answers.top();
