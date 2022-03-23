@@ -33,17 +33,17 @@ string solution() {
 		}
 
 		long long next_s = cur_s + cur_s;
-		if (isVisited.find(next_s) == isVisited.end()) bfs_queue.push({cur_depth + 1, {next_s, (usedOperators + '+')}});
+		if (next_s <= t && isVisited.find(next_s) == isVisited.end()) bfs_queue.push({cur_depth + 1, {next_s, (usedOperators + '+')}});
 		
 		next_s = cur_s - cur_s;
-		if (isVisited.find(next_s) == isVisited.end()) bfs_queue.push({ cur_depth + 1, { next_s, (usedOperators + '-')} });
+		if (next_s <= t && isVisited.find(next_s) == isVisited.end()) bfs_queue.push({ cur_depth + 1, { next_s, (usedOperators + '-')} });
 		
 		next_s = cur_s * cur_s;
-		if (isVisited.find(next_s) == isVisited.end()) bfs_queue.push({ cur_depth + 1, { next_s, (usedOperators + '*')} });
+		if (next_s <= t && isVisited.find(next_s) == isVisited.end()) bfs_queue.push({ cur_depth + 1, { next_s, (usedOperators + '*')} });
 		
 		if (cur_s != 0) {
 			next_s = cur_s / cur_s;
-			if (isVisited.find(next_s) == isVisited.end()) bfs_queue.push({ cur_depth + 1, { next_s, usedOperators + '/'} });
+			if (next_s <= t && isVisited.find(next_s) == isVisited.end()) bfs_queue.push({ cur_depth + 1, { next_s, usedOperators + '/'} });
 
 		}
 	}
