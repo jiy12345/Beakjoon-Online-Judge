@@ -130,6 +130,7 @@
  * [2606: 바이러스](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2606%20-%20%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222530133973))
  * [2667: 단지번호붙이기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2667%20-%20%EB%8B%A8%EC%A7%80%EB%B2%88%ED%98%B8%EB%B6%99%EC%9D%B4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222528948375))
  * [4963: 섬의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/4963%20-%20%EC%84%AC%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)
+ * [5014: 스타트링크](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/5014%20-%20%EC%8A%A4%ED%83%80%ED%8A%B8%EB%A7%81%ED%81%AC.cpp)
  * 6087: 레이저 통신 [[풀이 1(우선순위 큐 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/6087%20-%20%EB%A0%88%EC%9D%B4%EC%A0%80%20%ED%86%B5%EC%8B%A0_sol1.cpp)] [[풀이 2(일반적인 큐 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/6087%20-%20%EB%A0%88%EC%9D%B4%EC%A0%80%20%ED%86%B5%EC%8B%A0_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222679924425))
  * [7562: 나이트의 이동](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/7562%20-%20%EB%82%98%EC%9D%B4%ED%8A%B8%EC%9D%98%20%EC%9D%B4%EB%8F%99.cpp)
  * [7569: 토마토](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/7569%20-%20%ED%86%A0%EB%A7%88%ED%86%A0.cpp) 
