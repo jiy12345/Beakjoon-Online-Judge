@@ -2,7 +2,7 @@
 
 ## 분류
 - [Bruteforcing](#Bruteforcing)
-- [Danamic Programming](#Danamic-Programming)
+- [Dynamic Programming](#Dynamic-Programming)
 - [Data Structures](#Data-Structures)
 - [Divide And Conquer](#Divide-And-Conquer )
 - [Geometry](#Geometry)
@@ -50,7 +50,7 @@
  * 18290: NM과 K (1) [[풀이 1(복사 생성)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp)] [[풀이 2(더하기 빼기)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
 
 
-## Danamic Programming
+## Dynamic Programming
  * [1149: RGB거리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1149%20-%20RGB%EA%B1%B0%EB%A6%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222544331819))
  * [1309: 동물원](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1309%20-%20%EB%8F%99%EB%AC%BC%EC%9B%90.cpp)
  * [1463: 1로 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1463%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222538882005))
