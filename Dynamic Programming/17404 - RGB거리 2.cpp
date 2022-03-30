@@ -1,64 +1,29 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ÁýÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2 ~ 1,000
-ÁýÀ» Ä¥ÇÏ´Â ºñ¿ë: 1 ~ 1,000
-
-- ¹®Á¦ »óÈ²
- °¢°¢ÀÇ ÁýÀ» »¡°­, ÃÊ·Ï, ÆÄ¶û Áß ÇÏ³ªÀÇ »öÀ¸·Î Ä¥ÇÏµÇ, ´ÙÀ½ÀÇ ±ÔÄ¢À» ¸¸Á·ÇÏ¿©¾ß ÇÑ´Ù°í ÇÒ ¶§,
-
- - 1¹ø ÁýÀÇ »öÀº 2¹ø, N¹ø ÁýÀÇ »ö°ú °°Áö ¾Ê¾Æ¾ß ÇÑ´Ù.
- - N¹ø ÁýÀÇ »öÀº N-1¹ø, 1¹ø ÁýÀÇ »ö°ú °°Áö ¾Ê¾Æ¾ß ÇÑ´Ù.
- - i(2 ¡Â i ¡Â N-1)¹ø ÁýÀÇ »öÀº i-1, i+1¹ø ÁýÀÇ »ö°ú °°Áö ¾Ê¾Æ¾ß ÇÑ´Ù.
-
- ¸ðµç ÁýÀ» Ä¥ÇÏ´Â ºñ¿ëÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ¿©¶ó.
-
-2. Ç®ÀÌ °èÈ¹
- ¹®Á¦°¡ µÇ´ÂÁ¡Àº °¡Àå ³¡°ú °¡Àå Ã³À½ÀÌ ¿¬°áµÊÀ¸·Î½á, °è»êÀÌ ´Þ¶óÁ³´Ù´Â °ÍÀÌ´Ù.
-
- °¢ ¿¬»êÀ» ÁøÇàÇÒ ¶§ Ã³À½¿¡ ¼±ÅÃÇÑ »öÀ» ¾Ë¾Æ¾ß ÇÑ´Ù.
-
- ¾îÂ÷ÇÇ ÇÕÀÌ¹Ç·Î ¿¬»êÀÇ ¼ø¼­´Â ¾î¶»°Ô ¹Ù²Ùµç »ó°üÀÌ ¾øÀ» °ÍÀÌ´Ù.
-
- µû¶ó¼­ Ã¹¹øÂ°¿Í N-1¹øÂ°¸¦ Á¦¿ÜÇÏ°í => ÀÌ°Ô ¾ÈµÇ´Â°Ô Ã¹¹øÂ°¸¦ Á¦¿ÜÇÏ´õ¶óµµ ¹«¾ùÀ¸·Î ½ÃÀÛÇÏ´ÂÁö´Â ¾Ë¾Æ¾ß ÇÑ´Ù.
-
- ±×·¸´Ù¸é ¿ª½Ã °íÁ¤À» ÇÏ´Â °ÍÀÌ Á¦ÀÏ ³ªÀ»¼öµµ.
-
-
-3. °èÈ¹ °ËÁõ
-
-*/
-
-
-// °¢ À§Ä¡¿¡¼­ Æ¯Á¤ »öÀ» ¼±ÅÃÇßÀ» ¶§ÀÇ ÃÖ¼Ò°ª ÀúÀåÇÒ ¹è¿­
+// ê° ìœ„ì¹˜ì—ì„œ íŠ¹ì • ìƒ‰ì„ ì„ íƒí–ˆì„ ë•Œì˜ ìµœì†Œê°’ ì €ìž¥í•  ë°°ì—´
 int min_nums[1000][3];
-// °ªÀ» ÀÔ·Â¹ÞÀ» ¹è¿­
+// ê°’ì„ ìž…ë ¥ë°›ì„ ë°°ì—´
 int RGB_cost[1000][3];
 
-int N; // ÁýÀÇ ¼ö
+int N; // ì§‘ì˜ ìˆ˜
 
 int solution() {
 
-	int answer = 1000 * 1000 + 1; // ³ª¿Ã ¼ö ÀÕ´Â °ª Áß ÃÖ´ë°ª
+	int answer = 1000 * 1000 + 1; // ë‚˜ì˜¬ ìˆ˜ ìž‡ëŠ” ê°’ ì¤‘ ìµœëŒ€ê°’
 
-	for (int firstHouseColor = 0; firstHouseColor < 3; firstHouseColor++) // Ã¹ ¹øÂ° ÁýÀÇ »ö±òÀ» ÁöÁ¤ÇÏ¿© ¹Ýº¹
+	for (int firstHouseColor = 0; firstHouseColor < 3; firstHouseColor++) // ì²« ë²ˆì§¸ ì§‘ì˜ ìƒ‰ê¹”ì„ ì§€ì •í•˜ì—¬ ë°˜ë³µ
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			// Ã¹¹øÂ° ÁýÀÇ »öÀ» ÁöÁ¤ÇÏ±â À§ÇØ ³ª¸ÓÁö »öÀÌ ¼±ÅÃµÉ ¼ö ¾øµµ·Ï ³ª¸ÓÁö »öÀº ÃÖ´ë°ªÀ¸·Î
+			// ì²«ë²ˆì§¸ ì§‘ì˜ ìƒ‰ì„ ì§€ì •í•˜ê¸° ìœ„í•´ ë‚˜ë¨¸ì§€ ìƒ‰ì´ ì„ íƒë  ìˆ˜ ì—†ë„ë¡ ë‚˜ë¨¸ì§€ ìƒ‰ì€ ìµœëŒ€ê°’ìœ¼ë¡œ
 			if (i == firstHouseColor)
 				min_nums[0][i] = RGB_cost[0][i]; 
 			else
 				min_nums[0][i] = 1000 * 1000 + 1;
 		}
 
-		// °¢ À§Ä¡±îÁöÀÇ ÃÖ´ë°ª ±¸ÇÏ±â
+		// ê° ìœ„ì¹˜ê¹Œì§€ì˜ ìµœëŒ€ê°’ êµ¬í•˜ê¸°
 		for (int i = 1; i < N; i++)
 		{
 			min_nums[i][0] = min(min_nums[i - 1][1], min_nums[i - 1][2]) + RGB_cost[i][0];
@@ -68,8 +33,8 @@ int solution() {
 
 		for (int lastHouseColor = 0; lastHouseColor < 3; lastHouseColor++)
 		{
-			if (lastHouseColor == firstHouseColor) continue; // Ã¹¹øÂ° ÁýÀÇ »ö°ú ¸¶Áö¸· ÁýÀÇ »öÀÌ °°À¸¸é ¾ÈµÇ¹Ç·Î °è»ê X
-			answer = min(answer, min_nums[N - 1][lastHouseColor]); // ³ª¸ÓÁö °æ¿ìÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÔ
+			if (lastHouseColor == firstHouseColor) continue; // ì²«ë²ˆì§¸ ì§‘ì˜ ìƒ‰ê³¼ ë§ˆì§€ë§‰ ì§‘ì˜ ìƒ‰ì´ ê°™ìœ¼ë©´ ì•ˆë˜ë¯€ë¡œ ê³„ì‚° X
+			answer = min(answer, min_nums[N - 1][lastHouseColor]); // ë‚˜ë¨¸ì§€ ê²½ìš°ì˜ ìµœì†Ÿê°’ì„ êµ¬í•¨
 		}
 
 	}
