@@ -95,6 +95,7 @@
  * [15988: 1, 2, 3 더하기 3](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/15988%20-%201,%202,%203%20%EB%8D%94%ED%95%98%EA%B8%B0%203.cpp)
  * [15990: 1, 2, 3 더하기 5](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/15990%20-%201,%202,%203%20%EB%8D%94%ED%95%98%EA%B8%B0%205.cpp)
  * [16194: 카드 구매하기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/16194%20-%20%EC%B9%B4%EB%93%9C%20%EA%B5%AC%EB%A7%A4%ED%95%98%EA%B8%B0%202.cpp)
+ * [17404: RGB거리 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/17404%20-%20RGB%EA%B1%B0%EB%A6%AC%202.cpp)
 
 ## Data Structures
  * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
