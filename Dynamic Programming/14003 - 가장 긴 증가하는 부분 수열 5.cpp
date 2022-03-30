@@ -44,30 +44,15 @@ void solution() {
     }
 }
 
-class E {
-public:
-    int e[30];
-
-};
-
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
 
-    //cin >> N;
+    cin >> N;
 
-    //for (int i = 0; i < N; i++) {
-    //    cin >> A[i];
-    //}
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+    }
 
-    E e;
-    
-    e.e[3] = 10;
-
-    E f;
-    f = e;
-
-    cout << f.e[3];
-
-    //solution();
+    solution();
 }
