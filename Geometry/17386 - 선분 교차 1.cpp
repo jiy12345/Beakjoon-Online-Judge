@@ -2,45 +2,6 @@
 #include<utility>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-L1, L2: µÎ°³ÀÇ ¼±ºÐ
-L1ÀÇ ¾ç ³¡ Á¡Àº (x1, y1), (x2, y2)
-L2ÀÇ ¾ç ³¡ Á¡Àº (x3, y3), (x4, y4)
-
-- º¯¼ö Á¦ÇÑ »çÇ×
--1,000,000 ¡Â x1, y1, x2, y2, x3, y3, x4, y4 ¡Â 1,000,000
-x1, y1, x2, y2, x3, y3, x4, y4´Â Á¤¼ö
-
-- ¹®Á¦ »óÈ²
-µÎ°³ÀÇ ¼±ºÐÀÇ ¾ç ³¡Á¡µéÀÌ ÁÖ¾îÁú ¶§, µÎ ¼±ÀÌ ±³Â÷ÇÏ´ÂÁö ÆÇÁ¤ÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹y1
-ÀÏ´Ü x ±¸°£ÀÌ °ãÄ¡´ÂÁöºÎÅÍ Ã¼Å©ÇÑ´Ù.
-
-=> ±×·¯·Á¸é °¢ Á¡µéÀÇ À§Ä¡°ü°è ºÎÅÍ Á¤¸®µÇ¾î¾ß ÇÑ´Ù.
-=> ¸ðµç Á¶°ÇÀ» ´Ù Ã¼Å©ÇÏ·Á¸é 4°³¸¦ ¼ø¼­¿¡ »ó°üÀÖ°Ô ¹èÄ¡ÇØ¾ß ÇÏ¹Ç·Î, 4! = 24ÀÌ´Ù!
-
-1. °ãÄ¡´Â ¹üÀ§¸¦ È®ÀÎ
-L1ÀÇ ¿ìÃø°ú L2ÀÇ ÁÂÃøÀ» ºñ±³ÇÏ°í,
-L2ÀÇ ¿ìÃø°ú L1ÀÇ ÁÂÃøÀ» ºñ±³ÇÏ¿©, 
-µÎ °æ¿ì ¸ðµÎ ¿ìÃøÀÌ Ä¿¾ßÁö¸¸ °ãÃÄÀÖ´Ù°í º¼ ¼ö ÀÖ´Ù.
-
-2. ´ë»óÀÌ µÇ´Â ¹üÀ§ ±¸ÇÏ±â
-L1ÀÇ ¿ìÃø°ú L2ÀÇ ¿ìÃø ºñ±³ÇÏ¿© ´õ ÀÛÀº °ª ÀúÀå
-L1ÀÇ ÁÂÃø°ú L2ÀÇ ¿ìÃø ºñ±³ÇÏ¿© ´õ Å« °ª ÀúÀå
-
-
-3. °ãÄ¡´ÂÁö ¿©ºÎ È®ÀÎ
-µÎ ¼±ºÐÀÇ °ø½ÄÀ» °¢°¢ ±¸ÇÏ°í, µÎ ¼±ºÐÀÇ °ø½Ä°£ÀÇ »¬¼ÀÀ» ÁøÇàÇÑ ÈÄ, ¾Õ¼­ ±¸ÇØ³õÀº ¿ÞÂÊ ³¡°ú ¿À¸¥ÂÊ ³¡À» ´ëÀÔÇÑ ÈÄ, µÎ °ªÀ» °öÇÏ¿© 0º¸´Ù ÀÛ°Å³ª °°ÀºÁö È®ÀÎÇÑ´Ù!
-
-
-
-3. °èÈ¹ °ËÁõ
-*/
-
-
 long long x1, y_1, x2, y2, x3, y3, x4, y4;
 
 int ccw(long long x1, long long y1, long long x2, long long y2, long long x3, long long y3) {
@@ -64,7 +25,7 @@ int solution(){
 	int result3 = ccw(x3, y3, x4, y4, x1, y_1);
 	int result4 = ccw(x3, y3, x4, y4, x2, y2);
 	
-	// ÇÑ ¼±ºÐ¿¡¼­ ´Ù¸¥ ¼±ºÐÀÇ ¾ç ³¡Á¡±îÁöÀÇ ¹æÇâÀÌ ¼­·Î ´Þ¶ó¾ß!
+	// í•œ ì„ ë¶„ì—ì„œ ë‹¤ë¥¸ ì„ ë¶„ì˜ ì–‘ ëì ê¹Œì§€ì˜ ë°©í–¥ì´ ì„œë¡œ ë‹¬ë¼ì•¼!
 	if (result1 * result2 < 0 && result3 * result4 < 0) {
 		return 1;
 	}
