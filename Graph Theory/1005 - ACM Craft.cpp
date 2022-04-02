@@ -33,11 +33,9 @@ union find 알고리즘으로 양 쪽 다 연결되어 있을 때는 무시하고 넘어간다!
 // 필요한 변수 선언
 int T, N, K, W; // 테스트 케이스의 개수, 건물의 개수, 건설 순서 규칙 개수, 목표 건물
 
-int times[MAX]; // 건설에 걸리는 시간
-int pre[MAX]; // 이전 노드의 개수
-vector<int> suc[MAX]; // 이후 노드
 
-int solution() {
+
+int solution(int times[MAX], int pre[MAX], vector<int> suc[MAX]) {
     int result[MAX] = { 0, };
     queue<int>Queue;
 
@@ -66,6 +64,9 @@ int main() {
     cin >> T;
 
     for (int t = 0; t < T; t++) {
+        int times[MAX]; // 건설에 걸리는 시간
+        int pre[MAX] = { 0, }; // 이전 노드의 개수
+        vector<int> suc[MAX]; // 이후 노드
         cin >> N >> K;
         for (int i = 0; i < N; i++)
             cin >> times[i];
@@ -78,6 +79,6 @@ int main() {
         cin >> W;
         W--;
 
-        cout << solution() << '\n';
+        cout << solution(times, pre, suc) << '\n';
     }
 }
