@@ -3,35 +3,10 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-V: Á¤Á¡ÀÇ °³¼ö
-E: °£¼±ÀÇ °³¼ö
-A, B, C: A¹ø Á¤Á¡°ú B¹ø Á¤Á¡ÀÌ °¡ÁßÄ¡ CÀÎ °£¼±À¸·Î ¿¬°áµÇ¾î ÀÖ´Ù.
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-V: 1 ~ 10,000
-E: 1 ~ 100,000
-
-ÃÖ¼Ò ½ºÆÐ´× Æ®¸®ÀÇ °¡ÁßÄ¡°¡ intÇüÀ¸·Î Ç¥ÇöÇÒ ¼ö ÀÖ´Â ¹üÀ§°¡ µÇ´Â °æ¿ìÀÇ ÀÔ·Â¸¸ ÁÖ¾îÁø´Ù.
-
-- ¹®Á¦ »óÈ²
- ÃÖ¼Ò ½ºÆÐ´× Æ®¸®ÀÇ °¡ÁßÄ¡¸¦ ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-ÃÖ¼Ò ½ºÆÐ´× Æ®¸®¸¦ ±¸ÇÒ ¶§´Â °æ·Î¸¦ µû·Î ÁöÁ¤ÇÒ ÇÊ¿ä°¡ ¾øÀ¸¹Ç·Î, ¿ì¼± ¼øÀ§ Å¥¿¡ ³Ö¾î °£¼±À» ÇÏ³ª¾¿ »©°í,
-
-union find ¾Ë°í¸®ÁòÀ¸·Î ¾ç ÂÊ ´Ù ¿¬°áµÇ¾î ÀÖÀ» ¶§´Â ¹«½ÃÇÏ°í ³Ñ¾î°£´Ù!
-
-3. °èÈ¹ °ËÁõ
-*/
-
 #define MAX 1001
 
-// ÇÊ¿äÇÑ º¯¼ö ¼±¾ð
-int T, N, K, W; // Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö, °Ç¹°ÀÇ °³¼ö, °Ç¼³ ¼ø¼­ ±ÔÄ¢ °³¼ö, ¸ñÇ¥ °Ç¹°
+// í•„ìš”í•œ ë³€ìˆ˜ ì„ ì–¸
+int T, N, K, W; // í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜, ê±´ë¬¼ì˜ ê°œìˆ˜, ê±´ì„¤ ìˆœì„œ ê·œì¹™ ê°œìˆ˜, ëª©í‘œ ê±´ë¬¼
 
 
 
@@ -39,21 +14,21 @@ int solution(int times[MAX], int pre[MAX], vector<int> suc[MAX]) {
     int result[MAX] = { 0, };
     queue<int>Queue;
 
-    // ÀÌÀü¿¡ Áö¾î¾ßÇÒ °Ç¹°ÀÌ ¾ø´Â °Ç¹°ºÎÅÍ °Ç¼³
+    // ì´ì „ì— ì§€ì–´ì•¼í•  ê±´ë¬¼ì´ ì—†ëŠ” ê±´ë¬¼ë¶€í„° ê±´ì„¤
     for (int i = 0; i < N; i++)
         if (!pre[i]) Queue.push(i);
 
-    // W¹ø °Ç¹°À» Áþ±âÀ§ÇØ ¸ÕÀú Áö¾î¾ß ÇÏ´Â °Ç¹°ÀÌ ¾øÀ» ¶§
+    // Wë²ˆ ê±´ë¬¼ì„ ì§“ê¸°ìœ„í•´ ë¨¼ì € ì§€ì–´ì•¼ í•˜ëŠ” ê±´ë¬¼ì´ ì—†ì„ ë•Œ
     while (pre[W] > 0) {
         int u = Queue.front();
         Queue.pop();
-        // ´ÙÀ½ °Ç¹°µéÀÇ °Ç¼³ ½Ã°£ °»½Å
+        // ë‹¤ìŒ ê±´ë¬¼ë“¤ì˜ ê±´ì„¤ ì‹œê°„ ê°±ì‹ 
         for (int next : suc[u]) {
             result[next] = max(result[next], result[u] + times[u]);
             if (--pre[next] == 0) Queue.push(next);
         }
     }
-    // ÇöÀç±îÁö °è»êµÈ ½Ã°£ + ¸ñÇ¥ °Ç¹°À» Áþ´Â µ¥ °É¸®´Â ½Ã°£
+    // í˜„ìž¬ê¹Œì§€ ê³„ì‚°ëœ ì‹œê°„ + ëª©í‘œ ê±´ë¬¼ì„ ì§“ëŠ” ë° ê±¸ë¦¬ëŠ” ì‹œê°„
     return result[W] + times[W];
 }
 
@@ -64,9 +39,9 @@ int main() {
     cin >> T;
 
     for (int t = 0; t < T; t++) {
-        int times[MAX]; // °Ç¼³¿¡ °É¸®´Â ½Ã°£
-        int pre[MAX] = { 0, }; // ÀÌÀü ³ëµåÀÇ °³¼ö
-        vector<int> suc[MAX]; // ÀÌÈÄ ³ëµå
+        int times[MAX]; // ê±´ì„¤ì— ê±¸ë¦¬ëŠ” ì‹œê°„
+        int pre[MAX] = { 0, }; // ì´ì „ ë…¸ë“œì˜ ê°œìˆ˜
+        vector<int> suc[MAX]; // ì´í›„ ë…¸ë“œ
         cin >> N >> K;
         for (int i = 0; i < N; i++)
             cin >> times[i];
