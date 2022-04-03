@@ -8,8 +8,6 @@ using namespace std;
 // 필요한 변수 선언
 int T, N, K, W; // 테스트 케이스의 개수, 건물의 개수, 건설 순서 규칙 개수, 목표 건물
 
-
-
 int solution(int times[MAX], int pre[MAX], vector<int> suc[MAX]) {
     int result[MAX] = { 0, };
     queue<int>Queue;
