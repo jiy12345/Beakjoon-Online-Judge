@@ -2,51 +2,9 @@
 #include<vector>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: µå·¡°ï Ä¿ºêÀÇ °³¼ö
-
- µå·¡°ï Ä¿ºê Á¤º¸
-x, y: µå·¡°ï Ä¿ºêÀÇ ½ÃÀÛ ÁÂÇ¥
-d: ½ÃÀÛ ¹æÇâ
-g: ¼¼´ë
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1 ~ 20
-
- µå·¡°ï Ä¿ºê Á¤º¸
-x, y: 0 ~ 100
-d: 0 ~ 3
-0: xÁÂÇ¥°¡ Áõ°¡ÇÏ´Â ¹æÇâ (¡æ)
-1: yÁÂÇ¥°¡ °¨¼ÒÇÏ´Â ¹æÇâ (¡è)
-2: xÁÂÇ¥°¡ °¨¼ÒÇÏ´Â ¹æÇâ (¡ç)
-3: yÁÂÇ¥°¡ Áõ°¡ÇÏ´Â ¹æÇâ (¡é)
-
-g: 0 ~ 10
-
-ÀÔ·ÂÀ¸·Î ÁÖ¾îÁö´Â µå·¡°ï Ä¿ºê´Â °ÝÀÚ ¹ÛÀ¸·Î ¹þ¾î³ªÁö ¾Ê´Â´Ù.
-µå·¡°ï Ä¿ºê´Â ¼­·Î °ãÄ¥ ¼ö ÀÖ´Ù.
-
-
-- ¹®Á¦ »óÈ²
- Å©±â°¡ 1x1ÀÎ Á¤»ç°¢ÇüÀÇ ³× ²ÀÁþÁ¡ÀÌ ¸ðµÎ µå·¡°ï Ä¿ºêÀÇ ÀÏºÎÀÎ °ÍÀÇ °³¼ö¸¦ ±¸ÇÏ¶ó.
-
-2. Ç®ÀÌ °èÈ¹
- command º¤ÅÍ¸¦ ¸¸µé¾î¼­ ÇÑ ¼¼´ë¸¦ ¸ðµÎ ±×¸° ÈÄ 
- 
- º¹»ç + È¸ÀüÇÏ¿© µÚ¿¡ Ãß°¡ÇÏ´Â Çü½ÄÀ¸·Î ÁøÇàÇÏ¸é µÉ µí ÇÏ´Ù. 
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 enum class DIRECTION : int { EAST, NORTH, WEST, SOUTH };
 
-// ¹Ý½Ã°è ¹æÇâ 90µµ È¸Àü
+// ë°˜ì‹œê³„ ë°©í–¥ 90ë„ íšŒì „
 inline constexpr DIRECTION operator++(DIRECTION a) {
 	int answer = static_cast<int>(a) + 1;
 
@@ -68,15 +26,15 @@ void dragonCurve(int x, int y, int d, int g) {
 
 	map[cur_y][cur_x] = true;
 	
-	// µå·¡°ï Ä¿ºêÀÇ ÀÌµ¿ ¹æÇâµé °è»êÇÏ±â
+	// ë“œëž˜ê³¤ ì»¤ë¸Œì˜ ì´ë™ ë°©í–¥ë“¤ ê³„ì‚°í•˜ê¸°
 	for (int i = 0; i < g; i++) {
 		int cur_size = moves.size();
 
 		for (int j = cur_size - 1; j >= 0; j--)
-			moves.push_back(++moves[j]); // ¹Ý½Ã°è ¹æÇâ 90µµ È¸Àü ½ÃÅ² ³»¿ëÀ» º¹»ç
+			moves.push_back(++moves[j]); // ë°˜ì‹œê³„ ë°©í–¥ 90ë„ íšŒì „ ì‹œí‚¨ ë‚´ìš©ì„ ë³µì‚¬
 	}
 
-	// µå·¡°ï Ä¿ºê¿¡ È°¿ëµÇ´Â ÁÂÇ¥µé Ç¥½Ã
+	// ë“œëž˜ê³¤ ì»¤ë¸Œì— í™œìš©ë˜ëŠ” ì¢Œí‘œë“¤ í‘œì‹œ
 	for (int i = 0; i < moves.size(); i++) {
 		cur_x = cur_x + dx[static_cast<int>(moves[i])];
 		cur_y = cur_y + dy[static_cast<int>(moves[i])];
