@@ -180,6 +180,7 @@
  * [11399: ATM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11399%20-%20ATM.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222494105653))
 
 ## Implementation
+ * [2290: LCD Test](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2290%20-%20LCD%20Test.cpp) 
  * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509993489))
  * [11723: 집합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/11723%20-%20%EC%A7%91%ED%95%A9.cpp)
  * [14499: 주사위 굴리기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14499%20-%20%EC%A3%BC%EC%82%AC%EC%9C%84%20%EA%B5%B4%EB%A6%AC%EA%B8%B0.cpp)
