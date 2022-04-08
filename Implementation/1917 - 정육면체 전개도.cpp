@@ -1,50 +1,14 @@
 #include <iostream>
 #include <vector>
-#include <queue>	
-#include <cstring>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- ¼¼°³ÀÇ ÀÔ·Â µ¥ÀÌÅÍ°¡ ÁÖ¾îÁø´Ù.
- °¢°¢ÀÇ ÀÔ·Â µ¥ÀÌÅÍ´Â ¿©¼¸ °³ÀÇ ÁÙ·Î ÀÌ·ç¾îÁ® ÀÖ´Ù.
- °¢ µ¥ÀÌÅÍ´Â ¿©¼¸ °³ÀÇ ÁÙ¿¡ °ÉÃÄ ¿©¼¸ °³ÀÇ ¼ýÀÚ°¡ ºó Ä­À» »çÀÌ¿¡ µÎ°í ÁÖ¾îÁø´Ù.
- ¼ýÀÚ´Â 0 ¶Ç´Â 1·Î ÀÌ·ç¾îÁø´Ù.
- 36°³ÀÇ ¼ýÀÚ Áß 1Àº Á¤È®È÷ 6°³°¡ ÀÖ´Ù.
- Á¤»ç°¢ÇüµéÀÌ ¼­·Î ¶³¾îÁ® ÀÖ´Â °æ¿ì´Â ¾ø´Ù.
-
- 0: °ø¹é
- 1: Á¤»ç°¢Çü
-
-
-- ¹®Á¦ »óÈ²
- ¼¼ °³ÀÇ ÁÙ¿¡ °ÉÃÄ, ÀÔ·ÂµÈ ¼ø¼­´ë·Î Àü°³µµ°¡ Á¤À°¸éÃ¼ÀÇ Àü°³µµÀÌ¸é yes¸¦, ¾Æ´Ï¸é no¸¦ Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- command º¤ÅÍ¸¦ ¸¸µé¾î¼­ ÇÑ ¼¼´ë¸¦ ¸ðµÎ ±×¸° ÈÄ
-
- º¹»ç + È¸ÀüÇÏ¿© µÚ¿¡ Ãß°¡ÇÏ´Â Çü½ÄÀ¸·Î ÁøÇàÇÏ¸é µÉ µí ÇÏ´Ù.
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
-int di[4] = { 1, -1, 0, 1 };
-int dj[4] = { 0, 0, 1, -1 };
 int arr[6][6];
 
 bool isDice() {
 	vector <int> row[6];
 	vector <int> column[6];
 
-	//°¡·Î ÀúÀå
+	//ê°€ë¡œ ì €ìž¥
 	int numOfRow = 0;
 	bool rtf = false;
 	for (int i = 0; i < 6; i++) {
@@ -59,7 +23,7 @@ bool isDice() {
 			numOfRow++;
 	}
 
-	//¼¼·Î ÀúÀå
+	//ì„¸ë¡œ ì €ìž¥
 	int ccnt = 0;
 	bool ctf = false;
 	for (int j = 0; j < 6; j++) {
