@@ -16,20 +16,19 @@ class stack {
 private:
 	int stackArray[STACK_CAPACITY] = { 0, };
 	int top_index;
-
 public:
 	stack() {
 		top_index = -1;
 	}
 
-	bool push(int X) {
+	int push(int X) {
 		if (full()) {
 			return -1;
 		}
 		else {
 			stackArray[++top_index] = X;
+			return 1;
 		}
-
 	}
 
 	int pop() {
