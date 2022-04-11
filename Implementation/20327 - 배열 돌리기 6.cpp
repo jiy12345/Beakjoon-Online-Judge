@@ -2,44 +2,6 @@
 #include<cstring>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¹è¿­ÀÇ ¼¼·Î, °¡·Î ±æÀÌ´Â 2^N
-R: ¿¬»êÀÇ °³¼ö
-k: ¿¬»êÀÇ ¹øÈ£
-l: ºÎºÐ ¹è¿­ÀÇ Å©±â°¡ 2^l
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1 ~ 7
-R: 1 ~ 1,000
-¹è¿­ÀÇ °¢ ¿ø¼Ò: -999 ~ 999
-
-k = 1: °¢ ºÎºÐ ¹è¿­ ³»ºÎ »óÇÏ ¹ÝÀü
-k = 2: °¢ ºÎºÐ ¹è¿­ ³»ºÎ ÁÂ¿ì ¹ÝÀü
-k = 3: °¢ ºÎºÐ ¹è¿­ ³»ºÎ ¿À¸¥ÂÊÀ¸·Î 90µµ È¸Àü
-k = 4: °¢ ºÎºÐ ¹è¿­ ³»ºÎ ¿ÞÂÊÀ¸·Î 90µµ È¸Àü
-k = 5: °¢ ºÎºÐ ¹è¿­ °£ »óÇÏ ¹ÝÀü
-k = 6: °¢ ºÎºÐ ¹è¿­ °£ ÁÂ¿ì ¹ÝÀü
-k = 7: °¢ ºÎºÐ ¹è¿­ °£ ¿À¸¥ÂÊÀ¸·Î 90µµ È¸Àü
-k = 8: °¢ ºÎºÐ ¹è¿­ °£ ¿ÞÂÊÀ¸·Î 90µµ È¸Àü
-
-
-- ¹®Á¦ »óÈ²
-¹è¿­¿¡ R°³ÀÇ ¿¬»êÀ» ¼ø¼­´ë·Î ¼öÇàÇÑ °á°ú¸¦ ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-1, 2¹ø ¿¬»ê: swap ¿¬»êÀ» ÅëÇØ ÁøÇàÇÏ¸é µÉ µí ÇÏ´Ù.
- => ¹Ýº¹ È½¼ö¸¦ °è»êÇÏ´Â °ÍÀÌ ¾Æ´Ï¶ó °¢ ¹Ýº¹¶§¸¶´Ù sub arrayÀÇ Å©±â¸¸Å­ ´õÇÏ¸é µÉ µí ÇÏ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
-
 int N, R, k, l, sizeOfArray;
 int A1[128][128];
 int A2[128][128];
@@ -51,10 +13,10 @@ void swap(int& a, int& b) {
 }
 
 void operationOne(int sizeOfSubArray) {
-	// °¢ ºÎºÐº°·Î ¿¬»ê ÁøÇà
+	// ê° ë¶€ë¶„ë³„ë¡œ ì—°ì‚° ì§„í–‰
 	for (int i = 0; i < sizeOfArray; i += sizeOfSubArray) {
 		for (int j = 0; j < sizeOfArray; j += sizeOfSubArray) {
-			// ³¡ À§Ä¡ ¼³Á¤
+			// ë ìœ„ì¹˜ ì„¤ì •
 			int end_i = i + sizeOfSubArray;
 			int end_j = j + sizeOfSubArray;
 
@@ -69,10 +31,10 @@ void operationOne(int sizeOfSubArray) {
 }
 
 void operationTwo(int sizeOfSubArray) {
-	// °¢ ºÎºÐº°·Î ¿¬»ê ÁøÇà
+	// ê° ë¶€ë¶„ë³„ë¡œ ì—°ì‚° ì§„í–‰
 	for (int i = 0; i < sizeOfArray; i += sizeOfSubArray) {
 		for (int j = 0; j < sizeOfArray; j += sizeOfSubArray) {
-			// ³¡ À§Ä¡ ¼³Á¤
+			// ë ìœ„ì¹˜ ì„¤ì •
 			int end_i = i + sizeOfSubArray;
 			int end_j = j + sizeOfSubArray;
 
@@ -87,10 +49,10 @@ void operationTwo(int sizeOfSubArray) {
 }
 
 void operationThree(int sizeOfSubArray) {
-	// °¢ ºÎºÐº°·Î ¿¬»ê ÁøÇà
+	// ê° ë¶€ë¶„ë³„ë¡œ ì—°ì‚° ì§„í–‰
 	for (int i = 0; i < sizeOfArray; i += sizeOfSubArray) {
 		for (int j = 0; j < sizeOfArray; j += sizeOfSubArray) {
-			// ³¡ À§Ä¡ ¼³Á¤
+			// ë ìœ„ì¹˜ ì„¤ì •
 			int end_i = i + sizeOfSubArray;
 			int end_j = j + sizeOfSubArray;
  
@@ -105,10 +67,10 @@ void operationThree(int sizeOfSubArray) {
 }
 
 void operationFour(int sizeOfSubArray) {
-	// °¢ ºÎºÐº°·Î ¿¬»ê ÁøÇà
+	// ê° ë¶€ë¶„ë³„ë¡œ ì—°ì‚° ì§„í–‰
 	for (int i = 0; i < sizeOfArray; i += sizeOfSubArray) {
 		for (int j = 0; j < sizeOfArray; j += sizeOfSubArray) {
-			// ³¡ À§Ä¡ ¼³Á¤
+			// ë ìœ„ì¹˜ ì„¤ì •
 			int end_i = i + sizeOfSubArray;
 			int end_j = j + sizeOfSubArray;
 
