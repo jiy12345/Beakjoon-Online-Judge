@@ -1,44 +1,6 @@
 #include<iostream>
-#include<cstring>
 #include<deque>
 using namespace std;
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ÄÁº£ÀÌ¾î º§Æ®ÀÇ ±æÀÌ
-K: ³»±¸µµ°¡ 0ÀÎ Ä­ÀÇ °³¼ö°¡ K°³ ÀÌ»óÀÌ¸é °úÁ¤ Á¾·á
-Ai: i¹ø Ä­ÀÇ ³»±¸µµ
- => 1¹ø À§Ä¡: ¿Ã¸®´Â À§Ä¡
- => N¹ø À§Ä¡: ³»¸®´Â À§Ä¡
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1 ~ 7
-K: 1 ~ 2N
-Ai: 1 ~ 1,000
-
-- ¹®Á¦ »óÈ²
-
-º§Æ®°¡ °¢ Ä­ À§¿¡ ÀÖ´Â ·Îº¿°ú ÇÔ²² ÇÑ Ä­ È¸ÀüÇÑ´Ù.
-°¡Àå ¸ÕÀú º§Æ®¿¡ ¿Ã¶ó°£ ·Îº¿ºÎÅÍ, º§Æ®°¡ È¸ÀüÇÏ´Â ¹æÇâÀ¸·Î ÇÑ Ä­ ÀÌµ¿ÇÒ ¼ö ÀÖ´Ù¸é ÀÌµ¿ÇÑ´Ù. ¸¸¾à ÀÌµ¿ÇÒ ¼ö ¾ø´Ù¸é °¡¸¸È÷ ÀÖ´Â´Ù.
-  ·Îº¿ÀÌ ÀÌµ¿ÇÏ±â À§ÇØ¼­´Â ÀÌµ¿ÇÏ·Á´Â Ä­¿¡ ·Îº¿ÀÌ ¾øÀ¸¸ç, ±× Ä­ÀÇ ³»±¸µµ°¡ 1 ÀÌ»ó ³²¾Æ ÀÖ¾î¾ß ÇÑ´Ù.
-¿Ã¸®´Â À§Ä¡¿¡ ÀÖ´Â Ä­ÀÇ ³»±¸µµ°¡ 0ÀÌ ¾Æ´Ï¸é ¿Ã¸®´Â À§Ä¡¿¡ ·Îº¿À» ¿Ã¸°´Ù.
-³»±¸µµ°¡ 0ÀÎ Ä­ÀÇ °³¼ö°¡ K°³ ÀÌ»óÀÌ¶ó¸é °úÁ¤À» Á¾·áÇÑ´Ù. ±×·¸Áö ¾Ê´Ù¸é 1¹øÀ¸·Î µ¹¾Æ°£´Ù.
-
-
-2. Ç®ÀÌ °èÈ¹
- È¸Àü ¸ðµç Á¤º¸¸¦ È¸Àü ½ÃÅ°µÇ, ´ÙÀ½°ú °°Àº ±ÔÄ¢À» µû¸£µµ·Ï ÇÏÀÚ.
-
-
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 
 int N, K, numOfZero;
 
@@ -47,7 +9,7 @@ deque<int> A;
 void rotate(deque<bool>& hasRobot) {
 	hasRobot.push_front(hasRobot.back());
 	hasRobot.pop_back();
-	// ³»¸®´Â À§Ä¡¿¡¼­ ·Îº¿ »©±â
+	// ë‚´ë¦¬ëŠ” ìœ„ì¹˜ì—ì„œ ë¡œë´‡ ë¹¼ê¸°
 	hasRobot[N - 1] = false;
 
 	A.push_front(A.back());
@@ -56,23 +18,23 @@ void rotate(deque<bool>& hasRobot) {
 
 void robotMove(deque<bool>& hasRobot) {
 	for (int i = N - 2; i >= 0; i--) {
-		// ÇØ´ç À§Ä¡¿¡ ·Îº¿ÀÌ ¾øÀ» °æ¿ì ÁøÇà x
+		// í•´ë‹¹ ìœ„ì¹˜ì— ë¡œë´‡ì´ ì—†ì„ ê²½ìš° ì§„í–‰ x
 		if (hasRobot[i] == false) continue;
 		
-		// ÀÌµ¿ÇÏ·Á´Â Ä­¿¡ ·Îº¿ÀÌ ¾øÀ¸¸ç, ±× Ä­ÀÇ ³»±¸µµ°¡ 1 ÀÌ»ó ³²¾Æ ÀÖ¾î¾ß
+		// ì´ë™í•˜ë ¤ëŠ” ì¹¸ì— ë¡œë´‡ì´ ì—†ìœ¼ë©°, ê·¸ ì¹¸ì˜ ë‚´êµ¬ë„ê°€ 1 ì´ìƒ ë‚¨ì•„ ìžˆì–´ì•¼
 		if (hasRobot[i + 1] == false && A[i + 1] >= 1) {
-			// ´ÙÀ½ Ä­À¸·Î ·Îº¿ ¿Å±â±â
+			// ë‹¤ìŒ ì¹¸ìœ¼ë¡œ ë¡œë´‡ ì˜®ê¸°ê¸°
 			hasRobot[i] = false;
 			hasRobot[i + 1] = true;
-			// ÀÌµ¿ÇÑ Ä­ÀÇ ³»±¸µµ 1 °¨¼Ò
+			// ì´ë™í•œ ì¹¸ì˜ ë‚´êµ¬ë„ 1 ê°ì†Œ
 			A[i + 1]--;
 
-			// ³»±¸µµ°¡ 0ÀÎ Ä­ÀÇ °³¼ö ¼¼±â
+			// ë‚´êµ¬ë„ê°€ 0ì¸ ì¹¸ì˜ ê°œìˆ˜ ì„¸ê¸°
 			if (A[i + 1] == 0) numOfZero++;
 		}
 	}
 
-	// ³»¸®´Â À§Ä¡¿¡¼­ ·Îº¿ »©±â
+	// ë‚´ë¦¬ëŠ” ìœ„ì¹˜ì—ì„œ ë¡œë´‡ ë¹¼ê¸°
 	hasRobot[N - 1] = false;
 }
 
@@ -84,21 +46,22 @@ int solution() {
 
 	while (true) {
 		step_cnt++;
-		// 1. º§Æ®°¡ °¢ Ä­ À§¿¡ ÀÖ´Â ·Îº¿°ú ÇÔ²² ÇÑÄ­ È¸Àü
+		// 1. ë²¨íŠ¸ê°€ ê° ì¹¸ ìœ„ì— ìžˆëŠ” ë¡œë´‡ê³¼ í•¨ê»˜ í•œì¹¸ íšŒì „
 		rotate(hasRobot);
 
-		// 2. °¡Àå ¸ÕÀú º§Æ®¿¡ ¿Ã¶ó°£ ·Îº¿ºÎÅÍ º§Æ®°¡ È¸ÀüÇÏ´Â ¹æÇâÀ¸·Î ÇÑÄ­ ÀÌµ¿ÇÒ ¼ö ÀÕ´Ù¸é ÀÌµ¿
+		// 2. ê°€ìž¥ ë¨¼ì € ë²¨íŠ¸ì— ì˜¬ë¼ê°„ ë¡œë´‡ë¶€í„° ë²¨íŠ¸ê°€ íšŒì „í•˜ëŠ” ë°©í–¥ìœ¼ë¡œ í•œì¹¸ ì´ë™í•  ìˆ˜ ìž‡ë‹¤ë©´ ì´ë™
 		robotMove(hasRobot);
 
-		// 4. ¿Ã¸®´Â À§Ä¡¿¡ ÀÖ´Â Ä­ÀÇ ³»±¸µµ°¡ 0ÀÌ ¾Æ´Ï¶ó¸é ¿Ã¸®´Â À§Ä¡¿¡ ·Îº¿À» ¿Ã¸°´Ù.
+		// 3. ì˜¬ë¦¬ëŠ” ìœ„ì¹˜ì— ìžˆëŠ” ì¹¸ì˜ ë‚´êµ¬ë„ê°€ 0ì´ ì•„ë‹ˆë¼ë©´ ì˜¬ë¦¬ëŠ” ìœ„ì¹˜ì— ë¡œë´‡ì„ ì˜¬ë¦°ë‹¤.
 		if (A[0] >= 1) {
 			hasRobot.front() = true;
 			A[0]--;
 
-			// ³»±¸µµ°¡ 0ÀÎ Ä­ÀÇ °³¼ö ¼¼±â
+			// ë‚´êµ¬ë„ê°€ 0ì¸ ì¹¸ì˜ ê°œìˆ˜ ì„¸ê¸°
 			if (A[0] == 0) numOfZero++;
 		}
-
+		
+		// 4. ë‚´êµ¬ë„ê°€ 0ì¸ ì¹¸ì˜ ê°œìˆ˜ê°€ Kê°œ ì´ìƒì´ë¼ë©´ ê³¼ì •ì„ ì¢…ë£Œí•œë‹¤. ê·¸ë ‡ì§€ ì•Šë‹¤ë©´ 1ë²ˆìœ¼ë¡œ ëŒì•„ê°„ë‹¤.
 		if (numOfZero >= K) break;
 	}
 
