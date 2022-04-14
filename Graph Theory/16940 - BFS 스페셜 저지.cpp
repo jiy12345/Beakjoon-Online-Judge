@@ -3,37 +3,6 @@
 #include<set>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: Á¤Á¡ÀÇ °³¼ö
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2 ~ 100,000
-Æ®¸® Á¤º¸°¡ ÁÖ¾îÁú ¶§´Â 1ºÎÅÍ N±îÁöÀÇ Á¤Á¡ÀÌ 1¹ø¾¿ µîÀåÇÑ´Ù.
-
-- ¹®Á¦ »óÈ²
- Æ®¸®ÀÇ Á¤º¸°¡ ÁÖ¾îÁö°í, BFSÀÇ ¹æ¹® ¼ø¼­°¡ ÁÖ¾îÁú ¶§,
- ÇØ´ç ¹æ¹® ¼ø¼­°¡ BFS·Î °¡´ÉÇÑ ¹æ¹® ¼ø¼­ÀÎÁö Ã¼Å©ÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
- BFS»ó¿¡¼­ ±íÀÌ°¡ °°Àº ³ëµå³¢¸®´Â ¹æ¹® ¼ø¼­°¡ ¹Ù²ð ¼ö ÀÖ´Ù. 
-
- µû¶ó¼­ ·çÆ® ±âÁØÀ¸·Î °¢ ³ëµåÀÇ ±íÀÌ¸¦ ±â·ÏÇØ³õ°í, ¼ø¼­´ë·Î Ã¼Å©ÇÏ¸é¼­ ³¡±îÁö ºñ³»¸² Â÷¼øÀ» ÀÌ·é´Ù¸é ³ª¿Ã ¼ö ÀÖ´Â ¼ö¿­
- ±×·¸Áö ¾Ê´Ù¸é ³ª¿Ã ¼ö ¾ø´Â ¼ö¿­·Î ÆÇ´ÜÇÏ¸é µÉ µí ÇÏ´Ù.
- 
- => ÀÌ·¸°Ô¸¸ ÇÑ´Ù¸é ¾î¶² ºÎ¸ð ³ëµå°¡ ³ª¿Â ÈÄ ´ÙÀ½ ³ª¿À´Â ³ëµåµéÀÌ ´Ù¸¥ ºÎ¸ðÀÇ ÀÚ½Ä ³ëµåµéÀÏ °æ¿ì¸¦ Ã¼Å©ÇÏÁö ¸øÇÑ´Ù.
- µû¶ó¼­ ÇÏ³ªÀÇ ºÎ¸ð°¡ µîÀåÇÏ¿´À» ¶§, ±×ºÎ¸ðÀÇ ÀÚ½ÄµéÀÌ ¸ÕÀú µîÀåÇÏ¿´´ÂÁöµµ Ã¼Å©ÇÏ¿©¾ß ÇÑ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
-
 int N;
 vector<int> graph[100001];
 int visitOrder[100001];
@@ -52,17 +21,17 @@ int bfs() {
 
 
 	set<int> visitable;
-	int idx = 1; // °æ·Î¿¡¼­ °¡´ÉÇÑ ÈÄº¸ ³ëµå±ºÀÇ ½ÃÀÛ ÀÎµ¦½º
+	int idx = 1; // ê²½ë¡œì—ì„œ ê°€ëŠ¥í•œ í›„ë³´ ë…¸ë“œêµ°ì˜ ì‹œìž‘ ì¸ë±ìŠ¤
 	while (!bfs_queue.empty()) {
 		int cur_node = bfs_queue.front();
 		bfs_queue.pop();
 
 		int sz = 0;
-		// ÇöÀç ³ëµå·ÎºÎÅÍ ¹æ¹® °¡´ÉÇÑ ¸ðµç ³ëµå¿¡ ´ëÇØ
+		// í˜„ìž¬ ë…¸ë“œë¡œë¶€í„° ë°©ë¬¸ ê°€ëŠ¥í•œ ëª¨ë“  ë…¸ë“œì— ëŒ€í•´
 		for (int next : graph[cur_node]) {
-			// ¾ÆÁ÷ ¹æ¹®ÇÏÁö ¾Ê¾ÒÀ» °æ¿ì
+			// ì•„ì§ ë°©ë¬¸í•˜ì§€ ì•Šì•˜ì„ ê²½ìš°
 			if (isVisited[next] == false) {
-				// ¹æ¹® °¡´ÉÇÑ ÈÄº¸±º¿¡ Ãß°¡
+				// ë°©ë¬¸ ê°€ëŠ¥í•œ í›„ë³´êµ°ì— ì¶”ê°€
 				visitable.insert(next);
 				isVisited[next] = true;
 				sz++;
@@ -70,10 +39,10 @@ int bfs() {
 		}
 
 		for (int i = idx; i < idx + sz; i++) {
-			// ÈÄº¸±º¿¡ ´ÙÀ½ ¼ø¼­ÀÇ ³ëµå°¡ ¾øÀ» °æ¿ì ¸¸µé ¼ö ¾ø´Â °Í
+			// í›„ë³´êµ°ì— ë‹¤ìŒ ìˆœì„œì˜ ë…¸ë“œê°€ ì—†ì„ ê²½ìš° ë§Œë“¤ ìˆ˜ ì—†ëŠ” ê²ƒ
 			if (visitable.count(visitOrder[i]) == 0) {
 				return 0;
-			} // ´ÙÀ½ ¼ø¼­ÀÇ ³ëµå°¡ ÀÖÀ» °æ¿ì ³ëµå Çª½Ã
+			} // ë‹¤ìŒ ìˆœì„œì˜ ë…¸ë“œê°€ ìžˆì„ ê²½ìš° ë…¸ë“œ í‘¸ì‹œ
 			else bfs_queue.push(visitOrder[i]);
 		}
 		idx += sz;
