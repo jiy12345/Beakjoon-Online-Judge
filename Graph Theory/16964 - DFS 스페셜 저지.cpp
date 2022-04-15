@@ -3,39 +3,6 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: Á¤Á¡ÀÇ °³¼ö
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2 ~ 100,000
-Æ®¸® Á¤º¸°¡ ÁÖ¾îÁú ¶§´Â 1ºÎÅÍ N±îÁöÀÇ Á¤Á¡ÀÌ 1¹ø¾¿ µîÀåÇÑ´Ù.
-½ÃÀÛ Á¤Á¡Àº Ç×»ó 1¹ø Á¤Á¡ÀÌ´Ù.
-
-- ¹®Á¦ »óÈ²
- Æ®¸®ÀÇ Á¤º¸°¡ ÁÖ¾îÁö°í, DFSÀÇ ¹æ¹® ¼ø¼­°¡ ÁÖ¾îÁú ¶§,
- ÇØ´ç ¹æ¹® ¼ø¼­°¡ DFS·Î °¡´ÉÇÑ ¹æ¹® ¼ø¼­ÀÎÁö Ã¼Å©ÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-Áß¿äÇÑ °ÍÀº °¢ ½ÃÁ¡¿¡¼­ ´ÙÀ½ À§Ä¡°¡ ³ª¿Ã¼ö ÀÖ´Â ¹æ¹® ¼ø¼­ÀÎ°¡ÀÌ´Ù.
-
-µû¶ó¼­ Å½»öÀ» ÁøÇàÇÏ¸é¼­ °¢ À§Ä¡¿¡¼­ °¥ ¼ö ÀÖ´Â À§Ä¡µéÀ» Ã£°í, ³¡±îÁö Å½»öÇÒ ¶§±îÁö °è¼ÓÇØ¼­ °¥ ¼ö ÀÖ´Ù¸é 
-
-
-1. 1ºÎÅÍ Å½»öÀ» ½ÃÀÛÇÑ´Ù.
-2. ÇöÀç ¼ø¼­¿¡ ¹æ¹®ÇØ¾ß ÇÏ´Â ³ëµå°¡ 1°ú ¿¬°áµÇ¾î ÀÖ´Â ³ëµåÀÎÁö Ã¼Å©ÇÑ´Ù.
-3. À§¿Í °°ÀÌ ¿¬¼âÀûÀ¸·Î ¹æ¹®ÇÏ¸ç, ¸®ÇÁ ³ëµå¿¡ ¹æ¹®ÇÏ¿´À» ¶§´Â
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
-
 int N;
 vector<int> graph[100001];
 vector<int> answer;
@@ -50,7 +17,7 @@ bool comp(int a, int b) {
 }
 
 
-// dfs·Î ¹æ¹®ÇÑ ¼ø¼­´ë·ÎÀÇ ¼ö¿­À» ±¸ÇØÁÖ´Â ÇÔ¼ö
+// dfsë¡œ ë°©ë¬¸í•œ ìˆœì„œëŒ€ë¡œì˜ ìˆ˜ì—´ì„ êµ¬í•´ì£¼ëŠ” í•¨ìˆ˜
 void dfs(int x) {
 	answer.push_back(x);
 
@@ -77,17 +44,17 @@ int main() {
 	vector<int> input(N);
 	for (int i = 0; i < N; i++) {
 		cin >> input[i];
-		// ±×·¡ÇÁÀÇ ³ëµå ¹æ¹® ¼ø¼­ Á¶Á¤À» À§ÇØ °¢ ³ëµå°¡ ¹æ¹®µÇ´Â ½ÃÁ¡ ÀúÀå
+		// ê·¸ëž˜í”„ì˜ ë…¸ë“œ ë°©ë¬¸ ìˆœì„œ ì¡°ì •ì„ ìœ„í•´ ê° ë…¸ë“œê°€ ë°©ë¬¸ë˜ëŠ” ì‹œì  ì €ìž¥
 		visitOrder[input[i]] = i + 1;
 	}
 
-	// Ã¹ ¼ýÀÚ°¡ 1ÀÌ ¾Æ´Ò °æ¿ì Æ²¸²
+	// ì²« ìˆ«ìžê°€ 1ì´ ì•„ë‹ ê²½ìš° í‹€ë¦¼
 	if (input[0] != 1) {
 		cout << 0;
 		return 0;
 	}
 	else {
-		// °¢ ³ëµå¿¡ ÀÎÁ¢ÇÑ ³ëµå·ÎÀÇ ¹æ¹® ¼ø¼­¸¦ ÀÔ·Â ¼ø¼­¿¡ ¸ÂÃç Á¤·Ä
+		// ê° ë…¸ë“œì— ì¸ì ‘í•œ ë…¸ë“œë¡œì˜ ë°©ë¬¸ ìˆœì„œë¥¼ ìž…ë ¥ ìˆœì„œì— ë§žì¶° ì •ë ¬
 		for (int i = 1; i <= N; i++) {
 			sort(graph[i].begin(), graph[i].end(), comp);
 		}
