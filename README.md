@@ -147,6 +147,7 @@
  * [11403: 경로 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11403%20-%20%EA%B2%BD%EB%A1%9C%20%EC%B0%BE%EA%B8%B0.cpp)
  * [**11404: 플로이드**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11404%20-%20%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C.cpp)
  * [11724: 연결 요소의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11724%20-%20%EC%97%B0%EA%B2%B0%20%EC%9A%94%EC%86%8C%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222537886059))
+ * [11725: 트리의 부모 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11725%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EB%B6%80%EB%AA%A8%20%EC%B0%BE%EA%B8%B0.cpp)
  * 12852: 1로 만들기 2 [[풀이 1(이전 노드 기록)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12852%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0%202_sol1.cpp)] [[풀이 2(각 노드별 경로 기록)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12852%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0%202_sol2.cpp)]
  * [12886: 돌 그룹](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12886%20-%20%EB%8F%8C%20%EA%B7%B8%EB%A3%B9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222674067433))
  * [12946: 육각 보드](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12946%20-%20%EC%9C%A1%EA%B0%81%20%EB%B3%B4%EB%93%9C.cpp)
