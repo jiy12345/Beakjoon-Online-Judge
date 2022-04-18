@@ -2,42 +2,6 @@
 #include<cstring>
 using namespace std;
 
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-n: ´ë³ª¹« ½£ÀÇ °¡·Î, ¼¼·Î ±æÀÌ
-
- - º¯¼ö Á¦ÇÑ »çÇ×
-n: 1 ~ 500
-
-°¢ Áö¿ªÀÇ ´ë³ª¹«ÀÇ ¾ç: 1 ~ 1,000,000
-
-- ¹®Á¦ »óÈ²
- ÆÇ´Ù°¡ ´ÙÀ½°ú °°ÀÌ ¿òÁ÷ÀÎ´Ù°í ÇÏÀÚ.
-
-- ÇÑ Áö¿ª¿¡¼­ ´ë³ª¹«¸¦ ¸Ô´Â´Ù.
-- Áö¿ªÀÇ ´ë³ª¹«¸¦ ´Ù ¸ÔÀ¸¸é »ó, ÇÏ, ÁÂ, ¿ìÁß ÇÑ°÷À¸·Î ÀÌµ¿ÇÑ´Ù.
-- ÇöÀç Áö¿ªº¸´Ù ´ë³ª¹«°¡ ¸¹Àº Áö¿ªÀ¸·Î¸¸ ÀÌµ¿ÇÑ´Ù.
-
- ´ë³ª¹« ½£ÀÇ »óÅÂ°¡ ÁÖ¾îÁ³´Ù°í ÇÒ ¶§, ÆÇ´Ù°¡ ÀÌµ¿ÇÒ ¼ö ÀÖ´Â Ä­ÀÇ ÃÖ´ë°ªÀ» ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
- ¸ðµç À§Ä¡¿¡ ´ëÇØ °Ë»öÇÏµÇ, ±× À§Ä¡°¡ ÃÖ¼Ò°ªÀÌ³ª ÃÖ´ë°ªÀÌ¶ó´Â º¸ÀåÀÌ ¾øÀ¸¹Ç·Î
-
- ±× À§Ä¡·ÎºÎÅÍ ÀÛ¾ÆÁö´Â ¹æÇâÀ¸·ÎÀÇ ÀÌµ¿°ú, Ä¿Áö´Â ¹æÇâÀ¸·ÎÀÇ ÀÌµ¿ÀÇ ÇÕÀ» ´õÇÏÀÚ!
-  => ÀÌ·¸°Ô ÇÏ¸é ½Ã°£ÃÊ°ú°¡ ¹ß»ýÇÑ´Ù.
- 
- »ç½Ç Ã³À½ »ý°¢ÇÑ ¹æÇâÀ¸·Î ÁøÇàÇÏ¸é Áßº¹µÈ ¿¬»êÀ» ÁøÇàÇØ¾ß ÇÏ´Â ºÎºÐÀÌ ³Ê¹« ¸¹´Ù.
-
- ±×·¸´Ù¸é ¾î¶»°Ô Áßº¹ ¿¬»êµÇ´Â ºÎºÐÀ» ÁÙÀÏ ¼ö ÀÖÀ»±î?
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 int di[4] = { 1, -1, 0, 0 };
 int dj[4] = { 0, 0, 1, -1 };
 
@@ -51,16 +15,15 @@ bool isInRange(int i, int j) {
 
 int dfs(int cur_i, int cur_j) {
 	if (maxDist[cur_i][cur_j] != 0) return maxDist[cur_i][cur_j];
-	// ÇöÀç Ä­µµ Æ÷ÇÔµÇ¾î¾ß ÇÏ¹Ç·Î
+	// í˜„ìž¬ ì¹¸ë„ í¬í•¨ë˜ì–´ì•¼ í•˜ë¯€ë¡œ
 	maxDist[cur_i][cur_j] = 1;
 
 	for (int i = 0; i < 4; i++) {
 		int next_i = cur_i + di[i];
 		int next_j = cur_j + dj[i];
 
-		// ½£ ¹üÀ§ ¹ÛÀÏ °æ¿ì Å½»öÀ» ÁøÇàÇÏÁö ¾ÊÀ½
+		// ìˆ² ë²”ìœ„ ë°–ì¼ ê²½ìš° íƒìƒ‰ì„ ì§„í–‰í•˜ì§€ ì•ŠìŒ
 		if (!isInRange(next_i, next_j)) continue;
-
 
 		if (bambooForest[cur_i][cur_j] < bambooForest[next_i][next_j]) {
 			maxDist[cur_i][cur_j] = max(maxDist[cur_i][cur_j], dfs(next_i, next_j) + 1);
