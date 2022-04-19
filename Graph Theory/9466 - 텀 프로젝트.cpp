@@ -2,45 +2,6 @@
 #include<cstring>
 using namespace std;
 
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-T: Å×½ºÆ® ÄÉÀÌ½ºÀÇ ¼ö
-r: ÇÐ»ýÀÇ ¼ö
-
- - º¯¼ö Á¦ÇÑ »çÇ×
-n: 2 ~ 100,000
-
-- ¹®Á¦ »óÈ²
-ÇÐ»ýµéÀÌ(s1, s2, ..., sr)ÀÌ¶ó ÇÒ ¶§, r=1ÀÌ°í s1ÀÌ s1À» ¼±ÅÃÇÏ´Â °æ¿ì³ª, s1ÀÌ s2¸¦ ¼±ÅÃÇÏ°í, s2°¡ s3¸¦ ¼±ÅÃÇÏ°í,..., sr-1ÀÌ srÀ» ¼±ÅÃÇÏ°í, srÀÌ s1À» ¼±ÅÃÇÏ´Â °æ¿ì¿¡¸¸ ÇÑ ÆÀÀÌ µÉ ¼ö ÀÖ´Ù.
-
-ÇÁ·ÎÁ§Æ® ÆÀ¿¡ ¼ÓÇÏÁö ¸øÇÑ ÇÐ»ýµéÀÇ ¼ö¸¦ ³ªÅ¸³»¶ó
-
-2. Ç®ÀÌ °èÈ¹
- ÀÎÁ¢ ¸®½ºÆ® ÇüÅÂ·Î ±×·¡ÇÁ¸¦ ÀúÀåÇÑ µÚ, »çÀÌÅ¬À» ÀÌ·ê °æ¿ì ÆÀÀ¸·Î, ±×·¸Áö ¾ÊÀ» °æ¿ì ÆÀ¿¡ ¼ÓÇÏÁö ¾Ê´Â °ÍÀ¸·Î Ç¥Çö
-
- ÀÏ´Ü »çÀÌÅ¬À» Ã£¾Æ¾ß ÇÏ´Â ¹®Á¦´Â ¸Â´Ù.
-
- ¹®Á¦°¡ µÇ´Â ºÎºÐÀº ¹«¾ùÀÏ±î?
-
-»çÀÌÅ¬ Ã¼Å©¸¦ ¹æ¹®ÇÏÁö ¾ÊÀº ³ëµå Áß ÀÌÀü ³ëµå°¡ ¾Æ´Ñ ³ëµåÀÏ °æ¿ì¿¡ Ã¼Å©ÇÏ°í ÀÖ´Âµ¥,
-
-ÀÌ·¸°Ô ÇÒ °æ¿ì ´Ù¸¥ °æ·Î¿¡¼­ »çÀÌÅ¬À» °¡¸®Ä×À» °æ¿ì¸¦ Ã¼Å©ÇÏÁö ¸øÇÑ´Ù.
-
-±×·¸´Ù¸é ¾î¶»°Ô ÇØ¾ßÇÒ±î?
-
-»çÀÌÅ¬ÀÌ ¿Ï¼ºµÈ °æ¿ì µû·Î Ç¥½ÃÇØÁÖ´Â °ÍÀº ¾î¶³±î?
- => »çÀÌÅ¬ÀÌ ÀÏ´Ü ¿Ï¼ºµÇ¸é ´Ù¸¥ »ç¶÷°ú´Â ÆÀÀ» ÀÌ·ê¼ö´Â ¾øÀ¸¹Ç·Î, ¾Æ¿¹ ¹æ¹®ÇÏÁö ¸øÇÏµµ·Ï ÇÏ´Â °ÍÀÌ´Ù.
-
-ÀÏ´Ü
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 #define MAX 100001
 
 int T, n, numIsInTeam;
@@ -58,15 +19,15 @@ void findTeam(int nodeNum) {
 
 	if (!isVisited[next]) findTeam(next);
 
-	//ÀÌ¹Ì ¹æ¹®ÇßÁö¸¸ Å½»öÀÌ ³¡³­ ³ëµå°¡ ¾Æ´Ï¶ó¸é »çÀÌÅ¬
+	//ì´ë¯¸ ë°©ë¬¸í–ˆì§€ë§Œ íƒìƒ‰ì´ ëë‚œ ë…¸ë“œê°€ ì•„ë‹ˆë¼ë©´ ì‚¬ì´í´
 	else if (!searchCompleted[next]) {
-		// ÆÀ¿¡ Æ÷ÇÔµÇ´Â ÀÎ¿ø ¼¼±â
+		// íŒ€ì— í¬í•¨ë˜ëŠ” ì¸ì› ì„¸ê¸°
 		for (int i = next; i != nodeNum; i = graph[i])
 			numIsInTeam++;
 		numIsInTeam++;
 	}
 
-	// ÇöÀç ³ëµå·ÎºÎÅÍ °¡´Â ¸ðµç °æ·Î Å½»ö ¿Ï·á
+	// í˜„ìž¬ ë…¸ë“œë¡œë¶€í„° ê°€ëŠ” ëª¨ë“  ê²½ë¡œ íƒìƒ‰ ì™„ë£Œ
 	searchCompleted[nodeNum] = true;
 }
 
