@@ -2,27 +2,6 @@
 #include<vector>
 using namespace std;
 
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: Æ®¸® ³ëµåÀÇ °³¼ö
-
- - º¯¼ö Á¦ÇÑ »çÇ×
-N: 1 ~ 50
-
-- ¹®Á¦ »óÈ²
- Æ®¸®ÀÇ »óÅÂ¿Í Áö¿ï ³ëµå°¡ ÁÖ¾îÁ³À» ¶§ ¸®ÇÁ ³ëµåÀÇ °³¼ö¸¦ ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 #define MAX 50
 
 int N, nodeToDelete;
@@ -33,7 +12,7 @@ void dfs(int nodeNum) {
 	int numChildNode = 0;
 
 	for (int nextNode : graph[nodeNum]) {
-		// »èÁ¦µÈ ³ëµåÀÏ °æ¿ì ±× ¹æÇâÀ¸·Î Å½»öÇÏÁö ¾ÊÀ½
+		// ì‚­ì œëœ ë…¸ë“œì¼ ê²½ìš° ê·¸ ë°©í–¥ìœ¼ë¡œ íƒìƒ‰í•˜ì§€ ì•ŠìŒ
 		if (nextNode != nodeToDelete) {
 			dfs(nextNode);
 			numChildNode++;
