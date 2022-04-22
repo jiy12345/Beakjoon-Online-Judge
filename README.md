@@ -133,6 +133,7 @@
  * [1987: 알파벳](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1987%20-%20%EC%95%8C%ED%8C%8C%EB%B2%B3.cpp)
  * [2178: 미로 탐색](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2178%20-%20%EB%AF%B8%EB%A1%9C%20%ED%83%90%EC%83%89.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222527790770))
  * [**2206: 벽 부수고 이동하기**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2206%20-%20%EB%B2%BD%20%EB%B6%80%EC%88%98%EA%B3%A0%20%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0.cpp)
+ * [2250: 트리의 높이와 너비](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2250%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EB%86%92%EC%9D%B4%EC%99%80%20%EB%84%88%EB%B9%84.cpp)
  * [2468: 안전영역](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2468%20-%20%EC%95%88%EC%A0%84%EC%98%81%EC%97%AD.cpp)
  * [2573: 빙산](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2573%20-%20%EB%B9%99%EC%82%B0.cpp)
  * [2583: 영역 구하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2583%20-%20%EC%98%81%EC%97%AD%20%EA%B5%AC%ED%95%98%EA%B8%B0.cpp)
