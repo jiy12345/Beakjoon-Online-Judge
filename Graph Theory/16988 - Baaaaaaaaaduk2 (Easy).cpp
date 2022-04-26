@@ -2,49 +2,6 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-N: ¹ÙµÏÆÇÀÇ ÇàÀÇ °³¼ö
-M: ¹ÙµÏÆÇÀÇ ¿­ÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 3, 20
-0: ºóÄ­
-1: ³ªÀÇ µ¹
-2: »ó´ëÀÇ µ¹
-
-ºóÄ­Àº 2°³ ÀÌ»ó Á¸Àç
-¾ç ÇÃ·¹ÀÌ¾î ¸ğµÎ »ó´ë¹æÀÇ µ¹·Î ºóÆ´¾øÀÌ ¿¡¿ö½ÎÀÎ ±×·ìÀÌ ¾øÀ½ÀÌ º¸Àå
-
-- ¹®Á¦ »óÈ²
-ÇöÀç ÆÇ¿¡¼­ µ¹ 2°³¸¦ µÎ¾î Á×ÀÏ ¼ö ÀÖ´Â »ó´ë µ¹ÀÇ ÃÖ´ë °¹¼ö¸¦ Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-°¢ »ó´ë µ¹ÀÌ ¸ğ¿©ÀÖ´Â ºÎºĞ¿¡ ´ëÇØ¼­ Å½»öÇÏµÇ, ÁÖº¯ÀÇ 0ÀÇ °³¼ö±îÁö Ã¼Å©ÇÑ´Ù.
-
-0ÀÇ °³¼ö´Â Ç×»ó 1ÀÌ»óÀÏ ¼ö¹Û¿¡ ¾ø´Ù.
-
-³õ¾Æ¾ß ÇÏ´Â µ¹ÀÌ 1°³ÀÏ °æ¿ì¿Í 2°³ÀÏ °æ¿ì µÎ °¡Áö¸¸ Ã¼Å©ÇÏ¸é µÉ µíÇÏ´Ù.
-
-1. ¸ğµç ¹æ¹®ÇÏÁö ¾ÊÀº À§Ä¡¿¡ ´ëÇØ bfs¸¦ ÁøÇàÇÏ¿©, ¸ğ¿©ÀÖ´Â »ó´ëµ¹ÀÇ °³¼ö¿Í, ±× µ¹À» Àâ±â À§ÇØ ³õ¾Æ¾ß ÇÏ´Â µ¹ÀÇ °³¼ö¸¦ ±¸ÇÑ´Ù.
- => ÇÊ¿äÇÑ µ¹ÀÌ 3°³ ÀÌ»óÀÏ °æ¿ì ÀâÀ» ¼ö ¾ø´Â °ÍÀÌ¹Ç·Î ÀúÀåÇÏÁö ¾Ê´Â´Ù.
- => 1°³ÀÏ °æ¿ì¿Í 2°³ÀÏ °æ¿ì´Â µû·Î ÀúÀåÇÑ´Ù.
-
-// ÀÌ·¸°Ô ÇÒ °æ¿ì µÎ µ¹ ¹«¸®°¡ ºóÄ­À» °øÀ¯ÇÏ´Â °æ¿ì¿¡ ´ëÇØ¼­´Â Ã¼Å©ÇÏÁö ¸øÇÑ´Ù.
-
-µû¶ó¼­ ´ÙÀ½°ú °°ÀÌ ÁøÇàÇØº¸ÀÚ
-
-1. °¡´ÉÇÑ ÁÂÇ¥¸¦ »Ì´Â´Ù.(ÁÖº¯¿¡ ÇÏ³ª¶óµµ »ó´ëÆíÀÇ µ¹ÀÌ ÀÖ´Â ºóÄ­)
-
-2. Á¶ÇÕ¿¡ µû¶ó µ¹À» 2°³ ¹èÄ¡ÇÑ´Ù.
-
-3. °¢ µ¹À» ¹èÄ¡ ÈÄ °¢ µ¹ÀÇ 4¹æÇâÀ¸·ÎºÎÅÍÀÇ bfs¸¦ ÁøÇàÇÏ°í, ¿ÏÀüÈ÷ µÑ·¯½Î¿© ÀÖÀ» °æ¿ì(0ÀÌ ³ª¿ÀÁö ¾ÊÀ» °æ¿ì)¿¡¸¸ ÀâÈù µ¹·Î ´õÇÑ´Ù.
-
-3. °èÈ¹ °ËÁõ
-*/
-
 #define MAX 20
 
 int di[4] = { 0, 0, 1, -1 };
@@ -78,7 +35,6 @@ int bfs(int start_i, int start_j) {
             if (isInRange(next_i, next_j) == false || isVisited[next_i][next_j] == true) continue;
 
             if (board[next_i][next_j] == 0) {
-                cout << "?" << endl;
                 numStonesCanBeCaught = -1;
             }
             else if (board[next_i][next_j] == 2) {
@@ -98,14 +54,14 @@ int solution() {
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
-            // ºóÄ­ÀÏ ¶§¸¸ µûÁö±â
+            // ë¹ˆì¹¸ì¼ ë•Œë§Œ ë”°ì§€ê¸°
             if (board[i][j] != 0) continue;
 
             for (int k = 0; k < 4; k++) {
                 int next_i = i + di[k];
                 int next_j = j + dj[k];
                 if (isInRange(next_i, next_j) == false) continue;
-                // »ó´ëÆí µ¹ÀÌ ÁÖº¯¿¡ ÀÖÀ» °æ¿ì °í·Á
+                // ìƒëŒ€í¸ ëŒì´ ì£¼ë³€ì— ìˆì„ ê²½ìš° ê³ ë ¤
                 if (board[next_i][next_j] == 2) {
                     possibleLocations.push_back({ i, j });
                     break;
@@ -121,7 +77,7 @@ int solution() {
             int next_i = possibleLocations[0].first + di[l];
             int next_j = possibleLocations[0].second + dj[l];
             if (isInRange(next_i, next_j) == false) continue;
-            // »ó´ëÆí µ¹ÀÏ ¶§¸¸ °í·Á
+            // ìƒëŒ€í¸ ëŒì¼ ë•Œë§Œ ê³ ë ¤
             if (isVisited[next_i][next_j] == false && board[next_i][next_j] == 2) {
                 answer += bfs(next_i, next_j);
             }
@@ -132,12 +88,12 @@ int solution() {
         for (int j = i + 1; j < possibleLocations.size(); j++) {
             int curCaughtStones = 0;
 
-            // ¹æ¹® ¹è¿­ ÃÊ±âÈ­
+            // ë°©ë¬¸ ë°°ì—´ ì´ˆê¸°í™”
             memset(isVisited, false, sizeof(isVisited));
 
             pair<int, int> twoLocations[2] = { possibleLocations[i], possibleLocations[j] };
             
-            // ÀÓ½Ã·Î µ¹ ³õ±â
+            // ì„ì‹œë¡œ ëŒ ë†“ê¸°
             board[twoLocations[0].first][twoLocations[0].second] = 1;
             board[twoLocations[1].first][twoLocations[1].second] = 1;
 
@@ -146,14 +102,14 @@ int solution() {
                     int next_i = twoLocations[k].first + di[l];
                     int next_j = twoLocations[k].second + dj[l];
                     if (isInRange(next_i, next_j) == false) continue;
-                    // »ó´ëÆí µ¹ÀÏ ¶§¸¸ °í·Á
+                    // ìƒëŒ€í¸ ëŒì¼ ë•Œë§Œ ê³ ë ¤
                     if (isVisited[next_i][next_j] == false && board[next_i][next_j] == 2) {
                         curCaughtStones += bfs(next_i, next_j);
                     }
                 }
             }
 
-            // ³ù´ø µ¹ ´Ù½Ã »©±â
+            // ë†¨ë˜ ëŒ ë‹¤ì‹œ ë¹¼ê¸°
             board[twoLocations[0].first][twoLocations[0].second] = 0;
             board[twoLocations[1].first][twoLocations[1].second] = 0;
 
