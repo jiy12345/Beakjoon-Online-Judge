@@ -14,21 +14,15 @@ int findParent(int x) {
 	else return Parent[x] = findParent(Parent[x]);
 }
 
-void Union(int x, int y)
-{
+void Union(int x, int y) {
 	x = findParent(x);
 	y = findParent(y);
 
 	if (x != y) Parent[y] = x;
 }
 
-bool isSameParent(int x, int y)
-{
-	x = findParent(x);
-	y = findParent(y);
-
-	if (x == y) return true;
-	else return false;
+bool isSameParent(int x, int y) {
+	return findParent(x) == findParent(y);
 }
 
 int solution() {
