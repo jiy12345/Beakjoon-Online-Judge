@@ -2,36 +2,10 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ÄÄÇ»ÅÍÀÇ ¼ö
-M: °¡´ÉÇÑ ¿¬°áÀÇ °³¼ö
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1 ~ 1,000
-M: 1 ~ 100,000
-
-¸ðµç ÄÄÇ»ÅÍ°¡ ¿¬°áµÇÁö ¾Ê´Â °æ¿ì´Â ¾ø´Ù.
-
-- ¹®Á¦ »óÈ²
- °¢ ÄÄÇ»ÅÍ°£ ¿¬°áÇÏ´Âµ¥ µå´Â ºñ¿ëÀÌ ÁÖ¾îÁ³À» ¶§, 
- ¸ðµç ÄÄÇ»ÅÍ¸¦ ¿¬°áÇÏ´Âµ¥ ÇÊ¿äÇÑ ÃÖ¼Ò ºñ¿ëÀ» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-ÃÖ¼Ò ½ºÆÐ´× Æ®¸®¸¦ ±¸ÇÒ ¶§´Â °æ·Î¸¦ µû·Î ÁöÁ¤ÇÒ ÇÊ¿ä°¡ ¾øÀ¸¹Ç·Î, ¿ì¼± ¼øÀ§ Å¥¿¡ ³Ö¾î °£¼±À» ÇÏ³ª¾¿ »©°í,
-
-union find ¾Ë°í¸®ÁòÀ¸·Î ¾ç ÂÊ ´Ù ¿¬°áµÇ¾î ÀÖÀ» ¶§´Â ¹«½ÃÇÏ°í ³Ñ¾î°£´Ù!
-
-3. °èÈ¹ °ËÁõ
-*/
-
 #define MAX 1001
 
 int V, E;
-// C, A, B ¼øÀ¸·Î ÀúÀå
+// C, A, B ìˆœìœ¼ë¡œ ì €ìž¥
 priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> links;
 int Parent[MAX];
 
@@ -85,7 +59,7 @@ int main() {
 	for (int i = 0; i < E; i++) {
 		int a, b, c;
 		cin >> a >> b >> c;
-		// °¡ÁßÄ¡¸¦ °¡Àå ¾Õ¿¡ ³ö °¡ÁßÄ¡ ±âÁØÀ¸·Î Á¤·ÄµÇµµ·Ï ÇÔ
+		// ê°€ì¤‘ì¹˜ë¥¼ ê°€ìž¥ ì•žì— ë†” ê°€ì¤‘ì¹˜ ê¸°ì¤€ìœ¼ë¡œ ì •ë ¬ë˜ë„ë¡ í•¨
 		links.push({ c, a, b });
 	}
 
