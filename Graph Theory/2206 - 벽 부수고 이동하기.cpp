@@ -3,52 +3,24 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¸ÊÀÇ ¼¼·Î ±æÀÌ
-M: ¸ÊÀÇ °¡·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N, M: 1~1,000
-
-- ¹®Á¦ »óÈ²
- ÇÑ°³ÀÇ º®À» ºÎ¼ö°í ÀÌµ¿ÇÒ ¼ö ÀÖ´Ù°í ÇÒ ‹š, ÃÖ´Ü °Å¸®¸¦ Ãâ·ÂÇÑ´Ù.
-
-ºÒ°¡´ÉÇÏ´Ù¸é -1À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- 1000 * 1000ÀÌ¸é ÀÏ¹ÝÀûÀÎ DFS¸¦ ÁøÇàÇÏ¿©¼­´Â ½Ã°£ÃÊ°ú°¡ ³¯¸¸ÇÑ Å©±âÀÌ´Ù. µû¶ó¼­ BFS¸¦ ÁøÇàÇØ¾ß ÇÒ µí ÇÏ´Ù.
-
- ±×·±µ¥ BFS¸¦ ÁøÇàÇÒ ¶§ Å¥¿¡ Çª½ÃÇÒ ¶§ ¹æ¹® Ç¥½Ã¸¦ ÇÏ¿© Áßº¹¹æ¹®ÀÌ ¾ÈµÇ±â ÇÑ´Ù¸é ±¦Âú³ª?
-
- ÇØ´ç À§Ä¡±îÁö ÃÖ´Ü°Å¸®¶ó°í º¸ÀåÇÒ ¼ö ÀÖ³ª?
-  => ÀÏ´Ü ¶Õ´Â´Ù°í °¡Á¤ÇÏ±â ¶§¹®¿¡
-
-  ¶Õ´Â °ÍÀ» Ç¥½ÃÇØÁàµµ ¹æ¹®Ç¥½Ã¸¦ ¸ÕÀú ÇØ¹ö¸°´Ù¸é ÇØ´ç °æ·Î°¡ ¸·Çô¼­ ´õÀÌ»ó °¥ ¼ö ¾ø´Â °æ¿ì°¡ µÇ¾úÀ» °æ¿ì¿¡´Â °æ·Î°¡ ÀÖÀ½¿¡µµ °æ·Î¸¦ Ã£Áö ¸øÇÏ´Â °æ¿ì°¡ ¹ß»ýÇÒ ¼öµµ ÀÖ´Ù!
-
-  => ±×·¸´Ù¸é ¶ÕÀº ´ÙÀ½ÀÇ °æ¿ì¿¡´Â ¹æ¹® Ç¥½Ã¸¦ ÁøÇàÇÏÁö ¾Ê´Â´Ù¸é ¾î¶³±î?
-  => ±×·±µ¥ ÀÌ·¸°Ô ÇÑ´Ù¸é 4¹æÇâ ÀÌµ¿ÀÌ±â ¶§¹®¿¡ °è¼ÓÇØ¼­ ÀÌµ¿¸¸ ÇÏ´Â °æ¿ì°¡ ¹ß»ýÇÒ ¼ö ÀÖ´Ù!
-*/
-
 int N, M;
 
 int dx[4] = { 0,  0, 1, -1 };
 int dy[4] = { 1, -1, 0,  0 };
 
 string map[1000];
-// ¶Õ¾úÀ» ¶§¿Í ¶ÕÁö ¾Ê¾ÒÀ» ¶§ÀÇ °æ·Î¸¦ µû·Î °è»êÇÏ±â À§ÇØ 3Â÷¿øÀ¸·Î ÀúÀå
+// ëš«ì—ˆì„ ë•Œì™€ ëš«ì§€ ì•Šì•˜ì„ ë•Œì˜ ê²½ë¡œë¥¼ ë”°ë¡œ ê³„ì‚°í•˜ê¸° ìœ„í•´ 3ì°¨ì›ìœ¼ë¡œ ì €ìž¥
 int depth[1000][1000][2];
 
 int solution() {
 	int answer = -1;
 
-	// ÁÂÇ¥, ³²Àº ¶Õ´Â ±âÈ¸ÀÇ ¼ö ÀúÀå
+	// ì¢Œí‘œ, ë‚¨ì€ ëš«ëŠ” ê¸°íšŒì˜ ìˆ˜ ì €ìž¥
 	queue<vector<int>> bfs_queue;
 	
 	bfs_queue.push({ 0,0,1 });
 
-	depth[0][0][1] = 1; // Ã¹ À§Ä¡±îÁöÀÇ ÀÌµ¿Àº 1·Î °£ÁÖ
+	depth[0][0][1] = 1; // ì²« ìœ„ì¹˜ê¹Œì§€ì˜ ì´ë™ì€ 1ë¡œ ê°„ì£¼
 
 	while (!bfs_queue.empty()) {
 		int cur_x = bfs_queue.front()[0];
@@ -68,12 +40,12 @@ int solution() {
 			int next_y = cur_y + dy[i];
 
 			if (next_x >= 0 && next_x < N && next_y >= 0 && next_y < M) {
-				// °¥ ¼ö¾ø´Â ±æ(º®)ÀÌ°í, º®À» ¾ÆÁ÷ ¾È¶Õ¾úÀ»¶§
+				// ê°ˆ ìˆ˜ì—†ëŠ” ê¸¸(ë²½)ì´ê³ , ë²½ì„ ì•„ì§ ì•ˆëš«ì—ˆì„ë•Œ
 				if (map[next_x][next_y] == '1' && block_num == 1) {
 					depth[next_x][next_y][block_num - 1] = depth[cur_x][cur_y][block_num] + 1;
 					bfs_queue.push({ next_x, next_y, block_num - 1 });
 				}
-				// °¥ ¼öÀÖ´Â ±æÀÌ°í, ¹æ¹®ÇÏÁö ¾Ê¾Ò´Ù¸é
+				// ê°ˆ ìˆ˜ìžˆëŠ” ê¸¸ì´ê³ , ë°©ë¬¸í•˜ì§€ ì•Šì•˜ë‹¤ë©´
 				if (map[next_x][next_y] == '0' && depth[next_x][next_y][block_num] == 0) {
 					depth[next_x][next_y][block_num] = depth[cur_x][cur_y][block_num] + 1;
 					bfs_queue.push({ next_x, next_y, block_num });
