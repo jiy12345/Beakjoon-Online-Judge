@@ -4,37 +4,13 @@
 #include<utility>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
- - º¯¼ö
-N: Áö¿ªÀÇ °¡·Î, ¼¼·Î ±æÀÌ
-
- - º¯¼ö Á¦ÇÑ »çÇ×
-N:2~100
-°¢ À§Ä¡ÀÇ ³ôÀÌ: 1~100
-
-
-
-2. Ç®ÀÌ °èÈ¹
-´Ù¼Ò ¹«½ÄÇØº¸ÀÌÁö¸¸, ¸ğµç ³ôÀÌ¿¡ ´ëÇØ Å½»öÀ» ÁøÇàÇÏ°í,
-
-°¢ Å½»ö¿¡¼­ ¸ğµç ¿µ¿ªÀ» Å½»öÇÏ¸ç °¢ ¿µ¿ªÀÌ ¾ÈÀü ¿µ¿ªÀÏ °æ¿ì bfs¸¦ ÁøÇàÇÏ´Â Çü½ÄÀ¸·Î ÁøÇà
-
-
-
-
-3. °èÈ¹ °ËÁõ
-
-
-*/
-
 int dx[4] = { -1, 1, 0, 0 };
 int dy[4] = { 0, 0, -1, 1 };
 
 int region[102][102];
 int N;
 
-// region: °¢ À§Ä¡°¡ ¾ÈÀü¿µ¿ªÀÌ¸é true, ¾Æ´Ï¸é false
+// region: ê° ìœ„ì¹˜ê°€ ì•ˆì „ì˜ì—­ì´ë©´ true, ì•„ë‹ˆë©´ false
 void bfs(int cur_region[102][102], pair<int, int> cur_loc, int water_level) {
 	queue<pair<int, int>> bfs_queue;
 	bfs_queue.push(cur_loc);
@@ -48,7 +24,7 @@ void bfs(int cur_region[102][102], pair<int, int> cur_loc, int water_level) {
 			int cur_j = loc.second - dy[i];
 
 			if (cur_region[cur_i][cur_j] - water_level > 0) {
-				// ´õ ÀÌ»ó Å½»öÇÏÁö ¾Êµµ·Ï °¡Àå ³·Àº ³ôÀÌ·Î ¼³Á¤
+				// ë” ì´ìƒ íƒìƒ‰í•˜ì§€ ì•Šë„ë¡ ê°€ì¥ ë‚®ì€ ë†’ì´ë¡œ ì„¤ì •
 				cur_region[cur_i][cur_j] = 0;
 				bfs_queue.push({ cur_i, cur_j });
 			}
@@ -60,10 +36,10 @@ int find_safe_zone(int cur_region[102][102], int water_level) {
 	int cnt = 0;
 	for (int i = 1;i <= N;i++) {
 		for (int j = 1;j <= N;j++) {
-			// Çö À§Ä¡°¡ Ä§¼öµÇÁö ¾ÊÀº À§Ä¡¶ó¸é
+			// í˜„ ìœ„ì¹˜ê°€ ì¹¨ìˆ˜ë˜ì§€ ì•Šì€ ìœ„ì¹˜ë¼ë©´
 			if (cur_region[i][j] - water_level > 0) {
 				cnt++;
-				// Çö À§Ä¡ºÎÅÍ vfs ½ÃÀÛ
+				// í˜„ ìœ„ì¹˜ë¶€í„° vfs ì‹œì‘
 				bfs(cur_region, { i,j }, water_level);
 			}
 		}
@@ -74,7 +50,7 @@ int find_safe_zone(int cur_region[102][102], int water_level) {
 int solution(int max_num) {
 	int answer = 0;
 
-	// °¢°¢ÀÇ ¸ğµç ³ôÀÌ¿¡ ´ëÇØ¼­ Ã¼Å©
+	// ê°ê°ì˜ ëª¨ë“  ë†’ì´ì— ëŒ€í•´ì„œ ì²´í¬
 	for (int i = 0;i <= max_num;i++) {
 		int cur_region[102][102];
 		copy(&region[0][0], &region[0][0] + 102 * 102 , &cur_region[0][0]);
