@@ -4,62 +4,21 @@
 using namespace std;
 
 /*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: Çà¼ºÀÇ ¼ö
-x, y, z: Çà¼ºÀÌ À§Ä¡ÇÑ 3Â÷¿ø ÁÂÇ¥
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1 ~ 100,000
-x, y, z: -1,000,000,000 ~ 1,000,000,000
-
-ÇÑ À§Ä¡¿¡ Çà¼ºÀÌ µÎ °³ ÀÌ»ó ÀÖ´Â °æ¿ì´Â ¾ø´Ù.
-
-- ¹®Á¦ »óÈ²
- N°³ÀÇ Çà¼ºÀÇ À§Ä¡°¡ ÁÖ¾îÁ³À» ¶§, ÅÍ³ÎÀ» ÃÑ N - 1°³ °Ç¼³ÇÏ¿© ¸ðµç Çà¼ºÀÌ ¼­·Î ¿¬°áµÇ°Ô ÇÏ´Âµ¥ ÇÊ¿äÇÑ ÃÖ¼Ò ºñ¿ëÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó
-
-µÎ Çà¼º A(xA, yA, zA)¿Í B(xB, yB, zB)¸¦ 
-ÅÍ³Î·Î ¿¬°áÇÒ ¶§ µå´Â ºñ¿ëÀº min(|xA-xB|, |yA-yB|, |zA-zB|)ÀÌ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- ¸ðµç Çà¼º°£ÀÇ °Å¸®¸¦ ±¸ÇÏ¸é ÆíÇÏ±â´Â ÇÏ°ÚÁö¸¸, ±×·¸°Ô ÇÒ °æ¿ì
-
- 4 x 100,000 x 100,000 = 40,000,000,000¹ÙÀÌÆ® = 40±â°¡ ¹ÙÀÌÆ®°¡ ³ª¿À¹Ç·Î ¸Þ¸ð¸®°¡ ÃÊ°úµÉ °ÍÀÌ´Ù.
-
- ¶ÇÇÑ ½Ã°£ º¹Àâµµµµ ³ô¾Æ ½Ã°£ ³»¿¡ ³¡³»Áö ¸ø ÇÒ °ÍÀÌ´Ù.
-
- ±×·¸´Ù¸é ¾î¶»°Ô ÇØ¾ßÇÒ±î?
-
-
-
- °Å¸® °è»ê ½ÄÀ» »ìÆìº¸ÀÚ
-
- min(|xA-xB|, |yA-yB|, |zA-zB|)
- 
- 
- Å©·ç½ºÄ® ¾Ë°í¸®ÁòÀ» Àû¿ëÇÏ±â À§ÇØ¼­´Â °¢ »óÈ²¿¡¼­ÀÇ ÃÖ¼Ò°ªÀ» °¡Áø °£¼±À» ±¸ÇØ¾ß ÇÑ´Ù.
-
- °¢ »óÈ²¿¡¼­ ÃÖ¼Òºñ¿ëÀ» °¡Áø °£¼±À» ¼±ÅÃÇÏ±â À§ÇØ¼­´Â ¾î¶² °£¼±µéÀ» °è»êÇØ³ö¾ß ÇÒ±î?
-
- ÀÏ´Ü °¢ À§Ä¡¿¡¼­ ¿¬°áµÉ ¼ö ÀÖ´Â Á¤Á¡°úÀÇ ¿¬°á Áß °¡Àå ÀûÀº ºñ¿ëÀÌ µå´Â °£¼±À» ¼±ÅÃÇØ¾ß ÇÏ´Â °ÍÀº ¸Â´Ù.
-
- ±×·±µ¥ ±× °£¼±À» ¼±ÅÃÇÏ·Á ÇÒ ¶§ ÀÌ¹Ì ¿¬°áµÇ¾î ÀÖ´Â Á¤Á¡°úÀÇ ¿¬°áÀÌ¸é ¼±ÅÃÇÏ¸é ¾ÈµÇ¹Ç·Î, ³Ñ¾î°¡¾ß ÇÑ´Ù.
- 
- ¾ÆÁ÷ ÀüÃ¼ ±×·ì°ú ¿¬°áµÇÁö ¾ÊÀº ³ëµå´Â ¾î¶² ³ëµå¿Íµµ »çÀÌÅ¬À» ÀÌ·çÁö ¾Ê±â ¶§¹®¿¡ °¡Àå ÃÖ¼Ò °£¼±À» ¼±ÅÃÇÏ¸é µÈ´Ù.
-
- µû¶ó¼­ °¢ ³ëµå¿¡¼­ °¡Àå ºñ¿ëÀÌ ÀûÀº °£¼±À» ÀúÀåÇÏ´Â °ÍÀÌ
-
-3. °èÈ¹ °ËÁõ
+í’€ì´ 2ì™€ ë‹¤ë¥´ê²Œ priority_queueë¥¼ ì‚¬ìš©í•˜ì˜€ë‹¤.
+ì‚¬ìš©í•œ ë©”ëª¨ë¦¬: 32156KB	
+ê±¸ë¦° ì‹œê°„: 268ms
+	
+ì ‘ê·¼ ìžì²´ëŠ” ì •ë ¬ê³¼ ì‹œê°„ ë³µìž¡ë„ê°€ ê°™ì„í…Œì§€ë§Œ, ì‚­ì œí•˜ëŠ” ê³¼ì •ì´ ì¶”ê°€ë˜ì–´ì„œ ê·¸ëŸ°ì§€ ì •ë ¬ë³´ë‹¤ëŠ” ì˜¤ëž˜ ê±¸ë ¸ë‹¤.
 */
 
 #define MAX 100000
 
 int N;
-// °¢ ÁÂÇ¥º°·Î Á¤·ÄÇÏ¿© ÀúÀå
+// ê° ì¢Œí‘œë³„ë¡œ ì •ë ¬í•˜ì—¬ ì €ìž¥
 vector<pair<int, int>> X;
 vector<pair<int, int>> Y;
 vector<pair<int, int>> Z;
-// °¡ÁßÄ¡, Ãâ¹ß Çà¼º, µµÂø Çà¼º ¼øÀ¸·Î ÀúÀå
+// ê°€ì¤‘ì¹˜, ì¶œë°œ í–‰ì„±, ë„ì°© í–‰ì„± ìˆœìœ¼ë¡œ ì €ìž¥
 priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> possibleLinks;
 int Parent[MAX];
 
@@ -86,7 +45,7 @@ void getPossibleLinks() {
 	sort(Z.begin(), Z.end());
 
 	for (int i = 0; i < N - 1; i++) {
-		//                      ¹ß»ýÇÏ´Â ºñ¿ë                      Ãâ¹ß Çà¼º    µµÂø Çà¼º
+		//                      ë°œìƒí•˜ëŠ” ë¹„ìš©                      ì¶œë°œ í–‰ì„±    ë„ì°© í–‰ì„±
 		possibleLinks.push({ abs(X[i].first - X[i + 1].first), X[i].second, X[i + 1].second });
 		possibleLinks.push({ abs(Y[i].first - Y[i + 1].first), Y[i].second, Y[i + 1].second });
 		possibleLinks.push({ abs(Z[i].first - Z[i + 1].first), Z[i].second, Z[i + 1].second });
@@ -121,7 +80,7 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		int x, y, z;
 		cin >> x >> y >> z;
-		// °¢ ÁÂÇ¥º°·Î ÀúÀå
+		// ê° ì¢Œí‘œë³„ë¡œ ì €ìž¥
 		X.push_back({ x, i });
 		Y.push_back({ y, i });
 		Z.push_back({ z, i });
