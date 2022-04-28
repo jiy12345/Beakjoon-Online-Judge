@@ -3,27 +3,6 @@
 #include <bitset>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-
-- º¯¼ö
-R: º¸µåÀÇ ¼¼·Î±æÀÌ
-C: º¸µåÀÇ °¡·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-R, C: 1~20
-
-- ¹®Á¦ »óÈ²
- °°Àº ¾ËÆÄºªÀÌ ÀûÈù Ä­À» µÎ¹ø Áö³¯ ¼ö ¾ø´Ù°í ÇÒ ¶§, ÁËÃø »ó´Ü¿¡¼­ ½ÃÀÛÇØ¼­ ¸»ÀÌ ÃÖ´ë·Î °¥ ¼ö ÀÖ´Â Ä­ÀÌ ¸î Ä­ÀÎÁö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó!
-
- Ã¹ À§Ä¡ ¶ÇÇÑ °æ·Î¿¡ Æ÷ÇÔµÈ´Ù°í º»´Ù!
-
-2. Ç®ÀÌ °èÈ¹
- DFS¸¦ ÁøÇàÇÏµÇ, ºñÆ®¸¶½ºÅ·À» ÅëÇØ ¾î¶² ¾ËÆÄºªÀÌ ÀÖ´ÂÁö °è»êÀ» °è¼ÓÇØ¼­ ÁøÇàÇØ¾ß ÇÒµí ÇÏ´Ù!
-
-*/
-
-
 int dx[4] = { 1, -1, 0,  0 };
 int dy[4] = { 0,  0, 1, -1 };
 
@@ -38,13 +17,13 @@ int solution(int cur_i, int cur_j, int bit_masking, int cur_depth) {
 
 	// A: 65, Z: 90
 	
-	// ¹æ¹® Ç¥½Ã ÈÄ ´ÙÀ½ Å½»ö ½ÃÀÛ
+	// ë°©ë¬¸ í‘œì‹œ í›„ ë‹¤ìŒ íƒìƒ‰ ì‹œì‘
 	is_visited[cur_i][cur_j] = true;
 	for (int i = 0;i < 4;i++) {
 		int next_i = cur_i + dx[i];
 		int next_j = cur_j + dy[i];
 
-		// ¹üÀ§¸¦ ¹ş¾î³µÀ» °æ¿ì¿¡´Â Å½»öÀ» ÁøÇàÇÏÁö ¾ÊÀ½
+		// ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ì„ ê²½ìš°ì—ëŠ” íƒìƒ‰ì„ ì§„í–‰í•˜ì§€ ì•ŠìŒ
 		if (next_i >= R || next_i < 0 || next_j >= C || next_j < 0) {
 			continue;
 		}
@@ -52,13 +31,13 @@ int solution(int cur_i, int cur_j, int bit_masking, int cur_depth) {
 			char next_alphabet = board[next_i][next_j];
 			int next_alpha_bit = (1 << (next_alphabet - 65));
 			int bit_masking_result = bit_masking | next_alpha_bit;
-			// Áö±İ±îÁö ¹æ¹®ÇÏÁö ¾Ê¾Ò´ø ¾ËÆÄºªÀÏ °æ¿ì¿¡¸¸ ÁøÇà
+			// ì§€ê¸ˆê¹Œì§€ ë°©ë¬¸í•˜ì§€ ì•Šì•˜ë˜ ì•ŒíŒŒë²³ì¼ ê²½ìš°ì—ë§Œ ì§„í–‰
 			if ((bit_masking_result != bit_masking) && is_visited[next_i][next_j] == false) {
 				max_num = max(max_num, solution(next_i, next_j, bit_masking_result, cur_depth + 1));
 			}
 		}
 	}
-	// ¹æ¹® Ç¥½Ã Áö¿ì±â
+	// ë°©ë¬¸ í‘œì‹œ ì§€ìš°ê¸°
 	is_visited[cur_i][cur_j] = false;
 
 
@@ -73,7 +52,7 @@ int main() {
 		cin >> board[i];
 	}
 
-	// Ã¹ ¾ËÆÄºª¿¡ ´ëÇÑ ºñÆ®¸¶½ºÅ· ÁøÇà
+	// ì²« ì•ŒíŒŒë²³ì— ëŒ€í•œ ë¹„íŠ¸ë§ˆìŠ¤í‚¹ ì§„í–‰
 	char start_alphabet = board[0][0];
 	int start_alpha_bit = (1 << (start_alphabet - 65));
 
