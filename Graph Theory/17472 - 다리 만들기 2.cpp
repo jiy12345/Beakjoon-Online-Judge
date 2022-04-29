@@ -4,7 +4,7 @@
 using namespace std;
 
 #define MAX 10
-// 0°ú 1Àº »ç¿ëÁßÀÌ¹Ç·Î 2 ~ 7¹ø »ç¿ë
+// 0ê³¼ 1ì€ ì‚¬ìš©ì¤‘ì´ë¯€ë¡œ 2 ~ 7ë²ˆ ì‚¬ìš©
 #define MAX_ISLAND 10
 
 int di[4] = { 1, -1, 0, 0 };
@@ -12,7 +12,7 @@ int dj[4] = { 0, 0, 1, -1 };
 
 int N, M;
 int islandNum = 2;
-// °¡ÁßÄ¡, Ãâ¹ß ¼¶, µµÂø ¼¶ ¼øÀ¸·Î ÀúÀå
+// ê°€ì¤‘ì¹˜, ì¶œë°œ ì„¬, ë„ì°© ì„¬ ìˆœìœ¼ë¡œ ì €ì¥
 vector<vector<int>> possibleLinks;
 int Parent[MAX_ISLAND];
 int islandMap[MAX][MAX];
@@ -25,7 +25,7 @@ void bfs(int start_i, int start_j, int cur_num) {
 	queue<pair<int, int>> bfs_queue;
 	bfs_queue.push({ start_i, start_j });
 	islandMap[start_i][start_j] = cur_num;
-
+	
 	while (!bfs_queue.empty()) {
 		int cur_i = bfs_queue.front().first;
 		int cur_j = bfs_queue.front().second;
@@ -78,20 +78,20 @@ void getPossibleLocation(int start_i, int start_j) {
 	for (int i = 0; i < 4; i++) {
 		int cur_i = start_i, cur_j = start_j, distance = 0;
 
-		// »óÇÏÁÂ¿ì ³× ¹æÇâ Áß¿¡¼­ ÇÑ ¹æÇâÀ¸·Î Âß Á÷Áø
+		// ìƒí•˜ì¢Œìš° ë„¤ ë°©í–¥ ì¤‘ì—ì„œ í•œ ë°©í–¥ìœ¼ë¡œ ì­‰ ì§ì§„
 		while (true) {
-			cur_i += di[i];
+			cur_i += di[i]; 
 			cur_j += dj[i];
 
 			if (isInRange(cur_i, cur_j) == false || islandMap[cur_i][cur_j] == startIsland) break;
 			if (!islandMap[cur_i][cur_j]) {
-				distance++;
+				distance++;    
 				continue;
 			}
 			if (islandMap[cur_i][cur_j]) {
 				if (distance > 1) {
-					possibleLinks.push_back({ distance, startIsland, islandMap[cur_i][cur_j] });
-					break;
+					possibleLinks.push_back({distance, startIsland, islandMap[cur_i][cur_j]});
+					break; 
 				}
 				break;
 			}
@@ -102,7 +102,7 @@ void getPossibleLocation(int start_i, int start_j) {
 void getPossibleLinks() {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < M; j++) {
-			// ¼¶¿¡ ¼ÓÇÏ´Â ¶¥ÀÏ °æ¿ì
+			// ì„¬ì— ì†í•˜ëŠ” ë•…ì¼ ê²½ìš°
 			if (islandMap[i][j] != 0) getPossibleLocation(i, j);
 		}
 	}
@@ -110,13 +110,12 @@ void getPossibleLinks() {
 }
 
 int kruskal() {
-	int cnt = 1; // ÃÑ ¸î°³ÀÇ ¼¶À» ¿¬°áÇß´Â°¡?
+	int cnt = 1; // ì´ ëª‡ê°œì˜ ì„¬ì„ ì—°ê²°í–ˆëŠ”ê°€?
 	int answer = 0;
 
-	for (int i = 0; i < N; i++) {
+	for (int i = 0; i < islandNum; i++) {
 		Parent[i] = i;
 	}
-
 
 	for (vector<int> cur_link : possibleLinks) {
 		if (isSameParent(cur_link[1], cur_link[2]) == false) {
@@ -146,7 +145,7 @@ int main() {
 	cin >> N >> M;
 
 	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {
+		for (int j = 0;j < M; j++) {
 			cin >> islandMap[i][j];
 		}
 	}
