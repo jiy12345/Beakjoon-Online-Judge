@@ -7,7 +7,7 @@ using namespace std;
 
 int N, M, K;
 
-// 가중치, 출발 행성, 도착 행성 순으로 저장
+// 가중치, 출발 도시, 도착 도시 순으로 저장
 vector<vector<int>> cables;
 int Parent[MAX];
 
@@ -24,7 +24,8 @@ void Union(int x, int y) {
 	y = findParent(y);
 
 	if (x != y) {
-		// 각각의 부모가 0일 경우 나머지의 부모도 0으로 통일해주기!
+		// 각각의 부모가 0일 경우 나머지의 부모도 0으로 통일해줌으로써
+		// 이미 발전소가 연결된 도시끼리는 연결되지 않도록 함!
 		if (x == 0) Parent[y] = 0;
 		else if (y == 0) Parent[x] = 0;
 		else Parent[y] = x;
