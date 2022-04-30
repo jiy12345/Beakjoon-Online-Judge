@@ -1,55 +1,13 @@
 #include<iostream>
 #include<vector>
-#include<set>
 #include<algorithm>
 using namespace std;
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: µµ½ÃÀÇ °³¼ö
-M: ÄÉÀÌºíÀÇ ¼ö
-K: ¹ßÀü¼ÒÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1 ~ 1,000
-M: 1 ~ 100,000
-
-
-- ¹®Á¦ »óÈ²
- ¹ßÀü¼Ò°¡ Á¸ÀçÇÏ´Â µµ½Ã°¡ ÀÖÀ¸¸ç,
- ÄÉÀÌºíÀÌ ¿¬°áµÇ¾î ÀÖ´Â µµ½Ã¿¡´Â ¹Ýµå½Ã ¹ßÀü¼Ò°¡ ÇÏ³ª¸¸ Á¸ÀçÇØ¾ß ÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-°¢ µµ½Ã´Â ¹Ýµå½Ã ¹ßÀü¼Ò°¡ ÀÖ´Â µµ½Ã¿Í ¿¬°áµÇ¾î¾ß ÇÑ´Ù.
-
-±×·¸´Ù¸é ¾î¶»°Ô ÇØ¾ß ÇÒ±î?
-
-¿ø·¡ Å©·ç½ºÄ® ¾Ë°í¸®Áò¿¡¼­¶ó¸é ±âÁØ ¾øÀÌ ÃÖ¼Ò ºñ¿ëÀ» °¡Áø °£¼±À» ¼±ÅÃÇÏ¸é µÇÁö¸¸, 
-
-Áö±ÝÀº ±×·¸Áö ¾Ê´Ù.
-
-µµ½Ãº°·Î ÇÏ³ªÀÇ ¹ßÀü¼Ò¸¸ ¿¬°áµÉ ¼ö ÀÖµµ·Ï ÇÏ´Â ¿¬°áÀ» ÁøÇàÇÏ¿©¾ß ÇÑ´Ù.
-
-Á¤·ÄÇÑ »óÅÂ¿¡¼­ ÇÏ³ª¾¿ »ÌÀ» ¶§ Á¶°ÇÀ» ÁØ´Ù¸é Ã³¸®ÇÒ ¼ö ÀÖÀ»±î?
-
-Á¶°ÇÀÌ¸®¸é ¹ßÀü¼Ò¿Í ¿¬°áµÇµµ·Ï ÇÏ´Â ¿¬°áÀÎÁö?
-
-±×·±µ¥ ÀÌ·±½ÄÀ¸·Î Ã¼Å©ÇÏ¸é ´çÀåÀº ¹ßÀü¼Ò¿Í ¿¬°áÀÌ µÇÁö ¾Ê´õ¶óµµ ³ªÁß¿¡ ´Ù¸¥ °£¼±À» ÅëÇØ ¿¬°áµÇµµ·Ï ÇÏ´Â ¿¬°áÀ» ¼±ÅÃÇÒ ¼ö ¾ø´Ù.
-
-±×·¸´Ù¸é ÀÌ·¯ÇÑ °£¼±À» ´Ù¸¥ °÷¿¡ ÀúÀåÇØµ×´Ù°¡ ´Ù½Ã Ã¼Å©ÇÏ´Â °ÍÀº?
- => ÃÖ¾ÇÀÇ °æ¿ì N^2ÀÌ ³ª¿Ã°ÍÀÌ±â ¶§¹®¿¡ ¾ÈµÉ µí ÇÏ´Ù.
-
-°°Àº ºÎ¸ð·Î º¸°í, 
-
-3. °èÈ¹ °ËÁõ
-*/
 
 #define MAX 1001
 
 int N, M, K;
 
-// °¡ÁßÄ¡, Ãâ¹ß Çà¼º, µµÂø Çà¼º ¼øÀ¸·Î ÀúÀå
+// ê°€ì¤‘ì¹˜, ì¶œë°œ í–‰ì„±, ë„ì°© í–‰ì„± ìˆœìœ¼ë¡œ ì €ìž¥
 vector<vector<int>> cables;
 int Parent[MAX];
 
@@ -66,7 +24,7 @@ void Union(int x, int y) {
 	y = findParent(y);
 
 	if (x != y) {
-		// °¢°¢ÀÇ ºÎ¸ð°¡ 0ÀÏ °æ¿ì ³ª¸ÓÁöÀÇ ºÎ¸ðµµ 0À¸·Î ÅëÀÏÇØÁÖ±â!
+		// ê°ê°ì˜ ë¶€ëª¨ê°€ 0ì¼ ê²½ìš° ë‚˜ë¨¸ì§€ì˜ ë¶€ëª¨ë„ 0ìœ¼ë¡œ í†µì¼í•´ì£¼ê¸°!
 		if (x == 0) Parent[y] = 0;
 		else if (y == 0) Parent[x] = 0;
 		else Parent[y] = x;
@@ -113,7 +71,7 @@ int main() {
 		int u, v, w;
 		cin >> u >> v >> w;
 
-		// ¹ßÀü¼Ò°¡ °Ç¼³µÈ µµ½Ã´Â ¸ðµÎ 0À¸·Î Ç¥½Ã
+		// ë°œì „ì†Œê°€ ê±´ì„¤ëœ ë„ì‹œëŠ” ëª¨ë‘ 0ìœ¼ë¡œ í‘œì‹œ
 		if(isPowerStation[u]) u = 0;
 		if(isPowerStation[v]) v = 0;
 
