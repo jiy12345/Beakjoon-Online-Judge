@@ -100,6 +100,5 @@ int main() {
 		cout << solution(locationsOfPeople) << '\n';
 	}
 
-
 	return 0;
 }
