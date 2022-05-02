@@ -3,37 +3,6 @@
 #include<cstring>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-T: Å×½ºÆ® ÄÉÀÌ½ºÀÇ ¼ö
-h: Æò¸éµµÀÇ ³ôÀÌ
-w: Æò¸éµµÀÇ ³Êºñ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-T: 1 ~ 100
-h, w: 2 ~ 100
-
-- °¨¿Á °ü·Ã Á¤º¸
- .: ºó °ø°£
- *: Áö³ª°¥ ¼ö ¾ø´Â º®
- #: ¹®
- $: ÁË¼öÀÇ À§Ä¡
-
- »ó±ÙÀÌ´Â °¨¿Á ¹ÛÀ» ÀÚÀ¯·Ó°Ô ÀÌµ¿ÇÒ ¼ö ÀÖ´Ù.
- ÁË¼öÀÇ ¼ö´Â Ç×»ó µÎ¸íÀÌ´Ù.
- °¢ ÁË¼ö¿Í °¨¿ÁÀÇ ¹Ù±ùÀ» ¿¬°áÇÏ´Â °æ·Î°¡ Ç×»ó Á¸ÀçÇÏ´Â °æ¿ì¸¸ ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø´Ù.
-
-
-- ¹®Á¦ »óÈ²
- ÁË¼ö¸¦ Å»¿Á½ÃÅ°±â À§ÇØ ¿­¾î¾ß ÇÏ´Â ¹®ÀÇ ÃÖ¼Ú°ªÀ» Ãâ·ÂÇÏ¶ó!
-
-2. Ç®ÀÌ °èÈ¹
- 
-
-3. °èÈ¹ °ËÁõ
-*/
-
 #define MAX 102
 
 int di[4] = { +1, -1, 0, 0 };
@@ -63,18 +32,18 @@ void bfs(int start_i, int start_j, int personNum) {
 			int next_i = cur_i + di[i];
 			int next_j = cur_j + dj[i];
 
-			// ¾Æ¿¹ Áö³ª°¥ ¼ö ¾ø´Â °æ¿ì
+			// ì•„ì˜ˆ ì§€ë‚˜ê°ˆ ìˆ˜ ì—†ëŠ” ê²½ìš°
 			if (isInRange(next_i, next_j) == false || prison[next_i][next_j] == '*') continue;
 
-			// ¹®ÀÏ °æ¿ì¿¡´Â ³ªÁß¿¡ Ã³¸®ÇØÁÖµµ·Ï µÚ¿¡ Çª½Ã
+			// ë¬¸ì¼ ê²½ìš°ì—ëŠ” ë‚˜ì¤‘ì— ì²˜ë¦¬í•´ì£¼ë„ë¡ ë’¤ì— í‘¸ì‹œ
 			if (prison[next_i][next_j] == '#') {
 				if (numOfDoors[cur_i][cur_j][personNum] + 1 < numOfDoors[next_i][next_j][personNum]) {
 					numOfDoors[next_i][next_j][personNum] = numOfDoors[cur_i][cur_j][personNum] + 1;
 					bfs_queue.push_back({ next_i, next_j });
 				}
 			}
-			else { // ºó °ø°£ÀÇ °æ¿ì ¸ÕÀú Ã³¸®ÇÏµµ·Ï ÇÔ
-				// ´Ù¸¸ ¹®À» ´õ Àû°Ô ¿­¾úÀ» °æ¿ì¿¡¸¸ »õ·Î ¹æ¹®ÇÏµµ·Ï ÇÔ
+			else { // ë¹ˆ ê³µê°„ì˜ ê²½ìš° ë¨¼ì € ì²˜ë¦¬í•˜ë„ë¡ í•¨
+				// ë‹¤ë§Œ ë¬¸ì„ ë” ì ê²Œ ì—´ì—ˆì„ ê²½ìš°ì—ë§Œ ìƒˆë¡œ ë°©ë¬¸í•˜ë„ë¡ í•¨
 				if (numOfDoors[cur_i][cur_j][personNum] < numOfDoors[next_i][next_j][personNum]) {
 					numOfDoors[next_i][next_j][personNum] = numOfDoors[cur_i][cur_j][personNum];
 					bfs_queue.push_front({ next_i, next_j });
@@ -116,7 +85,7 @@ int main() {
 		cin >> h >> w;
 
 		vector<pair<int, int>> locationsOfPeople;
-		locationsOfPeople.push_back({ 0, 0 }); // »ó±ÙÀÌÀÇ À§Ä¡
+		locationsOfPeople.push_back({ 0, 0 }); // ìƒê·¼ì´ì˜ ìœ„ì¹˜
 
 		for (int j = 0; j <= h + 1; j++) {
 			for (int k = 0; k <= w + 1; k++) {
