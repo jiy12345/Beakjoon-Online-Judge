@@ -5,46 +5,13 @@
 #include<string>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-T: Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö
-N: °øÇ×(³ëµå)ÀÇ ¼ö
-M: ÃÑ Áö¿ø ºñ¿ë
-K: Æ¼ÄÏ Á¤º¸(°£¼±)ÀÇ ¼ö
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2 ~ 100
-M: 0 ~ 10,000
-K: 0 ~ 10,000
-
-u: °¢ Æ¼ÄÏÀÇ Ãâ¹ß °øÇ×
-v: °¢ Æ¼ÄÏÀÇ µµÂø °øÇ×
-c: °¡´Âµ¥ µå´Â ºñ¿ë / 1 ~ M
-d: ¼Ò¿ä½Ã°£ / 1 ~ 1,000
-
-Ãâ¹ßµµ½Ã´Â 1¹øÀÌ°í, µµÂø µµ½Ã´Â N¹øÀÌ´Ù!
-
-- ¹®Á¦ »óÈ²
- °¢ Å×½ºÆ® ÄÉÀÌ½º´ç ÁÖ¾îÁø ºñ¿ë ³»¿¡¼­ ¸ñÀûÁö¿¡ µµ´ÞÇÒ ¼ö ÀÖ´Â °¡Àå ÂªÀº ½Ã°£À» ±¸ÇÏ¶ó
-
- ¸¸¾à ¸ñÀûÁö¿¡ µµÂøÇÒ ¼ö ¾ø´Â °æ¿ì Poor KCMÀ» Ãâ·ÂÇÏ¶ó.
-
-
-2. Ç®ÀÌ °èÈ¹
- ´ÙÀÍ½ºÆ®¶ó ¾Ë°í¸®ÁòÀ» ÅëÇØ °è¼ÓÇØ¼­ ÃÖ¼Ò ½Ã°£À» ±â·ÏÇÏµÇ, °¢ ´Ü°è¿¡¼­ ºñ¿ëÀÌ ÃÊ°úµÇ´Â °æ·Î´Â ¼±ÅÃÇÏÁö ¾Êµµ·Ï ÇÑ´Ù!
-
-3. °èÈ¹ °ËÁõ
-*/
-
 #define MAX 101
 #define MAX_COST 10001
 #define INF 10000 * 100
 
-// ÇÊ¿äÇÑ º¯¼ö ¼±¾ð
+// í•„ìš”í•œ ë³€ìˆ˜ ì„ ì–¸
 int T;
-int N, M, K; // Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö, °Ç¹°ÀÇ °³¼ö, °Ç¼³ ¼ø¼­ ±ÔÄ¢ °³¼ö, ¸ñÇ¥ °Ç¹°
+int N, M, K;
 
 struct Edge {
     int destNode;
@@ -68,7 +35,7 @@ void dijkstra(int start) {
         int curCost = pq.top()[2];
         pq.pop();
 
-        // °°Àº ºñ¿ëÀ¸·Î ´õ ÀûÀº ½Ã°£ ³»¿¡ ÀÌ¹Ì ¹æ¹®Çß´Ù¸é Å½»ö X
+        // ê°™ì€ ë¹„ìš©ìœ¼ë¡œ ë” ì ì€ ì‹œê°„ ë‚´ì— ì´ë¯¸ ë°©ë¬¸í–ˆë‹¤ë©´ íƒìƒ‰ X
         if (dp[curNode][curCost] < curTime) continue;
 
         for (int i = 0; i < edges[curNode].size(); i++) {
@@ -95,7 +62,7 @@ string solution() {
 
     dijkstra(1);
 
-    // °¡´ÉÇÑ ºñ¿ë ³»¿¡¼­ ÃÖ¼Ò ½Ã°£ÀÌ °É¸° °æ·Î Ã£±â
+    // ê°€ëŠ¥í•œ ë¹„ìš© ë‚´ì—ì„œ ìµœì†Œ ì‹œê°„ì´ ê±¸ë¦° ê²½ë¡œ ì°¾ê¸°
     for (int i = 0; i <= M; i++)
         answer = min(answer, dp[N][i]);
 
@@ -110,7 +77,7 @@ int main() {
 
     for (int t = 0; t < T; t++) {
         cin >> N >> M >> K;
-        // ¹è¿­ ÃÊ±âÈ­  
+        // ë°°ì—´ ì´ˆê¸°í™”  
         edges.clear();
         edges.resize(N + 1);
 
