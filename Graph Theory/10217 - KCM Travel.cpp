@@ -22,7 +22,6 @@ struct Edge {
 vector<vector<Edge>> edges;
 int dp[MAX][MAX_COST];
 
-
 void dijkstra(int start) {
 
     priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> pq;
