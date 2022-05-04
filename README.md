@@ -121,6 +121,7 @@
  * [1103: 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1103%20-%20%EA%B2%8C%EC%9E%84.cpp)
  * [1167: 트리의 지름](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1167%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%A7%80%EB%A6%84.cpp)
  * [1197: 최소 스패닝 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1197%20-%20%EC%B5%9C%EC%86%8C%20%EC%8A%A4%ED%8C%A8%EB%8B%9D%20%ED%8A%B8%EB%A6%AC.cpp)
+ * [1238: 파티](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1238%20-%20%ED%8C%8C%ED%8B%B0.cpp)
  * [1260: DFS와 BFS](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1260%20-%20DFS%EC%99%80%20BFS.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222526875068))
  * [1261: 알고스팟](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1261%20-%20%EC%95%8C%EA%B3%A0%EC%8A%A4%ED%8C%9F.cpp)
  * [1303: 전쟁 - 전투](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1303%20-%20%EC%A0%84%EC%9F%81%20-%20%EC%A0%84%ED%88%AC.cpp)
