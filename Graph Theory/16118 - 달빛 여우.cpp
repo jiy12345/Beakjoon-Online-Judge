@@ -2,54 +2,6 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ±×·çÅÍ±âÀÇ °³¼ö
-M: ¿À¼Ö±æÀÇ °³¼ö
-d: ¿À¼Ö±æÀÇ ±æÀÌ
-
- - º¯¼ö Á¦ÇÑ »çÇ×
-
- N: 2 ~ 4,000
- M: 1 ~ 100,000
-
- d: 1 ~ 100,000
-
- ¿À¼Ö±æÀº ¾ç¹æÇâ
- ¾î¶² µÎ ±×·çÅÍ±â »çÀÌ¿¡ µÎ °³ ÀÌ»óÀÇ ¿À¼Ö±æÀÌ ³ªÀÖ´Â °æ¿ì´Â ¾ø´Ù!
- ´Þºû ¿©¿ì¿Í ´Þºû ´Á´ë´Â ¸ðµÎ 1¹ø¿¡¼­ Ãâ¹ß
-
-- ¹®Á¦ »óÈ²
-
- µ¹À» ´ÙÀ½°ú °°Àº ´Ü°è¿¡ µû¶ó ¿òÁ÷¿©
-
- Å©±â°¡ °°Áö ¾ÊÀº µÎ ±×·ìÀ» °í¸¥´Ù. ±× ´ÙÀ½, µ¹ÀÇ °³¼ö°¡ ÀÛÀº ÂÊÀ» X, Å« ÂÊÀ» Y¶ó°í Á¤ÇÑ´Ù. ±× ´ÙÀ½, X¿¡ ÀÖ´Â µ¹ÀÇ °³¼ö¸¦ X+X°³·Î, Y¿¡ ÀÖ´Â µ¹ÀÇ °³¼ö¸¦ Y-X°³·Î ¸¸µç´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- Á¦ÇÑÀÌ µüÈ÷ ¾ø°í, µ¹À» °°Àº °³¼ö·Î ¸¸µé ¼ö ÀÖ´ÂÁö ¿©ºÎ¸¸ µûÁö´Â °ÍÀÌ¹Ç·Î,
-
- ¾î¶»°Ô ³¡³¯Áö ¿©ºÎ¸¦ ÆÇ´ÜÇÏ´Â °ÍÀÌ °¡Àå Áß¿äÇÏ´Ù.
-
- ÀÏ´Ü ¾Æ·¡·Î °¥ ¶§´Â ÇÑ ±×·ìÀÇ °³¼ö°¡ 0ÀÌ µÈ´Ù¸é ´õ ÀÌ»ó ¿òÁ÷ÀÏ ¼ö ¾øÀ¸¹Ç·Î °Å±â¼­ ³¡³»¾ß ÇÑ´Ù.
-
- ¶ÇÇÑ À§·Î °¥ ¶§´Â °¡Àå Å« ¼ö°¡ µÉ ¼ö ÀÖÀ» ¶§°¡ 500, 499ÀÏ ‹š ÀÌ¹Ç·Î, 1000ÀÌ»óÀ¸·Î´Â Àý´ë °¥ ¼ö ¾ø´Ù.
-
- µû¶ó¼­ 1000 Å©±âÀÇ 3Â÷¿ø ¹è¿­¿¡ ¹æ¹® Ç¥½Ã¸¦ ÁøÇàÇÏ°í, Ã£À¸¸é 1, ¸øÃ£°í Á¾·áÇÏ¸é 0À» Ãâ·ÂÇÏ¸é µÉ µí ÇÏ´Ù.
-
- ±×·±µ¥ ¾à°£ °ÆÁ¤µÇ´Â °ÍÀº ½Ã°£º¹Àâµµ¿Í °ø°£ º¹Àâµµ Á¤µµ?
-
- ¿¬»êÀ» ÀÚ¼¼È÷ º¸¸é, ÇÑ¹ø ¿¬»êÀ» ÇßÀ» ¶§ X¸¦ ´õÇÏ°í X¸¦ »« °ÍÀÌ¹Ç·Î ÀüÃ¼ÀÇ ÇÕ(A + B + C)´Â ¹Ù²îÁö ¾Ê´Â °ÍÀ» ¾Ë ¼ö ÀÖ´Ù.
-
- µÎ ¼ö¸¸ °¡Áö°íµµ 3°³ÀÇ µ¹ ±×·ìÀ» ³ªÅ¸³¾ ¼ö ÀÖ´Ù!
-
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
 #define INF 987654321
 
 #define MAX 4001
@@ -99,8 +51,8 @@ void wolf_dijkstra() {
         int cur_speed = dijkstra_queue.top()[2];
         dijkstra_queue.pop();
 
-        // ÀÌÀü ³ëµå¿¡¼­ ÇöÀç ³ëµå±îÁö´Â ÇöÀç ¼ÓµµÀÇ ¹Ý´ë·Î ´ÙÀ½ ³ëµå±îÁö ¿Ô±â ¶§¹®¿¡
-        // ÇöÀç ¼Óµµ¿Í ¹Ý´ëÀÇ ¼Óµµ·Î ºñ±³
+        // ì´ì „ ë…¸ë“œì—ì„œ í˜„ìž¬ ë…¸ë“œê¹Œì§€ëŠ” í˜„ìž¬ ì†ë„ì˜ ë°˜ëŒ€ë¡œ ë‹¤ìŒ ë…¸ë“œê¹Œì§€ ì™”ê¸° ë•Œë¬¸ì—
+        // í˜„ìž¬ ì†ë„ì™€ ë°˜ëŒ€ì˜ ì†ë„ë¡œ ë¹„êµ
         if (wolf_distanceFromStart[(cur_speed + 1) % 2][cur_node] < cur_cost) continue;
 
         for (int i = 0; i < nodes[cur_node].size(); i++) {
