@@ -5,33 +5,6 @@
 #include<limits.h>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-K: Æ÷ÀåÇÒ ¼ö ÀÖ´Â µµ·ÎÀÇ °³¼ö
-
-N: µµ½ÃÀÇ °³¼ö
-M: µµ·ÎÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-K: 1 ~ 20
-
-N: 1 ~ 10,000
-M: 1 ~ 50,000
-
-µµ·Î´Â ¾ç¹æÇâ µµ·Î
-µµ·Î¸¦ °¡´Âµ¥ °É¸®´Â ½Ã°£: 1 ~ 1,000,000
-
-- ¹®Á¦ »óÈ²
-K°³ ÀÌÇÏÀÇ µµ·Î¸¦ Æ÷ÀåÇÏ¿© ¾òÀ» ¼ö ÀÖ´Â ÃÖ¼Ò ½Ã°£À» ±¸ÇÏ¶ó
-
-
-2. Ç®ÀÌ °èÈ¹
- »ç¿ëÇÑ µµ·ÎÀÇ °³¼öº°·Î ´Ù¸£°Ô Ã¼Å©ÇÏ¿©, ±× Áß ÃÖ¼Ò°ªÀ» Ã£À¸¸é µÉ µí ÇÏ´Ù.
-
-3. °èÈ¹ °ËÁõ
-*/
-
 #define MAX 10001
 int N, M;
 int K;
@@ -58,16 +31,16 @@ void dijkstra(int start_node) {
 			long long next_dist = next_info.first;
 			long long next_node = next_info.second;
 
-			// ´ÙÀ½ µµ½Ã±îÁö Æ÷ÀåÇÏÁö ¾ÊÀ» °æ¿ì
+			// ë‹¤ìŒ ë„ì‹œê¹Œì§€ í¬ì¥í•˜ì§€ ì•Šì„ ê²½ìš°
 			if (cur_dist + next_dist < distFromStart[next_node][cur_pavedRoad]) {
 				distFromStart[next_node][cur_pavedRoad] = cur_dist + next_dist;
 				dijkstra_queue.push({ distFromStart[next_node][cur_pavedRoad], cur_pavedRoad, next_node });
 			}
 
-			// ÀÌ¹Ì Æ÷ÀåÈ½¼ö¸¦ ´Ù »ç¿ëÇÏ¿´À» °æ¿ì Æ÷ÀåÀº Ã¼Å©ÇÒ ÇÊ¿ä°¡ ¾øÀ½
+			// ì´ë¯¸ í¬ì¥íšŸìˆ˜ë¥¼ ë‹¤ ì‚¬ìš©í•˜ì˜€ì„ ê²½ìš° í¬ì¥ì€ ì²´í¬í•  í•„ìš”ê°€ ì—†ìŒ
 			if(cur_pavedRoad == K) continue;
 
-			// ´ÙÀ½ µµ½Ã±îÁö Æ÷ÀåÇÒ °æ¿ì
+			// ë‹¤ìŒ ë„ì‹œê¹Œì§€ í¬ì¥í•  ê²½ìš°
 			if (cur_dist < distFromStart[next_node][cur_pavedRoad + 1]) {
 				distFromStart[next_node][cur_pavedRoad + 1] = cur_dist;
 				dijkstra_queue.push({ distFromStart[next_node][cur_pavedRoad + 1], cur_pavedRoad + 1, next_node });
