@@ -3,43 +3,10 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¹æ(³ëµå)ÀÇ °³¼ö
-M: Åë·ÎÀÇ °³¼ö
-K: ¸ðÀÓ¿¡ Âü¿©ÇÏ´Â Ä£±¸ÀÇ ¼ö
-
-T: Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2 ~ 100
-M: ~ 6,000
-K: 0 ~ N
-
-¾ç¹æÇâ ÅëÇàÀÌ °¡´ÉÇÑ Åë·Î
-Åë·ÎÀÇ ±æÀÌ´Â ÀÚ¿¬¼ö
-µÎ ¹æÀ» ¿¬°áÇÏ´Â ºñ¹ÐÅë·Î´Â ¹Ýµå½Ã ÇÏ³ª¾¿ Á¸Àç
-¾î¶² ¹æ¿¡¼­ ´Ù¸¥ ¹æÀ¸·Î ºñ¹Ð Åë·Î¸¦ ÀÌ¿ëÇØ¼­ °¥ ¼ö ¾ø´Â °÷Àº Á¸ÀçÇÏÁö ¾Ê´Â´Ù.
-°°Àº ºñ¹Ð Åë·Î¿¡ ´ëÇÑ Á¤º¸°¡ Áßº¹µÇ¾î ÁÖ¾îÁöÁö ¾Ê´Â´Ù.
-
-- ¹®Á¦ »óÈ²
- °¢ Å×½ºÆ® ÄÉÀÌ½º´ç ÁÖ¾îÁø ºñ¿ë ³»¿¡¼­ ¸ñÀûÁö¿¡ µµ´ÞÇÒ ¼ö ÀÖ´Â °¡Àå ÂªÀº ½Ã°£À» ±¸ÇÏ¶ó
-
- ¸¸¾à ¸ñÀûÁö¿¡ µµÂøÇÒ ¼ö ¾ø´Â °æ¿ì Poor KCMÀ» Ãâ·ÂÇÏ¶ó.
-
-
-2. Ç®ÀÌ °èÈ¹
- ´ÙÀÍ½ºÆ®¶ó ¾Ë°í¸®ÁòÀ» ÅëÇØ °è¼ÓÇØ¼­ ÃÖ¼Ò ½Ã°£À» ±â·ÏÇÏµÇ, °¢ ´Ü°è¿¡¼­ ºñ¿ëÀÌ ÃÊ°úµÇ´Â °æ·Î´Â ¼±ÅÃÇÏÁö ¾Êµµ·Ï ÇÑ´Ù!
-
-3. °èÈ¹ °ËÁõ
-*/
-
 #define MAX 101
 #define INF 6000 * 1000
 
-// ÇÊ¿äÇÑ º¯¼ö ¼±¾ð
+// í•„ìš”í•œ ë³€ìˆ˜ ì„ ì–¸
 int T;
 int N, M, K;
 
@@ -59,7 +26,7 @@ void dijkstra(int start) {
         int cur_node = pq.top().second;
         pq.pop();
 
-        // °°Àº ºñ¿ëÀ¸·Î ´õ ÀûÀº ½Ã°£ ³»¿¡ ÀÌ¹Ì ¹æ¹®Çß´Ù¸é Å½»ö X
+        // ê°™ì€ ë¹„ìš©ìœ¼ë¡œ ë” ì ì€ ì‹œê°„ ë‚´ì— ì´ë¯¸ ë°©ë¬¸í–ˆë‹¤ë©´ íƒìƒ‰ X
         if (distFromStart[start][cur_node] < cur_dist) continue;
 
         for (pair<int, int> next_info : graph[cur_node]) {
@@ -84,11 +51,11 @@ int solution() {
         dijkstra(curStartLocation);
     }
 
-    // ¸ðµç µµÂøÁ¡¿¡ ´ëÇØ ¹Ýº¹
+    // ëª¨ë“  ë„ì°©ì ì— ëŒ€í•´ ë°˜ë³µ
     for (int i = 1; i <= N; i++) {
         int curSum = 0;
 
-        // ¸ðµç Ãâ¹ßÁ¡¿¡¼­ÀÇ °Å¸® °í·Á
+        // ëª¨ë“  ì¶œë°œì ì—ì„œì˜ ê±°ë¦¬ ê³ ë ¤
         for (int curStartLocation : startLocations) {
             curSum += distFromStart[curStartLocation][i];
         }
