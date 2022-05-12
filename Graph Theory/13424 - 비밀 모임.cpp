@@ -10,11 +10,9 @@ using namespace std;
 int T;
 int N, M, K;
 
-
 vector<pair<int ,int>> graph[MAX];
 vector<int> startLocations;
 int distFromStart[MAX][MAX];
-
 
 void dijkstra(int start) {
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int,int>>> pq;
