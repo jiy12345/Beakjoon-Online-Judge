@@ -173,6 +173,7 @@
  * [12886: 돌 그룹](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12886%20-%20%EB%8F%8C%20%EA%B7%B8%EB%A3%B9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222674067433))
  * [12946: 육각 보드](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12946%20-%20%EC%9C%A1%EA%B0%81%20%EB%B3%B4%EB%93%9C.cpp)
  * [13023: ABCDE](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/13023%20-%20ABCDE.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222650172349))
+ * [13424: 비밀 모임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/13424%20-%20%EB%B9%84%EB%B0%80%20%EB%AA%A8%EC%9E%84.cpp)
  * [13460: 구슬 탈출 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/13460%20-%20%EA%B5%AC%EC%8A%AC%20%ED%83%88%EC%B6%9C%202.cpp)
  * [13549: 숨바꼭질 3](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/13549%20-%20%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88%203.cpp)
  * [13913: 숨바꼭질 4](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/13913%20-%20%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88%204.cpp)
