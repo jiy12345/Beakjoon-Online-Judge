@@ -1,6 +1,4 @@
 #include<iostream>
-#include<queue>
-#include<algorithm>
 using namespace std;
 
 #define MAX 501
@@ -32,7 +30,7 @@ int solution() {
             }
         }
 
-        answer += knowable ? 1 : 0;
+        answer += knowable;
     }
 
     return answer;
