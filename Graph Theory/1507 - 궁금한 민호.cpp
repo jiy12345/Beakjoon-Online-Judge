@@ -1,34 +1,13 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: µµ½ÃÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-
-s: 1 ~ 50,000
-
-»ç°ÇÀÇ ÀüÈÄ °ü°è°¡ ¸ð¼øÀÎ °æ¿ì´Â ¾ø´Ù.
-
-- ¹®Á¦ »óÈ²
-
-
-
-2. Ç®ÀÌ °èÈ¹
- ´ÙÀÍ½ºÆ®¶ó ¾Ë°í¸®ÁòÀ» ÅëÇØ °è¼ÓÇØ¼­ ÃÖ¼Ò ½Ã°£À» ±â·ÏÇÏµÇ, °¢ ´Ü°è¿¡¼­ ºñ¿ëÀÌ ÃÊ°úµÇ´Â °æ·Î´Â ¼±ÅÃÇÏÁö ¾Êµµ·Ï ÇÑ´Ù!
-
-3. °èÈ¹ °ËÁõ
-*/
-
 #define MAX 21
 
 int N;
 int graph[MAX][MAX];
-// true: ±æÀÌ ÀÖÀ½
-// false: ±æÀÌ ¾øÀ½
-// ÀÏ´Ü ¸ðµç ³ëµå°£ÀÇ ±æÀÌ ÀÖ´Ù°í °¡Á¤
+// true: ê¸¸ì´ ìžˆìŒ
+// false: ê¸¸ì´ ì—†ìŒ
+// ì¼ë‹¨ ëª¨ë“  ë…¸ë“œê°„ì˜ ê¸¸ì´ ìžˆë‹¤ê³  ê°€ì •
 bool road[MAX][MAX];
 
 bool floydWarshall(void) {
@@ -37,13 +16,13 @@ bool floydWarshall(void) {
             for (int j = 0; j < N; j++) {
                 if (i == j || j == k || i == k)
                     continue;
-                // ÇÃ·ÎÀÌµå°¡ ¼º¸³ÇÏÁö ¾Ê´Â °æ¿ì
-                // Áï ÇöÀç ÃøÁ¤µÈ °Å¸®°¡ ÃÖ´Ü °Å¸®°¡ ¾Æ´Ñ °æ¿ì!
+                // í”Œë¡œì´ë“œê°€ ì„±ë¦½í•˜ì§€ ì•ŠëŠ” ê²½ìš°
+                // ì¦‰ í˜„ìž¬ ì¸¡ì •ëœ ê±°ë¦¬ê°€ ìµœë‹¨ ê±°ë¦¬ê°€ ì•„ë‹Œ ê²½ìš°!
                 else if (graph[i][j] > graph[i][k] + graph[k][j]) {
                     return false;
                 }
-                // i -> j·Î °¡´Â °£¼±Àº i -> k, k -> j °£¼± µÎ°³·Î ´ëÃ¼µÉ ¼ö ÀÖÀ¸¸ç,
-                // ÀÌ·² °æ¿ì °£¼±ÀÇ °³¼ö¸¦ ÁÙÀÏ ¼ö ÀÖÀ½
+                // i -> jë¡œ ê°€ëŠ” ê°„ì„ ì€ i -> k, k -> j ê°„ì„  ë‘ê°œë¡œ ëŒ€ì²´ë  ìˆ˜ ìžˆìœ¼ë©°,
+                // ì´ëŸ´ ê²½ìš° ê°„ì„ ì˜ ê°œìˆ˜ë¥¼ ì¤„ì¼ ìˆ˜ ìžˆìŒ
                 else if (graph[i][j] == graph[i][k] + graph[k][j])
                     road[i][j] = true;
             }
