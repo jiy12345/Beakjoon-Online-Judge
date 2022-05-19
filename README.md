@@ -171,6 +171,7 @@
  * [11403: 경로 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11403%20-%20%EA%B2%BD%EB%A1%9C%20%EC%B0%BE%EA%B8%B0.cpp)
  * [**11404: 플로이드**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11404%20-%20%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C.cpp)
  * [10423: 전기가 부족해](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/10423%20-%20%EC%A0%84%EA%B8%B0%EA%B0%80%20%EB%B6%80%EC%A1%B1%ED%95%B4.cpp)
+ * [11562: 백양로 브레이크](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11562%20-%20%EB%B0%B1%EC%96%91%EB%A1%9C%20%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC.cpp)
  * [11724: 연결 요소의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11724%20-%20%EC%97%B0%EA%B2%B0%20%EC%9A%94%EC%86%8C%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222537886059))
  * [11725: 트리의 부모 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11725%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EB%B6%80%EB%AA%A8%20%EC%B0%BE%EA%B8%B0.cpp)
  * [11779: 최소비용 구하기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11779%20-%20%EC%B5%9C%EC%86%8C%EB%B9%84%EC%9A%A9%20%EA%B5%AC%ED%95%98%EA%B8%B0%202.cpp)
