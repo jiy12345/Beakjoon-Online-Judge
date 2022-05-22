@@ -4,10 +4,10 @@ using namespace std;
 
 #define MAX 4001
 
-// LCS¸¦ ±¸ÇÏ±â À§ÇÑ ¹è¿­
+// LCSë¥¼ êµ¬í•˜ê¸° ìœ„í•œ ë°°ì—´
 int dp[MAX][MAX];
 
-// °ªÀ» ÀÔ·Â¹ŞÀ» ¹®ÀÚ¿­
+// ê°’ì„ ì…ë ¥ë°›ì„ ë¬¸ìì—´
 string string1;
 string string2;
 
@@ -16,15 +16,14 @@ int LCS() {
 
 	for (int i = 1; i <= string2.length(); i++) {
 		for (int j = 1; j <= string1.length(); j++) {
-			// µÎ ¹®ÀÚ¿­ÀÇ ¸¶Áö¸· À§Ä¡ÀÇ ¹®ÀÚ°¡ °°À» °æ¿ì
+			// ë‘ ë¬¸ìì—´ì˜ ë§ˆì§€ë§‰ ìœ„ì¹˜ì˜ ë¬¸ìê°€ ê°™ì„ ê²½ìš°
 			if (string1[j - 1] == string2[i - 1]) {
 				dp[i][j] = dp[i - 1][j - 1] + 1;
 			}
-			else { // °°Áö ¾ÊÀ» °æ¿ì
+			else { // ê°™ì§€ ì•Šì„ ê²½ìš°
 				dp[i][j] = 0;
 			}
 			answer = max(answer, dp[i][j]);
-
 		}
 	}
 
