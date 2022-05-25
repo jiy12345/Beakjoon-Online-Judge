@@ -204,6 +204,7 @@
  * [16988: Baaaaaaaaaduk2 (Easy)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/16988%20-%20Baaaaaaaaaduk2%20(Easy).cpp)
  * [17070: 파이프 옮기기 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17070%20-%20%ED%8C%8C%EC%9D%B4%ED%94%84%20%EC%98%AE%EA%B8%B0%EA%B8%B0%201.cpp)
  * [17472: 다리 만들기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17472%20-%20%EB%8B%A4%EB%A6%AC%20%EB%A7%8C%EB%93%A4%EA%B8%B0%202.cpp)
+ * [18223 민준이와 마산 그리고 건우](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/18223%20-%20%EB%AF%BC%EC%A4%80%EC%9D%B4%EC%99%80%20%EB%A7%88%EC%82%B0%20%EA%B7%B8%EB%A6%AC%EA%B3%A0%20%EA%B1%B4%EC%9A%B0.cpp)
  * [21940: 가운데에서 만나기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/21940%20-%20%EA%B0%80%EC%9A%B4%EB%8D%B0%EC%97%90%EC%84%9C%20%EB%A7%8C%EB%82%98%EA%B8%B0.cpp)
 
 ## Greedy Algorithm
