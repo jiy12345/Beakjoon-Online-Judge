@@ -7,7 +7,6 @@ using namespace std;
 
 int N, M, W;
 
-
 bool bellman_ford(vector<vector<int>> edges) {
 	vector<int> dist(N + 1, INF);
 
