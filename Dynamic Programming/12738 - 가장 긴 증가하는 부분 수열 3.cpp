@@ -2,37 +2,10 @@
 #include<vector>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¼ö¿­ AÀÇ Å©±â
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N:1~1,000,000
-
-¼ö¿­À» ÀÌ·ç°í ÀÖ´Â ¼ö: 1 ~ 1,000,000
-
-- ¹®Á¦ »óÈ²
-°¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù, nÀ» 1, 2, 3ÀÇ ÇÕÀ¸·Î ³ªÅ¸³»´Â ¹æ¹ýÀÇ ¼ö¸¦ 1,000,000,009·Î ³ª´« ³ª¸ÓÁö¸¦ Ãâ·Â
-
-2. Ç®ÀÌ °èÈ¹
-
-¹®Á¦°¡ µÇ´Â Á¡: Á¶°ÇÀ» °í·ÁÇÑ °ÍÀ» ÇÑ¹ø¿¡ ¾î¶»°Ô ³ªÅ¸³¾ °ÍÀÌ³Ä?
-
-°¢ À§Ä¡¿¡¼­ÀÇ ÇÕÀº ¿ø·¡´Â
-
-dp[n] = dp[n-1] + dp[n-2] + dp[n-3] ÀÌ¾î¾ß ÇÏ³ª, °¢ Á¶°Ç¿¡ µû¶ó ¶Ç ³ª´µ¾îÁ®¾ß ÇÑ´Ù!
-
-3. °èÈ¹ °ËÁõ
-
- ¹«°Ô¿¡ ´ëÇØ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¹Ç·Î, ÀÌÀü °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼®µéÀº ´ÙÀ½ °¡¹æ¿¡µµ ³ÖÀ» ¼ö ÀÖ´Ù. µû¶ó¼­ ¿ì¼±¼øÀ§ Å¥¿¡ ÇöÀç °í·ÁÁßÀÎ º¸¼®µéÀ» ¸ðµÎ ´ã¾ÆµÐ´Ù¸é, ÇöÀç °¡¹æ¿¡ ³ÖÀ» ¼ö ÀÖ´Â º¸¼® Áß °¡°ÝÀÌ °¡Àå ³ôÀº º¸¼®À» ³Ö°Ô µÉ ¼ö ÀÖ´Ù.
-
-*/
-
-// °ªÀ» ÀÔ·Â¹ÞÀ» ¹è¿­
+// ê°’ì„ ìž…ë ¥ë°›ì„ ë°°ì—´
 int A[1000000] = { 0, };
 
-int N; // ¼ö¿­ÀÇ ±æÀÌ
+int N; // ìˆ˜ì—´ì˜ ê¸¸ì´
 
 int solution() {
     int answer = 0;
@@ -42,11 +15,11 @@ int solution() {
     LIS.push_back(A[0]);
 
     for (int i = 1; i < N; i++) {
-        // Çö À§Ä¡ÀÇ ¼ö°¡ ÇöÀç ±â·ÏÁßÀÎ LISÀÇ ¸ðµç ¼öº¸´Ù Å« ¼öÀÏ °æ¿ì
+        // í˜„ ìœ„ì¹˜ì˜ ìˆ˜ê°€ í˜„ìž¬ ê¸°ë¡ì¤‘ì¸ LISì˜ ëª¨ë“  ìˆ˜ë³´ë‹¤ í° ìˆ˜ì¼ ê²½ìš°
         if (LIS.back() < A[i]) {
             LIS.push_back(A[i]);
         }
-        else { // Çö À§Ä¡ÀÇ ¼öº¸´Ù ´õ Å« ¼ö°¡ LIS¿¡ ÀÖÀ» °æ¿ì
+        else { // í˜„ ìœ„ì¹˜ì˜ ìˆ˜ë³´ë‹¤ ë” í° ìˆ˜ê°€ LISì— ìžˆì„ ê²½ìš°
             auto it = lower_bound(LIS.begin(), LIS.end(), A[i]);
             *it = A[i];
         }
