@@ -184,7 +184,6 @@
  * [11779: 최소비용 구하기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/11779%20-%20%EC%B5%9C%EC%86%8C%EB%B9%84%EC%9A%A9%20%EA%B5%AC%ED%95%98%EA%B8%B0%202.cpp)
  * 12852: 1로 만들기 2 [[풀이 1(이전 노드 기록)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12852%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0%202_sol1.cpp)] [[풀이 2(각 노드별 경로 기록)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12852%20-%201%EB%A1%9C%20%EB%A7%8C%EB%93%A4%EA%B8%B0%202_sol2.cpp)]
  * [12886: 돌 그룹](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12886%20-%20%EB%8F%8C%20%EA%B7%B8%EB%A3%B9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222674067433))
- * [12904: A와 B](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/12904%20-%20A%EC%99%80%20B.cpp)
  * [12946: 육각 보드](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/12946%20-%20%EC%9C%A1%EA%B0%81%20%EB%B3%B4%EB%93%9C.cpp)
  * [13023: ABCDE](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/13023%20-%20ABCDE.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222650172349))
  * [13424: 비밀 모임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/13424%20-%20%EB%B9%84%EB%B0%80%20%EB%AA%A8%EC%9E%84.cpp)
@@ -228,6 +227,7 @@
  * [**11000: 강의실 배정**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11000%20-%20%EA%B0%95%EC%9D%98%EC%8B%A4%20%EB%B0%B0%EC%A0%95.cpp)
  * [11047: 동전 0](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11047%20-%20%EB%8F%99%EC%A0%84%200.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222494137695))
  * [11399: ATM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11399%20-%20ATM.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222494105653))
+ * [12904: A와 B](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/12904%20-%20A%EC%99%80%20B.cpp)
 
 ## Implementation
  * [1917: 정육면체 전개도](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1917%20-%20%EC%A0%95%EC%9C%A1%EB%A9%B4%EC%B2%B4%20%EC%A0%84%EA%B0%9C%EB%8F%84.cpp) 
