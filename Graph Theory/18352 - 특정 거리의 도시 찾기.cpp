@@ -39,7 +39,7 @@ void dijkstra() {
 }
 
 void solution() {
-    fill(&dist[0], &dist[N], N);
+    fill(&dist[0], &dist[N + 1], N);
 
     dijkstra();
 
