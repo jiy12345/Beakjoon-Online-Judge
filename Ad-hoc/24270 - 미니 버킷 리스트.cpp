@@ -8,7 +8,6 @@ int N, K;
 long long factorial(int r) {
     long long result = 1;
     for (int i = 1; i <= N; i++) {
-        result %= 1000000007;
         result = result * (r + i) % 1000000007;
     }
 
