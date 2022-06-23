@@ -280,6 +280,7 @@
  * [1738: 수 이어쓰기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1738%20-%20%EC%88%98%20%EC%9D%B4%EC%96%B4%EC%93%B0%EA%B8%B0.cpp)
  * [1747: 소수and팰린드롬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1747%20-%20%EC%86%8C%EC%88%98and%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.cpp)
  * [2004: 조합 0의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2004%20-%20%EC%A1%B0%ED%95%A9%200%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)
+ * [2089: -2진수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2089%20-%20-2%EC%A7%84%EC%88%98.cpp)
  * [2609: 최대공약수와 최소공배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2609%20-%20%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631010235))
  * [4375: 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/4375%20-%201.cpp)
  * [6064: 카잉 달력](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6064%20-%20%EC%B9%B4%EC%9E%89%20%EB%8B%AC%EB%A0%A5.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222633743068))
