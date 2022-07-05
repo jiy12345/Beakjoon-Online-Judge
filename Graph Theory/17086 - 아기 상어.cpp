@@ -1,32 +1,7 @@
-﻿#include<iostream>
+#include<iostream>
 #include<queue>
 #include<algorithm>
 using namespace std;
-
-/*
-1. 문제 분석
-- 변수
-K: 말을 따라할 수 있는 횟수
-W, H: 격자판의 가로길이, 세로길이​
-
-- 변수 제한 사항
-K: 0 ~ 30
-W, H: 1 ~ 200​
-
-0: 평지
-1: 장애물
-
-- 문제 상황
-
-2. 풀이 계획​
-
-3. 계획 검증
- 1. 알고리즘 측면​
-
- 2. 시간복잡도 측면
-
- 3. 공간복잡도 측면
-*/
 
 #define MAX 50
 
