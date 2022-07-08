@@ -241,6 +241,7 @@
  * [11060: 점프 점프](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/11060%20-%20%EC%A0%90%ED%94%84%20%EC%A0%90%ED%94%84.cpp)
  * [17086: 아기 상어](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17086%20-%20%EC%95%84%EA%B8%B0%20%EC%83%81%EC%96%B4.cpp)
  * [17141: 연구소 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17141%20-%20%EC%97%B0%EA%B5%AC%EC%86%8C%202.cpp)
+ * [17142: 연구소 3](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17142%20-%20%EC%97%B0%EA%B5%AC%EC%86%8C%203.cpp)
 ### Tree
  * [2263: 트리의 순회](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2263%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%88%9C%ED%9A%8C.cpp)
  * [5639: 이진 검색 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/5639%20-%20%EC%9D%B4%EC%A7%84%20%EA%B2%80%EC%83%89%20%ED%8A%B8%EB%A6%AC.cpp)
