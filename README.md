@@ -267,6 +267,7 @@
  * [13904: 과제](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/13904%20-%20%EA%B3%BC%EC%A0%9C.cpp)
 
 ## Implementation
+ * [1051: 숫자 정사각형](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1051%20-%20%EC%88%AB%EC%9E%90%20%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95.cpp) 
  * [1063: 킹](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1063%20-%20%ED%82%B9.cpp) 
  * [1917: 정육면체 전개도](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1917%20-%20%EC%A0%95%EC%9C%A1%EB%A9%B4%EC%B2%B4%20%EC%A0%84%EA%B0%9C%EB%8F%84.cpp) 
  * [2290: LCD Test](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2290%20-%20LCD%20Test.cpp) 
