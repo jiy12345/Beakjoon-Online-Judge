@@ -2,41 +2,6 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N, M: °ÝÀÚÆÇÀÇ ¼¼·Î, °¡·Î ±æÀÌ
-H, W: Á÷»ç°¢ÇüÀÇ Å©±â
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-2 ¡Â N, M ¡Â 1,000
-1 ¡Â H ¡Â N
-1 ¡Â W ¡Â M
-1 ¡Â Sr ¡Â N-H+1
-1 ¡Â Sc ¡Â M-W+1
-1 ¡Â Fr ¡Â N-H+1
-1 ¡Â Fc ¡Â M-W+1
-ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø Á÷»ç°¢ÇüÀº °ÝÀÚÆÇÀ» ¹þ¾î³ªÁö ¾Ê°í, Á÷»ç°¢ÇüÀÌ ³õ¿© ÀÖ´Â Ä­¿¡´Â º®ÀÌ ¾ø´Ù.
-
-- ¹®Á¦ »óÈ²
- Á÷»ç°¢ÇüÀÇ ÇöÀç À§Ä¡, ¸ñÇ¥ À§Ä¡, °ÝÀÚÆÇÀÇ »óÅÂ°¡ ÁÖ¾îÁ³À» ¶§,
-
- Á÷»ç°¢ÇüÀÇ ÃÖ¼Ò ÀÌµ¿ È½¼ö¸¦ ±¸ÇÏ¿©¶ó.
-
- ÀÌµ¿ÇÒ ¼ö ¾øÀ» °æ¿ì¿¡´Â -1À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
- °¢ À§Ä¡º°·Î ÇÑ¹ø¾¿ °è»êÇÏ¸é µÉ µí ÇÏ´Ù!
-
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
-
 #define MAX 1001
 
 int di[4] = { -1, 0, 1, 0 };
@@ -48,7 +13,7 @@ int S_r, S_c, F_r, F_c;
 int grid[MAX][MAX];
 
 int isInRange(int i, int j) {
-	// ÁÂ »ó´Ü ¹× ¿ìÇÏ´Ü ÁÂÇ¥ µ¿½Ã Ã¼Å©
+	// ì¢Œ ìƒë‹¨ ë° ìš°í•˜ë‹¨ ì¢Œí‘œ ë™ì‹œ ì²´í¬
 	return 1 <= i && i + H - 1 <= N && 1 <= j && j + W - 1 <= M;
 }
 
@@ -90,6 +55,7 @@ int bfs() {
 }
 
 int solution() {
+	// ì§ì‚¬ê°í˜• ëª¨ì–‘ìœ¼ë¡œ ë²½ í‘œì‹œ
 	for (int i = 1; i <= N; i++) {
 		for (int j = 1; j <= M; j++) {
 			if (grid[i][j] == 1) {
