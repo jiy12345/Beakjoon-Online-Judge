@@ -99,6 +99,7 @@
  * [5582: 공통 부분 문자열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/5582%20-%20%EA%B3%B5%ED%86%B5%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.cpp)
  * [9084: 동전](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9084%20-%20%EB%8F%99%EC%A0%84.cpp)
  * [9095: 1, 2, 3 더하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9095%20-%201%2C%202%2C%203%20%EB%8D%94%ED%95%98%EA%B8%B0.cpp)
+ * [9184: 신나는 함수 실행](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9184%20-%20%EC%8B%A0%EB%82%98%EB%8A%94%20%ED%95%A8%EC%88%98%20%EC%8B%A4%ED%96%89.cpp)
  * [**9251: LCS**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9251%20-%20LCS.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222560710653))
  * [**9252: LCS 2**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9252%20-%20LCS%202.cpp)
  * [9465: 스티커](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/9465%20-%20%EC%8A%A4%ED%8B%B0%EC%BB%A4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222558002737))
