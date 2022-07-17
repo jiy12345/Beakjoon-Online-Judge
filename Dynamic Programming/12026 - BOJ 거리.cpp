@@ -2,39 +2,6 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- N: º¸µµ ºí·ÏÀÇ °³¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 1 ~ 1,000
-
- BOJ°Å¸®ÀÇ °¢ º¸µµºí·Ï¿¡´Â B, O, J Áß¿¡ ÇÏ³ª°¡ ¾²¿© ÀÖ´Ù
- 1¹øÀº ¹Ýµå½Ã BÀÌ´Ù
-
-- ¹®Á¦ »óÈ²
-½ºÅ¸Æ®°¡ ÇöÀç ÀÖ´Â °÷ÀÌ i¹øÀÌ¶ó¸é, i+1¹øºÎÅÍ N¹ø±îÁö·Î Á¡ÇÁ¸¦ ÇÒ ¼ö ÀÖ°í, 
-ÇÑ ¹ø kÄ­ ¸¸Å­ Á¡ÇÁ¸¦ ÇÏ´Âµ¥ ÇÊ¿äÇÑ ¿¡³ÊÁöÀÇ ¾çÀº k*kÀÌ¶ó°í ÇÒ ¶§,
-½ºÅ¸Æ®°¡ ¸µÅ©¸¦ ¸¸³ª´Âµ¥ ÇÊ¿äÇÑ ¿¡³ÊÁö ¾çÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ¿©¶ó.
-
-
-2. Ç®ÀÌ °èÈ¹
-
-
-1. ¹æ¹®ÀÌ °¡´ÉÇÑ À§Ä¡¿¡ ´ëÇØ(ÀúÀåµÈ ¿¡³ÊÁö ¾çÀÌ 0ÀÌ ¾Æ´Ñ À§Ä¡¿¡ ´ëÇØ) ´ÙÀ½À» ¹Ýº¹ÇÑ´Ù.
- 1) Çö À§Ä¡ÀÇ ´ÙÀ½À§Ä¡ºÎÅÍ ³¡ À§Ä¡±îÁö°¥ ¼ö ÀÖ´Â À§Ä¡±îÁö ÃÑ ÇÊ¿äÇÑ ¿¡³ÊÁö¾çÀ» ´ÙÀ½°ú °°Àº ½Ä¿¡ µû¶ó ±¸ÇÑ´Ù.
-  ´ÙÀ½ À§Ä¡ÀÇ ¿¡³ÊÁö ¾ç = ÇöÀç À§Ä¡±îÁöÀÇ ¿¡³ÊÁö ¾ç + k * k
- 2) 1)¿¡¼­ ±¸ÇÑ °ªÀÌ ÇöÀç ÀúÀåµÇ¾î ÀÖ´Â °ªº¸´Ù ÀÛÀ» ¶§¸¸ °»½ÅÇÏ°í,±×·¸Áö ¾ÊÀ¸¸é °»½ÅÇÏÁö ¾Ê´Â´Ù.
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
-
 #define MAX 1000
 
 int dp[MAX];
@@ -59,7 +26,7 @@ int solution() {
 
 	for (int i = 0; i < N; i++)
 		for (int j = i + 1; j < N; j++)
-			// ´ÙÀ½ ¹®ÀÚÀÏ ¶§¸¸
+			// ë‹¤ìŒ ë¬¸ìžì¼ ë•Œë§Œ
 			if (road[j] == nextChar(road[i]))
 				dp[j] = min(dp[j], dp[i] + (j - i) * (j - i));
 
