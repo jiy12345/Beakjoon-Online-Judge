@@ -1,35 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
- N: °ÝÀÚÀÇ °¡·Î, ¼¼·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 3 ~ 999
- NÀº È¦¼ö
-
-
-- ¹®Á¦ »óÈ²
- NÀÌ ÁÖ¾îÁ³À» ¶§ °¡¿îµ¥¼­ºÎÅÍ ´ÞÆØÀÌ ¸ð¾çÀ¸·Î ¼öµéÀ» Ãâ·ÂÇÏ°í, ÁÖ¾îÁø ¼öÀÇ ÁÂÇ¥¸¦ ±¸ÇÏ¿©¶ó.
-
-
-2. Ç®ÀÌ °èÈ¹
-
-
-1. ¹æ¹®ÀÌ °¡´ÉÇÑ À§Ä¡¿¡ ´ëÇØ(ÀúÀåµÈ ¿¡³ÊÁö ¾çÀÌ 0ÀÌ ¾Æ´Ñ À§Ä¡¿¡ ´ëÇØ) ´ÙÀ½À» ¹Ýº¹ÇÑ´Ù.
- 1) Çö À§Ä¡ÀÇ ´ÙÀ½À§Ä¡ºÎÅÍ ³¡ À§Ä¡±îÁö°¥ ¼ö ÀÖ´Â À§Ä¡±îÁö ÃÑ ÇÊ¿äÇÑ ¿¡³ÊÁö¾çÀ» ´ÙÀ½°ú °°Àº ½Ä¿¡ µû¶ó ±¸ÇÑ´Ù.
-  ´ÙÀ½ À§Ä¡ÀÇ ¿¡³ÊÁö ¾ç = ÇöÀç À§Ä¡±îÁöÀÇ ¿¡³ÊÁö ¾ç + k * k
- 2) 1)¿¡¼­ ±¸ÇÑ °ªÀÌ ÇöÀç ÀúÀåµÇ¾î ÀÖ´Â °ªº¸´Ù ÀÛÀ» ¶§¸¸ °»½ÅÇÏ°í,±×·¸Áö ¾ÊÀ¸¸é °»½ÅÇÏÁö ¾Ê´Â´Ù.
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
 #define MAX 999
 
 enum DIRECTION{UP, RIGHT, DOWN, LEFT};
@@ -44,7 +15,7 @@ void solution() {
 	int target_i = 0;
 	int target_j = 0;
 
-	// Ã¹ À§Ä¡´Â °¡¿îµ¥
+	// ì²« ìœ„ì¹˜ëŠ” ê°€ìš´ë°
 	int cur_i = (N + 1) / 2 - 1;
 	int cur_j = (N + 1) / 2 - 1;
 	int cur_num = 1;
@@ -56,9 +27,9 @@ void solution() {
 	}
 	snail[cur_i][cur_j] = cur_num++;
 
-	// ÇÑÁÙ¿¡ ¾µ ¼ýÀÚ °³¼ö
+	// í•œì¤„ì— ì“¸ ìˆ«ìž ê°œìˆ˜
 	for (int i = 0; i < N - 1; i++) {
-		// °°Àº È½¼ö¸¸Å­ µÎ¹ø¾¿ ÀÌµ¿
+		// ê°™ì€ íšŸìˆ˜ë§Œí¼ ë‘ë²ˆì”© ì´ë™
 		for (int k = 0; k < 2; k++) {
 			for (int j = 0; j < i + 1; j++) {
 				cur_i = cur_i + di[cur_direction];
@@ -69,13 +40,13 @@ void solution() {
 				}
 				snail[cur_i][cur_j] = cur_num++;
 			}
-			// ¹æÇâ ÀüÈ¯
+			// ë°©í–¥ ì „í™˜
 			cur_direction++;
 			cur_direction %= 4;
 		}
 	}
 
-	// ¸¶Áö¸· ÁÙ ±ß±â
+	// ë§ˆì§€ë§‰ ì¤„ ê¸‹ê¸°
 	for (int j = 0; j < N - 1; j++) {
 		cur_i = cur_i + di[cur_direction];
 		cur_j = cur_j + dj[cur_direction];
