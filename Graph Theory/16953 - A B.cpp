@@ -11,8 +11,8 @@ int bfs() {
 	bfs_queue.push({ 0, B });
 
 	while (!bfs_queue.empty()) {
-		int cur_depth		= bfs_queue.front().first;
-		long long cur_i		= bfs_queue.front().second;
+		int cur_depth	= bfs_queue.front().first;
+		int cur_i	= bfs_queue.front().second;
 		bfs_queue.pop();
 
 		if (cur_i <= A) {
@@ -30,12 +30,9 @@ int bfs() {
 
 		// 연산 2의 반대. 1을 빼고 10으로 나누기
 		if ((cur_i - 1) % 10 == 0) {
-
 			int next_i = (cur_i -1) / 10;
 			bfs_queue.push({ next_depth, next_i });
-		
 		}
-
 	}
 	
 	return answer;
