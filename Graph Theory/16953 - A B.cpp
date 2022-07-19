@@ -1,53 +1,8 @@
 #include<iostream>
 #include<queue>
-#include<map>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-A, B: ÁÖ¾îÁö´Â µÎ ¼ýÀÚ
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-1,000,000,000
-
-
-- ¹®Á¦ »óÈ²
-µÎ ¼ö A, B°¡ ÁÖ¾îÁö°í, °¡´ÉÇÑ ¿¬»êÀÌ ´ÙÀ½°ú °°´Ù°í ÇÒ ¶§,
-
-2¸¦ °öÇÑ´Ù.
-1À» ¼öÀÇ °¡Àå ¿À¸¥ÂÊ¿¡ Ãß°¡ÇÑ´Ù.
-
-A¸¦ B·Î ¹Ù²Ù´Âµ¥ ÇÊ¿äÇÑ ¿¬»êÀÇ ÃÖ¼Ò°ªÀ» ±¸ÇÏ¿©¶ó.
-¹Ù²Ü ¼ö ¾øÀ» °æ¿ì -1À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-1. bfs¸¦ ÁøÇàÇÏµÇ
-
-¹æ¹® Ç¥½Ã¸¦ boolÇüÀ¸·Î ÁøÇàÇÏ¸é 1±â°¡¹ÙÀÌÆ®°¡ ÇÊ¿äÇÏ´Ù. ¾î¶»°Ô Ã³¸®ÇÒ ¼ö ÀÖÀ»±î?
-
-- ¿¬»ê 1: ºñÆ® ¿¬»ê <<·Î ±¸Çö °¡´É
-=> ¿¬»ê 1ÀÇ °á°ú´Â Ç×»ó Â¦¼öÀÌ´Ù.
-- ¿¬»ê 2: ¼ö¿¡ 10À» °öÇÑ ÈÄ 1 ´õÇÏ´Â °ÍÀ¸·Î ±¸Çö °¡´É
-=> ¿¬»ê 2ÀÇ °á°ú´Â Ç×»ó È¦¼öÀÌ´Ù.
-
-=> °¡´ÉÇÑ µÎ ¿¬»êÀÌ ¸ðµÎ ¼ö°¡ Ä¿Áö´Â ¿¬»êÀÌ¹Ç·Î, BÀÌ»óÀ¸·Î ÁøÇàÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
-
-
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
-
 int A, B;
-map<int, int> isVisited;
-
 
 int bfs() {
 	int answer = -1;
@@ -67,18 +22,16 @@ int bfs() {
 
 		int next_depth = cur_depth + 1;
 
-		// ¿¬»ê 1. 2·Î ³ª´©±â
+		// ì—°ì‚° 1ì˜ ë°˜ëŒ€. 2ë¡œ ë‚˜ëˆ„ê¸°
 		if (cur_i % 2 == 0) {
 			int next_i = cur_i >> 1;
-
 			bfs_queue.push({ next_depth, next_i });
 		}
 
+		// ì—°ì‚° 2ì˜ ë°˜ëŒ€. 1ì„ ë¹¼ê³  10ìœ¼ë¡œ ë‚˜ëˆ„ê¸°
 		if ((cur_i - 1) % 10 == 0) {
-			// ¿¬»ê 2. 10À» °öÇÏ°í 1 ´õÇÏ±â
+
 			int next_i = (cur_i -1) / 10;
-	
-			isVisited[next_i]++;
 			bfs_queue.push({ next_depth, next_i });
 		
 		}
