@@ -16,7 +16,6 @@ int solution() {
         tenSquared *= 10;
     }
 
-
     // 몇번째 숫자인지 구하기
     answer = (answer + 1) + (k - 1) / digit;
 
