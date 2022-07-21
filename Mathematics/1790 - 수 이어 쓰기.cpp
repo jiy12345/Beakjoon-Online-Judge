@@ -2,41 +2,6 @@
 #include<string>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¸¶Áö¸· ¼ö
-k: ¸îÀÎÁö ¾Ë¾Æ¾ß ÇÏ´Â ÀÚ¸®¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-1 ¡Â N ¡Â 100,000,000  
-1 ¡Â k ¡Â 1,000,000,000
-
-
-- ¹®Á¦ »óÈ²
- N°ú k°¡ ÁÖ¾îÁ³À» ¶§, ¸¸µé¾îÁø ¼ýÀÚ¿¡¼­ k¹øÂ° ÀÚ¸® ¼ö¸¦ Ãâ·ÂÇÑ´Ù.
- ¼öÀÇ ±æÀÌ°¡ kº¸´Ù ÀÛ¾Æ¼­ k¹øÂ° ÀÚ¸® ¼ýÀÚ°¡ ¾ø´Â °æ¿ì´Â -1À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-ÀÏ´Ü, ¾î¶² ¹üÀ§ÀÎÁö È®Á¤ÇØ¾ß ÇÑ´Ù.
-µû¶ó¼­ °ªÀ» ¿Ã¸®¸ç °è»êÇØº¸ÀÚ
-
-°¢ ÀÚ¸®¼ö¿¡ ´ëÇØ °¡Áö´Â ¼ýÀÚ´Â ´ÙÀ½°ú °°´Ù.
-
-(10^N - 10^(N-1)) * N
-
-µû¶ó¼­ À§ÀÇ ¼ö¸¦ k¿¡¼­ »©°¡¸ç
-
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
-
 int N, k;
 
 int solution() {
@@ -52,7 +17,7 @@ int solution() {
     }
 
 
-    // ¸î¹øÂ° ¼ýÀÚÀÎÁö ±¸ÇÏ±â
+    // ëª‡ë²ˆì§¸ ìˆ«ìžì¸ì§€ êµ¬í•˜ê¸°
     answer = (answer + 1) + (k - 1) / digit;
 
     //cout << answer << endl;
