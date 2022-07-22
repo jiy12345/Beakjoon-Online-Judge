@@ -323,6 +323,7 @@
  * [17087: 숨바꼭질 6](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17087%20-%20%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88%206.cpp) 
  * [17425: 약수의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17425%20-%20%EC%95%BD%EC%88%98%EC%9D%98%20%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222629636361))
  * [17427: 약수의 합 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17427%20-%20%EC%95%BD%EC%88%98%EC%9D%98%20%ED%95%A9%202.cpp)
+ * [17436: 소수의 배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17436%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EB%B0%B0%EC%88%98.cpp)
 
 ## Number Theory
  * [2312: 수 복원하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Number%20Theory/2312-%20%EC%88%98%20%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0.cpp)
