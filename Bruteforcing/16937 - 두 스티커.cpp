@@ -1,56 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-H, W: ¸ð´«Á¾ÀÌÀÇ ¼¼·Î, °¡·Î ±æÀÌ
-N: ½ºÆ¼Ä¿ÀÇ °³¼ö
-Ri, Ci: i¹øÂ° ½ºÆ¼Ä¿ÀÇ ¼¼·Î, °¡·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- N: 1 ~ 100
-
-
-- ¹®Á¦ »óÈ²
- Å©¸®º¸µå¿¡ ´ÙÀ½°ú °°Àº 4°¡Áö ¹öÆ°¸¸ ÀÖ´Ù°í ÇÒ ¶§,
-
-È­¸é¿¡ A¸¦ Ãâ·ÂÇÑ´Ù.
-Ctrl-A: È­¸éÀ» ÀüÃ¼ ¼±ÅÃÇÑ´Ù
-Ctrl-C: ÀüÃ¼ ¼±ÅÃÇÑ ³»¿ëÀ» ¹öÆÛ¿¡ º¹»çÇÑ´Ù
-Ctrl-V: ¹öÆÛ°¡ ºñ¾îÀÖÁö ¾ÊÀº °æ¿ì¿¡´Â È­¸é¿¡ Ãâ·ÂµÈ ¹®ÀÚ¿­ÀÇ ¹Ù·Î µÚ¿¡ ¹öÆÛÀÇ ³»¿ëÀ» ºÙ¿©³Ö´Â´Ù.
-
- Å©¸®º¸µåÀÇ ¹öÆ°À» ÃÑ N¹ø ´­·¯¼­ È­¸é¿¡ Ãâ·ÂµÈ A °³¼öÀÇ ÃÖ´ë°ªÀ» ±¸ÇÏ¿©¶ó!
-
-2. Ç®ÀÌ °èÈ¹
-
-µÎ°³ÀÇ ½ºÆ¼Ä¿¸¦ ÃÖ´ëÇÑ ÀÛÀº °ø°£ ³»¿¡ ¹èÄ¡ÇÏ±â À§ÇØ¼­´Â ÃÖ´ëÇÑ ÀÛÀº °ø°£¸¸À» »ç¿ëÇØ¾ß ÇÑ´Ù.
-
-½ºÆ¼Ä¿ µÎ°³´Â °ãÄ¥ ¼ö ¾øÀ¸¹Ç·Î, ´ÙÀ½°ú °°Àº °æ¿ì°¡ ÀÖÀ» ¼ö ÀÖ´Ù.
-
-µÎ ½ºÆ¼Ä¿¸¦ »Ì´Â °ÍÀº ¼ø¼­°¡ »ó°ü ¾øÀ¸¹Ç·Î, Á¶ÇÕÀ¸·Î »Ì¾Æ¾ß ÇÑ´Ù.
-
-
-1. µÎ ½ºÆ¼Ä¿¸¦ ¼¼·Î·Î ´Ã¾î³õ´Â´Ù.
- => ÀÌ °æ¿ì, µÎ ½ºÆ¼Ä¿ÀÇ ´ÙÀ½°ú °°Àº 2°¡Áö Á¶°ÇÀ» Ã¼Å©ÇØ¾ß ÇÑ´Ù.
-
- ¼¼·Î ±æÀÌÀÇ ÇÕ <= ¸ð´«Á¾ÀÌÀÇ ¼¼·Î ±æÀÌ
- °¡·Î ±æÀÌÀÇ ÃÖ´ë°ª <= ¸ð´«Á¾ÀÌÀÇ °¡·Î ±æÀÌ
-
-2. µÎ ½ºÆ¼Ä¿¸¦ °¡·Î·Î ´Ã¾î³õ´Â´Ù.
- °¡·Î ±æÀÌÀÇ ÇÕ <= ¸ð´«Á¾ÀÌÀÇ °¡·Î ±æÀÌ
- ¼¼·Î ±æÀÌÀÇ ÃÖ´ë°ª <= ¸ð´«Á¾ÀÌÀÇ ¼¼·Î ±æÀÌ
-
- ¶ÇÇÑ, °¢ ½ºÆ¼Ä¿´Â ¸ðµÎ 90µµ È¸ÀüÀÌ °¡´ÉÇÏ¹Ç·Î, È¸Àü¿¡ µû¸¥ 4°¡Áö °æ¿ì¸¦ ¸ðµÎ Ã¼Å©ÇØÁà¾ß ÇÑ´Ù!
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
-
 #define MAX 100
 #define R	0
 #define C	1
@@ -67,22 +17,22 @@ inline bool canBePlaced(int firstR, int firstC, int secondR, int secondC) {
 }
 
 bool isPossible(int firstStickerIndex, int secondStickerIndex) {
-	// 1. È¸Àü ÇÏÁö ¾Ê¾ÒÀ» °æ¿ì
+	// 1. íšŒì „ í•˜ì§€ ì•Šì•˜ì„ ê²½ìš°
 	if (canBePlaced(stickers[firstStickerIndex][R], stickers[firstStickerIndex][C],
 		stickers[secondStickerIndex][R], stickers[secondStickerIndex][C])) 
 		return true;
 	
-	// 2. Ã¹¹øÀç ½ºÆ¼Ä¿¸¸ È¸ÀüÇßÀ» °æ¿ì
+	// 2. ì²«ë²ˆìž¬ ìŠ¤í‹°ì»¤ë§Œ íšŒì „í–ˆì„ ê²½ìš°
 	if (canBePlaced(stickers[firstStickerIndex][C], stickers[firstStickerIndex][R],
 		stickers[secondStickerIndex][R], stickers[secondStickerIndex][C]))
 		return true;
 
-	// 3. µÎ¹øÀç ½ºÆ¼Ä¿¸¸ È¸ÀüÇßÀ» °æ¿ì
+	// 3. ë‘ë²ˆìž¬ ìŠ¤í‹°ì»¤ë§Œ íšŒì „í–ˆì„ ê²½ìš°
 	if (canBePlaced(stickers[firstStickerIndex][R], stickers[firstStickerIndex][C],
 		stickers[secondStickerIndex][C], stickers[secondStickerIndex][R]))
 		return true;
 
-	// 4. µÎ ½ºÆ¼Ä¿ ¸ðµÎ È¸ÀüÇßÀ» °æ¿ì
+	// 4. ë‘ ìŠ¤í‹°ì»¤ ëª¨ë‘ íšŒì „í–ˆì„ ê²½ìš°
 	if (canBePlaced(stickers[firstStickerIndex][C], stickers[firstStickerIndex][R],
 		stickers[secondStickerIndex][C], stickers[secondStickerIndex][R]))
 		return true;
@@ -96,7 +46,7 @@ inline int getArear(int firstStickerIndex, int secondStickerIndex) {
 }
 
 int solution() {
-	// Á¶ÇÕ
+	// ì¡°í•©
 	for (int i = 0; i < N; i++)
 		for (int j = i + 1; j < N; j++)
 			if (isPossible(i, j)) curMax = max(curMax, getArear(i, j));
