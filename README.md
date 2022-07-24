@@ -70,6 +70,7 @@
  * 16197: 두 동전 [[풀이 1(방문 표시 o)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16197%20-%20%EB%91%90%20%EB%8F%99%EC%A0%84_sol1.cpp)] [[풀이 2(방문 표시 x)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16197%20-%20%EB%91%90%20%EB%8F%99%EC%A0%84_sol2.cpp)] 
  * [16198: 에너지 모으기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16198%20-%20%EC%97%90%EB%84%88%EC%A7%80%20%EB%AA%A8%EC%9C%BC%EA%B8%B0.cpp)
  * [16922: 로마 숫자 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16922%20-%20%EB%A1%9C%EB%A7%88%20%EC%88%AB%EC%9E%90%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)
+ * [16937: 두 스티커](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16937%20-%20%EB%91%90%20%EC%8A%A4%ED%8B%B0%EC%BB%A4.cpp)
  * [16943: 숫자 재배치](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/16943%20-%20%EC%88%AB%EC%9E%90%20%EC%9E%AC%EB%B0%B0%EC%B9%98.cpp)
  * 18290: NM과 K (1) [[풀이 1(복사 생성)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp)] [[풀이 2(더하기 빼기)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
 
