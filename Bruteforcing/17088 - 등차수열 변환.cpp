@@ -1,49 +1,5 @@
 #include<iostream>
-#include<algorithm>
 using namespace std;
-
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: ¼ö¿­ BÀÇ Å©±â
-
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-Bi: 1 ~ 10^9
-N: 1 ~ 10^5
-
-
-- ¹®Á¦ »óÈ²
-µÎ ¼ö A, B°¡ ÁÖ¾îÁö°í, °¡´ÉÇÑ ¿¬»êÀÌ ´ÙÀ½°ú °°´Ù°í ÇÒ ¶§,
-
-2¸¦ °öÇÑ´Ù.
-1À» ¼öÀÇ °¡Àå ¿À¸¥ÂÊ¿¡ Ãß°¡ÇÑ´Ù.
-
-A¸¦ B·Î ¹Ù²Ù´Âµ¥ ÇÊ¿äÇÑ ¿¬»êÀÇ ÃÖ¼Ò°ªÀ» ±¸ÇÏ¿©¶ó.
-¹Ù²Ü ¼ö ¾øÀ» °æ¿ì -1À» Ãâ·ÂÇÑ´Ù.
-
-2. Ç®ÀÌ °èÈ¹
-
-1. bfs¸¦ ÁøÇàÇÏµÇ
-
-¹æ¹® Ç¥½Ã¸¦ boolÇüÀ¸·Î ÁøÇàÇÏ¸é 1±â°¡¹ÙÀÌÆ®°¡ ÇÊ¿äÇÏ´Ù. ¾î¶»°Ô Ã³¸®ÇÒ ¼ö ÀÖÀ»±î?
-
-- ¿¬»ê 1: ºñÆ® ¿¬»ê <<·Î ±¸Çö °¡´É
-=> ¿¬»ê 1ÀÇ °á°ú´Â Ç×»ó Â¦¼öÀÌ´Ù.
-- ¿¬»ê 2: ¼ö¿¡ 10À» °öÇÑ ÈÄ 1 ´õÇÏ´Â °ÍÀ¸·Î ±¸Çö °¡´É
-=> ¿¬»ê 2ÀÇ °á°ú´Â Ç×»ó È¦¼öÀÌ´Ù.
-
-=> °¡´ÉÇÑ µÎ ¿¬»êÀÌ ¸ðµÎ ¼ö°¡ Ä¿Áö´Â ¿¬»êÀÌ¹Ç·Î, BÀÌ»óÀ¸·Î ÁøÇàÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
-
-
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
 
 #define MAX 1000000000
 
@@ -61,7 +17,7 @@ void dfs(int prevValue, int idx, int cnt, int r) {
 }
 
 int solution() {
-	// °¡´ÉÇÑ ½ÃÀÛ ¼ýÀÚ¿Í µ¿Â÷¿¡ µû¶ó ¹Ýº¹
+	// ê°€ëŠ¥í•œ ì‹œìž‘ ìˆ«ìžì™€ ë™ì°¨ì— ë”°ë¼ ë°˜ë³µ
 	for (int i = -1; i < 2; i++)
 		for (int j = -1; j < 2; j++)
 			dfs(B[1] + i, 2, (i != 0) + (j != 0), (B[1] + i) - (B[0] + j));
