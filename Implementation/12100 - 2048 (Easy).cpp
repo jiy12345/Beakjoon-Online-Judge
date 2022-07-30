@@ -21,7 +21,7 @@ vector<int> directions;
 // 각각의 한줄을 이동하는 함수
 void moveLine(int startIndex, int endIndex, int curLine, int direction, vector<vector<int>> &curGameBoard) {
 	int curPlaced	= startIndex; // 현재 배치되어야 하는 위치
-	int prevNum		= 0; // 바로 이전 번호
+	int prevNum	= 0; // 바로 이전 번호
 	
 	if (direction == RIGHT || direction == LEFT) {
 		for (int j = startIndex; j != endIndex; j += dj[direction]) {
@@ -100,7 +100,7 @@ int permutationWithRepeatation(vector<vector<int>>gameBoard) {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < N; j++) {
 				if (directions[i] == UP || directions[i] == LEFT) moveLine(N - 1, -1, j, directions[i], curGameBoard);
-				else											  moveLine(0, N, j, directions[i], curGameBoard);
+				else						  moveLine(0, N, j, directions[i], curGameBoard);
 			}
 			
 		}
