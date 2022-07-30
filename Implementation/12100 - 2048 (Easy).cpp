@@ -3,33 +3,6 @@
 #include<vector>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºĞ¼®
-- º¯¼ö
-N: º¸µåÀÇ °¡·Î, ¼¼·Î ±æÀÌ
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 1 ~ 20
-
-- ¹®Á¦ »óÈ²
- ÃÖ´ë 5¹ø ÀÌµ¿ÇÏ¿© ¸¸µé ¼ö ÀÖ´Â °¡Àå Å« ºí·ÏÀÇ °ªÀ» ±¸ÇÏ¿©¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-1) ÇÑ¹øÀÇ ¿òÁ÷ÀÓ
-ÀÌµ¿ ¹æÇâ¿¡ µû¶ó ÀÌµ¿ ¹æÇâÀÇ Ãâ¹ßÁ¡¿¡¼­ºÎÅÍ °°Àº ¼ıÀÚ³¢¸® ÇÕÃÄÁø´Ù.
-ÇÕÃÄÁø ´ÙÀ½¿¡´Â Ãâ¹ßÁ¡¿¡ °¡Àå °¡±î¿î À§Ä¡ºÎÅÍ ÇÑÀÚ¸®¾¿ Â÷ÁöÇÏ°Ô µÈ´Ù.
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
-
 #define MAX 20
 
 enum DIRECTION {
@@ -45,35 +18,35 @@ int dj[4] = { 0, 0, -1, +1 };
 int N;
 vector<int> directions;
 
-// °¢°¢ÀÇ ÇÑÁÙÀ» ÀÌµ¿ÇÏ´Â ÇÔ¼ö
+// ê°ê°ì˜ í•œì¤„ì„ ì´ë™í•˜ëŠ” í•¨ìˆ˜
 void moveLine(int startIndex, int endIndex, int curLine, int direction, vector<vector<int>> &curGameBoard) {
-	int curPlaced	= startIndex; // ÇöÀç ¹èÄ¡µÇ¾î¾ß ÇÏ´Â À§Ä¡
-	int prevNum		= 0; // ¹Ù·Î ÀÌÀü ¹øÈ£
+	int curPlaced	= startIndex; // í˜„ì¬ ë°°ì¹˜ë˜ì–´ì•¼ í•˜ëŠ” ìœ„ì¹˜
+	int prevNum		= 0; // ë°”ë¡œ ì´ì „ ë²ˆí˜¸
 	
 	if (direction == RIGHT || direction == LEFT) {
 		for (int j = startIndex; j != endIndex; j += dj[direction]) {
-			// ºóÄ­ÀÏ °æ¿ì ¾Æ¹« ÀÏµµ ÀÏ¾î³ªÁö ¾ÊÀ½
+			// ë¹ˆì¹¸ì¼ ê²½ìš° ì•„ë¬´ ì¼ë„ ì¼ì–´ë‚˜ì§€ ì•ŠìŒ
 			if (curGameBoard[curLine][j] == 0) continue;
 
-			// ÇÕÄ¥¼ö ÀÖ´Â ¼ö¸¦ Ã£¾ÒÀ» °æ¿ì
+			// í•©ì¹ ìˆ˜ ìˆëŠ” ìˆ˜ë¥¼ ì°¾ì•˜ì„ ê²½ìš°
 			if (prevNum == curGameBoard[curLine][j]) {
-				// µÎ ¼ö ÇÕÇÑ ¼ö À§Ä¡¿¡ ÀúÀå
+				// ë‘ ìˆ˜ í•©í•œ ìˆ˜ ìœ„ì¹˜ì— ì €ì¥
 				curGameBoard[curLine][curPlaced] = prevNum * 2;
 				curPlaced += dj[direction];
-				// Çö À§Ä¡ÀÇ ¼ö Áö¿ì±â
+				// í˜„ ìœ„ì¹˜ì˜ ìˆ˜ ì§€ìš°ê¸°
 				curGameBoard[curLine][j] = 0;
-				// ÇÑ¹ø ÇÕÃÄÁø ¼ö´Â ´Ù½Ã ÇÕÃÄÁú ¼ö ¾øÀ¸¹Ç·Î
+				// í•œë²ˆ í•©ì³ì§„ ìˆ˜ëŠ” ë‹¤ì‹œ í•©ì³ì§ˆ ìˆ˜ ì—†ìœ¼ë¯€ë¡œ
 				prevNum = 0;
 			}
-			else { // ÇÕÄ¥ ¼ö ¾ø´Â ¼ö¸¦ Ã£¾ÒÀ» °æ¿ì
-				// ÀÌÀü ¼ö ÀúÀå
+			else { // í•©ì¹  ìˆ˜ ì—†ëŠ” ìˆ˜ë¥¼ ì°¾ì•˜ì„ ê²½ìš°
+				// ì´ì „ ìˆ˜ ì €ì¥
 				if (prevNum != 0) {
 					curGameBoard[curLine][curPlaced] = prevNum;
 					curPlaced += dj[direction];
 				}
-				// ÇÕÄ¥ ¼ö ÀÖ´Â ¼ö °»½Å
+				// í•©ì¹  ìˆ˜ ìˆëŠ” ìˆ˜ ê°±ì‹ 
 				prevNum = curGameBoard[curLine][j];
-				// ÇöÀç À§Ä¡ÀÇ ¼ö Áö¿ì±â
+				// í˜„ì¬ ìœ„ì¹˜ì˜ ìˆ˜ ì§€ìš°ê¸°
 				curGameBoard[curLine][j] = 0;
 			}
 		}
@@ -84,28 +57,28 @@ void moveLine(int startIndex, int endIndex, int curLine, int direction, vector<v
 	}
 	else {
 		for (int i = startIndex; i != endIndex; i += di[direction]) {
-			// ºóÄ­ÀÏ °æ¿ì ¾Æ¹« ÀÏµµ ÀÏ¾î³ªÁö ¾ÊÀ½
+			// ë¹ˆì¹¸ì¼ ê²½ìš° ì•„ë¬´ ì¼ë„ ì¼ì–´ë‚˜ì§€ ì•ŠìŒ
 			if (curGameBoard[i][curLine] == 0) continue;
 
-			// ÇÕÄ¥¼ö ÀÖ´Â ¼ö¸¦ Ã£¾ÒÀ» °æ¿ì
+			// í•©ì¹ ìˆ˜ ìˆëŠ” ìˆ˜ë¥¼ ì°¾ì•˜ì„ ê²½ìš°
 			if (prevNum == curGameBoard[i][curLine]) {
-				// µÎ ¼ö ÇÕÇÑ ¼ö À§Ä¡¿¡ ÀúÀå
+				// ë‘ ìˆ˜ í•©í•œ ìˆ˜ ìœ„ì¹˜ì— ì €ì¥
 				curGameBoard[curPlaced][curLine] = prevNum * 2;
 				curPlaced += di[direction];
-				// Çö À§Ä¡ÀÇ ¼ö Áö¿ì±â
+				// í˜„ ìœ„ì¹˜ì˜ ìˆ˜ ì§€ìš°ê¸°
 				curGameBoard[i][curLine] = 0;
-				// ÇÑ¹ø ÇÕÃÄÁø ¼ö´Â ´Ù½Ã ÇÕÃÄÁú ¼ö ¾øÀ¸¹Ç·Î
+				// í•œë²ˆ í•©ì³ì§„ ìˆ˜ëŠ” ë‹¤ì‹œ í•©ì³ì§ˆ ìˆ˜ ì—†ìœ¼ë¯€ë¡œ
 				prevNum = 0;
 			}
-			else { // ÇÕÄ¥ ¼ö ¾ø´Â ¼ö¸¦ Ã£¾ÒÀ» °æ¿ì
-				// ÀÌÀü ¼ö ÀúÀå
+			else { // í•©ì¹  ìˆ˜ ì—†ëŠ” ìˆ˜ë¥¼ ì°¾ì•˜ì„ ê²½ìš°
+				// ì´ì „ ìˆ˜ ì €ì¥
 				if (prevNum != 0) {
 					curGameBoard[curPlaced][curLine] = prevNum;
 					curPlaced += di[direction];
 				}
-				// ÇÕÄ¥ ¼ö ÀÖ´Â ¼ö °»½Å
+				// í•©ì¹  ìˆ˜ ìˆëŠ” ìˆ˜ ê°±ì‹ 
 				prevNum = curGameBoard[i][curLine];
-				// ÇöÀç À§Ä¡ÀÇ ¼ö Áö¿ì±â
+				// í˜„ì¬ ìœ„ì¹˜ì˜ ìˆ˜ ì§€ìš°ê¸°
 				curGameBoard[i][curLine] = 0;
 			}
 		}
