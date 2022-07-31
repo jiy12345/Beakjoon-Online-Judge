@@ -3,53 +3,6 @@
 #include<queue>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-N: º¸µåÀÇ °¡·Î, ¼¼·Î ±æÀÌ
-K: »ç°úÀÇ °³¼ö
-X: ¹æÇâ ÀüÈ¯ÀÌ ÀÌ·ç¾îÁö´Â ½Ã°£
-L: ¹ìÀÇ ¹æÇâ º¯È¯ È½¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
-N: 2 ~ 100
-K: 0 ~ 100
-X: 0 ~ 10,000
-L: 1 ~ 100
-
-- ¹®Á¦ »óÈ²
- ¹ìÀº ¸Å ÃÊ¸¶´Ù ÀÌµ¿À» ÇÏ´Âµ¥ ´ÙÀ½°ú °°Àº ±ÔÄ¢À» µû¸¥´Ù°í ÇÒ ¶§,
-
-¸ÕÀú ¹ìÀº ¸ö±æÀÌ¸¦ ´Ã·Á ¸Ó¸®¸¦ ´ÙÀ½Ä­¿¡ À§Ä¡½ÃÅ²´Ù.
-¸¸¾à ÀÌµ¿ÇÑ Ä­¿¡ »ç°ú°¡ ÀÖ´Ù¸é, ±× Ä­¿¡ ÀÖ´ø »ç°ú°¡ ¾ø¾îÁö°í ²¿¸®´Â ¿òÁ÷ÀÌÁö ¾Ê´Â´Ù.
-¸¸¾à ÀÌµ¿ÇÑ Ä­¿¡ »ç°ú°¡ ¾ø´Ù¸é, ¸ö±æÀÌ¸¦ ÁÙ¿©¼­ ²¿¸®°¡ À§Ä¡ÇÑ Ä­À» ºñ¿öÁØ´Ù. Áï, ¸ö±æÀÌ´Â º¯ÇÏÁö ¾Ê´Â´Ù.
-
-¹ìÀÌ ÀÌ¸®Àú¸® ±â¾î´Ù´Ï´Ù°¡ º® ¶Ç´Â ÀÚ±âÀÚ½ÅÀÇ ¸ö°ú ºÎµúÈ÷¸é °ÔÀÓÀÌ ³¡³­´Ù.
-
-°ÔÀÓÀÌ ¸î ÃÊ¾Ö ³¡³ª´ÂÁö °è»êÇÏ¶ó
-
-2. Ç®ÀÌ °èÈ¹
-
-- ¹ìÀÇ ÀÌµ¿
-1) ºó Ä­ÀÏ °æ¿ì: 
- 1. ¹æÇâÀüÈ¯ÀÌ ¾ø´Â Ä­ÀÏ °æ¿ì: °¡´ø ¹æÇâÀ¸·Î ÇÑÄ­ ¾ÕÀ¸·Î º¸³»°í, ²¿¸® ÇÑÄ­ ÁÙÀÌ±â
- 2. ¹æÇâÀüÈ¯ÀÌ ÀÖ´Â Ä­ÀÏ °æ¿ì: ¹æÇâÀüÈ¯ ÇÏ´Â ¹æÇâÀ¸·Î ÇÑÄ­ ¾ÕÀ¸·Î º¸³»°í, ²¿¸® ÇÑÄ­ ÁÙÀÌ±â
-
-2) »ç°ú°¡ ÀÖ´Â Ä­ÀÏ °æ¿ì
- 1. ¹æÇâÀüÈ¯ÀÌ ¾ø´Â Ä­ÀÏ °æ¿ì: °¡´ø ¹æÇâÀ¸·Î ÇÑÄ­ ¾ÕÀ¸·Î º¸³»±â
- 2. ¹æÇâÀüÈ¯ÀÌ ÀÖ´Â Ä­ÀÏ °æ¿ì: ¹æÇâÀüÈ¯ ÇÏ´Â ¹æÇâÀ¸·Î ÇÑÄ­ ¾ÕÀ¸·Î º¸³»±â
-
-- Á¾·á Á¶°ÇÀÇ Ã¼Å©
- À§ÀÇ Ã³¸®°¡ ¸ðµÎ ³¡³­ µÚ, ¸Ó¸®(°¡Àå ¾Õ)°¡ ÀÖ´Â Ä­ÀÌ º® ¶Ç´Â ÀÚ±â ÀÚ½ÅÀÏ °æ¿ì °ÔÀÓ Á¾·á
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
-
 #define MAX 100
 #define MAX_TIME 10000
 
@@ -96,29 +49,29 @@ int solution() {
 		cur_head_i += di[curDirection];
 		cur_head_j += dj[curDirection];
 
-		// ²¿¸®¿¡ ´ëÇÑ Ã³¸®
+		// ê¼¬ë¦¬ì— ëŒ€í•œ ì²˜ë¦¬
 		switch (gameBoard[cur_head_i][cur_head_j]) {
 		case EMPTY: {
 			int cur_tail_i = snakeLocations.front().first;
 			int cur_tail_j = snakeLocations.front().second;
-			// ²¿¸® À§Ä¡ ºñ¿ì±â
+			// ê¼¬ë¦¬ ìœ„ì¹˜ ë¹„ìš°ê¸°
 			gameBoard[cur_tail_i][cur_tail_j] = EMPTY;
 			snakeLocations.pop();
 			break;
 		}
 		case APPLE:
-			// ²¿¸®´Â º¯È­ ¾øÀ½
+			// ê¼¬ë¦¬ëŠ” ë³€í™” ì—†ìŒ
 			break;
 		case SNAKE:
 		case WALL:
 			return cur_time;
 		}
 
-		// ¸Ó¸®¿¡ ´ëÇÑ Ã³¸®
+		// ë¨¸ë¦¬ì— ëŒ€í•œ ì²˜ë¦¬
 		gameBoard[cur_head_i][cur_head_j] = SNAKE;
 		snakeLocations.push({ cur_head_i, cur_head_j });
 
-		// ¹æÇâ ÀüÈ¯
+		// ë°©í–¥ ì „í™˜
 		curDirection = curDirection + directionChange[cur_time];
 		curDirection = (curDirection == -1) ? UP : curDirection;
 		curDirection %= DIRECTION_COUNT;
@@ -128,7 +81,7 @@ int solution() {
 void gameBoardSetting() {
 	cin >> N >> K;
 
-	// °ÔÀÓÆÇ ¿ÜºÎ º®À¸·Î µÎ¸£±â
+	// ê²Œìž„íŒ ì™¸ë¶€ ë²½ìœ¼ë¡œ ë‘ë¥´ê¸°
 	for (int i = 0; i <= N + 1; i++) {
 		gameBoard[0][i] = WALL;
 		gameBoard[N + 1][i] = WALL;
@@ -136,7 +89,7 @@ void gameBoardSetting() {
 		gameBoard[i][N + 1] = WALL;
 	}
 
-	// »ç°ú À§Ä¡ ÀÔ·Â ¹Þ±â
+	// ì‚¬ê³¼ ìœ„ì¹˜ ìž…ë ¥ ë°›ê¸°
 	int apple_i, apple_j;
 	for (int i = 0; i < K; i++) {
 		cin >> apple_i >> apple_j;
