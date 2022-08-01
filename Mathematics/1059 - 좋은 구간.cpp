@@ -2,46 +2,6 @@
 #include<algorithm>
 using namespace std;
 
-/*
-1. ¹®Á¦ ºÐ¼®
-- º¯¼ö
-S: Á¤¼öÀÇ ÁýÇÕ
-L: SÀÇ Å©±â
-n: ¸ñÇ¥ ¼ö
-
-- º¯¼ö Á¦ÇÑ »çÇ×
- L: 1 ~ 50
- S¿¡´Â Áßº¹µÇ´Â Á¤¼ö°¡ ¾ø´Ù.
- ÁýÇÕ S¿¡ Æ÷ÇÔµÈ ¸ðµç Á¤¼ö´Â 1º¸´Ù Å©°Å³ª °°°í, 1,000º¸´Ù ÀÛ°Å³ª °°´Ù.
- 
- nÀº ÁýÇÕ s¿¡ ÀÖ´Â ¼ö ¹üÀ§ ³»¿¡ ÀÖ´Ù.
-
-- ¹®Á¦ »óÈ²
-Á¤¼ö ÁýÇÕ S°¡ ÁÖ¾îÁ³À»¶§, ´ÙÀ½ Á¶°ÇÀ» ¸¸Á·ÇÏ´Â ±¸°£ [A, B]¸¦ ÁÁÀº ±¸°£ÀÌ¶ó°í ÇÑ´Ù.
-
-A¿Í B´Â ¾çÀÇ Á¤¼öÀÌ°í, A < B¸¦ ¸¸Á·ÇÑ´Ù.
-A ¡Â x ¡Â B¸¦ ¸¸Á·ÇÏ´Â ¸ðµç Á¤¼ö x°¡ ÁýÇÕ S¿¡ ¼ÓÇÏÁö ¾Ê´Â´Ù.
-
-ÁýÇÕ S¿Í nÀÌ ÁÖ¾îÁ³À» ¶§, nÀ» Æ÷ÇÔÇÏ´Â ÁÁÀº ±¸°£ÀÇ °³¼ö¸¦ ±¸ÇØº¸ÀÚ.
-
-2. Ç®ÀÌ °èÈ¹
- nÀÌ ¼ÓÇÏ´Â ÁÁÀº ±¸°£ÀÇ °³¼ö´Â ´ÙÀ½°ú °°ÀÌ °è»êÇÒ ¼ö ÀÖ´Ù.
-
-1. ÁýÇÕ S¸¦ Á¤·ÄÇÑ´Ù.
-2. nÀÌ ÁýÇÕ SÀÇ ¾î¶² ¼ö a¿Í ¾î¶² ¼ö b »çÀÌ¿¡ ÀÖ´ÂÁö Ã¼Å©ÇÑ´Ù.
-3. a + 1 ºÎÅÍ n±îÁö ¼ö k¸¦ ÇÏ³ª¾¿ »Ì¾Æ ¹Ýº¹ÇÏ¸ç, (b-1) - k¸¦ ´õÇÑ´Ù. 
-
-- Á¾·á Á¶°ÇÀÇ Ã¼Å©
- À§ÀÇ Ã³¸®°¡ ¸ðµÎ ³¡³­ µÚ, ¸Ó¸®(°¡Àå ¾Õ)°¡ ÀÖ´Â Ä­ÀÌ º® ¶Ç´Â ÀÚ±â ÀÚ½ÅÀÏ °æ¿ì °ÔÀÓ Á¾·á
-
-3. °èÈ¹ °ËÁõ
- 1. ¾Ë°í¸®Áò Ãø¸é
-
- 2. ½Ã°£º¹Àâµµ Ãø¸é
-
- 3. °ø°£º¹Àâµµ Ãø¸é
-*/
-
 #define MAX 50
 
 int S[MAX];
@@ -50,11 +10,11 @@ int L, n;
 int solution() {
 	sort(&S[0], &S[L]);
 
-	// nÀÌ Æ÷ÇÔµÇ´Â ±¸°£ Ã£±â
+	// nì´ í¬í•¨ë˜ëŠ” êµ¬ê°„ ì°¾ê¸°
 	int prevNum = 0;
 	int nextNum = 0;
 	for (int i = 0; i < L; i++) {
-		// n S¿¡ Æ÷ÇÔµÇ´Â °æ¿ì nÀÌ ¼ÓÇÏ´Â ÁÁÀº ±¸°£ÀÌ ³ª¿Ã ¼ö ¾øÀ½
+		// n Sì— í¬í•¨ë˜ëŠ” ê²½ìš° nì´ ì†í•˜ëŠ” ì¢‹ì€ êµ¬ê°„ì´ ë‚˜ì˜¬ ìˆ˜ ì—†ìŒ
 		if (S[i] == n) return 0;
 		if (S[i] > n) {
 			nextNum = S[i];
@@ -63,7 +23,7 @@ int solution() {
 		}
 	}
 
-	// ÁÁÀº ±¸°£ÀÇ °³¼ö ±¸ÇÏ±â
+	// ì¢‹ì€ êµ¬ê°„ì˜ ê°œìˆ˜ êµ¬í•˜ê¸°
 	int answer = 0;
 	for (int k = prevNum + 1; k <= n; k++) {
 		answer += (nextNum - 1) - max((n - 1), k);
