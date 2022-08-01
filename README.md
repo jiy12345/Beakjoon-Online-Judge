@@ -307,6 +307,7 @@
  * [1016: 제곱 ㄴㄴ 수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1016%20-%20%EC%A0%9C%EA%B3%B1%20%E3%84%B4%E3%84%B4%20%EC%88%98.cpp)
  * [1024: 수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1024%20-%20%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp)
  * [1026: 보물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1026%20-%20%EB%B3%B4%EB%AC%BC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222511044280))
+ * [1059: 좋은 구간](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1059%20-%20%EC%A2%8B%EC%9D%80%20%EA%B5%AC%EA%B0%84.cpp) 
  * [1373: 2진수 8진수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1373%20-%202%EC%A7%84%EC%88%98%208%EC%A7%84%EC%88%98.cpp)
  * [1629: 곱셈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1629%20-%20%EA%B3%B1%EC%85%88.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222536998009))
  * [1644: 소수의 연속합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1644%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EC%97%B0%EC%86%8D%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222512581322))
