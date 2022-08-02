@@ -4,11 +4,6 @@
 #include<iomanip>
 using namespace std;
 
-/*
-xa, ya, xb, yb, xc, yc: 주어지는 세 좌표
-
-*/
-
 double x_A, y_A, x_B, y_B, x_C, y_C;
 
 void input() {
