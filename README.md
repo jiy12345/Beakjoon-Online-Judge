@@ -132,6 +132,7 @@
  * [17404: RGB거리 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/17404%20-%20RGB%EA%B1%B0%EB%A6%AC%202.cpp)
 
 ## Data Structures
+ * [1417: 국회의원 선거](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1417%20-%20%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90%20%EC%84%A0%EA%B1%B0.cpp)
  * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
  * [10828: 스택](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10828%20-%20%EC%8A%A4%ED%83%9D.cpp)
  * [10845: 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10845%20-%20%ED%81%90.cpp)
