@@ -319,6 +319,7 @@
  * [1308: D-Day](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1308%20-%20D-Day.cpp)
  * [1312: 소수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1312%20-%20%EC%86%8C%EC%88%98.cpp)
  * [1373: 2진수 8진수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1373%20-%202%EC%A7%84%EC%88%98%208%EC%A7%84%EC%88%98.cpp)
+ * [1418: K-세준수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1418%20-%20K-%EC%84%B8%EC%A4%80%EC%88%98.cpp)
  * [1629: 곱셈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1629%20-%20%EA%B3%B1%EC%85%88.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222536998009))
  * [1644: 소수의 연속합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1644%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EC%97%B0%EC%86%8D%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222512581322))
  * [1676: 팩토리얼 0의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1676%20-%20%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC%200%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222531156973))
