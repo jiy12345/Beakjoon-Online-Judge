@@ -288,6 +288,7 @@
  * [1340: 연도 진행 바](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1340%20-%20%EC%97%B0%EB%8F%84%20%EC%A7%84%ED%96%89%20%EB%B0%94.cpp)
  * [1343: 폴리오미노](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1343%20-%20%ED%8F%B4%EB%A6%AC%EC%98%A4%EB%AF%B8%EB%85%B8.cpp)
  * [1380: 귀걸이](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1380%20-%20%EA%B7%80%EA%B1%B8%EC%9D%B4.cpp)
+ * [1475: 방 번호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1475%20-%20%EB%B0%A9%20%EB%B2%88%ED%98%B8.cpp)
  * [1913: 달팽이](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1913%20-%20%EB%8B%AC%ED%8C%BD%EC%9D%B4.cpp) 
  * [1917: 정육면체 전개도](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1917%20-%20%EC%A0%95%EC%9C%A1%EB%A9%B4%EC%B2%B4%20%EC%A0%84%EA%B0%9C%EB%8F%84.cpp) 
  * [2290: LCD Test](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2290%20-%20LCD%20Test.cpp) 
