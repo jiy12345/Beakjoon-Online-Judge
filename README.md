@@ -290,6 +290,7 @@
  * [1380: 귀걸이](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1380%20-%20%EA%B7%80%EA%B1%B8%EC%9D%B4.cpp)
  * [1475: 방 번호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1475%20-%20%EB%B0%A9%20%EB%B2%88%ED%98%B8.cpp)
  * [1531: 투명](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1531%20-%20%ED%88%AC%EB%AA%85.cpp)
+ * [1730: 판화](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1730%20-%20%ED%8C%90%ED%99%94.cpp)
  * [1913: 달팽이](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1913%20-%20%EB%8B%AC%ED%8C%BD%EC%9D%B4.cpp) 
  * [1917: 정육면체 전개도](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1917%20-%20%EC%A0%95%EC%9C%A1%EB%A9%B4%EC%B2%B4%20%EC%A0%84%EA%B0%9C%EB%8F%84.cpp) 
  * [2290: LCD Test](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2290%20-%20LCD%20Test.cpp) 
