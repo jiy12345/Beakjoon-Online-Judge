@@ -330,6 +330,7 @@
  * [1676: 팩토리얼 0의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1676%20-%20%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC%200%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222531156973))
  * [1738: 수 이어쓰기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1738%20-%20%EC%88%98%20%EC%9D%B4%EC%96%B4%EC%93%B0%EA%B8%B0.cpp)
  * [1747: 소수and팰린드롬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1747%20-%20%EC%86%8C%EC%88%98and%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.cpp)
+ * [1789: 수들의 합]([https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1747%20-%20%EC%86%8C%EC%88%98and%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.cpp](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1789%20-%20%EC%88%98%EB%93%A4%EC%9D%98%20%ED%95%A9.cpp))
  * [1790: 수 이어 쓰기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1790%20-%20%EC%88%98%20%EC%9D%B4%EC%96%B4%20%EC%93%B0%EA%B8%B0.cpp)
  * [1934: 최소공배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1934%20-%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp)
  * [2004: 조합 0의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2004%20-%20%EC%A1%B0%ED%95%A9%200%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)
