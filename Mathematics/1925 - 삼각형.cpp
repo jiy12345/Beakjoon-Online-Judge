@@ -3,14 +3,6 @@
 #include<cstdlib>
 using namespace std;
 
-//
-// 각을 어떻게 체크해야 할까?
-// 소수의 오차에 대한 언급이 없는 것을 보니
-// => 피타고라스의 정리로 체크할 수 있다!
-// 
-// 
-//
-
 int x_1, y_1, x_2, y_2, x_3, y_3;
 
 int distanceSquared(int x1, int y1, int x2, int y2) {
