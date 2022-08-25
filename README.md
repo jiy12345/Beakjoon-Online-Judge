@@ -297,6 +297,7 @@
  * [1917: 정육면체 전개도](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1917%20-%20%EC%A0%95%EC%9C%A1%EB%A9%B4%EC%B2%B4%20%EC%A0%84%EA%B0%9C%EB%8F%84.cpp) 
  * [1969: DNA](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1969%20-%20DNA.cpp) 
  * [1996: 지뢰 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1996%20-%20%EC%A7%80%EB%A2%B0%20%EC%B0%BE%EA%B8%B0.cpp) 
+ * [2034: 반음](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2034%20-%20%EB%B0%98%EC%9D%8C.cpp) 
  * [2290: LCD Test](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2290%20-%20LCD%20Test.cpp) 
  * [3190: 뱀](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/3190%20-%20%EB%B1%80.cpp) 
  * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509993489))
