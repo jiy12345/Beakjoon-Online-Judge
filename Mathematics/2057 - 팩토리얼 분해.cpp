@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<vector>
 using namespace std;
 
@@ -8,7 +8,7 @@ vector<long long>factorials;
 bool binCoef(long long curSum, int curIndex, int maxIndex) {
 	if (curIndex == maxIndex) {
 		if (curSum == N) return true;
-		else			 return false;
+		else		 return false;
 	}
 
 	for (int i = 0; i < 2; iS++) {
