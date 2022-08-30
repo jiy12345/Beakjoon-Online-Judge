@@ -44,6 +44,7 @@
  * [1251: 단어 나누기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1251%20-%20%EB%8B%A8%EC%96%B4%20%EB%82%98%EB%88%84%EA%B8%B0.cpp)
  * [1759: 암호 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1759%20-%20%EC%95%94%ED%98%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222516074349))
  * 2143: 두 배열의 합 [[풀이 1(unordered_map 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2143%20-%20%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9_sol1.cpp)] [[풀이 2(투 포인터 알고리즘 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2143%20-%20%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9_sol2.cpp)]
+ * [2246: 콘도 선정](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2246%20-%20%EC%BD%98%EB%8F%84%20%EC%84%A0%EC%A0%95.cpp) 
  * [2529: 부등호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2529%20-%20%EB%B6%80%EB%93%B1%ED%98%B8.cpp)
  * [3085: 사탕 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/3085%20-%20%EC%82%AC%ED%83%95%20%EA%B2%8C%EC%9E%84.cpp)
  * [6603: 로또](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/6603%20-%20%EB%A1%9C%EB%98%90.cpp)
