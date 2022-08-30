@@ -7,11 +7,12 @@ int C[10000];
 
 int solution() {
 	int answer = 0;
-	for (int i = 0; i < N; i++) {
+	for (int X = 0; X < N; X++) {
 		int j = 0;
 		for (j; j < N; j++) {
-			if (D[i] > D[j] && C[i] > C[j]) break;
-			if (C[i] > C[j] && D[i] > D[j]) break;
+			if (X == j) continue;
+			if (D[X] > D[j] && C[X] >= C[j]) break;
+			if (C[X] > C[j] && D[X] >= D[j]) break;
 		}
 
 		if (j == N) answer++;
@@ -27,10 +28,7 @@ int main() {
 	cin >> N;
 	for (int i = 0; i < N; i++) {
 		cin >> D[i] >> C[i];
-	}
-
-	for (int i = 0; i < N; i++)
-		
+	}	
 
 	cout << solution();
 
