@@ -301,6 +301,7 @@
  * [2034: 반음](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2034%20-%20%EB%B0%98%EC%9D%8C.cpp) 
  * [2238: 경매](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2238%20-%20%EA%B2%BD%EB%A7%A4.cpp) 
  * [2290: LCD Test](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2290%20-%20LCD%20Test.cpp) 
+ * [2535: 아시아 정보올림피아드](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2535%20-%20%EC%95%84%EC%8B%9C%EC%95%84%20%EC%A0%95%EB%B3%B4%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C.cpp) 
  * [3190: 뱀](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/3190%20-%20%EB%B1%80.cpp) 
  * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509993489))
  * [11723: 집합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/11723%20-%20%EC%A7%91%ED%95%A9.cpp)
