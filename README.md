@@ -346,6 +346,7 @@
  * [2089: -2진수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2089%20-%20-2%EC%A7%84%EC%88%98.cpp)
  * [2097: 조약돌](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2097%20-%20%EC%A1%B0%EC%95%BD%EB%8F%8C.cpp)
  * [2609: 최대공약수와 최소공배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2609%20-%20%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631010235))
+ * [2622: 삼각형만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2622%20-%20%EC%82%BC%EA%B0%81%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) 
  * [4375: 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/4375%20-%201.cpp)
  * [6064: 카잉 달력](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6064%20-%20%EC%B9%B4%EC%9E%89%20%EB%8B%AC%EB%A0%A5.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222633743068))
  * [6588: 골드바흐의 추측](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6588%20-%20%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%20%EC%B6%94%EC%B8%A1.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631033854))
