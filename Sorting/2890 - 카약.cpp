@@ -4,7 +4,7 @@
 #include<algorithm>
 using namespace std;
 
-int R, C; // 
+int R, C;
 
 bool cmp(pair<int, int> a, pair<int, int> b){
 	if (a.first < b.first)
@@ -12,8 +12,6 @@ bool cmp(pair<int, int> a, pair<int, int> b){
 	return false;
 }
 
-// 정렬하여 등수를 매긴 뒤
-// 번호 순으로 다시 정렬하여 출력한다.
 void solution() {
 	string curRow;
 	vector<pair<int, int>> rank;
