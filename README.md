@@ -385,6 +385,7 @@
  * [**2473: 세 용액**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2473%20-%20%EC%84%B8%20%EC%9A%A9%EC%95%A1.cpp)
  * [2628: 종이자르기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2628%20-%20%EC%A2%85%EC%9D%B4%EC%9E%90%EB%A5%B4%EA%B8%B0.cpp)
  * [2822: 점수 계산](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2822%20-%20%EC%A0%90%EC%88%98%20%EA%B3%84%EC%82%B0.cpp)
+ * [2890: 카약](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2890%20-%20%EC%B9%B4%EC%95%BD.cpp)
  * [5020: 전화번호 목록](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/5020%20-%20%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%20%EB%AA%A9%EB%A1%9D.cpp) 
  * [10816: 숫자 카드 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/10816%20-%20%EC%88%AB%EC%9E%90%20%EC%B9%B4%EB%93%9C%202.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509528634))
  * [**16678: 모독**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/16678%20-%20%EB%AA%A8%EB%8F%85.cpp)
