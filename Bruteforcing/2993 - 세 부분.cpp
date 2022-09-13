@@ -9,7 +9,6 @@ string solution() {
 	int strSize = input.size();
 	string answer = input;
 
-	
 	for (int i = 1; i < strSize; i++) {
 		for (int j = i + 1; j < strSize; j++) {
 			string subStrs[3];
