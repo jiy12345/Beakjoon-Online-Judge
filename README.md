@@ -21,6 +21,7 @@
 
 ## Ad-hoc
  * [1034: 램프](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Ad-hoc/1034%20-%20%EB%9E%A8%ED%94%84.cpp)
+ * [1402: 아무래도이문제는A번난이도인것같다](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Ad-hoc/1402%20-%20%EC%95%84%EB%AC%B4%EB%9E%98%EB%8F%84%EC%9D%B4%EB%AC%B8%EC%A0%9C%EB%8A%94A%EB%B2%88%EB%82%9C%EC%9D%B4%EB%8F%84%EC%9D%B8%EA%B2%83%EA%B0%99%EB%8B%A4.cpp)
  * [1419: 등차수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Ad-hoc/1419%20-%20%EB%93%B1%EC%B0%A8%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp)
  * [2136: 개미](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Ad-hoc/2136%20-%20%EA%B0%9C%EB%AF%B8.cpp)
  * [2381: 최대 거리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Ad-hoc/2381%20-%20%EC%B5%9C%EB%8C%80%20%EA%B1%B0%EB%A6%AC.cpp)
