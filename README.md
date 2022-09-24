@@ -10,6 +10,7 @@
 - [Graph Theory](#Graph-Theory)
     - [Breadth-first Search](#Breadth-first-Search)
     - [Depth-first Search](#Depth-first-Search)
+    - [Disjoint-Set](#Disjoint-Set)
     - [Tree](#Tree)
 - [Greedy Algorithm](#Greedy-Algorithm)
 - [Implementation](#Implementation)
@@ -262,6 +263,8 @@
  * [17142: 연구소 3](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/17142%20-%20%EC%97%B0%EA%B5%AC%EC%86%8C%203.cpp)
 ### Depth-first Search
  * [2210: 숫자판 점프](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2210%20-%20%EC%88%AB%EC%9E%90%ED%8C%90%20%EC%A0%90%ED%94%84.cpp)
+### Disjoint Set
+ * [1043: 거짓말](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1043%20-%20%EA%B1%B0%EC%A7%93%EB%A7%90.cpp)
 ### Tree
  * [2263: 트리의 순회](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2263%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%88%9C%ED%9A%8C.cpp)
  * [5639: 이진 검색 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/5639%20-%20%EC%9D%B4%EC%A7%84%20%EA%B2%80%EC%83%89%20%ED%8A%B8%EB%A6%AC.cpp)
