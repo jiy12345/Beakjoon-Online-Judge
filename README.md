@@ -316,6 +316,7 @@
  * [2535: 아시아 정보올림피아드](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2535%20-%20%EC%95%84%EC%8B%9C%EC%95%84%20%EC%A0%95%EB%B3%B4%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C.cpp) 
  * [2677: 에드삭 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2677%20-%20%EC%97%90%EB%93%9C%EC%82%AD%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) 
  * [2714: 문자를 받은 승환이](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2714%20-%20%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EB%B0%9B%EC%9D%80%20%EC%8A%B9%ED%99%98%EC%9D%B4.cpp) 
+ * [2799: 블라인드](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2799%20-%20%EB%B8%94%EB%9D%BC%EC%9D%B8%EB%93%9C.cpp) 
  * [2949: 45도](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2949%20-%2045%EB%8F%84.cpp) 
  * [3054: 피터팬 프레임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/3054%20-%20%ED%94%BC%ED%84%B0%ED%8C%AC%20%ED%94%84%EB%A0%88%EC%9E%84.cpp) 
  * [3190: 뱀](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/3190%20-%20%EB%B1%80.cpp) 
