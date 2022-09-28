@@ -1,8 +1,6 @@
 #include<iostream>
 using namespace std;
 
-// 엘리베이터: 한 층에 10초
-// 컨베이어 벨트: 한 대 거리에 5초
 int T;
 int h, l;
 
