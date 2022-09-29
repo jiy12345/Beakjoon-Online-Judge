@@ -52,6 +52,7 @@
  * [2993: 세 부분](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2993%20-%20%EC%84%B8%20%EB%B6%80%EB%B6%84.cpp)
  * [3085: 사탕 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/3085%20-%20%EC%82%AC%ED%83%95%20%EA%B2%8C%EC%9E%84.cpp)
  * [3711: 학번](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/3711%20-%20%ED%95%99%EB%B2%88.cpp)
+ * [4096: 팰린드로미터](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/4096%20-%20%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%9C%EB%AF%B8%ED%84%B0.cpp)
  * [6603: 로또](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/6603%20-%20%EB%A1%9C%EB%98%90.cpp)
  * [7568: 덩치](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/7568%20-%20%EB%8D%A9%EC%B9%98.cpp)
  * [10971: 외판원 순회 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10971%20-%20%EC%99%B8%ED%8C%90%EC%9B%90%20%EC%88%9C%ED%9A%8C%202.cpp)
