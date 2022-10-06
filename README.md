@@ -392,6 +392,8 @@
  * [17425: 약수의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17425%20-%20%EC%95%BD%EC%88%98%EC%9D%98%20%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222629636361))
  * [17427: 약수의 합 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17427%20-%20%EC%95%BD%EC%88%98%EC%9D%98%20%ED%95%A9%202.cpp)
  * [17436: 소수의 배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17436%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EB%B0%B0%EC%88%98.cpp)
+ * [24039: 2021은 무엇이 특별할까](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/24039%20-%202021%EC%9D%80%20%EB%AC%B4%EC%97%87%EC%9D%B4%20%ED%8A%B9%EB%B3%84%ED%95%A0%EA%B9%8C.cpp)
+
 
 ## Number Theory
  * [2312: 수 복원하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Number%20Theory/2312-%20%EC%88%98%20%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0.cpp)
