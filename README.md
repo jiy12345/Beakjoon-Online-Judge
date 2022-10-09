@@ -423,6 +423,7 @@
  * [4821: 페이지 세기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/4821%20-%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EC%84%B8%EA%B8%B0.cpp)
  * [5430: AC](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/5430%20-%20AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222503817960))
  * [5635: 생일](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/5635%20-%20%EC%83%9D%EC%9D%BC.cpp) 
+ * [6550: 부분 문자열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/6550%20-%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.cpp) 
  * [9935: 문자열 폭발](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/9935%20-%20%EB%AC%B8%EC%9E%90%EC%97%B4%20%ED%8F%AD%EB%B0%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509312906))
  * [16916: 부분 문자열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/16916%20-%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.cpp)
 
