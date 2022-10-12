@@ -17,7 +17,6 @@ inline int sumOfSquares(int X) {
 	return sumOfSquares;
 }
 
-
 int solution() {
 	int answer = 0;
 
@@ -44,7 +43,6 @@ int solution() {
 		sequenceOfB.push_back(nextB);
 		curB = nextB;
 	}
-
 
 	int sumOfLength = sequenceOfA.size() + sequenceOfB.size() + 2;
 	int i;
