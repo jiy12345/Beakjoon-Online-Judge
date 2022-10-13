@@ -379,6 +379,7 @@
  * [2740: 행렬 곱셈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2740%20-%20%ED%96%89%EB%A0%AC%20%EA%B3%B1%EC%85%88.cpp) 
  * [3049: 다각형의 대각선](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/3049%20-%20%EB%8B%A4%EA%B0%81%ED%98%95%EC%9D%98%20%EB%8C%80%EA%B0%81%EC%84%A0.cpp) 
  * [4375: 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/4375%20-%201.cpp)
+ * [4884: FIFA 월드컵](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/4884%20-%20FIFA%20%EC%9B%94%EB%93%9C%EC%BB%B5.cpp)
  * [5347: LCM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/5347%20-%20LCM.cpp)
  * [6064: 카잉 달력](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6064%20-%20%EC%B9%B4%EC%9E%89%20%EB%8B%AC%EB%A0%A5.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222633743068))
  * [6588: 골드바흐의 추측](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6588%20-%20%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%20%EC%B6%94%EC%B8%A1.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631033854))
