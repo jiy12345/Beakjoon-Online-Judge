@@ -377,6 +377,7 @@
  * [2609: 최대공약수와 최소공배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2609%20-%20%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631010235))
  * [2622: 삼각형만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2622%20-%20%EC%82%BC%EA%B0%81%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) 
  * [2740: 행렬 곱셈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2740%20-%20%ED%96%89%EB%A0%AC%20%EA%B3%B1%EC%85%88.cpp) 
+ * [2936: 채식주의자](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2936%20-%20%EC%B1%84%EC%8B%9D%EC%A3%BC%EC%9D%98%EC%9E%90.cpp)
  * [3049: 다각형의 대각선](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/3049%20-%20%EB%8B%A4%EA%B0%81%ED%98%95%EC%9D%98%20%EB%8C%80%EA%B0%81%EC%84%A0.cpp) 
  * [4375: 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/4375%20-%201.cpp)
  * [4884: FIFA 월드컵](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/4884%20-%20FIFA%20%EC%9B%94%EB%93%9C%EC%BB%B5.cpp)
