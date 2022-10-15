@@ -331,6 +331,7 @@
  * [4383: 점프는 즐거워](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/4383%20-%20%EC%A0%90%ED%94%84%EB%8A%94%20%EC%A6%90%EA%B1%B0%EC%9B%8C.cpp) 
  * [5046: 전국 대학생 프로그래밍 대회 동아리 연합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/5046%20-%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9.cpp) 
  * [5426: 비밀 편지](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/5426%20-%20%EB%B9%84%EB%B0%80%20%ED%8E%B8%EC%A7%80.cpp) 
+ * [5462: POI](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/5462%20-%20POI.cpp) 
  * [9733: 꿀벌](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/9733%20-%20%EA%BF%80%EB%B2%8C.cpp) 
  * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509993489))
  * [11723: 집합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/11723%20-%20%EC%A7%91%ED%95%A9.cpp)
