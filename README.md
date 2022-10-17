@@ -56,6 +56,7 @@
  * [4881: 자리수의 제곱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/4881%20-%20%EC%9E%90%EB%A6%AC%EC%88%98%EC%9D%98%20%EC%A0%9C%EA%B3%B1.cpp)
  * [6603: 로또](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/6603%20-%20%EB%A1%9C%EB%98%90.cpp)
  * [7568: 덩치](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/7568%20-%20%EB%8D%A9%EC%B9%98.cpp)
+ * [9196: 정수 직사각형](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/9196%20-%20%EC%A0%95%EC%88%98%20%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95.cpp)
  * [10971: 외판원 순회 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10971%20-%20%EC%99%B8%ED%8C%90%EC%9B%90%20%EC%88%9C%ED%9A%8C%202.cpp)
  * [10819: 차이를 최대로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10819%20-%20%EC%B0%A8%EC%9D%B4%EB%A5%BC%20%EC%B5%9C%EB%8C%80%EB%A1%9C.cpp)
  * [14225: 부분 수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14225%20-%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp)
