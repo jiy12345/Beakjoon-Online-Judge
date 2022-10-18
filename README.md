@@ -389,6 +389,7 @@
  * [6588: 골드바흐의 추측](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6588%20-%20%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%20%EC%B6%94%EC%B8%A1.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631033854))
  * [9461: 파도반 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9461%20-%20%ED%8C%8C%EB%8F%84%EB%B0%98%20%EC%88%98%EC%97%B4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509889782))
  * [9613: GCD 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9613%20-%20GCD%20%ED%95%A9.cpp) 
+ * [9655: 돌 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9655%20-%20%EB%8F%8C%20%EA%B2%8C%EC%9E%84.cpp) 
  * [10610: 30](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10610%20-%2030.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509363413))
  * [10830: 행렬 제곱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10830%20-%20%ED%96%89%EB%A0%AC%20%EC%A0%9C%EA%B3%B1.cpp)
  * [10972: 다음 순열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10972%20-%20%EB%8B%A4%EC%9D%8C%20%EC%88%9C%EC%97%B4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222536286898))
