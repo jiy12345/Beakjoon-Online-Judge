@@ -396,6 +396,7 @@
  * [10972: 다음 순열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10972%20-%20%EB%8B%A4%EC%9D%8C%20%EC%88%9C%EC%97%B4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222536286898))
  * [10973: 이전 순열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/10973%20-%20%EC%9D%B4%EC%A0%84%20%EC%88%9C%EC%97%B4.cpp)
  * [11005: 진법 변환 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/11005%20-%20%EC%A7%84%EB%B2%95%20%EB%B3%80%ED%99%98%202.cpp)
+ * [13241: 최소공배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/13241%20-%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp)
  * [16974: 레벨 햄버거](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/16974%20-%20%EB%A0%88%EB%B2%A8%20%ED%96%84%EB%B2%84%EA%B1%B0.cpp)
  * [17087: 숨바꼭질 6](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17087%20-%20%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88%206.cpp)
  * [17103: 골드바흐 파티션](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17103%20-%20%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%20%ED%8C%8C%ED%8B%B0%EC%85%98.cpp)  
