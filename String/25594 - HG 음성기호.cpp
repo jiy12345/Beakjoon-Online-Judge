@@ -32,7 +32,6 @@ unordered_map<char, string> HG = {
 	{ 'z', "zebra" }
 };
 
-
 void solution() {
 	string answer = "";
 	bool isHG = true;
