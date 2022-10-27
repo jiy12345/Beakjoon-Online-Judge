@@ -150,6 +150,7 @@
  * [10866: 덱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10866%20-%20%EB%8D%B1.cpp)
  * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
  * [11286: 절댓값 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11286%20-%20%EC%A0%88%EB%8C%93%EA%B0%92%20%ED%9E%99.cpp)
+ * [25584: 근무 지옥에 빠진 푸앙이 (Large)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/25584%20-%20%EA%B7%BC%EB%AC%B4%20%EC%A7%80%EC%98%A5%EC%97%90%20%EB%B9%A0%EC%A7%84%20%ED%91%B8%EC%95%99%EC%9D%B4%20(Large).cpp)
  * [25757: 임스와 함께하는 미니게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/25757%20-%20%EC%9E%84%EC%8A%A4%EC%99%80%20%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94%20%EB%AF%B8%EB%8B%88%EA%B2%8C%EC%9E%84.cpp)
 
 
