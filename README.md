@@ -37,6 +37,7 @@
  * [24500: blobblush](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Ad-hoc/24500%20-%20blobblush.cpp)
  * [25707: 팔찌 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Ad-hoc/25707%20-%20%ED%8C%94%EC%B0%8C%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)
 
+
 ## Bruteforcing
  * [1027: 고층 건물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1027%20-%20%EA%B3%A0%EC%B8%B5%20%EA%B1%B4%EB%AC%BC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222520875048))
  * [1062: 가르침](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1062%20-%20%EA%B0%80%EB%A5%B4%EC%B9%A8.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222518670522))
@@ -142,6 +143,7 @@
  * [16194: 카드 구매하기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/16194%20-%20%EC%B9%B4%EB%93%9C%20%EA%B5%AC%EB%A7%A4%ED%95%98%EA%B8%B0%202.cpp)
  * [17404: RGB거리 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/17404%20-%20RGB%EA%B1%B0%EB%A6%AC%202.cpp)
 
+
 ## Data Structures
  * [1417: 국회의원 선거](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1417%20-%20%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90%20%EC%84%A0%EA%B1%B0.cpp)
  * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
@@ -157,10 +159,12 @@
 ## Divide And Conquer 
  * [1992: 쿼드 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Divide%20And%20Conquer/1992%20-%20%EC%BF%BC%EB%93%9C%20%ED%8A%B8%EB%A6%AC.cpp)
 
+
 ## Geometry
  * [11758: CCW](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Geometry/11758%20-%20CCW.cpp)
  * [17386: 선분 교차 1](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Geometry/17386%20-%20%EC%84%A0%EB%B6%84%20%EA%B5%90%EC%B0%A8%201.cpp) 
  * [17387: 선분 교차 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Geometry/17387%20-%20%EC%84%A0%EB%B6%84%20%EA%B5%90%EC%B0%A8%202.cpp) 
+ 
  
 ## Graph Theory
  * [1005: ACM Craft](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/1005%20-%20ACM%20Craft.cpp)
@@ -277,6 +281,7 @@
  * [2263: 트리의 순회](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2263%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%88%9C%ED%9A%8C.cpp)
  * [5639: 이진 검색 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/5639%20-%20%EC%9D%B4%EC%A7%84%20%EA%B2%80%EC%83%89%20%ED%8A%B8%EB%A6%AC.cpp)
 
+
 ## Greedy Algorithm
  * [1080: 행렬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1080%20-%20%ED%96%89%EB%A0%AC.cpp)
  * [1092: 배](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/1092%20-%20%EB%B0%B0.cpp)
@@ -303,6 +308,7 @@
  * [13904: 과제](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/13904%20-%20%EA%B3%BC%EC%A0%9C.cpp)
  * [25631: 마트료시카 합치기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/25631%20-%20%EB%A7%88%ED%8A%B8%EB%A3%8C%EC%8B%9C%EC%B9%B4%20%ED%95%A9%EC%B9%98%EA%B8%B0.cpp)
  * [25644: 최대 상승](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/25644%20-%20%EC%B5%9C%EB%8C%80%20%EC%83%81%EC%8A%B9.cpp)
+
 
 ## Implementation
  * [1051: 숫자 정사각형](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1051%20-%20%EC%88%AB%EC%9E%90%20%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95.cpp) 
@@ -359,6 +365,7 @@
  * [20055: 컨베이어 벨트 위의 로봇](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/20055%20-%20%EC%BB%A8%EB%B2%A0%EC%9D%B4%EC%96%B4%20%EB%B2%A8%ED%8A%B8%20%EC%9C%84%EC%9D%98%20%EB%A1%9C%EB%B4%87.cpp)
  * [20327: 배열 돌리기 6](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/20327%20-%20%EB%B0%B0%EC%97%B4%20%EB%8F%8C%EB%A6%AC%EA%B8%B0%206.cpp)
 
+
 ## Mathematics
  * [1016: 제곱 ㄴㄴ 수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1016%20-%20%EC%A0%9C%EA%B3%B1%20%E3%84%B4%E3%84%B4%20%EC%88%98.cpp)
  * [1024: 수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1024%20-%20%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp)
@@ -410,10 +417,12 @@
  * [17427: 약수의 합 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17427%20-%20%EC%95%BD%EC%88%98%EC%9D%98%20%ED%95%A9%202.cpp)
  * [17436: 소수의 배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17436%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EB%B0%B0%EC%88%98.cpp)
  * [24039: 2021은 무엇이 특별할까](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/24039%20-%202021%EC%9D%80%20%EB%AC%B4%EC%97%87%EC%9D%B4%20%ED%8A%B9%EB%B3%84%ED%95%A0%EA%B9%8C.cpp)
+ * [24228: 젓가락](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/24228%20-%20%EC%A0%93%EA%B0%80%EB%9D%BD.cpp)
 
 
 ## Number Theory
  * [2312: 수 복원하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Number%20Theory/2312-%20%EC%88%98%20%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0.cpp)
+
 
 ## Sorting
  * [1015: 수열 정렬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/1015%20-%20%EC%88%98%EC%97%B4%20%EC%A0%95%EB%A0%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222535198437))
@@ -431,6 +440,7 @@
  * [5020: 전화번호 목록](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/5020%20-%20%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%20%EB%AA%A9%EB%A1%9D.cpp) 
  * [10816: 숫자 카드 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/10816%20-%20%EC%88%AB%EC%9E%90%20%EC%B9%B4%EB%93%9C%202.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509528634))
  * [**16678: 모독**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/16678%20-%20%EB%AA%A8%EB%8F%85.cpp)
+
 
 ## String
  * [1786: 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/1786%20-%20%EC%B0%BE%EA%B8%B0.cpp)
