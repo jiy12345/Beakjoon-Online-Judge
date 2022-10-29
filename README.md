@@ -418,6 +418,7 @@
  * [17436: 소수의 배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/17436%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EB%B0%B0%EC%88%98.cpp)
  * [24039: 2021은 무엇이 특별할까](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/24039%20-%202021%EC%9D%80%20%EB%AC%B4%EC%97%87%EC%9D%B4%20%ED%8A%B9%EB%B3%84%ED%95%A0%EA%B9%8C.cpp)
  * [24228: 젓가락](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/24228%20-%20%EC%A0%93%EA%B0%80%EB%9D%BD.cpp)
+ * [25193: 곰곰이의 식단 관리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/25193%20-%20%EA%B3%B0%EA%B3%B0%EC%9D%B4%EC%9D%98%20%EC%8B%9D%EB%8B%A8%20%EA%B4%80%EB%A6%AC.cpp)
 
 
 ## Number Theory
