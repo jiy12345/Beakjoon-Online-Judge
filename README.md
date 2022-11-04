@@ -105,6 +105,7 @@
  * [2096: 내려가기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2096%20-%20%EB%82%B4%EB%A0%A4%EA%B0%80%EA%B8%B0.cpp)
  * [2133: 타일 채우기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2133%20-%20%ED%83%80%EC%9D%BC%20%EC%B1%84%EC%9A%B0%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222567906711))
  * [2156: 포도주 시식](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2156%20-%20%ED%8F%AC%EB%8F%84%EC%A3%BC%20%EC%8B%9C%EC%8B%9D.cpp)
+ * [2167: 2차원 배열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2167%20-%202%EC%B0%A8%EC%9B%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp)
  * [2193: 이친수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2193%20-%20%EC%9D%B4%EC%B9%9C%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222552575440))
  * [**2225: 합분해**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2225%20-%20%ED%95%A9%EB%B6%84%ED%95%B4.cpp)
  * [**2293: 동전 1**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/2293%20-%20%EB%8F%99%EC%A0%84%201.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222560718699))
