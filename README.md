@@ -445,6 +445,7 @@
  * [2890: 카약](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2890%20-%20%EC%B9%B4%EC%95%BD.cpp)
  * [5020: 전화번호 목록](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/5020%20-%20%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%20%EB%AA%A9%EB%A1%9D.cpp) 
  * [10816: 숫자 카드 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/10816%20-%20%EC%88%AB%EC%9E%90%20%EC%B9%B4%EB%93%9C%202.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509528634))
+ * [14729: 칠무해](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/14729%20-%20%EC%B9%A0%EB%AC%B4%ED%95%B4.cpp)
  * [**16678: 모독**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/16678%20-%20%EB%AA%A8%EB%8F%85.cpp)
 
 
