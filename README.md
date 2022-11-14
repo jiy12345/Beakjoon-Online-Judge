@@ -57,6 +57,7 @@
  * [3711: 학번](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/3711%20-%20%ED%95%99%EB%B2%88.cpp)
  * [4096: 팰린드로미터](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/4096%20-%20%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%9C%EB%AF%B8%ED%84%B0.cpp)
  * [4881: 자리수의 제곱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/4881%20-%20%EC%9E%90%EB%A6%AC%EC%88%98%EC%9D%98%20%EC%A0%9C%EA%B3%B1.cpp)
+ * [5671: 호텔 방 번호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/5671%20-%20%ED%98%B8%ED%85%94%20%EB%B0%A9%20%EB%B2%88%ED%98%B8.cpp)
  * [6159: 코스튬 파티](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/6159%20-%20%EC%BD%94%EC%8A%A4%ED%8A%AC%20%ED%8C%8C%ED%8B%B0.cpp)
  * [6603: 로또](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/6603%20-%20%EB%A1%9C%EB%98%90.cpp)
  * [7568: 덩치](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/7568%20-%20%EB%8D%A9%EC%B9%98.cpp)
