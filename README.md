@@ -363,6 +363,7 @@
  * [13717: 포켓몬 GO](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/13717%20-%20%ED%8F%AC%EC%BC%93%EB%AA%AC%20GO.cpp)
  * [14499: 주사위 굴리기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14499%20-%20%EC%A3%BC%EC%82%AC%EC%9C%84%20%EA%B5%B4%EB%A6%AC%EA%B8%B0.cpp)
  * [14503: 로봇 청소기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14503%20-%20%EB%A1%9C%EB%B4%87%20%EC%B2%AD%EC%86%8C%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222510048011))
+ * [14709: 여우 사인](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14709%20-%20%EC%97%AC%EC%9A%B0%20%EC%82%AC%EC%9D%B8.cpp)
  * [14890: 경사로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14890%20-%20%EA%B2%BD%EC%82%AC%EB%A1%9C.cpp)
  * [15662: 톱니바퀴 (2)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/15662%20-%20%ED%86%B1%EB%8B%88%EB%B0%94%ED%80%B4%20(2).cpp)
  * [15685: 드래곤 커브](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/15685%20-%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%BB%A4%EB%B8%8C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222692514508))
