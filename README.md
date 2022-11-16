@@ -468,6 +468,7 @@
  * [5635: 생일](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/5635%20-%20%EC%83%9D%EC%9D%BC.cpp) 
  * [6550: 부분 문자열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/6550%20-%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.cpp) 
  * [7656: 만능 오라클](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/7656%20-%20%EB%A7%8C%EB%8A%A5%20%EC%98%A4%EB%9D%BC%ED%81%B4.cpp) 
+ * [9324: 진짜 메시지](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/9324%20-%20%EC%A7%84%EC%A7%9C%20%EB%A9%94%EC%8B%9C%EC%A7%80.cpp) 
  * [9935: 문자열 폭발](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/9935%20-%20%EB%AC%B8%EC%9E%90%EC%97%B4%20%ED%8F%AD%EB%B0%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509312906))
  * [16916: 부분 문자열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/16916%20-%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.cpp)
  * [25594: HG 음성기호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/25594%20-%20HG%20%EC%9D%8C%EC%84%B1%EA%B8%B0%ED%98%B8.cpp)
