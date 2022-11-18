@@ -361,6 +361,7 @@
  * [12670: 최후의 승자는 누구](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/12670%20-%20%EC%B5%9C%ED%9B%84%EC%9D%98%20%EC%8A%B9%EC%9E%90%EB%8A%94%20%EB%88%84%EA%B5%AC.cpp)
  * [13015: 별 찍기 - 23](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/13015%20-%20%EB%B3%84%20%EC%B0%8D%EA%B8%B0%20-%2023.cpp)
  * [13717: 포켓몬 GO](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/13717%20-%20%ED%8F%AC%EC%BC%93%EB%AA%AC%20GO.cpp)
+ * [14493: 과일노리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14493%20-%20%EA%B3%BC%EC%9D%BC%EB%85%B8%EB%A6%AC.cpp)
  * [14499: 주사위 굴리기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14499%20-%20%EC%A3%BC%EC%82%AC%EC%9C%84%20%EA%B5%B4%EB%A6%AC%EA%B8%B0.cpp)
  * [14503: 로봇 청소기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14503%20-%20%EB%A1%9C%EB%B4%87%20%EC%B2%AD%EC%86%8C%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222510048011))
  * [14709: 여우 사인](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/14709%20-%20%EC%97%AC%EC%9A%B0%20%EC%82%AC%EC%9D%B8.cpp)
