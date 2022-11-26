@@ -358,6 +358,7 @@
  * [9715: 면적 구하기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/9715%20-%20%EB%A9%B4%EC%A0%81%20%EA%B5%AC%ED%95%98%EA%B8%B0.cpp) 
  * [9733: 꿀벌](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/9733%20-%20%EA%BF%80%EB%B2%8C.cpp) 
  * [10384: 팬그램](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10384%20-%20%ED%8C%AC%EA%B7%B8%EB%9E%A8.cpp) 
+ * [10431: 줄세우기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10431%20-%20%EC%A4%84%EC%84%B8%EC%9A%B0%EA%B8%B0.cpp) 
  * [10773: 제로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/10773%20-%20%EC%A0%9C%EB%A1%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509993489))
  * [11637: 인기 투표](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/11637%20-%20%EC%9D%B8%EA%B8%B0%20%ED%88%AC%ED%91%9C.cpp)
  * [11723: 집합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/11723%20-%20%EC%A7%91%ED%95%A9.cpp)
