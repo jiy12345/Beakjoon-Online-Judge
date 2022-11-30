@@ -42,6 +42,7 @@
  * [1027: 고층 건물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1027%20-%20%EA%B3%A0%EC%B8%B5%20%EA%B1%B4%EB%AC%BC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222520875048))
  * [1062: 가르침](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1062%20-%20%EA%B0%80%EB%A5%B4%EC%B9%A8.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222518670522))
  * [1107: 리모콘](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1107%20-%20%EB%A6%AC%EB%AA%A8%EC%BD%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222622996411))
+ * [1120: 문자열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1120%20-%20%EB%AC%B8%EC%9E%90%EC%97%B4.cpp)
  * [1182: 부분수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1182%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222520968836))
  * 1208: 부분수열의 합 2 [[풀이 1(map 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1208%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9%202_sol1.cpp)] [[풀이 2(배열 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1208%20-%20%EB%B6%80%EB%B6%84%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9%202_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222669388798))
  * [1248: 맞춰봐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1248%20-%20%EB%A7%9E%EC%B6%B0%EB%B4%90.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222640273931))
