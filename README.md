@@ -152,6 +152,7 @@
 
 ## Data Structures
  * [1021: 회전하는 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1021%20-%20%ED%9A%8C%EC%A0%84%ED%95%98%EB%8A%94%20%ED%81%90.cpp)
+ * [1158: 요세푸스 문제](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1158%20-%20%EC%9A%94%EC%84%B8%ED%91%B8%EC%8A%A4%20%EB%AC%B8%EC%A0%9C.cpp)
  * [1417: 국회의원 선거](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1417%20-%20%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90%20%EC%84%A0%EA%B1%B0.cpp)
  * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
  * [7785: 회사에 있는 사람](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/7785%20-%20%ED%9A%8C%EC%82%AC%EC%97%90%20%EC%9E%88%EB%8A%94%20%EC%82%AC%EB%9E%8C.cpp)
