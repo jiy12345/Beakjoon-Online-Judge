@@ -3,9 +3,9 @@
 ## 분류
 - [Ad-hoc](#Ad-hoc)
 - [Bruteforcing](#Bruteforcing)
-- [Dynamic Programming](#Dynamic-Programming)
 - [Data Structures](#Data-Structures)
-- [Divide And Conquer](#Divide-And-Conquer )
+- [Divide And Conquer](#Divide-And-Conquer)
+- [Dynamic Programming](#Dynamic-Programming)
 - [Geometry](#Geometry)
 - [Graph Theory](#Graph-Theory)
     - [Breadth-first Search](#Breadth-first-Search)
