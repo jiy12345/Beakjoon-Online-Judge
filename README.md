@@ -94,6 +94,27 @@
  * 18290: NM과 K (1) [[풀이 1(복사 생성)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp)] [[풀이 2(더하기 빼기)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
 
 
+## Data Structures
+ * [1021: 회전하는 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1021%20-%20%ED%9A%8C%EC%A0%84%ED%95%98%EB%8A%94%20%ED%81%90.cpp)
+ * [1158: 요세푸스 문제](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1158%20-%20%EC%9A%94%EC%84%B8%ED%91%B8%EC%8A%A4%20%EB%AC%B8%EC%A0%9C.cpp)
+ * [1269: 대칭 차집합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1269%20-%20%EB%8C%80%EC%B9%AD%20%EC%B0%A8%EC%A7%91%ED%95%A9.cpp)
+ * [1417: 국회의원 선거](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1417%20-%20%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90%20%EC%84%A0%EA%B1%B0.cpp)
+ * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
+ * [7785: 회사에 있는 사람](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/7785%20-%20%ED%9A%8C%EC%82%AC%EC%97%90%20%EC%9E%88%EB%8A%94%20%EC%82%AC%EB%9E%8C.cpp)
+ * [10828: 스택](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10828%20-%20%EC%8A%A4%ED%83%9D.cpp)
+ * [10845: 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10845%20-%20%ED%81%90.cpp)
+ * [10866: 덱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10866%20-%20%EB%8D%B1.cpp)
+ * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
+ * [11286: 절댓값 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11286%20-%20%EC%A0%88%EB%8C%93%EA%B0%92%20%ED%9E%99.cpp)
+ * [11866: 요세푸스 문제 0](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11866%20-%20%EC%9A%94%EC%84%B8%ED%91%B8%EC%8A%A4%20%EB%AC%B8%EC%A0%9C%200.cpp)
+ * [25584: 근무 지옥에 빠진 푸앙이 (Large)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/25584%20-%20%EA%B7%BC%EB%AC%B4%20%EC%A7%80%EC%98%A5%EC%97%90%20%EB%B9%A0%EC%A7%84%20%ED%91%B8%EC%95%99%EC%9D%B4%20(Large).cpp)
+ * [25757: 임스와 함께하는 미니게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/25757%20-%20%EC%9E%84%EC%8A%A4%EC%99%80%20%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94%20%EB%AF%B8%EB%8B%88%EA%B2%8C%EC%9E%84.cpp)
+
+
+## Divide And Conquer 
+ * [1992: 쿼드 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Divide%20And%20Conquer/1992%20-%20%EC%BF%BC%EB%93%9C%20%ED%8A%B8%EB%A6%AC.cpp)
+
+
 ## Dynamic Programming
  * [1149: RGB거리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1149%20-%20RGB%EA%B1%B0%EB%A6%AC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222544331819))
  * [1309: 동물원](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/1309%20-%20%EB%8F%99%EB%AC%BC%EC%9B%90.cpp)
@@ -148,26 +169,6 @@
  * [15990: 1, 2, 3 더하기 5](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/15990%20-%201,%202,%203%20%EB%8D%94%ED%95%98%EA%B8%B0%205.cpp)
  * [16194: 카드 구매하기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/16194%20-%20%EC%B9%B4%EB%93%9C%20%EA%B5%AC%EB%A7%A4%ED%95%98%EA%B8%B0%202.cpp)
  * [17404: RGB거리 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Dynamic%20Programming/17404%20-%20RGB%EA%B1%B0%EB%A6%AC%202.cpp)
-
-
-## Data Structures
- * [1021: 회전하는 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1021%20-%20%ED%9A%8C%EC%A0%84%ED%95%98%EB%8A%94%20%ED%81%90.cpp)
- * [1158: 요세푸스 문제](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1158%20-%20%EC%9A%94%EC%84%B8%ED%91%B8%EC%8A%A4%20%EB%AC%B8%EC%A0%9C.cpp)
- * [1417: 국회의원 선거](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1417%20-%20%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90%20%EC%84%A0%EA%B1%B0.cpp)
- * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
- * [7785: 회사에 있는 사람](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/7785%20-%20%ED%9A%8C%EC%82%AC%EC%97%90%20%EC%9E%88%EB%8A%94%20%EC%82%AC%EB%9E%8C.cpp)
- * [10828: 스택](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10828%20-%20%EC%8A%A4%ED%83%9D.cpp)
- * [10845: 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10845%20-%20%ED%81%90.cpp)
- * [10866: 덱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10866%20-%20%EB%8D%B1.cpp)
- * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
- * [11286: 절댓값 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11286%20-%20%EC%A0%88%EB%8C%93%EA%B0%92%20%ED%9E%99.cpp)
- * [11866: 요세푸스 문제 0](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11866%20-%20%EC%9A%94%EC%84%B8%ED%91%B8%EC%8A%A4%20%EB%AC%B8%EC%A0%9C%200.cpp)
- * [25584: 근무 지옥에 빠진 푸앙이 (Large)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/25584%20-%20%EA%B7%BC%EB%AC%B4%20%EC%A7%80%EC%98%A5%EC%97%90%20%EB%B9%A0%EC%A7%84%20%ED%91%B8%EC%95%99%EC%9D%B4%20(Large).cpp)
- * [25757: 임스와 함께하는 미니게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/25757%20-%20%EC%9E%84%EC%8A%A4%EC%99%80%20%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94%20%EB%AF%B8%EB%8B%88%EA%B2%8C%EC%9E%84.cpp)
-
-
-## Divide And Conquer 
- * [1992: 쿼드 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Divide%20And%20Conquer/1992%20-%20%EC%BF%BC%EB%93%9C%20%ED%8A%B8%EB%A6%AC.cpp)
 
 
 ## Geometry
