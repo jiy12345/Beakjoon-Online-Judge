@@ -3,6 +3,7 @@
 ## 분류
 - [Ad-hoc](#Ad-hoc)
 - [Bruteforcing](#Bruteforcing)
+- [Combinatorics](#Combinatorics)
 - [Data Structures](#Data-Structures)
 - [Divide And Conquer](#Divide-And-Conquer)
 - [Dynamic Programming](#Dynamic-Programming)
@@ -93,6 +94,10 @@
  * [17088: 등차수열 변환](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/17088%20-%20%EB%93%B1%EC%B0%A8%EC%88%98%EC%97%B4%20%EB%B3%80%ED%99%98.cpp)
  * 18290: NM과 K (1) [[풀이 1(복사 생성)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol1.cpp)] [[풀이 2(더하기 빼기)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/18290%20-%20NM%EA%B3%BC%20K%20(1)_sol2.cpp)] ([블로그 글](https://blog.naver.com/jiy12345/222638548354))
 
+
+## Combinatorics
+ * [1359: 복권](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Combinatorics/1359%20-%20%EB%B3%B5%EA%B6%8C.cpp)
+ * [2407: 조합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Combinatorics/2407%20-%20%EC%A1%B0%ED%95%A9.cpp)
 
 ## Data Structures
  * [1021: 회전하는 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1021%20-%20%ED%9A%8C%EC%A0%84%ED%95%98%EB%8A%94%20%ED%81%90.cpp)
