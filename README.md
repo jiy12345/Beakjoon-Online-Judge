@@ -343,6 +343,7 @@
  * [1384: 메시지](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1384%20-%20%EB%A9%94%EC%8B%9C%EC%A7%80.cpp)
  * [1388: 바닥 장식](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1388%20-%20%EB%B0%94%EB%8B%A5%20%EC%9E%A5%EC%8B%9D.cpp)
  * [1475: 방 번호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1475%20-%20%EB%B0%A9%20%EB%B2%88%ED%98%B8.cpp)
+ * [1491: 나선](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1491%20-%20%EB%82%98%EC%84%A0.cpp)
  * [1531: 투명](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1531%20-%20%ED%88%AC%EB%AA%85.cpp)
  * [1730: 판화](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1730%20-%20%ED%8C%90%ED%99%94.cpp)
  * [1769: 3의 배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1769%20-%203%EC%9D%98%20%EB%B0%B0%EC%88%98.cpp)
