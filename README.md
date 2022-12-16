@@ -49,6 +49,7 @@
  * [1248: 맞춰봐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1248%20-%20%EB%A7%9E%EC%B6%B0%EB%B4%90.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222640273931))
  * [1251: 단어 나누기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1251%20-%20%EB%8B%A8%EC%96%B4%20%EB%82%98%EB%88%84%EA%B8%B0.cpp)
  * [1487: 물건 팔기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1487%20-%20%20%EB%AC%BC%EA%B1%B4%20%ED%8C%94%EA%B8%B0.cpp)
+ * [1543: 문서 검색](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1543%20-%20%EB%AC%B8%EC%84%9C%20%EA%B2%80%EC%83%89.cpp)
  * [1759: 암호 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1759%20-%20%EC%95%94%ED%98%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222516074349))
  * 2143: 두 배열의 합 [[풀이 1(unordered_map 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2143%20-%20%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9_sol1.cpp)] [[풀이 2(투 포인터 알고리즘 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2143%20-%20%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9_sol2.cpp)]
  * [2246: 콘도 선정](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2246%20-%20%EC%BD%98%EB%8F%84%20%EC%84%A0%EC%A0%95.cpp) 
