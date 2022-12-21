@@ -51,6 +51,7 @@
  * [1487: 물건 팔기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1487%20-%20%20%EB%AC%BC%EA%B1%B4%20%ED%8C%94%EA%B8%B0.cpp)
  * [1543: 문서 검색](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1543%20-%20%EB%AC%B8%EC%84%9C%20%EA%B2%80%EC%83%89.cpp)
  * [1590: 캠프가는 영식](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1590%20-%20%EC%BA%A0%ED%94%84%EA%B0%80%EB%8A%94%20%EC%98%81%EC%8B%9D.cpp)
+ * [1639: 행운의 티켓](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1639%20-%20%ED%96%89%EC%9A%B4%EC%9D%98%20%ED%8B%B0%EC%BC%93.cpp)
  * [1759: 암호 만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/1759%20-%20%EC%95%94%ED%98%B8%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222516074349))
  * 2143: 두 배열의 합 [[풀이 1(unordered_map 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2143%20-%20%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9_sol1.cpp)] [[풀이 2(투 포인터 알고리즘 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2143%20-%20%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9_sol2.cpp)]
  * [2246: 콘도 선정](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2246%20-%20%EC%BD%98%EB%8F%84%20%EC%84%A0%EC%A0%95.cpp) 
