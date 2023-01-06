@@ -526,6 +526,7 @@
 
 ## Two Pointers
  * [1806: 부분합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/1806%20-%20%EB%B6%80%EB%B6%84%ED%95%A9.cpp)
+ * [1940: 주몽](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/1940%20-%20%EC%A3%BC%EB%AA%BD.cpp)
  * [2003: 수들의 합 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/2003%20-%20%EC%88%98%EB%93%A4%EC%9D%98%20%ED%95%A9%202.cpp)
  * [2018: 수들의 합 5](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/2018%20-%20%EC%88%98%EB%93%A4%EC%9D%98%20%ED%95%A9%205.cpp)
  * [2467: 용액](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/2467%20-%20%EC%9A%A9%EC%95%A1.cpp)
