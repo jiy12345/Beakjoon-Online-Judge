@@ -367,6 +367,7 @@
  * [1917: 정육면체 전개도](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1917%20-%20%EC%A0%95%EC%9C%A1%EB%A9%B4%EC%B2%B4%20%EC%A0%84%EA%B0%9C%EB%8F%84.cpp) 
  * [1969: DNA](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1969%20-%20DNA.cpp) 
  * [1996: 지뢰 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1996%20-%20%EC%A7%80%EB%A2%B0%20%EC%B0%BE%EA%B8%B0.cpp) 
+ * [2029: 성냥](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2029%20-%20%EC%84%B1%EB%83%A5.cpp) 
  * [2034: 반음](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2034%20-%20%EB%B0%98%EC%9D%8C.cpp) 
  * [2238: 경매](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2238%20-%20%EA%B2%BD%EB%A7%A4.cpp) 
  * [2290: LCD Test](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2290%20-%20LCD%20Test.cpp) 
