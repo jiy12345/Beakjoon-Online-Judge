@@ -359,6 +359,7 @@
  * [1475: 방 번호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1475%20-%20%EB%B0%A9%20%EB%B2%88%ED%98%B8.cpp)
  * [1491: 나선](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1491%20-%20%EB%82%98%EC%84%A0.cpp)
  * [1531: 투명](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1531%20-%20%ED%88%AC%EB%AA%85.cpp)
+ * [1652: 누울 자리를 찾아라](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1652%20-%20%EB%88%84%EC%9A%B8%20%EC%9E%90%EB%A6%AC%EB%A5%BC%20%EC%B0%BE%EC%95%84%EB%9D%BC.cpp)
  * [1680: 쓰레기 수거](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1680%20-%20%EC%93%B0%EB%A0%88%EA%B8%B0%20%EC%88%98%EA%B1%B0.cpp)
  * [1730: 판화](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1730%20-%20%ED%8C%90%ED%99%94.cpp)
  * [1769: 3의 배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1769%20-%203%EC%9D%98%20%EB%B0%B0%EC%88%98.cpp)
