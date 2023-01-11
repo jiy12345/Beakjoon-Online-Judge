@@ -448,6 +448,7 @@
  * [2004: 조합 0의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2004%20-%20%EC%A1%B0%ED%95%A9%200%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)
  * [2057: 팩토리얼 분해](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2057%20-%20%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC%20%EB%B6%84%ED%95%B4.cpp)
  * [2089: -2진수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2089%20-%20-2%EC%A7%84%EC%88%98.cpp)
+ * [2090: 조화평균](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2090%20-%20%EC%A1%B0%ED%99%94%ED%8F%89%EA%B7%A0.cpp)
  * [2097: 조약돌](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2097%20-%20%EC%A1%B0%EC%95%BD%EB%8F%8C.cpp)
  * [2609: 최대공약수와 최소공배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2609%20-%20%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631010235))
  * [2622: 삼각형만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2622%20-%20%EC%82%BC%EA%B0%81%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) 
