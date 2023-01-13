@@ -451,6 +451,7 @@
  * [2089: -2진수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2089%20-%20-2%EC%A7%84%EC%88%98.cpp)
  * [2090: 조화평균](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2090%20-%20%EC%A1%B0%ED%99%94%ED%8F%89%EA%B7%A0.cpp)
  * [2097: 조약돌](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2097%20-%20%EC%A1%B0%EC%95%BD%EB%8F%8C.cpp)
+ * [2331: 반복수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2331%20-%20%EB%B0%98%EB%B3%B5%EC%88%98%EC%97%B4.cpp)
  * [2609: 최대공약수와 최소공배수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2609%20-%20%EC%B5%9C%EB%8C%80%EA%B3%B5%EC%95%BD%EC%88%98%EC%99%80%20%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631010235))
  * [2622: 삼각형만들기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2622%20-%20%EC%82%BC%EA%B0%81%ED%98%95%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp) 
  * [2740: 행렬 곱셈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/2740%20-%20%ED%96%89%EB%A0%AC%20%EA%B3%B1%EC%85%88.cpp) 
