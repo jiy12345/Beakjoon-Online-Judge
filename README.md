@@ -430,6 +430,7 @@
  * [1016: 제곱 ㄴㄴ 수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1016%20-%20%EC%A0%9C%EA%B3%B1%20%E3%84%B4%E3%84%B4%20%EC%88%98.cpp)
  * [1024: 수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1024%20-%20%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp)
  * [1026: 보물](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1026%20-%20%EB%B3%B4%EB%AC%BC.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222511044280))
+ * [1057: 토너먼트](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1057%20-%20%ED%86%A0%EB%84%88%EB%A8%BC%ED%8A%B8.cpp)
  * [1059: 좋은 구간](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1059%20-%20%EC%A2%8B%EC%9D%80%20%EA%B5%AC%EA%B0%84.cpp) 
  * [1064: 평행사변형](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1064%20-%20%ED%8F%89%ED%96%89%EC%82%AC%EB%B3%80%ED%98%95.cpp) 
  * [1094: 막대기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1094%20-%20%EB%A7%89%EB%8C%80%EA%B8%B0.cpp) 
