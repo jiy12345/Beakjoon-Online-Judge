@@ -443,6 +443,7 @@
  * [1629: 곱셈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1629%20-%20%EA%B3%B1%EC%85%88.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222536998009))
  * [1644: 소수의 연속합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1644%20-%20%EC%86%8C%EC%88%98%EC%9D%98%20%EC%97%B0%EC%86%8D%ED%95%A9.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222512581322))
  * [1676: 팩토리얼 0의 개수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1676%20-%20%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC%200%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222531156973))
+ * [1716: Polynomial Remains](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1716%20-%20Polynomial%20Remains.cpp)
  * [1738: 수 이어쓰기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1738%20-%20%EC%88%98%20%EC%9D%B4%EC%96%B4%EC%93%B0%EA%B8%B0.cpp)
  * [1740: 거듭제곱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1740%20-%20%EA%B1%B0%EB%93%AD%EC%A0%9C%EA%B3%B1.cpp)
  * [1747: 소수and팰린드롬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1747%20-%20%EC%86%8C%EC%88%98and%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.cpp)
