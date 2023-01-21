@@ -122,6 +122,7 @@
  * [1927: 최소 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/1927%20-%20%EC%B5%9C%EC%86%8C%20%ED%9E%99.cpp)
  * [2164: 카드2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/2164-%20%EC%B9%B4%EB%93%9C2.cpp)
  * [2358: 평행선](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/2358%20-%20%ED%8F%89%ED%96%89%EC%84%A0.cpp)
+ * [2776: 암기왕](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/2776%20-%20%EC%95%94%EA%B8%B0%EC%99%95.cpp)
  * [7785: 회사에 있는 사람](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/7785%20-%20%ED%9A%8C%EC%82%AC%EC%97%90%20%EC%9E%88%EB%8A%94%20%EC%82%AC%EB%9E%8C.cpp)
  * [10828: 스택](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10828%20-%20%EC%8A%A4%ED%83%9D.cpp)
  * [10845: 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10845%20-%20%ED%81%90.cpp)
