@@ -123,6 +123,7 @@
  * [2164: 카드2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/2164-%20%EC%B9%B4%EB%93%9C2.cpp)
  * [2358: 평행선](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/2358%20-%20%ED%8F%89%ED%96%89%EC%84%A0.cpp)
  * [2776: 암기왕](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/2776%20-%20%EC%95%94%EA%B8%B0%EC%99%95.cpp)
+ * [3986: 좋은 단어](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/3986%20-%20%EC%A2%8B%EC%9D%80%20%EB%8B%A8%EC%96%B4.cpp)
  * [4949: 균형잡힌 세상](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/4949%20-%20%EA%B7%A0%ED%98%95%EC%9E%A1%ED%9E%8C%20%EC%84%B8%EC%83%81.cpp)
  * [5568: 카드 놓기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/5568%20-%20%EC%B9%B4%EB%93%9C%20%EB%86%93%EA%B8%B0.cpp)
  * [7785: 회사에 있는 사람](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/7785%20-%20%ED%9A%8C%EC%82%AC%EC%97%90%20%EC%9E%88%EB%8A%94%20%EC%82%AC%EB%9E%8C.cpp)
