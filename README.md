@@ -523,6 +523,7 @@
  * [5800: 성적 통계](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/5800%20-%20%EC%84%B1%EC%A0%81%20%ED%86%B5%EA%B3%84.cpp) 
  * [8979: 올림픽](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/8979%20-%20%EC%98%AC%EB%A6%BC%ED%94%BD.cpp) 
  * [10816: 숫자 카드 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/10816%20-%20%EC%88%AB%EC%9E%90%20%EC%B9%B4%EB%93%9C%202.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509528634))
+ * [10825: 국영수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/10825%20-%20%EA%B5%AD%EC%98%81%EC%88%98.cpp)
  * [11931: 수 정렬하기 4](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/11931%20-%20%EC%88%98%20%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0%204.cpp) 
  * [13333: Q-인덱스](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/13333%20-%20Q-%EC%9D%B8%EB%8D%B1%EC%8A%A4.cpp) 
  * [14729: 칠무해](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/14729%20-%20%EC%B9%A0%EB%AC%B4%ED%95%B4.cpp)
