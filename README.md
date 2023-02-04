@@ -321,6 +321,8 @@
 ### Tree
  * [2263: 트리의 순회](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/2263%20-%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%88%9C%ED%9A%8C.cpp)
  * [5639: 이진 검색 트리](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/5639%20-%20%EC%9D%B4%EC%A7%84%20%EA%B2%80%EC%83%89%20%ED%8A%B8%EB%A6%AC.cpp)
+ * [9372: 상근이의 여행](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Graph%20Theory/9372%20-%20%EC%83%81%EA%B7%BC%EC%9D%B4%EC%9D%98%20%EC%97%AC%ED%96%89.cpp)
+
 
 
 ## Greedy Algorithm
