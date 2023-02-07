@@ -73,6 +73,7 @@
  * [7568: 덩치](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/7568%20-%20%EB%8D%A9%EC%B9%98.cpp)
  * [8892: 팰린드롬](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/8892%20-%20%ED%8C%B0%EB%A6%B0%EB%93%9C%EB%A1%AC.cpp)
  * [9196: 정수 직사각형](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/9196%20-%20%EC%A0%95%EC%88%98%20%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95.cpp)
+ * [10157: 자리배정](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10157%20-%20%EC%9E%90%EB%A6%AC%EB%B0%B0%EC%A0%95.cpp)
  * [10971: 외판원 순회 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10971%20-%20%EC%99%B8%ED%8C%90%EC%9B%90%20%EC%88%9C%ED%9A%8C%202.cpp)
  * [10819: 차이를 최대로](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/10819%20-%20%EC%B0%A8%EC%9D%B4%EB%A5%BC%20%EC%B5%9C%EB%8C%80%EB%A1%9C.cpp)
  * [14225: 부분 수열의 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/14225%20-%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4%EC%9D%98%20%ED%95%A9.cpp)
