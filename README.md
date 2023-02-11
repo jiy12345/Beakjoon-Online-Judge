@@ -354,6 +354,7 @@
  * [**11000: 강의실 배정**](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11000%20-%20%EA%B0%95%EC%9D%98%EC%8B%A4%20%EB%B0%B0%EC%A0%95.cpp)
  * [11047: 동전 0](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11047%20-%20%EB%8F%99%EC%A0%84%200.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222494137695))
  * [11399: ATM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11399%20-%20ATM.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222494105653))
+ * [11508: 2+1 세일](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/11508%20-%202%2B1%20%EC%84%B8%EC%9D%BC.cpp) 
  * [12904: A와 B](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/12904%20-%20A%EC%99%80%20B.cpp)
  * [13164: 행복 유치원](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/13164%20-%20%ED%96%89%EB%B3%B5%20%EC%9C%A0%EC%B9%98%EC%9B%90.cpp)
  * [13904: 과제](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/13904%20-%20%EA%B3%BC%EC%A0%9C.cpp)
