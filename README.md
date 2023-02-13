@@ -359,6 +359,7 @@
  * [12904: A와 B](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/12904%20-%20A%EC%99%80%20B.cpp)
  * [13164: 행복 유치원](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/13164%20-%20%ED%96%89%EB%B3%B5%20%EC%9C%A0%EC%B9%98%EC%9B%90.cpp)
  * [13904: 과제](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/13904%20-%20%EA%B3%BC%EC%A0%9C.cpp)
+ * [19939: 박 터뜨리기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/19939%20-%20%EB%B0%95%20%ED%84%B0%EB%9C%A8%EB%A6%AC%EA%B8%B0.cpp)
  * [25631: 마트료시카 합치기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/25631%20-%20%EB%A7%88%ED%8A%B8%EB%A3%8C%EC%8B%9C%EC%B9%B4%20%ED%95%A9%EC%B9%98%EA%B8%B0.cpp)
  * [25644: 최대 상승](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Greedy%20Algorithm/25644%20-%20%EC%B5%9C%EB%8C%80%20%EC%83%81%EC%8A%B9.cpp)
 
