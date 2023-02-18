@@ -387,6 +387,7 @@
  * [1817: 짐 챙기는 숌](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1817%20-%20%EC%A7%90%20%EC%B1%99%EA%B8%B0%EB%8A%94%20%EC%88%8C.cpp) 
  * [1913: 달팽이](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1913%20-%20%EB%8B%AC%ED%8C%BD%EC%9D%B4.cpp) 
  * [1917: 정육면체 전개도](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1917%20-%20%EC%A0%95%EC%9C%A1%EB%A9%B4%EC%B2%B4%20%EC%A0%84%EA%B0%9C%EB%8F%84.cpp) 
+ * [1966: 프린터 큐](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1966%20-%20%ED%94%84%EB%A6%B0%ED%84%B0%20%ED%81%90.cpp) 
  * [1969: DNA](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1969%20-%20DNA.cpp) 
  * [1996: 지뢰 찾기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/1996%20-%20%EC%A7%80%EB%A2%B0%20%EC%B0%BE%EA%B8%B0.cpp) 
  * [2029: 성냥](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2029%20-%20%EC%84%B1%EB%83%A5.cpp) 
