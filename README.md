@@ -497,6 +497,7 @@
  * [5347: LCM](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/5347%20-%20LCM.cpp)
  * [6064: 카잉 달력](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6064%20-%20%EC%B9%B4%EC%9E%89%20%EB%8B%AC%EB%A0%A5.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222633743068))
  * [6588: 골드바흐의 추측](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/6588%20-%20%EA%B3%A8%EB%93%9C%EB%B0%94%ED%9D%90%EC%9D%98%20%EC%B6%94%EC%B8%A1.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222631033854))
+ * [9375: 패션왕 신해빈](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9375%20-%20%ED%8C%A8%EC%85%98%EC%99%95%20%EC%8B%A0%ED%95%B4%EB%B9%88.cpp)
  * [9461: 파도반 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9461%20-%20%ED%8C%8C%EB%8F%84%EB%B0%98%20%EC%88%98%EC%97%B4.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509889782))
  * [9613: GCD 합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9613%20-%20GCD%20%ED%95%A9.cpp) 
  * [9655: 돌 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/9655%20-%20%EB%8F%8C%20%EA%B2%8C%EC%9E%84.cpp) 
