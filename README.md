@@ -60,6 +60,7 @@
  * 2143: 두 배열의 합 [[풀이 1(unordered_map 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2143%20-%20%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9_sol1.cpp)] [[풀이 2(투 포인터 알고리즘 사용)](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2143%20-%20%EB%91%90%20%EB%B0%B0%EC%97%B4%EC%9D%98%20%ED%95%A9_sol2.cpp)]
  * [2246: 콘도 선정](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2246%20-%20%EC%BD%98%EB%8F%84%20%EC%84%A0%EC%A0%95.cpp) 
  * [2422: 한윤정이 이탈리아에 가서 아이스크림을 사먹는데](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2422%20-%20%ED%95%9C%EC%9C%A4%EC%A0%95%EC%9D%B4%20%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84%EC%97%90%20%EA%B0%80%EC%84%9C%20%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EC%9D%84%20%EC%82%AC%EB%A8%B9%EB%8A%94%EB%8D%B0.cpp) 
+* [2512: 예산](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2512%20-%20%EC%98%88%EC%82%B0.cpp) 
  * [2529: 부등호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2529%20-%20%EB%B6%80%EB%93%B1%ED%98%B8.cpp)
  * [2635: 수 이어가기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2635%20-%20%EC%88%98%20%EC%9D%B4%EC%96%B4%EA%B0%80%EA%B8%B0.cpp)
  * [2993: 세 부분](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Bruteforcing/2993%20-%20%EC%84%B8%20%EB%B6%80%EB%B6%84.cpp)
