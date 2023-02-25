@@ -568,6 +568,7 @@
  * [9324: 진짜 메시지](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/9324%20-%20%EC%A7%84%EC%A7%9C%20%EB%A9%94%EC%8B%9C%EC%A7%80.cpp) 
  * [9935: 문자열 폭발](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/9935%20-%20%EB%AC%B8%EC%9E%90%EC%97%B4%20%ED%8F%AD%EB%B0%9C.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222509312906))
  * [16916: 부분 문자열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/16916%20-%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.cpp)
+ * [17413: 단어 뒤집기 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/17413%20-%20%EB%8B%A8%EC%96%B4%20%EB%92%A4%EC%A7%91%EA%B8%B0%202.cpp)
  * [25594: HG 음성기호](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/String/25594%20-%20HG%20%EC%9D%8C%EC%84%B1%EA%B8%B0%ED%98%B8.cpp)
 
 
