@@ -579,4 +579,5 @@
  * [2018: 수들의 합 5](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/2018%20-%20%EC%88%98%EB%93%A4%EC%9D%98%20%ED%95%A9%205.cpp)
  * [2467: 용액](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/2467%20-%20%EC%9A%A9%EC%95%A1.cpp)
  * [2470: 두 용액](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Sorting/2470%20-%20%EB%91%90%20%EC%9A%A9%EC%95%A1.cpp) ([블로그 글](https://blog.naver.com/jiy12345/222619557693))
+ * [2559: 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/2559%20-%20%EC%88%98%EC%97%B4.cpp)
  * [11728: 배열 합치기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Two%20Pointers/11728%20-%20%EB%B0%B0%EC%97%B4%20%ED%95%A9%EC%B9%98%EA%B8%B0.cpp)
