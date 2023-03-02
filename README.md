@@ -136,6 +136,7 @@
  * [10866: 덱](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/10866%20-%20%EB%8D%B1.cpp)
  * [11279: 최대 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11279%20-%20%EC%B5%9C%EB%8C%80%20%ED%9E%99.cpp)
  * [11286: 절댓값 힙](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11286%20-%20%EC%A0%88%EB%8C%93%EA%B0%92%20%ED%9E%99.cpp)
+ * [11478: 서로 다른 부분 문자열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11478%20-%20%EC%84%9C%EB%A1%9C%20%EB%8B%A4%EB%A5%B8%20%EB%B6%80%EB%B6%84%20%EB%AC%B8%EC%9E%90%EC%97%B4.cpp)
  * [11652: 카드](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11652%20-%20%EC%B9%B4%EB%93%9C.cpp)
  * [11866: 요세푸스 문제 0](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/11866%20-%20%EC%9A%94%EC%84%B8%ED%91%B8%EC%8A%A4%20%EB%AC%B8%EC%A0%9C%200.cpp)
  * [14425: 문자열 집합](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Data%20Structure/14425%20-%20%EB%AC%B8%EC%9E%90%EC%97%B4%20%EC%A7%91%ED%95%A9.cpp)
