@@ -464,6 +464,7 @@
  * [1057: 토너먼트](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1057%20-%20%ED%86%A0%EB%84%88%EB%A8%BC%ED%8A%B8.cpp)
  * [1059: 좋은 구간](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1059%20-%20%EC%A2%8B%EC%9D%80%20%EA%B5%AC%EA%B0%84.cpp) 
  * [1064: 평행사변형](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1064%20-%20%ED%8F%89%ED%96%89%EC%82%AC%EB%B3%80%ED%98%95.cpp) 
+ * [1072: 게임](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1072%20-%20%EA%B2%8C%EC%9E%84.cpp) 
  * [1094: 막대기](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1094%20-%20%EB%A7%89%EB%8C%80%EA%B8%B0.cpp) 
  * [1308: D-Day](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1308%20-%20D-Day.cpp)
  * [1312: 소수](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Mathematics/1312%20-%20%EC%86%8C%EC%88%98.cpp)
