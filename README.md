@@ -402,6 +402,7 @@
  * [2238: 경매](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2238%20-%20%EA%B2%BD%EB%A7%A4.cpp) 
  * [2290: LCD Test](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2290%20-%20LCD%20Test.cpp)
  * [2491: 수열](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2491%20-%20%EC%88%98%EC%97%B4.cpp)
+ * [2503: 숫자 야구](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2503%20-%20%EC%88%AB%EC%9E%90%20%EC%95%BC%EA%B5%AC.cpp)
  * [2535: 아시아 정보올림피아드](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2535%20-%20%EC%95%84%EC%8B%9C%EC%95%84%20%EC%A0%95%EB%B3%B4%EC%98%AC%EB%A6%BC%ED%94%BC%EC%95%84%EB%93%9C.cpp) 
  * [2563: 색종이](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2563%20-%20%EC%83%89%EC%A2%85%EC%9D%B4.cpp) 
  * [2567: 색종이 - 2](https://github.com/jiy12345/Beakjoon-Online-Judge/blob/master/Implementation/2567%20-%20%EC%83%89%EC%A2%85%EC%9D%B4%20-%202.cpp) 
